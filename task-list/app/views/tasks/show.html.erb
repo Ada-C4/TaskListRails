@@ -1,1 +1,16 @@
-<h1>Task: <%= @task.name %></h1>
+<h1>Task Details</h1>
+<p>
+  Name: <%= @task.name %>
+  <br>
+  Description: <%= @task.description %>
+  <br>
+    <% if @task.comp_date == nil %>
+        Completion Status: Incomplete
+        <br>
+        Completion Date: N/A
+    <% else %>
+        Completion Status: Complete
+        <br>
+        Completion Date: <%= @task.comp_date %>
+    <% end %>
+</p>
