@@ -1,0 +1,39 @@
+h1 {
+  font-family: 'Codystar', cursive;
+  text-align: center;
+  font-size: 60px;
+  letter-spacing: 10px;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+li {
+  padding-top: 10px;
+}
+
+a:link {
+  color:black;
+}
+
+a:visited {
+  color: #FF0000;
+}
+
+a:hover {
+  color: #FFFFFF;
+  background-color: #FF0000;
+}
+
+a:visited:hover {
+  color: black;
+  background-color: #FF0000;
+}
+
+p {
+  padding-top: 10px;
+}
