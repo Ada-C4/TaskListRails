@@ -1,17 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-</head>
-<body>
-  <h1>Task Detail</h1>
-  <h3><%= @task.name %></h3>
+<h1>Task Detail</h1>
+<h3><%= @task.name %></h3>
   <p>
     <%= @task.description %>
   </p>
   <p>
-    <%= @task.completed_date.strftime("Csompleted on %m/%d/%Y") %> 
+    <% if @task.completed_date.nil? %>
+      <%= "Not yet completed" %>
+    <% else %>
+      <%= @task.completed_date.strftime("Completed on %m/%d/%Y") %>
+    <% end %>
   </p>
 </body>
 </html>

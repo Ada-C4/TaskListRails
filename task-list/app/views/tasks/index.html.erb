@@ -1,18 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-</head>
-<body>
-  <h1>Task List</h1>
-  <ul>
-    <% @tasks.each do |task| %>
-    <li>
-      <%= link_to task.name, "/tasks/#{task.id}" %>
-    </li>
-    <% end %>
-  </ul>
+<h1>Task List</h1>
 
-</body>
-</html>
+  <table>
+    <thead>
+      <tr>
+        <th colspan="3">
+          <h2>Your Complete Task List</h2>
+        </th>
+      </tr>
+      <tr>
+        <th>
+          Complete?
+        </th>
+        <th>
+          Task
+        </th>
+        <th>
+          Completed Date
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @tasks.each do |task| %>
+      <tr>
+        <td>
+          <% if task.completed_date.nil? %>
+            empty box
+          <% else %>
+            checked box
+          <% end %>
+        </td>
+        <td>
+          <%= link_to task.name, "/tasks/#{task.id}" %>
+        </td>
+        <td>
+          <%= task.completed_date.strftime("%m/%d/%Y") if !task.completed_date.nil? %>
+        </td>
+      </tr>
+      <% end %>
+  </tbody>
+</table>
