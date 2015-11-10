@@ -1,3 +1,6 @@
+<p>
+  <%= link_to "Task List", "/" %>
+</p>
 <h1>Task Details</h1>
 <p>
   Name: <%= @task.name %>
@@ -11,6 +14,6 @@
     <% else %>
         Completion Status: Complete
         <br>
-        Completion Date: <%= @task.comp_date %>
+        Completion Date: <%= @task.comp_date.strftime("%B %d, %Y") %>
     <% end %>
 </p>
