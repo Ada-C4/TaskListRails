@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'welcome/index'
+
+  root 'welome#index'
   get 'tasks/' => 'tasks#index'
   get 'tasks/:id' => 'tasks#show'
 
