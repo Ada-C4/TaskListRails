@@ -1,0 +1,20 @@
+<p>
+  Task: <%= @task.name %>
+</p>
+<% unless @task.description.empty? %>
+  <p>
+    Description: <%= @task.description %>
+  </p>
+<% end %>
+<p>
+  <% if @task.completed_at.nil? %>
+    Completion Status: In progress
+  <% else %>
+    Completion Status: Completed
+  <% end %>
+</p>
+<% unless @task.completed_at.nil? %>
+  <p>
+    Completion Date: <%= @task.completed_at.to_date %>
+  </p>
+<% end %>
