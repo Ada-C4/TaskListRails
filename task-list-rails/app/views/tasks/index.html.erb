@@ -1,8 +1,6 @@
-<html>
-  <head>
-    <title>Tasks</title>
-  </head>
-  <body>
-    <h1>Tasks! In RAILS!</h1>
-  </body>
-</html>
+<h1>Tasks! in RAILS!</h1>
+<% @tasks.each do |task| %>
+  <p>
+    <%= task.name %>
+  </p>
+<% end %>
