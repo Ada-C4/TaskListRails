@@ -1,14 +1,20 @@
-<!DOCTYPE html>
 <html>
-<head>
-  <title>TaskList</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title><%=@title%></title>
+    <link href="../css/mysite.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:600,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <meta charset = "utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
 
-<%= yield %>
+  <header>
+  <h1 class="page_title"><%=@title%></h1>
 
-</body>
+  </header>
+
+  <body>
+    <%= yield %>
+  </body>
+
 </html>
