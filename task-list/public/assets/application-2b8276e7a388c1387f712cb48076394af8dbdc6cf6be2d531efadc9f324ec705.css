@@ -3,7 +3,7 @@ body {
   text-align: center;
   width: 960px;
   font-family: Helvetica, Verdana, sans-serif;
-  background-image: asset_path("wood-background.jpg", image)
+  background: asset_path("wood-background.jpg", image)
 }
 
 h2 {
