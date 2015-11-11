@@ -3,10 +3,10 @@
 
 <%= image_tag "shia_squat copy.gif", width: "500", height: "auto" %>
 
-<ul>
+<ol>
   <% @tasks.each do |task| %>
     <li><a href=<%=task.id%>><%= task.name %></a>: <%= task.description%>
       (<%= task.completed%>)
     </li>
   <%end%>
-</ul>
+</ol>
