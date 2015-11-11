@@ -1,8 +1,10 @@
-<h1> This is task # <%= @task.id %> </h1>
-<p>Task : <%= @task.name %> </p>
+<h1> Task # <%= @task.id %> </h1>
+<h2> <%= @task.name %> </h2>
    <%if @task.description != "" %>
-    <p> Description: <%= @task.description %> </p>
+    <h3> Description: <%= @task.description %> </h3>
    <% end %>
 <% if @task.completed_at != nil %>
   <p> completed_at : <%= @task.completed_at %> </p>
+<% else %>
+  <p> The task is not yet completed </p>
 <% end %>
