@@ -3,13 +3,19 @@ body {
   text-align: center;
   width: 960px;
   font-family: Helvetica, Verdana, sans-serif;
-  background-image: asset_path("wood-background.jpg", image)
+  background-image: url('wood-background.jpg');
 }
 
 h2 {
   font: 400 40px/1.5 Helvetica, Verdana, sans-serif;
   margin: 0;
   padding: 0;
+}
+
+section {
+  background-color: white;
+  width: 400px;
+  margin: 0 auto;
 }
 
 ul {
