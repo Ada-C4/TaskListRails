@@ -2,13 +2,11 @@
   🔅🔅🔆 Task Organizer 🔆🔅🔅
 </header>
 <h1>Task List</h1>
-<section>
   <ul>
   <% @tasks.each do |task| %>
     <li><%= link_to task.name, "/#{task.id}" %></li>
   <% end %>
   </ul>
-</section>
 <footer>
   🔅🔅🔆🔆🔅🔅
 </footer>

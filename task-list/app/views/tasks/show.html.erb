@@ -5,7 +5,6 @@
   <%= link_to "Task List", "/" %>
 </nav>
 <h1>Task Details</h1>
-<section>
   <p><b>Name:</b> <%= @task.name %></p>
   <p><b>Description:</b> <%= @task.description %></p>
     <% if @task.comp_date == nil %>
@@ -15,7 +14,7 @@
         <p><b>Completion Status:</b> Complete</p>
         <p><b>Completion Date:</b> <%= @task.comp_date.strftime("%B %d, %Y") %></p>
     <% end %>
-</section>
+</table>
 <footer>
   🔅🔅🔆🔆🔅🔅
 </footer>
