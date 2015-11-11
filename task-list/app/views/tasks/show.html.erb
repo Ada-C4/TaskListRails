@@ -1,14 +1,18 @@
 <h1><%= @task.name %></h1>
+
 <% if !@task.description.empty? %>
-  <h5>Description:</h5>
-  <p><%= @task.description %>
+  <p>Description: <%= @task.description %></p>
 <% end %>
-<h5>Created At:</h5>
-<p><%= @task.created_at %>
-<% if !@task.complete.nil? %>
-  <h5>Completed At:</h5>
-  <p><%= @task.completed_at %>
+
+<p>Created At: <%= @task.created_at %></p>
+
+<% if !@task.completed_at.nil? %>
+  <p>Status: Completed</p>
+  <p>Completed At: <%= @task.completed_at %></p>
+<% else %>
+  <p>Status: Incomplete</p>
 <% end %>
+
 <br>
 <br>
 <%= link_to "Back to Tasks", "/" %>
