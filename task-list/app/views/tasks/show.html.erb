@@ -1,19 +1,21 @@
-<p>
+<header>
+  🔅🔅🔆 Task Organizer 🔆🔅🔅
+</header>
+<nav>
   <%= link_to "Task List", "/" %>
-</p>
+</nav>
 <h1>Task Details</h1>
-<p>
-  Name: <%= @task.name %>
-  <br>
-  Description: <%= @task.description %>
-  <br>
+<section>
+  <p><b>Name:</b> <%= @task.name %></p>
+  <p><b>Description:</b> <%= @task.description %></p>
     <% if @task.comp_date == nil %>
-        Completion Status: Incomplete
-        <br>
-        Completion Date: N/A
+        <p><b>Completion Status:</b> Incomplete</p>
+        <p><b>Completion Date:</b> N/A</p>
     <% else %>
-        Completion Status: Complete
-        <br>
-        Completion Date: <%= @task.comp_date.strftime("%B %d, %Y") %>
+        <p><b>Completion Status:</b> Complete</p>
+        <p><b>Completion Date:</b> <%= @task.comp_date.strftime("%B %d, %Y") %></p>
     <% end %>
-</p>
+</section>
+<footer>
+  🔅🔅🔆🔆🔅🔅
+</footer>
