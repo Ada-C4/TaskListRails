@@ -1,7 +1,6 @@
 body {
   background-image: url('hood_moon_smaller.jpg');
   background-attachment: fixed;
-  max-width: 900px;
 }
 
 #wrap {
@@ -11,6 +10,8 @@ body {
 h1 {
   text-align: center;
   font-family: 'Special Elite', cursive;
+  padding: 10px;
+  margin: 5 auto;
 }
 
 h3 {
@@ -26,6 +27,14 @@ p {
 }
 
 #tasklist {
+  padding: 20px;
+  margin: 10px auto;
+  overflow: auto;
+  width: 600px;
+  height: 300px;
+}
+
+#task_details {
   padding: 20px;
   margin: 10px auto;
 }
