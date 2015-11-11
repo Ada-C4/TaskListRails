@@ -2,103 +2,57 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@import url('https://fonts.googleapis.com/css?family=Lato|News+Gothic|Inconsolata|Droid+Sans|Raleway|Leckerli+One');
+@import url('https://fonts.googleapis.com/css?family=Lobster|Cabin|');
 
 body {
-  background-color: #FFF;
-  font-family: Lato, sans-serif;
+  background-image: url("yellowstone_back.jpg");
+  font-family: Cabin, sans-serif;
   width: 100%;
   margin: auto;
 
 }
 
-h1, h3 {
-  font-size: 1.6em;
-  font-family: 'Leckerli One';
-  color: #534291;
-  text-align: center;
-}
-
-form {
+.page_element {
   width: 600px;
+  background-color: rgba(255, 255, 255, .6);
   margin: auto;
-  padding: 0px 50px 0px 50px;
+  padding:  50px;
   line-height: 200%;
 }
 
-fieldset {
-  padding-bottom: 20px;
-  border: 0;
+table {
+  margin: auto;
 }
 
-legend {
-  font-family: 'Leckerli One';
-  color: #534291;
-  font-size: 1.4em;
-  font-weight: bold;
-}
-
-label {
-  margin-left: 10px;
-}
-
-#name {
-  border: none;
-  border-glow: none;
-  background-color: #D1D1E0;
-  outline: none;
-  padding: 5px;
-  font-family: Lato, sans-serif;
-  font-size: 1.05em;
-  background-position: bottom right;
-  background-repeat: no-repeat;
-}
-
-textarea {
-  width: 100%;
-  height: 120px;
-  border: none;
-  outline: none;
-  background-color: #D1D1E0;
-  padding: 5px;
-  font-family: Lato, sans-serif;
-  font-size: 1.05em;
-  background-position: bottom right;
-  background-repeat: no-repeat;
-}
-
-.button {
+th {
   text-align: center;
 }
 
-.submit {
-  font-size: 1.1em;
-  color: #534291;
-  margin-bottom: 2em;
-  display: inline-block;
-
+td {
+  padding: 5px;
 }
 
-.edit {
-  border: none;
-  background-color:#FFF;
-  color: #FFF;
-}
-
-.edit:hover  {
-  font-family: Lato, sans-serif;
-  color: #A3A3C2;
-  font-size: 1.1em;
-}
-
-a:link {color: #534291}
-a:visited {color: #534291}
-
-
-footer {
-  background-color: #E5E5FF;
-  color: #534291;
-  padding: 1em 0;
+h1 {
+  font-size: 4em;
+  font-family: 'Lobster';
+  color: #1F3E5D;
   text-align: center;
-  width: 100%;
+}
+
+
+a:link {
+  color: #003366;
+  text-decoration: none;
+}
+a:visited {
+  color: #00002A;
+  text-decoration: none;
+}
+
+a:hover {
+  font-size: 150%;
+}
+
+.bigger_checkbox {
+  font-size: 150%;
 }
