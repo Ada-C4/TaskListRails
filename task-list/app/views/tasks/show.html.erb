@@ -1,20 +1,19 @@
-<p>
-  Task: <%= @task.name %>
-</p>
-<% unless @task.description.empty? %>
+<div class="task-info">
   <p>
-    Description: <%= @task.description %>
+    <span>Task:</span> <%= @task.name %>
   </p>
-<% end %>
-<p>
-  <% if @task.completed_at.nil? %>
-    Completion Status: In progress
-  <% else %>
-    Completion Status: Completed
+  <% unless @task.description.empty? %>
+  <p>
+    <span>Description:</span> <%= @task.description %>
+  </p>
   <% end %>
-</p>
-<% unless @task.completed_at.nil? %>
   <p>
-    Completion Date: <%= @task.completed_at.to_date %>
+    <span>Status:</span> <%= @status %>
   </p>
-<% end %>
+  <% unless @task.completed_at.nil? %>
+  <p>
+    <span>Completion Date:</span> <%= @task.completed_at.to_date %>
+  </p>
+  <% end %>
+  <%= image_tag "https://33.media.tumblr.com/8092a0b1f2aa7d8cf7fc8d58f7f36155/tumblr_n4fkyi9suN1qdwrtpo1_400.gif" %>
+</div>

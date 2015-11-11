@@ -1,28 +1,31 @@
-<form method="post">
-  <div>
-  <% unless @sorted_tasks[:todo].nil? %>
-    <% @sorted_tasks[:todo].each do |task| %>
-      <div>
-        <label><input type="checkbox" name="checked[]" value="<%= task.id %>"><strong><%= link_to task.name, "/tasks/" + task.id.to_s %></strong> - <%= task.description %></label>
-        <a href="/modify?task=<%= task.id %>">Modify</a>
-      </div>
-    <% end %>
-  <% end %>
+<form class= "wrapper-front" method="post">
+  <div class="button-farm">
+    <a href="/add_task"><h1>Add a new task!</h1></a>
+    <input type="submit" id="submit" name="submit" value="Complete"> |
+    <input type="submit" id="submit" name="submit" value="Modify"> |
+    <input type="submit" id="submit" name="submit" onclick="return confirm('Are you sure?')" value="Delete"> |
+    <input type="submit" id="submit" name="submit" onclick="return confirm('Are you sure?')" value="Clear Completed">
   </div>
-  <input type="submit" id="submit" name="submit" value="Complete">
-  <input type="submit" id="submit" name="submit" onclick="return confirm('Are you sure?')" value="Delete">
-  <input type="submit" id="submit" name="submit" onclick="return confirm('Are you sure?')" value="Delete All Completed Tasks">
-  </form>
-
   <div>
-    <h2>Good job! You've Completed These Tasks!</h2>
-    <% unless @sorted_tasks[:completed].nil? %>
-      <% @sorted_tasks[:completed].each do |task| %>
-        <div>
-          <strong><%= link_to task.name, "/tasks/" + task.id.to_s %></strong> - <%= task.description %> - <%= task.completed_at.to_date %>
+    <% unless @sorted_tasks[:todo].nil? %>
+      <% @sorted_tasks[:todo].each do |task| %>
+        <div class="task">
+          <label><input type="checkbox" name="checked[]" value="<%= task.id %>"><span><%= link_to task.name, "/tasks/" + task.id.to_s %></span></label>
+          <div class="task-detail">
+            <%= task.description %>
+          </div>
         </div>
       <% end %>
     <% end %>
   </div>
 
-  <a href="/add_task"><h1>Add a new task!</h1></a>
+  <div>
+    <% unless @sorted_tasks[:completed].nil? %>
+      <% @sorted_tasks[:completed].each do |task| %>
+        <div class="task">
+          <label><input type="checkbox" name="checked[]" value="<%= task.id %>"><span class="complete"><%= link_to task.name, "/tasks/" + task.id.to_s %></span></label>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</form>

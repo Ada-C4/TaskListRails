@@ -13,3 +13,96 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  font-family: 'Maven Pro', sans-serif;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: "Josefin Slab", serif;
+  text-align: center;
+  margin: 15px;
+}
+
+a {
+  color: #660066;
+  text-decoration: none;
+}
+
+span {
+  font-family: "Josefin Slab", serif;
+  font-weight: bolder;
+  font-size: 22px;
+}
+
+.task-info {
+  margin: 0 auto;
+  width: 50%;
+  margin-top: 150px;
+  border: 1px solid black;
+  text-align: center;
+  background-color: rgba(246, 245, 231, .85);
+}
+
+.wrapper-front {
+  background-image: url("flower-of-life.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  border-radius: 10%;
+  margin-top: 100px;
+}
+
+.task {
+  display: block;
+  border: 1px solid black;
+  margin: 15px auto;
+  padding: 15px;
+  max-width: 45%;
+  background-color: rgba(255, 255, 255, .75);
+}
+
+.task span {
+  font-size: 20px;
+  font-weight: 500;
+  vertical-align: bottom;
+}
+
+.task-detail, .task-date {
+  display: block;
+  margin: auto;
+  max-width: 80%;
+}
+
+.task-date {
+  font-style: italic;
+}
+
+.complete {
+  text-decoration: line-through;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+  height: 18px;
+  vertical-align: middle;
+}
+
+.button-farm {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  background-color: white;
+}
+
+input#submit {
+  cursor: pointer;
+  font-size: 24px;
+  background-color: rgba(255, 255, 255, 0);
+  font-family: "Josefin Slab", serif;
+  font-weight: bold;
+  border: none;
+}
