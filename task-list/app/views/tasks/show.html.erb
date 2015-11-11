@@ -1,5 +1,6 @@
-<h1>Task Detail</h1>
-<h3><%= @task.name %></h3>
+<div class="page_element">
+  <h1>Task Detail</h1>
+  <h3><%= @task.name %></h3>
   <p>
     <%= @task.description %>
   </p>
@@ -10,5 +11,4 @@
       <%= @task.completed_date.strftime("Completed on %m/%d/%Y") %>
     <% end %>
   </p>
-</body>
-</html>
+</div>

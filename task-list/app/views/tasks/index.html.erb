@@ -26,11 +26,13 @@
         <td class="bigger_checkbox">
           <% if task.completed_date.nil? %>
             ☐
+            <% @class = "incomplete" %>
           <% else %>
             ☑
+            <% @class = "complete" %>
           <% end %>
         </td>
-        <td>
+        <td class="<%= @class %>">
           <%= link_to task.name.capitalize, "/tasks/#{task.id}" %>
         </td>
         <td>
