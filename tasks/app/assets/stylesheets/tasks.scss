@@ -1,3 +1,31 @@
 // Place all the styles related to the tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  margin: 0;
+  background-image: url(/Chalkboard-background.jpg);
+  background-repeat: no-repeat;
+}
+
+h1 {
+  text-align: center;
+  color: #FBFBFB;
+  font-family: 'Rock Salt', cursive;
+}
+
+a {
+  text-decoration: none;
+  color: #FBFBFB;
+}
+
+p {
+  color: #FBFBFB;
+  font-family: 'Rock Salt', cursive;
+}
+
+.center {
+  margin: auto;
+  width: 400px;
+  padding-left: 250px;
+}

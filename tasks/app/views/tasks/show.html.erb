@@ -1,11 +1,18 @@
-<h1><%= @task.name %></h1>
-<p>
-  <%= @task.description %>
-</p>
-<p>
-  <% if !@task.completed.nil?  %>
-    Completed on <%= @task.completed %>
-    <% else %>
-    Not completed
-    <% end %>
-</p>
+<html>
+  <head>
+    <link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <h1><%= @task.name %></h1>
+    <p>
+      <%= @task.description %>
+    </p>
+    <p>
+      <% if !@task.completed.nil?  %>
+        Completed on <%= @task.completed %>
+        <% else %>
+        Not completed
+        <% end %>
+    </p>
+  </body>
+</html>
