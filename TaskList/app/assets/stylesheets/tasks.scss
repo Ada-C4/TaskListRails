@@ -24,6 +24,12 @@ p {
 
 #task {
   font-family: 'Special Elite', cursive;
+  margin: 3px;
+}
+
+#task:before {
+  content: "+";
+  margin-right: 4px;
 }
 
 #tasklist {
@@ -37,6 +43,15 @@ p {
 #task_details {
   padding: 20px;
   margin: 10px auto;
+  overflow: auto;
+  width: 700px;
+  height: 150px;
+}
+
+#back_button {
+  text-align: center;
+  margin: 15px;
+  font-size: 24px;
 }
 
 a:link{
