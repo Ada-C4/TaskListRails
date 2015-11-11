@@ -1,4 +1,8 @@
 <h1> Here are your tasks! </h1>
+<h1> We are going to get so much done! </h1>
+<marquee direction="right">
+<%= image_tag "werewolf.gif", width: "500", height: "auto" %>
+</marquee>
 <ul>
   <% @tasks.each do |task| %>
     <li><%= task.name %>: <%= task.description%>

@@ -3,14 +3,11 @@ body {
   width: 960px;
   margin: 0 auto;
   text-align: left;
-  font-family: "Raleway",serif;
-}
+  font-family: 'Rock Salt', cursive;}
 
-header {  background-color: #EB1D34;
-          color: white;
+header {  background-color: white;
+          color: black;
           text-align: center;
-          font-weight: 600;
-          font-family: "Raleway",serif;
           font-size: 30pt
 }
 
@@ -29,7 +26,7 @@ fieldset input {
 }
 
 ul {
-  list-style: none;
+  list-style:square;
   padding: 10px;
   margin: 10px;
   text-align: left;
