@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
+  root 'tasks#index'
 
   get '/' => 'tasks#index'
   get 'tasks/' => 'tasks#index'
   post 'tasks/' => 'tasks#create'
-  get 'tasks/new' => 'tasks#create'
+  get 'tasks/new' => 'tasks#new'
   get 'tasks/:id' => 'tasks#show'
 
   # The priority is based upon order of creation: first created -> highest priority.
