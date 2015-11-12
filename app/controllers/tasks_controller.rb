@@ -19,8 +19,10 @@ class TasksController < ApplicationController
   end
 
   def destroy
-    # @post = Post.find(params[:id])
-    Task.destroy(task_params[:task])
+    Task.destroy(params[:id])
+    # delete_task = Task.find(params[:id])
+    # delete_task.destroy(task_params[:task])
+    # delete_task.destroy
     redirect_to "/"
   end
 
