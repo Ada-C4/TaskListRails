@@ -1,10 +1,11 @@
-<h1> Task # <%= @task.id %> </h1>
-<h2> <%= @task.name %> </h2>
-   <%if @task.description != "" %>
-    <h3> Description: <%= @task.description %> </h3>
-   <% end %>
-<% if @task.completed_at != nil %>
-  <p> completed_at : <%= @task.completed_at %> </p>
-<% else %>
-  <p> The task is not yet completed </p>
-<% end %>
+<div class="tasks">
+  <h2> <%= @task.name %> </h2>
+     <%if @task.description != "" %>
+        <h3> Description: <%= @task.description %> </h3>
+     <% end %>
+    <% if !@task.completed_at.nil? %>
+        <p> completed_at : <%= @task.completed_at %> </p>
+    <% else %>
+        <p> The task is not yet completed </p>
+    <% end %>
+  </div>
