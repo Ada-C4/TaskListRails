@@ -1,0 +1,14 @@
+<div class="page_element">
+  <h1>Task Detail</h1>
+  <h3><%= @task.name %></h3>
+  <p>
+    <%= @task.description %>
+  </p>
+  <p>
+    <% if @task.completed_date.nil? %>
+      <%= "Not yet completed" %>
+    <% else %>
+      <%= @task.completed_date.strftime("Completed on %m/%d/%Y") %>
+    <% end %>
+  </p>
+</div>
