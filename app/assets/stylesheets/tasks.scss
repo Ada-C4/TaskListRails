@@ -1,3 +1,59 @@
 // Place all the styles related to the tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-image: image-url("background_sea.png");
+  background-size: cover;
+  text-align: center;
+}
+
+$body-bg: transparent;
+
+h1 {
+  text-align: center;
+  // font-family: Didot;
+  font-size: 40px;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid;
+  border-color: #747070;
+  text-align: center;
+  margin: auto;
+  width: 700px;
+  padding: 0px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.task {
+  margin:auto;
+  text-align: center;
+  font-size: 18px;
+  color: #671713;
+}
+
+.list {
+  margin: auto;
+  width: 400px;
+}
+
+a {
+  text-decoration: none;
+  margin:auto;
+  text-align: center;
+  font-size: 18px;
+  color: #671713;
+}
+
+a:hover { color: #747070}
+
+a:hover {font-weight: bold}
+
+.return_home {
+  font-size: 22px;
+}
