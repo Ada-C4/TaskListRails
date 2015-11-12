@@ -9,4 +9,7 @@ class TasksController < ApplicationController
     @task = Task.find(id)
   end
 
+  def create
+  end
+  
 end
