@@ -13,7 +13,12 @@
         <td><%= task.name %></td>
         <td><%= link_to "details", "/tasks/#{task.id}" %></td>
       </tr>
-    <% end %>
+      <% end %>
+      <tr>
+        <td colspan="2" id="table_nav">
+          <%= link_to "new task", "/tasks/" %>
+        </td>
+      </tr>
     </tbody>
   </table>
 </div>

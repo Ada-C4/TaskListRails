@@ -6,14 +6,19 @@
         </tr>
       </thead>
       <tbody>
-      <% @task_info_hash.each do |key, value| %>
-        <% if !value.nil? && value != "" %>
-          <tr>
-            <td id="attribute"><strong><%= key %>:</strong></td>
-            <td><%= value %></td>
-          </tr>
+        <% @task_info_hash.each do |key, value| %>
+          <% if !value.nil? && value != "" %>
+            <tr>
+              <td id="attribute"><strong><%= key %>:</strong></td>
+              <td><%= value %></td>
+            </tr>
+          <% end %>
         <% end %>
-      <% end %>
+        <tr>
+          <td colspan="2" id="table_nav">
+            <%= link_to "back", "/tasks/" %>
+          </td>
+        </tr>
       </tbody>
   </table>
 </div>

@@ -45,8 +45,17 @@ td {
   border-bottom: 2px #3399CC solid;
 }
 
+tr:last-child td {
+  border-bottom: none;
+}
+
 #attribute {
   color: #CA5A45;
+}
+
+#table_nav {
+  text-align: center;
+  padding-top: 12px;
 }
 
 a {
