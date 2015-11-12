@@ -1,7 +1,10 @@
 <h1> Do It To It </h1>
 <hr />
+
+<%= link_to "Create new task", "/tasks/new" %>
+
 <div class="list">
   <% @tasks.each do |task| %>
-  <div class="task"><%= link_to task.name, "/#{task.id}" %></div>
+  <div class="task"><%= link_to task.name, "/tasks/#{task.id}" %></div>
   <% end %>
 </div>
