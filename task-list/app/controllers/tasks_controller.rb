@@ -17,6 +17,12 @@ class TasksController < ApplicationController
     redirect_to '/tasks'
   end
 
+  def delete
+    id = params[:id]
+    @task =Task.find(id).delete
+    redirect_to '/tasks'
+  end
+
   private
 
   def task_params
