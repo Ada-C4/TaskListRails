@@ -2,6 +2,6 @@
 
 <div id='tasklist'>
   <% @tasks.each do |task| %>
-    <div id='task'><%= link_to task.name, "/tasks/#{task.id}" %></div>
+    <div id='task'><%= link_to task.name, "/tasks/#{task.id}" %> - <%= button_to "Delete Task", "/tasks/#{task.id}", method: :delete %></div>
   <% end %>
 </div> 
