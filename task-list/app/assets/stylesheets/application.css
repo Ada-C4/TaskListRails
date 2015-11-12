@@ -14,5 +14,10 @@
  *= require_self
  */
  body {
-   background-image: url(/to-do-list.png);
+   width: 1000;
+   height: 600px;
+   background-image: url('/assets/Sky.jpg');
+   background-size: 980px 700px;
+   /*background-repeat: no-repeat;*/
+     /*// background-color: #C0C0C0;*/
  }
