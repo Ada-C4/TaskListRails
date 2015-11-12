@@ -1,0 +1,19 @@
+<div id="table">
+  <table>
+    <thead>
+        <tr>
+          <th colspan="2" id="title">Task details</th>
+        </tr>
+      </thead>
+      <tbody>
+      <% @task_info_hash.each do |key, value| %>
+        <% if !value.nil? && value != "" %>
+          <tr>
+            <td id="attribute"><strong><%= key %>:</strong></td>
+            <td><%= value %></td>
+          </tr>
+        <% end %>
+      <% end %>
+      </tbody>
+  </table>
+</div>

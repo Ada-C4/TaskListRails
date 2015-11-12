@@ -1,8 +1,19 @@
-<html>
-  <head>
-    <title>Tasks</title>
-  </head>
-  <body>
-    <h1>Tasks! In RAILS!</h1>
-  </body>
-</html>
+<div id="table">
+  <table>
+    <thead>
+      <tr>
+        <td colspan="2" id="title">
+          My Tasks
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <% @tasks.each do |task| %>
+      <tr>
+        <td><%= task.name %></td>
+        <td><%= link_to "details", "/tasks/#{task.id}" %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
