@@ -63,8 +63,13 @@ tr:last-child td {
   border-bottom: none;
 }
 
-#attribute {
+.attribute {
   color: #CA5A45;
+}
+
+#empty_description {
+  font-size: 12px;
+  padding: 4px 10px 2px 10px;
 }
 
 #table_nav {

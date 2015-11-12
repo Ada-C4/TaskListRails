@@ -7,7 +7,7 @@
       </thead>
       <tbody>
         <tr>
-          <td id="attribute">
+          <td class="attribute">
             <strong>name:</strong>
           </td>
           <td>
@@ -15,15 +15,21 @@
           </td>
         </tr>
         <tr>
-          <td id="attribute">
+          <td class="attribute">
             <strong>description:</strong>
           </td>
-          <td>
-            <%= @task.description %>
-          </td>
+          <% if @task.description != "" %>
+            <td>
+              <%= @task.description %>
+            </td>
+          <% else %>
+            <td id="empty_description">
+              <em>empty</em>
+            </td>
+          <% end %>
         </tr>
         <tr>
-          <td id="attribute">
+          <td class="attribute">
             <strong>date created:</strong>
           </td>
           <td>
@@ -31,7 +37,7 @@
           </td>
         </tr>
         <tr>
-          <td id="attribute">
+          <td class="attribute">
             <strong>completed?</strong>
           </td>
           <% if @task.completed %>
@@ -42,7 +48,7 @@
         </tr>
         <% if @task.completed == true && !@task.completed_at.nil? %>
           <tr>
-            <td id="attribute">
+            <td class="attribute">
               <strong>date completed:</strong>
             </td>
             <td>
