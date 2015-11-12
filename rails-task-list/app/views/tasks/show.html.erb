@@ -1,7 +1,6 @@
 <h1>Task Details</h1>
 
 <p>Task Name: <%= @task.name %></p>
-<% binding.pry %>
 <% if @task.description != nil && @task.description != "" %>
   <p>Task Description: <%= @task.description %></p>
 <% end %>
