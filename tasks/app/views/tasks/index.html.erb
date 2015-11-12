@@ -27,10 +27,28 @@
         <% gray = true %>
         <% num += 1 %>
       <% end %>
+    <!--else if task is complete-->
+    <% else %>
+      <% if gray %>
+        <div class="gray-box">
+          <span><%= num %>    </span><a class="done" href="/tasks/<%= task.id %>"><%= task.name.upcase %></a>
+        </div>
+        <% gray = false %>
+        <% num += 1 %>
+      <% else %>
+        <div class="white-box">
+          <span><%= num %>    </span><a class="done" href="/tasks/<%= task.id %>"><%= task.name.upcase %></a>
+        </div>
+        <% gray = true %>
+        <% num += 1 %>
+      <% end %>
     <% end %>
+
   <% end %>
 
-<% @tasks.each do |task| %>
+<!--This code was used for moving all completed tasks to the bottom of the list-->
+<!--Leaving it here in case I need it later-->
+<!-- <% @tasks.each do |task| %>
   <% if !task.complete.nil? %>
     <% if gray %>
       <div class="gray-box">
@@ -47,4 +65,4 @@
     <% end %>
   <% end %>
 <% end %>
-</div>
+</div> -->
