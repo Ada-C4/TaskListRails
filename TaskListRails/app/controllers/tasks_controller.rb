@@ -17,6 +17,10 @@ class TasksController < ApplicationController
     redirect_to "/"
   end
 
+  def delete
+    Task.destroy(params[:id])
+    redirect_to "/"
+  end
   private
 
   def task_params
