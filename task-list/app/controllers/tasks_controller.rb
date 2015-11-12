@@ -16,21 +16,22 @@ class TasksController < ApplicationController
   end
 
   def create
-    Task.create(post_params[:task])
+    Task.create(task_params[:task])
     redirect_to "/"
   end
 
+  def destroy
+    id = params[:id]
+    Task.destroy(id)
+    redirect_to "/"
+  end
+  
   private
 
-  def post_params
+  def task_params
     params.permit(task:[:name, :description])
   end
 
-  def delete
-    id = params[:id]
-    Task.find(id).destroy
 
-    redirect_to "/"
-  end
 
 end

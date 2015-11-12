@@ -3,8 +3,7 @@
   <ul>
     <% @tasks.each do |task| %>
       <li> <%= link_to "Task: #{task.name}", "/tasks/#{task.id}" %>
-        <%= button_to "delete", {:controller => :tasks,
-      :action => 'destroy', :id => task.id }, :method => :delete %>
+        <%= button_to "delete", {action: 'destroy', id: task.id }, method: :delete, data: { confirm: "Are you sure?" } %>
 
     <% end %>
   </ul>
