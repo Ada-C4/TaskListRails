@@ -4,7 +4,9 @@
     <% @tasks.each do |task| %>
     <li>
     <a href="/tasks/<%= task.id %>"><%= task.name %>: <%= task.description %></a>
-    <% end %>
     </li>
+    <% end %>
   </ul>
+
+  <%= link_to "add ANOTHER task", "/tasks/new", class: "add-task" %>
 </div>
