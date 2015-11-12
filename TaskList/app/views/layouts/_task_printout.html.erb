@@ -1,0 +1,42 @@
+<form method="post"
+  <% if @method == :delete %>
+    action="/delete_confirmation"
+  <% end %>
+>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <td>Task</td>
+        <td>Description</td>
+        <td>Completed</td>
+      </tr>
+    </thead>
+    <tbody>
+      <% @tasks.each do |task| %>
+      <% completed = !task.completed_date.nil? %>
+      <tr>
+        <td <% if completed %>
+          class="strikethru"
+          <% end %>
+          ><%= task.name %></td>
+        <td <% if completed %>
+          class="strikethru"
+          <% end %>
+          ><%= task.description %></td>
+        <td>
+          <% if completed %>
+            <%= task.completed_date.strftime("%b %-d, %Y") %>
+          <% end %>
+        </td>
+        <td>
+          <a href="/tasks/<%= task.id %>" class="btn info-btn btn-sm" type="button" aria-label="Task Info Button">
+            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+          </a>
+          <a href="/tasks/<%= task.id %>" class="btn info-btn btn-sm" type="button" aria-label="Delete Task Button">
+            <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
