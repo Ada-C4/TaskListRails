@@ -1,17 +1,19 @@
-<div class="form">
+<div class="on_paper">
 
-<%= form_tag do %>
+  <%= form_for @task do |f| %>
+    <fieldset>
+      <legend>Post Information</legend>
 
-  <label id="top" for="name">task name:</label>
-  <input type="text" size=40 id="name">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
 
-  <br>
-  <label for="description">task description:</label>
-  <textarea id="description" cols="40%"></textarea>
+      <%= f.label :description %>
+      <%= f.text_field :description %>
 
-  <br>
-  <button class="button" type="submit">add task</button>
+    </fieldset>
 
-<% end %>
+    <%= f.submit%>
+
+  <% end %>
 
 </div>
