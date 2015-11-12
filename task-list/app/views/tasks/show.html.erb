@@ -1,0 +1,11 @@
+<section>
+<h1><%= @task.name %></h1>
+
+    <p><%= @task.description %></p>
+    <% if @task.completed_date != nil %>
+    <p>Completed!</p>
+    <% else %>
+    <p>Incomplete!</p>
+    <% end %>
+    <p><%= @task.completed_date %></p>
+</section>
