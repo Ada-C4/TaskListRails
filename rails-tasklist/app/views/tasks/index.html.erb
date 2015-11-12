@@ -1,0 +1,46 @@
+<h1>All tasks</h1>
+<div class="container">
+  <ul class="list-inline">
+    <% @tasks.each do |task| %>
+    <li>
+      <%= task.name %>; <%= task.description %>; <%= link_to "Show", "/tasks/#{task.id}" %>
+
+    </li>
+    <% end %>
+  </ul>
+</div>
+
+<div class="container">
+  <h1>Task List</h1>
+    <table class="table table-hover">
+      <tr >
+        <th>
+          task view
+        </th>
+        <th id="taskie">
+          task
+        </th>
+        <th>
+          description
+        </th>
+        <th>
+          completed
+        </th>
+      </tr>
+      <% @tasks.each do |task| %>
+        <tr>
+          <td>
+            <%= link_to "show", "/tasks/#{task.id}" %>
+          </td>
+         <td>
+          	<div><%= task.name %></div>
+         </td>
+         <td>
+          	<div><% if task.description == "" %><%= "n/a" %><% end %><%= task.description %></div>
+         </td>
+         <td>
+          	<div><% if task.completed_at.class == NilClass %><%= "in progress :)" %><% end %><%= task.completed_at %></div>
+         </td>
+       </tr>
+      <% end %>
+    </table>
