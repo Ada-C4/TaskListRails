@@ -1,0 +1,12 @@
+<%= form_for @task do |f| %>
+  <fieldset>
+    <legend>Task Information</legend>
+    <%= f.label :name %>
+    <%= f.text_field :name%>
+    <br>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+
+  </fieldset>
+  <%= f.submit %>
+<% end %>
