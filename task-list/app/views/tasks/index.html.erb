@@ -1,14 +1,13 @@
-<a href="tasks/new">Add a new Task</a>
 <table>
   <col width="80%">
   <col width="20%">
   <tr>
-    <th>Task</th>
+    <th id="task_name">Task</th>
     <th></th>
   </tr>
     <% @tasks.each do |task| %>
       <tr>
-        <td>
+        <td >
           <%= link_to "Task: #{task.name}", "/tasks/#{task.id}" %>
         </td>
         <td>

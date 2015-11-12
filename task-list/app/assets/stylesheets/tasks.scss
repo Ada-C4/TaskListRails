@@ -6,6 +6,7 @@
 h1 {
   color: purple;
   margin-left: 120px;
+  text-align: center;
 }
 
 li {
@@ -20,13 +21,21 @@ li {
   display:inline-block;
 }
 
-
 footer {
   color: green;
   margin-top: 500px;
 }
 
-.tasks {
-  font-family: monospace;
-  margin-left: 90px;
+
+table {
+  width: 600px;
+  margin-left:auto;
+  margin-right:auto;
+
+}
+
+td, th {
+border: 1px solid transparent; /* No more visible border */
+height: 30px;
+transition: all 0.3s;  /* Simple transition for hover effect */
 }
