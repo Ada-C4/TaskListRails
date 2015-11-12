@@ -15,4 +15,15 @@ class TasksController < ApplicationController
     @task = Task.new
   end
 
+  def create
+    Task.create(post_params[:task])
+    redirect_to "/"
+  end
+
+  private
+
+  def post_params
+    params.permit(task:[:name, :description])
+  end
+
 end
