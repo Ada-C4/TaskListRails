@@ -9,5 +9,17 @@ class TasksController < ApplicationController
   end
 
   def new
+    @task = Task.new
+  end
+
+  def create
+    Task.create(task_params[:task])
+    redirect_to "/"
+  end
+
+  private
+
+  def task_params
+    params.permit(task:[:name,:description])
   end
 end
