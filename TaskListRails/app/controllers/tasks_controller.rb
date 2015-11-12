@@ -7,4 +7,8 @@ class TasksController < ApplicationController
     id = params[:id]
     @task = Task.find(id)
   end
+
+  def new
+    @task = Task.new
+  end
 end
