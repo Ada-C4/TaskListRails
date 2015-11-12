@@ -1,5 +1,5 @@
 body {
-  background-image: url('hood_moon_smaller.jpg');
+  background-image: url('hood_moon_smaller_2.jpg');
   background-attachment: fixed;
 }
 
@@ -14,6 +14,10 @@ h1 {
   margin: 5 auto;
 }
 
+h2 {
+  font-family: 'Special Elite', cursive;
+}
+
 h3 {
   font-family: 'Special Elite', cursive;
 }
@@ -22,22 +26,23 @@ p {
   font-family: 'Inconsolata', sans-serif;
 }
 
-#task {
+table {
   font-family: 'Special Elite', cursive;
-  margin: 3px;
+  margin: 5px auto;
+  width: 570px;
 }
 
-#task:before {
-  content: "+";
-  margin-right: 4px;
+td#delete {
+  text-align: right;
 }
 
-#tasklist {
-  padding: 20px;
+
+.tasklist {
+  padding: 15px;
   margin: 10px auto;
   overflow: auto;
   width: 600px;
-  height: 300px;
+  height: 150px;
 }
 
 #task_details {
@@ -51,6 +56,25 @@ p {
 #back_button {
   text-align: center;
   margin: 15px;
+  font-size: 24px;
+}
+
+.delete_button {
+  border: none;
+  font-family: 'Inconsolata', sans-serif;
+}
+
+.add_task {
+  text-align: center;
+  margin: 0 auto;
+  font-family: 'Special Elite', cursive;
+  font-size: 24px;
+}
+
+#divider {
+  text-align: center;
+  margin: 0 auto;
+  font-family: 'Special Elite', cursive;
   font-size: 24px;
 }
 

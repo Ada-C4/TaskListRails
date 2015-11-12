@@ -2,6 +2,8 @@ class TasksController < ApplicationController
 
 	def index
 		@tasks = Task.all
+		@working_tasks = Task.where('completed_at IS NULL')
+		@completed_tasks = Task.where.not(completed_at: 'NULL')
 	end
 
 	def show
