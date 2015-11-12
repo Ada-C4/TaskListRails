@@ -1,5 +1,6 @@
 <h1>Tasks</h1>
 
+<%= button_to "Add a new task", "/tasks/new", method: :get%>
 <ul>
   <% @tasks.each do |task| %>
     <div class="list_box">
