@@ -1,3 +1,22 @@
 // Place all the styles related to the tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
+@import url(https://fonts.googleapis.com/css?family=Special+Elite);
+
+* {
+  // background-image: image(app/assets/images/envelope_back);
+  font-family: Oswald;
+}
+
+a, h1 {
+  font-family: Special Elite;
+}
+
+#complete {
+  text-decoration: line-through;
+}
+
+#incomplete {
+  text-decoration: none;
+}

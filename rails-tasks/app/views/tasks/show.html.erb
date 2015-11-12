@@ -1,4 +1,12 @@
-<h1>Chores</h1>
+<h1><%= @task_name %></h1>
 <p>
-  <%= @task_name %>: <%= @description %>
+  <%= @description %>:
+  <% if @completed_status == true && @completed_date == nil%>
+    completed
+  <% elsif @completed_status == true %>
+    completed <%= @completed_date %>
+  <% else %>
+    incomplete
+  <% end %>
 </p>
+<a href="/task_list">List Home</a>
