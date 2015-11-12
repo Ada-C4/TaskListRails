@@ -16,7 +16,7 @@ This project...
 
 Tinker with your Model in the `rails console` in order to ensure you have created your model appropriately. 
 
-<!--    
+    
 
 ## Wave 1
 This wave is where we will introduce the view layer where we begin interacting with our application via the browser.
@@ -75,4 +75,4 @@ In this wave, we explore creating ActiveRecord associations by creating `belongs
   - The url of this page should look something like `http://localhost:5000/people/1/tasks`.
   - Link to this action from a Person's `show` view.
 - Deploy your completed app to Heroku.
--->
+

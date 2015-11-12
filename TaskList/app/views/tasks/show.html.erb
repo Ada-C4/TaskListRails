@@ -1,0 +1,12 @@
+<h1>Task Details</h1>
+<div id='task_details'>
+  <h3><%= @task.name %></h3>
+  <p><%= @task.description %></p>
+  <% unless @task.completed_at.nil? %>
+    <p>Completed on: <%= @task.completed_at %></p>
+  <% else %>
+  <h3>This task is not complete yet. Get to it!</h3>
+  <% end %>
+</div>
+
+<p id='back_button'><%= link_to 'back to Task List', '/tasks' %></p>
