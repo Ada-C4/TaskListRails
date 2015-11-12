@@ -19,10 +19,15 @@ class TasksController < ApplicationController
     redirect_to "/"
   end
 
+  def destroy
+    Task.destroy(params[:id])
+    redirect_to "/"
+  end
+
   private
 
   def task_params
     params.permit(task:[:name, :description, :completed_date])
   end
-  
+
 end
