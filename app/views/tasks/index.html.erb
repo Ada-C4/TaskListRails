@@ -1,11 +1,12 @@
 <h1> Do It To It </h1>
-<hr />
 
 <%= link_to "Create new task", "/tasks/new" %>
 
+<hr />
+
 <div class="list">
   <% @tasks.each do |task| %>
-  <div class="task"><%= link_to task.name, "/tasks/#{task.id}" %></div>
-    <%= button_to "Delete", { action: :destroy, id: task.id }, method: :delete, data: { confirm: 'Are you sure?' } %>
-  <% end %>
+  <div class="task"><%= link_to task.name, "/tasks/#{task.id}" %>
+<%= button_to "Delete", { action: :destroy, id: task.id }, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+<% end %>
 </div>

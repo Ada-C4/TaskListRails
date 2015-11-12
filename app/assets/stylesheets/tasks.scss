@@ -29,10 +29,17 @@ hr {
 }
 
 .task {
-  margin:auto;
+  margin: auto;
   text-align: center;
   font-size: 18px;
   color: #671713;
+  width: 400px;
+  background-color: #ffffff;
+  opacity: 0.6;
+  border-radius: 5px 5px 5px 5px;
+  padding: 10px;
+  margin: 15px;
+  word-wrap: break-word;
 }
 
 .list {
