@@ -3,7 +3,8 @@
   <ul>
     <% @tasks.each do |task| %>
     <li>
-    <a href="/tasks/<%= task.id %>"><%= task.name %>: <%= task.description %></a>
+    <a href="/tasks/<%= task.id %>"><%= task.name %></a>
+     <p class="description"><%= task.description %></p>
     </li>
     <% end %>
   </ul>
