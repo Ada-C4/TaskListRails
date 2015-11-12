@@ -22,21 +22,23 @@
  }
 
  header, footer {
-   border-width: 5;
+   /*border-width: 5;
    border-style: solid;
-   border-color: #1E1902;
-   background-color: #367237;
+   border-color: #1E1902;*/
+   /*background-color: #367237;*/
    text-align: center;
  }
 
  section {
    margin: 20 0;
-   background-color: #6ABA50;
+   /*background-color: #6ABA50;*/
  }
 
  body {
-   background-color: #367237;
-   width: 600;
+   background-image: url('/assets/background.jpg');
+   /*background-color: #367237;*/
+   background-repeat: no-repeat;
+   background-size: 950px, 950px;
  }
 
  /*.button {
@@ -101,4 +103,8 @@
    text-decoration: underline;
    font-size: 12px;
    color: #1E1902;
+ }
+
+ .button_to {
+   display: inline-block;
  }
