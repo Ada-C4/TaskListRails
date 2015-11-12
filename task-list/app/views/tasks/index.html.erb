@@ -1,7 +1,11 @@
+<a href="tasks/new">Add a new Task</a>
 <div class="tasks">
   <ul>
     <% @tasks.each do |task| %>
-      <li> <%= link_to "Task: #{task.name}", "/tasks/#{task.id}" %></p>
+      <li> <%= link_to "Task: #{task.name}", "/tasks/#{task.id}" %>
+        <%= button_to "delete", {:controller => :tasks,
+      :action => 'destroy', :id => task.id }, :method => :delete %>
+
     <% end %>
   </ul>
 </div>
