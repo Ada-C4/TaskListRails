@@ -1,0 +1,36 @@
+<header>
+  <h1 id="page-title" class="title">Details</h1>
+</header>
+
+<div class="task-detail">
+  <p class="task-name">
+    <%= @task.name.upcase %>
+  </p>
+  <p class="task-description">
+    <%= @task.description %>
+  </p>
+  <p class="task-complete-date">
+    <% if !@task.complete.nil? %>
+    <span>Completed on: </span><%= @task.complete.strftime("%D") %>
+    <% end %>
+  </p>
+</div>
+
+<div class="button-container">
+  <a id="gray-button" class="circle-button" href="/">
+    <p class="circle-button-title">OK</p>
+    <span>Go back</span>
+  </a>
+
+  <!--How do I fix the indentation without getting %20s in the URL?  -->
+  <a class="circle-button" href="/tasks/
+  <% if @task.id + 1 == @num_tasks %>
+<%= 1 %>
+  <% else %>
+<%= (@task.id + 1) %>
+  <% end %>
+  ">
+    <p class="circle-button-title">HMM...</p>
+    <span>What's next?</span>
+  </a>
+</div>

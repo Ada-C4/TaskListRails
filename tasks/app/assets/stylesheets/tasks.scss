@@ -1,3 +1,168 @@
-// Place all the styles related to the tasks controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  // font-family: 'Open Sans', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  background-color: #FFFFFF;
+  // background-image: image-url("angle.png");
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-attachment: fixed;
+  // background-position: right bottom;
+}
+
+// header {
+//   width: 300px;
+//   // height: 100px;
+//   // background-color: #ffffff;
+//   // opacity: 0.7;
+//   margin: auto;
+// }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid;
+  border-color: #747070;
+  text-align: center;
+  margin: auto;
+  width: 700px;
+  padding: 0px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+a {
+  text-decoration: none;
+  margin:auto;
+  text-align: center;
+  font-size: 18px;
+  color: black;
+}
+
+a:hover {color: #747070}
+
+h1 {
+  text-align: center;
+  font-family: 'Petit Formal Script', cursive;
+  color: #000000;
+  font-size: 40px;
+  margin: 5px auto;
+  width: 300px;
+  border: 5px;
+}
+
+.list {
+  margin: 40px auto;
+  width: 450px;
+  border-color: #E7E5E1;
+  border-style: groove;
+  border-width: thin;
+}
+
+.full-task {
+  display: block;
+  opacity: 0.6;
+  border-radius: 5px 5px 5px 5px;
+  padding: 10px;
+  margin: 15px;
+  word-wrap: break-word;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+h2 {
+  text-align: center;
+}
+
+.inner-box {
+  margin: 5px;
+  background-color: #ffffff;
+}
+
+.outer-box {
+  width: 300px;
+  text-align: center;
+  margin: auto;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #ffffff;
+  opacity: 0.7;
+}
+
+.gray-box {
+  background-color: #E7E5E1;
+  display: block;
+  // opacity: 0.6;
+  // border-radius: 5px 5px 5px 5px;
+  padding: 10px;
+  // margin: 15px;
+  word-wrap: break-word;
+}
+
+.white-box {
+  background-color: #ffffff;
+  display: block;
+  // opacity: 0.6;
+  // border-radius: 5px 5px 5px 5px;
+  padding: 10px;
+  // margin: 15px;
+  word-wrap: break-word;
+}
+
+.title {
+  font-family: 'Petit Formal Script', cursive;
+  font-size: 40px;
+  text-align: center;
+  color: #ff5363;
+  height: 75px;
+}
+
+#page-title {
+  margin-top: 40px;
+}
+
+.task-detail {
+  text-align: center;
+  // border-radius: 50%;
+  // display: inline-block;
+  // border: 1px solid #000000;
+}
+
+.task-name {
+  font-size: 48px;
+  margin-top: 20px;
+}
+
+.task-description {
+  font-size: 24px;
+}
+
+.circle-button-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.circle-button {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  display: inline-block;
+  border-color: #000000;
+  border-style: solid;
+  border-width: 1px;
+  text-align: center;
+  padding-top: 10px;
+  margin: 10px;
+}
+
+.button-container {
+  margin: auto;
+  width: 320px;
+}
+
+#gray-button {
+  background-color: #E7E5E1;
+}
