@@ -1,0 +1,19 @@
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <h1>Task List</h1>
+    <div class="center">
+      <% @tasks.each do |task| %>
+        <p>
+          <% if !task.completed.nil?  %>
+            <a href="/tasks/<%= task.id %>"><%= task.name %></a>
+          <% else %>
+            <a href="/tasks/<%= task.id %>" class="strikethrough"><%= task.name %></a>
+          <% end %>
+        </p>
+      <% end %>
+      </div>
+</body>
+</html>
