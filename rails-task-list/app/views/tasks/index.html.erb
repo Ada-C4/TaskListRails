@@ -1,0 +1,11 @@
+<h1>Tasks</h1>
+
+<ul>
+  <% @tasks.each do |task| %>
+  <div class="list_box">
+  <li>
+    <%= link_to task.name, "/#{task.id}"  %>
+  </li>
+  </div>
+  <% end %>
+</ul>

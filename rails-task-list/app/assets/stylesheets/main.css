@@ -1,0 +1,86 @@
+h1 {
+  font-family: 'Codystar', cursive;
+  text-align: center;
+  font-size: 60px;
+  letter-spacing: 10px;
+  margin-left: 40px;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.list_box {
+  width: 400px;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  list-style-type: none;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 30px;
+
+}
+
+.list_box:nth-child(10n+1) {
+  background-image: url(hubble_1.jpeg);
+}
+
+.list_box:nth-child(10n+2) {
+  background-image: url(hubble_2.jpeg);
+}
+
+.list_box:nth-child(10n+3) {
+  background-image: url(hubble_2_5.jpeg);
+}
+
+.list_box:nth-child(10n+4) {
+  background-image: url(hubble_3.jpeg);
+}
+
+.list_box:nth-child(10n+5) {
+  background-image: url(hubble_4.jpeg);
+}
+
+.list_box:nth-child(10n+6) {
+  background-image: url(hubble_5.jpeg);
+}
+
+.list_box:nth-child(10n+7) {
+  background-image: url(hubble_6.jpeg);
+}
+
+.list_box:nth-child(10n+8) {
+  background-image: url(hubble_7.jpeg);
+}
+
+.list_box:nth-child(10n+9) {
+  background-image: url(hubble_8.jpeg);
+}
+
+.list_box:nth-child(10n+0) {
+  background-image: url(hubble_9.jpeg);
+}
+
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+a:hover {
+  color: #FFFFFF;
+  background-color: #FF0000;
+}
+
+a:visited:hover {
+  color: #000000;
+  background-color: #FF0000;
+}
+
+p {
+  padding-top: 10px;
+}
