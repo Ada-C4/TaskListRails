@@ -1,0 +1,50 @@
+<!-- <header>
+  <div class="outer-box">
+    <div class="inner-box">
+      <h1>THINGS TO DO</h1>
+    </div>
+  </div>
+</header>
+<hr> -->
+<div class="list">
+  <div class = list-title>
+    List
+  </div>
+  <% gray = true %>
+  <% num = 1 %>
+  <% @tasks.each do |task| %>
+    <% if task.complete.nil? %>
+      <% if gray %>
+        <div class="gray-box">
+          <span><%= num %>    </span><a href="/tasks/<%= task.id %>"><%= task.name.upcase %></a>
+        </div>
+        <% gray = false %>
+        <% num += 1 %>
+      <% else %>
+        <div class="white-box">
+          <span><%= num %>    </span><a href="/tasks/<%= task.id %>"><%= task.name.upcase %></a>
+        </div>
+        <% gray = true %>
+        <% num += 1 %>
+      <% end %>
+    <% end %>
+  <% end %>
+
+<% @tasks.each do |task| %>
+  <% if !task.complete.nil? %>
+    <% if gray %>
+      <div class="gray-box">
+        <span><%= num %>    </span><a class="done" href="/tasks/<%= task.id %>"><%= task.name.upcase %></a>
+      </div>
+      <% gray = false %>
+      <% num += 1 %>
+    <% else %>
+      <div class="white-box">
+        <span><%= num %>    </span><a class="done" href="/tasks/<%= task.id %>"><%= task.name.upcase %></a>
+      </div>
+      <% gray = true %>
+      <% num += 1 %>
+    <% end %>
+  <% end %>
+<% end %>
+</div>
