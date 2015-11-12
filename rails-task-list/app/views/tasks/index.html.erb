@@ -5,6 +5,7 @@
     <div class="list_box">
       <li>
         <%= link_to task.name, "/tasks/#{task.id}"  %>
+        <%= button_to "Delete",  "/tasks/#{task.id}", method: :delete, data: { confirm: "Are you sure you want to delete this task?"}  %>
       </li>
     </div>
   <% end %>
