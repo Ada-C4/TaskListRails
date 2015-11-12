@@ -1,0 +1,7 @@
+<h1> Do It To It </h1>
+<hr />
+<div class="list">
+  <% @tasks.each do |task| %>
+  <div class="task"><%= link_to task.name, "/#{task.id}" %></div>
+  <% end %>
+</div>
