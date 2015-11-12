@@ -1,10 +1,19 @@
 <a href="tasks/new">Add a new Task</a>
-<div class="tasks">
-  <ul>
+<table>
+  <col width="80%">
+  <col width="20%">
+  <tr>
+    <th>Task</th>
+    <th></th>
+  </tr>
     <% @tasks.each do |task| %>
-      <p><li> <%= link_to "Task: #{task.name}", "/tasks/#{task.id}" %></li>
-        <%= button_to "delete", {action: 'destroy', id: task.id }, method: :delete, data: { confirm: "Are you sure?"} %></p>
-
+      <tr>
+        <td>
+          <%= link_to "Task: #{task.name}", "/tasks/#{task.id}" %>
+        </td>
+        <td>
+          <%= button_to "delete", {action: 'destroy', id: task.id }, method: :delete, data: { confirm: "Are you sure?"} %></p>
+        </td>
+      </tr>
     <% end %>
-  </ul>
-</div>
+</table>
