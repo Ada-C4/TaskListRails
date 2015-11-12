@@ -2,14 +2,19 @@ body {
   background-image: url("astrosurfer.png");
   text-align: center;
   background-repeat: no-repeat;
-  background-size: auto;
+  /*background-position: relative;*/
+  background-size: cover;
+  margin: auto;
 }
 
+
 h1 {
-font-family: Megrim;
+font-family: Megrim, sans-serif;
 color: white;
 font-size: 70px;
 font-weight: bolder;
+text-align: center;
+margin: auto;
 }
 
 h2 {
@@ -17,8 +22,33 @@ h2 {
   color: white;
   font-size: 40px;
   font-weight: bolder;
+  text-align: center;
+  margin: auto;
+}
+
+.new {
+  font-family: Megrim, sans-serif;
+  color: white;
+  font-size: 40px;
+  font-weight: bolder;
+  text-align: center;
+  text-decoration: none;
+  border: dashed orange;
+
 }
 a {
+  font-family: Julius Sans One, sans-serif;
+  color: white;
+  font-size: 20px;
+}
+
+legend {
+  font-family: Megrim, sans-serif;
+  color: white;
+  font-size: 40px;
+}
+
+fieldset {
   font-family: Julius Sans One, sans-serif;
   color: white;
   font-size: 20px;
@@ -33,15 +63,19 @@ ul {
   text-align: center;
   line-height: 200%;
   font-weight: bold;
+  text-align: center;
+  margin: auto;
 }
 
 li a {
   color: white;
+  text-align: center;
 }
 
 li {
 color: white;
 font-family: Julius Sans One, sans-serif;
+text-align: center;
 font-size: 20px;
 font-weight: bold;
 

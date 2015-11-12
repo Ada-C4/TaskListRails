@@ -1,0 +1,18 @@
+<link href="tasklist/app/assets/stylesheets/application.css" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Megrim' rel='stylesheet' type='text/css'>
+
+<%= form_for @task do |f| %>
+  <fieldset>
+    <legend> Add a New Task </legend>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br>
+    <%= f.label :descript %>
+    <%= f.text_field :descript %>
+    <br>
+    <%= f.label :date_completed %>
+    <%= f.date_field :date_completed %>
+  </fieldset>
+  <%= f.submit %>
+<% end %>
