@@ -1,0 +1,25 @@
+<h1>Here is One Task</h1>
+
+<table class = "table table-hover">
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Completed</th>
+  </tr>
+  <tr>
+      <td><%= @task.name %></td>
+      <td><% if @task.description == "" %>
+        none
+      <% else %>
+      <%= @task.description %>
+      <% end %></td>
+      <td>
+        <% if @task.done_date.nil? %>
+          not complete
+        <% else %>
+          completed on <%= @task.done_date %>
+        <% end %>
+      </td>
+  </tr>
+
+</table>

@@ -1,0 +1,12 @@
+<h1>Here are the tasks</h1>
+
+<table class = "table table-hover">
+  <tr>
+    <th>
+      Task
+    </th>
+  </tr>
+  <% @tasks.each do |task| %>
+    <tr><td><%= link_to "#{task.name}", "/tasks/#{task.id}" %></td></tr>
+  <% end %>
+</table>
