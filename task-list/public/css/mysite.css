@@ -1,0 +1,45 @@
+body {
+  background-image: url(http://img05.deviantart.net/0d04/i/2008/126/a/3/crumpled_graph_paper_texture_by_madragonn.jpg);
+  background-size: cover;
+  width: 960px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Rock Salt', cursive;}
+
+
+
+h1 {
+  padding: 10px;
+  margin: 10px;
+  font-size: 30pt;
+}
+
+fieldset {
+  padding: 50px;
+  margin: 10px;
+}
+
+fieldset input {
+  padding: 0 40px;
+  margin: 20px;
+}
+
+a:link, a:visited{
+  background-color: yellow;
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {color: #6fddbf}
+ol {
+
+  padding: 50px;
+  margin: 10px;
+  text-align: left;
+  font-size: 20pt;
+  font-weight: 600;
+}
+
+li {
+  padding: 10px 0;
+}

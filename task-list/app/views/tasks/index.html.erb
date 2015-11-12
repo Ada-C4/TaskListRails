@@ -1,0 +1,12 @@
+<h1> Here are your tasks! </h1>
+<h1> We are going to get so much done! </h1>
+
+<%= image_tag "shia_squat copy.gif", width: "500", height: "auto" %>
+
+<ol>
+  <% @tasks.each do |task| %>
+    <li><a href=<%=task.id%>><%= task.name %></a>: <%= task.description%>
+      (<%= task.completed%>)
+    </li>
+  <%end%>
+</ol>
