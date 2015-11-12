@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get '/' => 'tasks#index'
   get 'tasks/' => 'tasks#index'
   post 'tasks/' => 'tasks#create'
+  delete 'tasks/:id' => 'tasks#destroy'
   get 'tasks/new' => 'tasks#new'
   get 'tasks/:id' => 'tasks#show'
 
