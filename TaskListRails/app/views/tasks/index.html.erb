@@ -2,7 +2,7 @@
   <ul>
     <% @tasks.each do |task| %>
       <li><%= task.name %> <%= link_to "Show", "/tasks/#{task.id}" %>
-          <%= button_to "Delete", "/tasks/#{task.id}", :method => :delete,
+          <%= link_to "Delete", "/tasks/#{task.id}", :method => :delete,
           :onclick => "return confirm('Are you sure?')"%></li>
     <% end %>
     <%= link_to "Add a New Task", "tasks/new" %>
