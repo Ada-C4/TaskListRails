@@ -5,8 +5,7 @@ class TasksController < ApplicationController
 
   def show
     id = params[:id]
-    task = Task.find(id)
-    @task_info_hash = task.attributes
+    @task = Task.find(id)
   end
 
   def welcome

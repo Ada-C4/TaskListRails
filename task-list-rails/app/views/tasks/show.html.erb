@@ -6,13 +6,49 @@
         </tr>
       </thead>
       <tbody>
-        <% @task_info_hash.each do |key, value| %>
-          <% if !value.nil? && value != "" %>
-            <tr>
-              <td id="attribute"><strong><%= key %>:</strong></td>
-              <td><%= value %></td>
-            </tr>
+        <tr>
+          <td id="attribute">
+            <strong>name:</strong>
+          </td>
+          <td>
+            <%= @task.name %>
+          </td>
+        </tr>
+        <tr>
+          <td id="attribute">
+            <strong>description:</strong>
+          </td>
+          <td>
+            <%= @task.description %>
+          </td>
+        </tr>
+        <tr>
+          <td id="attribute">
+            <strong>date created:</strong>
+          </td>
+          <td>
+            <%= @task.created_at.to_date %>
+          </td>
+        </tr>
+        <tr>
+          <td id="attribute">
+            <strong>completed?</strong>
+          </td>
+          <% if @task.completed %>
+            <td>yes</td>
+          <% else %>
+            <td>no</td>
           <% end %>
+        </tr>
+        <% if @task.completed == true && !@task.completed_at.nil? %>
+          <tr>
+            <td id="attribute">
+              <strong>date completed:</strong>
+            </td>
+            <td>
+              <%= "#{@task.completed_at.to_date}" %>
+            </td>
+          </tr>
         <% end %>
         <tr>
           <td colspan="2" id="table_nav">
