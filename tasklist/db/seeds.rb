@@ -15,11 +15,11 @@ tasks = [
   { name: "Go to Lunch", descript: "eat", date_completed: random_time },
   { name: "Go to Second Lunch", descript: "eat more" },
   { name: "Play Video Games", descript: "Super Mario", date_completed: random_time },
-  { name: "High Five Somebody You Don't Know", description: "Everyone", date_completed: random_time },
+  { name: "High Five Somebody You Don't Know", descript: "Everyone", date_completed: random_time },
   { name: "Plant Flowers", descript: "Magnolias!", date_completed: random_time },
   { name: "Call Mom", descript: "Hi MOM" },
   { name: "She worries, you know.", descript: "Yup" },
-  { name: "Nap.", descript: "", date_completed: random_time }
+  { name: "Nap", descript: "ZZZZZZZZ", date_completed: random_time }
 ]
 
 tasks.each do |task|

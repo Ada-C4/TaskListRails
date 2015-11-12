@@ -1,9 +1,8 @@
 body {
   background-image: url("astrosurfer.png");
   text-align: center;
-  background-size: contain;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto;
 }
 
 h1 {
@@ -14,17 +13,26 @@ font-weight: bolder;
 }
 
 h2 {
-  font-family: Julius Sans One;
+  font-family: Julius Sans One, sans-serif;
   color: white;
   font-size: 40px;
   font-weight: bolder;
+}
+a {
+  font-family: Julius Sans One, sans-serif;
+  color: white;
+  font-size: 20px;
+}
 
+a:hover {
+  color: orange;
 }
 
 ul {
   list-style-type: none;
-  text-align: inherit;
+  text-align: center;
   line-height: 200%;
+  font-weight: bold;
 }
 
 li a {
@@ -33,7 +41,7 @@ li a {
 
 li {
 color: white;
-font-family: Julius Sans One;
+font-family: Julius Sans One, sans-serif;
 font-size: 20px;
 font-weight: bold;
 
