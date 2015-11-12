@@ -1,5 +1,12 @@
-<h1>My Tasks</h1>
-<table>
+<div id="table">
+  <table>
+    <thead>
+      <tr>
+        <td colspan="2" id="title">
+          My Tasks
+        </td>
+      </tr>
+    </thead>
     <tbody>
       <% @tasks.each do |task| %>
       <tr>
@@ -8,4 +15,5 @@
       </tr>
     <% end %>
     </tbody>
-</table>
+  </table>
+</div>
