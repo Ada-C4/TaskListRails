@@ -1,0 +1,19 @@
+<h1>note to self<br>must do:</h1>
+<table align="center">
+  <% @tasks.each do |task| %>
+    <tr>
+      <td>
+        <% if task.complete == true %>
+          <a id=complete href="/task_list/<%= task.name %>"> <%= task.name %> </a>
+        <% else %>
+          <a id=incomplete href="/task_list/<%= task.name %>"> <%= task.name %> </a>
+        <% end %>
+      </td>
+    </tr>
+  <% end %>
+    <tr>
+      <td>
+        <a href="/task_list/new">+ add a task</a>
+      </td>
+    </tr>
+</table>

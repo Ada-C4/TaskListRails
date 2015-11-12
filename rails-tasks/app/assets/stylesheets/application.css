@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+ * {
+   /*background-image: url(notemockup6.jpg);*/
+  }
+
+
+ body {
+   text-align: center;
+ }
