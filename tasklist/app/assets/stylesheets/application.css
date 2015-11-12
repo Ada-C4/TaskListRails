@@ -1,15 +1,48 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+body {
+  background-image: url("astrosurfer.png");
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+h1 {
+font-family: Megrim;
+color: white;
+font-size: 70px;
+font-weight: bolder;
+}
+
+h2 {
+  font-family: Julius Sans One, sans-serif;
+  color: white;
+  font-size: 40px;
+  font-weight: bolder;
+}
+a {
+  font-family: Julius Sans One, sans-serif;
+  color: white;
+  font-size: 20px;
+}
+
+a:hover {
+  color: orange;
+}
+
+ul {
+  list-style-type: none;
+  text-align: center;
+  line-height: 200%;
+  font-weight: bold;
+}
+
+li a {
+  color: white;
+}
+
+li {
+color: white;
+font-family: Julius Sans One, sans-serif;
+font-size: 20px;
+font-weight: bold;
+
+}
