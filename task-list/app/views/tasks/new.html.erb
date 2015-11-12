@@ -2,7 +2,22 @@
   🔅🔅🔆 Task Organizer 🔆🔅🔅
 </header>
 <h1>New Task</h1>
+<%= form_for @task do |f| %>
+  <fieldset>
+    <legend>Task Details</legend>
 
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+
+    <!-- <%= f.label :comp_date %>
+    <%= f.datetime_field :comp_date %> -->
+  </fieldset>
+  <br>
+  <%= f.submit %>
+<% end %>
 <footer>
   🔅🔅🔆🔆🔅🔅
 </footer>
