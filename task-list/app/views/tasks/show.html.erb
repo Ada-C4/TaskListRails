@@ -1,0 +1,19 @@
+<div class="task-info">
+  <p>
+    <span>Task:</span> <%= @task.name %>
+  </p>
+  <% unless @task.description.empty? %>
+  <p>
+    <span>Description:</span> <%= @task.description %>
+  </p>
+  <% end %>
+  <p>
+    <span>Status:</span> <%= @status %>
+  </p>
+  <% unless @task.completed_at.nil? %>
+  <p>
+    <span>Completion Date:</span> <%= @task.completed_at.to_date %>
+  </p>
+  <% end %>
+  <%= image_tag "https://33.media.tumblr.com/8092a0b1f2aa7d8cf7fc8d58f7f36155/tumblr_n4fkyi9suN1qdwrtpo1_400.gif" %>
+</div>
