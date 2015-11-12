@@ -1,10 +1,14 @@
+def random_time
+  Time.at(rand * Time.now.to_i)
+end
+
 tasks = [
-  { name: "Eat Lunch", description: "grilled cheese. Butter bread this time", completed: false },
-  { name: "Hike", description: "Discovery Park at noon", completed: false },
-  { name: "sleep", description: "at night", completed: false },
-  { name: "re-read notes", description: "rails, rails, rails", completed: false },
-  { name: "get invited to dinner at ricky's or emily's", description: "food", completed: false },
-  { name: "thanksgiving!", description: "Evan, Ohio, food", completed: false }
+  { name: "Eat Lunch", description: "grilled cheese. Butter bread this time", completed: false, completed_date: random_time },
+  { name: "Hike", description: "Discovery Park at noon", completed: true, completed_date: random_time},
+  { name: "sleep", description: "at night", completed: true, completed_date: random_time },
+  { name: "re-read notes", description: "rails, rails, rails", completed: false, completed_date: random_time },
+  { name: "get invited to dinner at ricky's or emily's", description: "food", completed: false, completed_date: random_time },
+  { name: "thanksgiving!", description: "Evan, Ohio, food", completed: false, completed_date: random_time }
 ]
 
 tasks.each do |task|
