@@ -111,10 +111,16 @@ h2 {
   word-wrap: break-word;
 }
 
-.list-title {
+.title {
   font-family: 'Petit Formal Script', cursive;
   font-size: 40px;
   text-align: center;
+  color: #ff5363;
+  height: 75px;
+}
+
+#page-title {
+  margin-top: 40px;
 }
 
 .task-detail {
@@ -126,6 +132,7 @@ h2 {
 
 .task-name {
   font-size: 48px;
+  margin-top: 20px;
 }
 
 .task-description {
