@@ -18,7 +18,7 @@
 
  * {
    font-family: Gloria Hallelujah, sans-serif;
-   color: #1E1902;
+   color: #405421;
  }
 
  header, footer {
@@ -57,32 +57,16 @@
  }*/
 
  ul {
-   text-align: left;
- }
-
- /*fieldset {
-   border-style: none;
-   font-size:20px;
- }
-
- input[type="text"] {
-   height:30;
- }
-
- input[type="text"], textarea {
-   background-color:#888855;
-   border:1px solid #875424;
-   width: 250;
- }
-
- textarea {
-   vertical-align: top;
+   list-style-type: none;
+   text-align: center;
+   margin-top: 50px;
+   margin-bottom: 0px;
  }
 
  ::-webkit-input-placeholder {
    color: #1E1902;
    font-size:12px;
- }*/
+ }
 
  table {
    padding-bottom: 20;
@@ -95,16 +79,31 @@
  }
 
  td {
-   padding: 0 50;
    text-align: center;
+ }
+
+ th, td {
+   padding-left: 50px;
  }
 
  a {
    text-decoration: underline;
    font-size: 12px;
-   color: #1E1902;
+   color: #405421;
  }
 
  .button_to {
    display: inline-block;
+ }
+
+ .delete_button, .submit {
+   background-color: #E8F7D0;
+   font-size: 8px;
+   border-radius: 5px;
+   color: #405421;
+ }
+
+ fieldset{
+   margin-top: 150px;
+   width: 800px;
  }
