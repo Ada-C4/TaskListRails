@@ -1,17 +1,14 @@
 <link href="tasklist/app/assets/stylesheets/application.css" rel="stylesheet">
 <link href='https://fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Megrim' rel='stylesheet' type='text/css'>
+
 <html>
   <body>
-    <h1> What's Da Happs </h1>
-    <ul>
-      <% @tasks.each do |task| %>
-      <li> <a href="./tasks/<%= task.id %>"><br><%= task.name %></a><br>
-      <% if !task.date_completed.nil? %>
-      STATUS: DONE, DONE, and DONE!
-      <% end %>
-      </li>
-      <% end %>
-    </ul>
+    <h1><%= @task.name %></h1>
+    <h2><%= @task.descript %></h2>
+    <h2>COMPLETED ON:</h2>
+    <h2><%= @task.date_completed %> </h2>
+
+    <p><a href= "/tasks"> BACK TO TASK LIST</a> </p>
   </body>
 </html>
