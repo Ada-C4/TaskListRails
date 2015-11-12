@@ -28,6 +28,12 @@ class TasksController < ApplicationController
     redirect_to "/"
   end
 
+  def destroy
+    to_delete = Task.where(task_params[:name])
+    Task.destroy(to_delete[0].id)
+    redirect_to "/"
+  end
+
   private
 
   def task_params

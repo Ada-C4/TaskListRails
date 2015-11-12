@@ -6,9 +6,9 @@
     <tr>
       <td>
         <% if task.complete == true %>
-          <a class="complete" href="/tasks/<%= task.name %>"> <%= task.name %> </a>
+          <%= button_to "✘", "/tasks/#{task.name}", :method => :delete, data: { confirm: "delete #{task.name}?" } %>   <a class="complete" href="/tasks/<%= task.name %>"> <%= task.name %> </a>
         <% else %>
-          <a class="incomplete" href="/tasks/<%= task.name %>"> <%= task.name %> </a>
+          <%= button_to "✘", "/tasks/#{task.name}", :method => :delete, data: { confirm: "delete #{task.name}?" } %>   <a class="incomplete" href="/tasks/<%= task.name %>"> <%= task.name %> </a>
         <% end %>
       </td>
     </tr>
