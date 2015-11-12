@@ -2,7 +2,7 @@ class TasksController < ApplicationController
 
   def create
     Task.create(task_params[:task])
-    redirect_to "/tasks/"
+    redirect_to action: :index
   end
 
   def destroy
