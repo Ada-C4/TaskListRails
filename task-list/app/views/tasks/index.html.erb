@@ -1,6 +1,11 @@
 <div class="page_element">
 <h1>Task List</h1>
 
+<nav>
+  <%= link_to "New Task", "/tasks/new" %>
+
+</nav>
+
   <table>
     <thead>
       <tr>
@@ -26,13 +31,13 @@
         <td class="bigger_checkbox">
           <% if task.completed_date.nil? %>
             ☐
-            <% @class = "incomplete" %>
+            <% strike = "incomplete" %>
           <% else %>
             ☑
-            <% @class = "complete" %>
+            <% strike = "complete" %>
           <% end %>
         </td>
-        <td class="<%= @class %>">
+        <td class=<%= strike %>>
           <%= link_to task.name.capitalize, "/tasks/#{task.id}" %>
         </td>
         <td>
