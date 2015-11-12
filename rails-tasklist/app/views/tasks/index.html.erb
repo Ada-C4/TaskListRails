@@ -12,31 +12,33 @@
           task
         </th>
         <th>
-          description
-        </th>
-        <th>
           completed
         </th>
       </tr>
       <% @tasks.each do |task| %>
         <tr>
           <td>
-            <%= link_to "show", "/tasks/#{task.id}" %>
+            <%= link_to "show", "/tasks/#{task.id}", class: "btn btn-default" %>
           </td>
           <td>
-            <%= button_to "delete", "tasks/#{task.id}", method: :delete %>
+            <%= button_to "delete", "tasks/#{task.id}", method: :delete, class: "btn btn-default", data: { confirm: 'Are you sure?' } %>
             <!-- onclick="return confirm('Are you sure?')" -->
           </td>
          <td>
           	<div><%= task.name %></div>
          </td>
          <td>
-          	<div><% if task.description == "" %><%= "n/a" %><% end %><%= task.description %></div>
-         </td>
-         <td>
-          	<div><% if task.completed_at.class == NilClass %><%= "in progress :)" %><% end %><%= task.completed_at %></div>
+           <div>
+             <% if task.completed_at.class == NilClass %>
+                <img class="nocheckmark" src="/assets/white.png" alt="no checkmark"/>
+              <% else %>
+                <img class="checkmark" src="/assets/checkmark3.png" alt="checkmark"/>
+              <% end %>
+            </div>
+          	<!-- <div><% if task.completed_at.class == NilClass %><%= "in progress :)" %><% end %><%= task.completed_at %></div> -->
          </td>
        </tr>
       <% end %>
     </table>
-    <%= link_to "add a task", "/tasks/new" %>
+    <a class="btn btn-default" href="/tasks/new"><img src="/assets/edit.png" class = "icon">Add a task here</a>
+</div>

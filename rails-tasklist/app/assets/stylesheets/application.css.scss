@@ -25,6 +25,23 @@ h1 {
   text-align: center;
 }
 
+body {
+ margin: 0;
+ background-image: url('assets/wood.png');
+ background-size: 1440px 800px;
+ background-repeat:no-repeat;
+ display: compact;
+
+ }
+// body {
+//   margin: 0;
+//   background: url('assets/wood.png') no-repeat center center fixed;
+//   -webkit-background-size: cover;
+//   -moz-background-size: cover;
+//   -o-background-size: cover;
+//   background-size: cover;
+// }
+
 
 // #add_task {
 //   font-family: Playfair Display;
@@ -54,23 +71,23 @@ h1 {
 //   padding-left: 70px;
 // }
 //
-// .checkmark {
-//   height: 20px;
-//   width: 20px;
-//   margin-right: 20px;
-//   margin-left: 20px;
-//   display: inline-block;
-//   vertical-align: middle;
-// }
-//
-// .nocheckmark {
-//   height: 20px;
-//   width: 20px;
-//   margin-right: 20px;
-//   margin-left: 20px;
-//   display: inline-block;
-//   vertical-align: middle;
-// }
+.checkmark {
+  height: 20px;
+  width: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.nocheckmark {
+  height: 20px;
+  width: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
 //
 // td {
 //   display: inline-block;
