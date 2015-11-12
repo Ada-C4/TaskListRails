@@ -3,10 +3,10 @@
   <ul>
     <% @tasks.each do |task| %>
     <li><a href='/tasks/<%= task.id %>'><%= task.name %></a>
+      <%= link_to 'Destroy',  { action: :destroy, id: task.id }, method: :delete, data: { confirm: 'Are you sure?' } %>
     </li>
     <% end %>
   </ul>
 
-  <%= link_to "Create a Task", "/tasks/new" %>
-  <%= link_to "Remove a Task", "/tasks/remove" %>
+  <%= link_to "Back to List", "/tasks/index" %>
 </section>

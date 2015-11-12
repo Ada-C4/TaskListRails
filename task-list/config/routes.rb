@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   root 'welcome#index'
   get 'tasks/' => 'tasks#index'
   get 'tasks/new' => 'tasks#new'
+  get 'tasks/remove' => 'tasks#remove'
+  delete 'tasks/:id' => 'tasks#destroy'
   get 'tasks/:id' => 'tasks#show'
   post 'tasks/' => 'tasks#create'
 

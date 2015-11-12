@@ -5,12 +5,22 @@ class TasksController < ApplicationController
     redirect_to "/tasks/"
   end
 
+  def destroy
+    @task = Task.find(params[:id])
+    @task.destroy
+    redirect_to action: :index
+  end
+
   def index
     @tasks = Task.all
   end
 
   def new
     @task = Task.new
+  end
+
+  def remove
+    @tasks = Task.all
   end
 
   def show
