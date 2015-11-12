@@ -16,6 +16,12 @@ class TasksController < ApplicationController
     @task = Task.create(task_params)
     redirect_to "/"
   end
+  def destroy
+    id = params[:id]
+    @task = Task.find(id)
+    @task.delete
+    redirect_to "/"
+  end
   def task_params
     params.require(:task).permit(:name, :description, :completed_at)
   end
