@@ -7,8 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+    <a href="/">All Tasks</a>
+  </header>
+  <h1> <%= @title %> </h1>
 
 <%= yield %>
-
+<footer>
+Created by  Tamar Hershenbaum &copy; <%= Time.now.year %>
+</footer>
 </body>
 </html>

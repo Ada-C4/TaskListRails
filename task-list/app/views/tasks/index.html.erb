@@ -1,1 +1,7 @@
-<h1>Hey</h1>
+<div class="tasks">
+  <ul>
+    <% @tasks.each do |task| %>
+      <li> <%= link_to "Task: #{task.name}", "/tasks/#{task.id}" %></p>
+    <% end %>
+  </ul>
+</div>
