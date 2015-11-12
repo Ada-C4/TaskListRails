@@ -29,8 +29,6 @@ This wave is where we will introduce the view layer where we begin interacting w
 - All markup in all views should have semantic relevance.
 - Add some basic styles to your task list.
 
-<!--  
-
 ## Wave 2
 In this wave we will add the first set of user interactivity and persistence.
 
@@ -43,6 +41,7 @@ In this wave we will add the first set of user interactivity and persistence.
     1. Ask the user to confirm that they definitely want to delete the task.
     1. Delete the task from the database and redirect the user back to the list of remaining tasks
 
+<!--
 ## Wave 3
 In this wave we will extend the interactivity with users, allowing them to edit existing tasks in a couple of different ways. As always, follow RESTful conventions when implementing these features.
 
