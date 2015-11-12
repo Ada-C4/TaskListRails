@@ -61,7 +61,22 @@ form {
   padding: 0;
 }
 
+fieldset {
+  font-family: 'Rock Salt', cursive;
+  color: #FBFBFB;
+}
+
 #add_new {
   margin-top: 20px;
   font-size: 1.5em;
+}
+
+.new_button {
+  margin-left: 20px;
+  font-family: 'Rock Salt', cursive;
+  color: #FBFBFB;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  font-weight: bold;
 }
