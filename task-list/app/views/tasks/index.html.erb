@@ -6,10 +6,9 @@
 <ol>
   <% @tasks.each do |task| %>
     <li><a href=<%=task.id%>><%= task.name %></a>: <%= task.description%>
-    <%= button_to "Delete Task", { action: "delete", id: task.id },
-                                    method: :delete, data: { confirm: "Are you sure?" } %>
+    <%= button_to "Delete Task", { action: :destroy, id: task.id}, method: :delete, data: { confirm: "Are you sure that you want to delete this?" } %>
       <%= task.completed%>
     </li>
   <%end%>
 </ol>
-<%= link_to "Add a new task", "new" %>
+<%= link_to "Add a new task", "tasks/new" %>

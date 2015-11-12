@@ -8,8 +8,8 @@ Rails.application.routes.draw do
 
   get 'tasks/:id' => 'tasks#show'
 
-  delete 'tasks/:id' => 'tasks#delete'
-  
+  delete 'tasks/:id' => 'tasks#destroy'
+
   post 'tasks' => 'tasks#create'
 
   # The priority is based upon order of creation: first created -> highest priority.
