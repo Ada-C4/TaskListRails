@@ -1,0 +1,30 @@
+<table align="center">
+  <thead>
+    <tr>
+      <th>
+        Task
+      </th>
+      <th>
+        Done?
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <% if @task.description == nil || @task.description == "" %>
+          <%= @task.name %>
+        <% else %>
+          <%= @task.name %>: <%= @task.description %>
+        <% end %>
+      </td>
+      <td>
+        <% if @task.completed_at == nil %>
+          <input type="checkbox" name="completed[]" value="incomplete">
+        <% else %>
+          <%= @task.completed_at %>
+        <% end %>
+      </td>
+    </tr>
+  </tbody>
+</table>

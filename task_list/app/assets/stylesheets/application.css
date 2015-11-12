@@ -13,3 +13,92 @@
  *= require_tree .
  *= require_self
  */
+
+ @import url('https://fonts.googleapis.com/css?family=Gloria Hallelujah|sans-serif');
+
+ * {
+   font-family: Gloria Hallelujah, sans-serif;
+   color: #1E1902;
+ }
+
+ header, footer {
+   border-width: 5;
+   border-style: solid;
+   border-color: #1E1902;
+   background-color: #367237;
+   text-align: center;
+ }
+
+ section {
+   margin: 20 0;
+   background-color: #6ABA50;
+ }
+
+ body {
+   background-color: #367237;
+   width: 600;
+ }
+
+ /*.button {
+ 	background-color:#888855;
+ 	border-radius:8px;
+ 	border:3px solid #875424;
+ 	display: inline-block;
+   color: #1E1902;
+   font-size:17px;
+ 	padding:6px 10px;
+ 	text-decoration:none;
+ }
+
+ .button:hover {
+ 	background-color:#6F7F4F;
+ }*/
+
+ ul {
+   text-align: left;
+ }
+
+ /*fieldset {
+   border-style: none;
+   font-size:20px;
+ }
+
+ input[type="text"] {
+   height:30;
+ }
+
+ input[type="text"], textarea {
+   background-color:#888855;
+   border:1px solid #875424;
+   width: 250;
+ }
+
+ textarea {
+   vertical-align: top;
+ }
+
+ ::-webkit-input-placeholder {
+   color: #1E1902;
+   font-size:12px;
+ }*/
+
+ table {
+   padding-bottom: 20;
+   font-size: 12px;
+ }
+
+ th {
+   font-size: 20px;
+   text-decoration: underline;
+ }
+
+ td {
+   padding: 0 50;
+   text-align: center;
+ }
+
+ a {
+   text-decoration: underline;
+   font-size: 12px;
+   color: #1E1902;
+ }
