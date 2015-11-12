@@ -10,7 +10,16 @@ h1 {
 
 li {
   color:yellow;
+  display:inline-block;
 }
+
+.button_to {
+  color: green;
+  margin-left: 20px;
+  float: left;
+  display:inline-block;
+}
+
 
 footer {
   color: green;
