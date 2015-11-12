@@ -20,4 +20,8 @@ class TasksController < ApplicationController
     end
   end
 
+  def new
+
+  end
+
 end
