@@ -11,4 +11,8 @@ class TasksController < ApplicationController
     @title = "Task # #{id}"
   end
 
+  def new
+    @task = Task.new
+  end
+
 end
