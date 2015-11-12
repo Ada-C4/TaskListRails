@@ -1,1 +1,10 @@
-<h1>I WORK</h1>
+<div class="content">
+  <h1>This took a lot of work. I promise.</h1>
+  <ul>
+    <% @tasks.each do |task| %>
+    <li>
+    <a href="/tasks/<%= task.id %>"><%= task.name %>: <%= task.description %></a>
+    <% end %>
+    </li>
+  </ul>
+</div>
