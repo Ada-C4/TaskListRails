@@ -1,21 +1,9 @@
-<h1>All tasks</h1>
-<div class="container">
-  <ul class="list-inline">
-    <% @tasks.each do |task| %>
-    <li>
-      <%= task.name %>; <%= task.description %>; <%= link_to "Show", "/tasks/#{task.id}" %>
-
-    </li>
-    <% end %>
-  </ul>
-</div>
-
 <div class="container">
   <h1>Task List</h1>
     <table class="table table-hover">
       <tr >
         <th>
-          task view
+          task info
         </th>
         <th id="taskie">
           task
@@ -44,3 +32,5 @@
        </tr>
       <% end %>
     </table>
+
+    <%= link_to "add a task", "/tasks/new" %>

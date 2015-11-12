@@ -1,0 +1,17 @@
+<div>
+  <h1>Add a Task</h1>
+
+  <%= form_for @task do |f| %>
+    <fieldset>
+      <legend> Add Task:</legend>
+      <%=f.label :name %>
+      <%=f.text_field :name %>
+      <br>
+      <%= f.label :description %>
+      <%= f.text_field :description %>
+      <br>
+    </fieldset>
+    <br>
+    <%= f.submit %>
+  <% end %>
+</div>
