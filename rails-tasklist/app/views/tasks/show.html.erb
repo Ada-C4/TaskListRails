@@ -20,8 +20,10 @@
           	<div><% if @task.description == "" %><%= "n/a" %><% end %><%= @task.description %></div>
          </td>
          <td>
-          	<div><% if @task.completed_at.class == NilClass %><%= "in progress :)" %><% end %><%= @task.completed_at %></div>
+          	<div><% if @task.completed_at.nil? %><%= "in progress :)" %><% end %><%= @task.completed_at %></div>
          </td>
        </tr>
     </table>
+    <%= button_to "edit", "/tasks/#{@task.id}/edit", method: :get, class: "btn btn-default" %>
+    <%= link_to "home", "/tasks/", class: "btn btn-default" %>
   </div>
