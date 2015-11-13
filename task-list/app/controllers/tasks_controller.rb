@@ -13,8 +13,7 @@ class TasksController < ApplicationController
   end
 
   def destroy
-    @task = Task.find(params[:id])
-    @task.destroy
+    Task.find(params[:id]).destroy
     redirect_to action: :index
   end
 
