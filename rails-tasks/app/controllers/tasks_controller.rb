@@ -20,7 +20,7 @@ class TasksController < ApplicationController
   end
 
   def new
-    @task = Task.new
+      @task = Task.new
   end
 
   def create
@@ -34,13 +34,26 @@ class TasksController < ApplicationController
     redirect_to "/"
   end
 
-  def update
+  def complete
     task = Task.find_by(name: "#{params[:name]}")
     task.update(completed_date: "#{Time.now}", complete: true)
+    @task_name = task.name
     @description = task.description
     date = task.completed_date
     @completed_date = "#{date.month}/#{date.day}/#{date.year}"
-    binding.pry
+  end
+
+  def edit
+    @task = Task.find_by(name: "#{params[:name]}")
+    @old_name = params[:name]
+    @old_description = @task.description
+  end
+
+  def update
+    @task = Task.find_by(name: params[:name])
+    @old_name = @task.name
+    @old_description = @task.description
+    @task.update(task_params[:task])
   end
 
   private

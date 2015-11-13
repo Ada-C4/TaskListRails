@@ -19,7 +19,7 @@
           <%= button_to "✎", "/tasks/#{task.name}/edit", :method => :get%>
         </td>
         <td>
-          <%= button_to "✔︎", "/tasks/#{task.name}", :method => :put %>
+          <%= button_to "✔︎", "/tasks/#{task.name}/update", :method => :put %>
         </td>
         <td>
           <%= button_to "✘", "/tasks/#{task.name}", :method => :delete, data: { confirm: "delete #{task.name}?" } %>
