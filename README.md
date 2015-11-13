@@ -14,9 +14,9 @@ This project...
     - Each task should include _at least_ a name, a description and an indicator for whether or not it is complete
   - conform to Rails conventions on naming and inflection
 
-Tinker with your Model in the `rails console` in order to ensure you have created your model appropriately. 
+Tinker with your Model in the `rails console` in order to ensure you have created your model appropriately.
 
-<!--    
+
 
 ## Wave 1
 This wave is where we will introduce the view layer where we begin interacting with our application via the browser.
@@ -29,7 +29,7 @@ This wave is where we will introduce the view layer where we begin interacting w
     - The `show` view should include the complete information about the task: name, description, completion status, and completion date.
 - All markup in all views should have semantic relevance.
 - Add some basic styles to your task list.
-  
+
 ## Wave 2
 In this wave we will add the first set of user interactivity and persistence.
 
@@ -41,6 +41,8 @@ In this wave we will add the first set of user interactivity and persistence.
   - On the home page, add a button or link for each task that will, once clicked...
     1. Ask the user to confirm that they definitely want to delete the task.
     1. Delete the task from the database and redirect the user back to the list of remaining tasks
+
+<!--       
 
 ## Wave 3
 In this wave we will extend the interactivity with users, allowing them to edit existing tasks in a couple of different ways. As always, follow RESTful conventions when implementing these features.

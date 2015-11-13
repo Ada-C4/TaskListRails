@@ -8,6 +8,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+  <nav>
+    <%= link_to "Your List", "/" %>  |  <%= link_to "Add a Task", "/tasks/new" %>
+  </nav>
+</header>
 
 <%= yield %>
 
