@@ -55,7 +55,6 @@ a {
   text-align: center;
   font-size: 18px;
   color: black;
-  margin-left: 20px;
 }
 
 a:hover {font-weight: bold}
@@ -69,6 +68,12 @@ a:hover {font-weight: bold}
 
 }
 
-.create_task {
+.new_task_button {
   color: rgb(181, 36, 26);
+  background-color: transparent;
+  margin-left: 40px;
+}
+
+.task {
+  margin: auto;
 }
