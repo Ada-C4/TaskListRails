@@ -147,6 +147,23 @@ input.edit-button {
   text-align: center;
 }
 
+input.complete-button {
+  display: block;
+  background:#4A537E; 
+  padding-top: 7px;
+  margin: 0 auto;
+  border:0 none;
+  opacity: .8;
+  cursor:pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; 
+  font-family: 'Special Elite', cursive;
+  font-size: 14px;
+  height: 23px;
+  width: 70px;
+  text-align: center;
+}
+
 
 textarea {
   outline: none;

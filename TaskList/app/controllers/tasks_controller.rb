@@ -3,7 +3,7 @@ class TasksController < ApplicationController
 	def index
 		@tasks = Task.all
 		@working_tasks = Task.where('completed_at IS NULL')
-		@completed_tasks = Task.where.not(completed_at: 'NULL')
+		@completed_tasks = Task.completed
 	end
 
 	def show
@@ -30,7 +30,10 @@ class TasksController < ApplicationController
 	end
 
 	def update
-		# if params[:completed] 
+		time = Time.now
+		id = params[:id]
+		if params[:completed] == true
+
 		redirect_to '/'
 	end
 
