@@ -41,7 +41,7 @@ h1 {
   margin-top: 40px;
   margin-left: auto;
   margin-right: auto;
-  width: 450px;
+  width: 600px;
   border-color: #E7E5E1;
   border-style: groove;
   border-width: thin;
@@ -159,7 +159,7 @@ h2 {
   text-align: center;
 }
 
-.delete-button {
+.delete-button, .edit-button, .complete-button {
   border-width: 1px;
   border-style: solid;
   background-color: transparent;
@@ -170,7 +170,7 @@ h2 {
   font-family: 'Quicksand', sans-serif;
 }
 
-.delete-button:hover {color: #747070}
+.delete-button:hover, .edit-button:hover, .complete-button:hover {color: #747070}
 
 .inline {
   display: inline;
@@ -181,7 +181,7 @@ h2 {
   text-align: right;
 }
 
-.new_task {
+.new_task, .edit_task {
   width: 400px;
   margin: auto;
 }

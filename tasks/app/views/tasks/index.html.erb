@@ -10,6 +10,8 @@
       <% if gray %>
         <div class="gray-box">
           <span><%= num %>    </span><a href="/tasks/<%= task.id %>"><%= task.name.upcase %></a>
+          <%= button_to "complete", "/tasks/#{task.id}/complete", method: :patch, class: "complete-button" %>
+          <%= button_to "edit", "/tasks/#{task.id}/edit", method: :get, class: "edit-button" %>
           <%= button_to "delete", "/tasks/#{task.id}", method: :delete, data: { :confirm => "Are you sure?" }, class: "delete-button" %>
         </div>
         <% gray = false %>
@@ -19,6 +21,8 @@
         <div class="white-box">
           <span class="inline"><%= num %>    </span>
           <a class="inline" href="/tasks/<%= task.id %>"><%= task.name.upcase %></a>
+          <%= button_to "complete", "/tasks/#{task.id}/complete", method: :patch, class: "complete-button" %>
+          <%= button_to "edit", "/tasks/#{task.id}/edit", method: :get, class: "edit-button" %>
           <%= button_to "delete", "/tasks/#{task.id}", method: :delete, data: { :confirm => "Are you sure?" }, class: "delete-button" %>
         </div>
         <% gray = true %>
@@ -30,6 +34,8 @@
         <div class="gray-box">
           <span><%= num %>    </span>
           <a class="done" href="/tasks/<%= task.id %>"><%= task.name.upcase %></a>
+          <%= button_to "complete", "/tasks/#{task.id}/complete", method: :patch, class: "complete-button" %>
+          <%= button_to "edit", "/tasks/#{task.id}/edit", method: :get, class: "edit-button" %>
           <%= button_to "delete", "/tasks/#{task.id}", method: :delete, data: { :confirm => "Are you sure?" }, class: "delete-button" %>
         </div>
         <% gray = false %>
@@ -39,6 +45,8 @@
         <div class="white-box">
           <span><%= num %>    </span>
           <a class="done" href="/tasks/<%= task.id %>"><%= task.name.upcase %></a>
+          <%= button_to "complete", "/tasks/#{task.id}/complete", method: :patch, class: "complete-button" %>
+          <%= button_to "edit", "/tasks/#{task.id}/edit", method: :get, class: "edit-button" %>
           <%= button_to "delete", "/tasks/#{task.id}", method: :delete, data: { :confirm => "Are you sure?" }, class: "delete-button"%>
         </div>
         <% gray = true %>
@@ -54,24 +62,3 @@
     <span>Add new item</span>
   </a>
 </div>
-
-<!--This code was used for moving all completed tasks to the bottom of the list-->
-<!--Leaving it here in case I need it later-->
-<!-- <% @tasks.each do |task| %>
-  <% if !task.complete.nil? %>
-    <% if gray %>
-      <div class="gray-box">
-        <span><%= num %>    </span><a class="done" href="/tasks/<%= task.id %>"><%= task.name.upcase %></a>
-      </div>
-      <% gray = false %>
-      <% num += 1 %>
-    <% else %>
-      <div class="white-box">
-        <span><%= num %>    </span><a class="done" href="/tasks/<%= task.id %>"><%= task.name.upcase %></a>
-      </div>
-      <% gray = true %>
-      <% num += 1 %>
-    <% end %>
-  <% end %>
-<% end %>
-</div> -->

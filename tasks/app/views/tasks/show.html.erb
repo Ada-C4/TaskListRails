@@ -19,11 +19,16 @@
 <div class="button-container">
   <a id="gray-button" class="circle-button" href="/">
     <p class="circle-button-title">OK</p>
-    <span>Go back</span>
+    <span>go back</span>
   </a>
 
+  <a class="circle-button" href="/tasks/<%= @task.id %>/edit">
+    <p class="circle-button-title">EDIT</p>
+    <span>this item</span>
+  </a>
+<!--
   <a class="circle-button" href="/tasks/<%= @next_id %>">
     <p class="circle-button-title">HMM...</p>
-    <span>What's next?</span>
-  </a>
+    <span>what's next?</span>
+  </a> -->
 </div>

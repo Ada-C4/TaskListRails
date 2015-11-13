@@ -25,6 +25,29 @@ class TasksController < ApplicationController
     redirect_to "/"
   end
 
+  def edit
+    id = params[:id]
+    @task = Task.find(id)
+  end
+
+  def update
+    id = params[:id]
+    task = Task.find(id)
+    task.update(name: task_params[:task][:name], description: task_params[:task][:description])
+    redirect_to "/"
+  end
+
+  def completed
+    id = params[:id]
+    task = Task.find(id)
+    if task.complete.nil?
+      task.update(complete: Time.now)
+    else
+      task.update(complete: nil)
+    end
+    redirect_to "/"
+  end
+
 # Finds the id of the next item in the task list
   def find_next_id(current_id)
     if current_id == Task.last.id
