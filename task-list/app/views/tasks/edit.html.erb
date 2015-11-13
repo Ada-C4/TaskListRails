@@ -1,6 +1,6 @@
 <%= form_for @task, url: { action: 'update'}, method: :patch do |f| %>
   <fieldset>
-    <legend>Edit Task</legend>
+    <legend><%=@title%></legend>
     <%= f.label :name %>
     <%= f.text_field :name%>
     <br>

@@ -12,34 +12,41 @@ class TasksController < ApplicationController
 
   def new
     @task = Task.new
+    @action = "create"
+    @method = :post
+    @title = "Task Information"
   end
 
   def edit
+    @title = "Edit your task"
     id = params[:id]
+    @action = "update"
+    @method = :patch
     @task = Task.find(id)
+    render "new"
   end
 
   def create
     Task.create(task_params[:task])
-    redirect_to '/tasks'
+    redirect_to '/'
   end
 
   def destroy
     id = params[:id]
     @task =Task.find(id).destroy
-    redirect_to '/tasks'
+    redirect_to '/'
   end
 
   def update
     Task.update(params[:id], task_params[:task])
-    redirect_to '/tasks'
+    redirect_to '/'
   end
 
   def toggle_completed
     id = params[:id]
     task = Task.find(id)
     task.update(id)
-    redirect_to '/tasks'
+    redirect_to '/'
   end
 
   #def completed_tasks
