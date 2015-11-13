@@ -1,3 +1,25 @@
+body {
+  background-color: #660066;
+  font-family: 'Old Standard TT', serif;
+}
+
+header {
+  color: #FFFFFF;
+  font-size: 1.5em;
+}
+
+h1, li {
+  color: #FFFFFF;
+}
+
+a {
+  color: #FFCCFF;
+}
+
+.homer {
+  width: 500px;
+}
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

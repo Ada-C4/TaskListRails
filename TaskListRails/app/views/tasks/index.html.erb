@@ -1,6 +1,9 @@
-<h1>Here are all the tasks!</h1>
-  <ul>
+<%= image_tag "homer2.png", class: "homer" %>
+<ul>
     <% @tasks.each do |task| %>
-      <li><%= task.name %>: <%= task.description %><%= link_to "Show", "/tasks/#{task.id}" %></li>
+      <li><%= task.name %> <%= link_to "Show", "/tasks/#{task.id}" %>
+          <%= link_to "Delete", "/tasks/#{task.id}", :method => :delete,
+          :onclick => "return confirm('Are you sure?')"%></li>
     <% end %>
+    <%= link_to "Add a New Task", "tasks/new" %>
   </ul>
