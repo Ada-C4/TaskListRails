@@ -1,0 +1,75 @@
+// Place all the styles related to the Tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background-image: url(vacuuming.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+  width: 960px;
+}
+
+img {
+  opacity: 0.4;
+}
+
+.content {
+  width: 650px;
+  margin: inherit;
+  background-color: #fff;
+  opacity: 0.6;
+  margin-left: 500px;
+  padding: 30px;
+}
+
+h1 {
+  color: orange;
+  font-size: 4em;
+}
+
+h3{
+  font-size: 2em;
+  color: #660066;
+}
+
+p {
+  font-size: 1.5em;
+  color: #660066;
+}
+
+.description {
+  margin-top: -10px;
+  font-size: 1em;
+  display: inline;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.5em;
+  color: black;
+  line-height: 60px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.add-task {
+  color: hotpink;
+}
+
+form {
+margin-top: 0;
+font-size: 1.5em;
+opacity: 0.6;
+}
+
+.form-field {
+  margin-left: 360px;
+  margin-top: -50px;
+}
+
+.new-input {
+  margin-top: 0;
+}
