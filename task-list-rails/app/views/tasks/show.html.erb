@@ -21,13 +21,13 @@
           <td class="attribute">
             <strong>description:</strong>
           </td>
-          <% if @task.description != "" %>
-            <td>
-              <%= @task.description %>
-            </td>
-          <% else %>
+          <% if @task.description == "" || @task.description.nil? %>
             <td id="empty_description">
               <em>empty</em>
+            </td>
+          <% else %>
+            <td>
+              <%= @task.description %>
             </td>
           <% end %>
         </tr>
