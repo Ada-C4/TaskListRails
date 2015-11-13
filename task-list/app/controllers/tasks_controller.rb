@@ -6,6 +6,33 @@ class TasksController < ApplicationController
   def show
     id = params[:id]
     @task = Task.find(id)
-    @status = @task.status
+  end
+
+  def new
+    @task = Task.new
+  end
+
+  def create
+    Task.create(task_params[:task])
+
+    redirect_to "/"
+  end
+
+  def complete_task
+    Task.update(params[:id], completed_at: Time.now)
+
+    redirect_to "/"
+  end
+
+  def destroy
+    Task.destroy(params[:id])
+
+    redirect_to "/"
+  end
+
+  private
+
+  def task_params
+    params.permit(task:[:name, :description])
   end
 end

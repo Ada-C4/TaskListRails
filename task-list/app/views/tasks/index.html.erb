@@ -1,18 +1,23 @@
-<form class= "wrapper-front" method="post">
+<div class= "wrapper-front">
   <div class="button-farm">
-    <a href="/add_task"><h1>Add a new task!</h1></a>
-    <input type="submit" id="submit" name="submit" value="Complete"> |
-    <input type="submit" id="submit" name="submit" value="Modify"> |
-    <input type="submit" id="submit" name="submit" onclick="return confirm('Are you sure?')" value="Delete"> |
+    <a href="tasks/new"><h1>Add a new task!</h1></a>
+
     <input type="submit" id="submit" name="submit" onclick="return confirm('Are you sure?')" value="Clear Completed">
   </div>
   <div>
     <% unless @sorted_tasks[:todo].nil? %>
       <% @sorted_tasks[:todo].each do |task| %>
         <div class="task">
-          <label><input type="checkbox" name="checked[]" value="<%= task.id %>"><span><%= link_to task.name, "/tasks/" + task.id.to_s %></span></label>
-          <div class="task-detail">
-            <%= task.description %>
+          <div class="info">
+            <span><%= link_to task.name, "/tasks/#{task.id}" %></span>
+            <div class="task-detail">
+              <%= task.description %>
+            </div>
+          </div>
+          <div class="task-buttons">
+            <%= button_to("/tasks/#{task.id}/complete", method: "patch", title: "Complete") { fa_icon("check fw lg") } %>
+            <%= button_to("/tasks/#{task.id}", method: "patch", title: "Edit") { fa_icon("pencil-square-o fw lg") } %>
+            <%= button_to("/tasks/#{task.id}", method: "delete", onclick: "return confirm('Are you sure?')", title: "Delete") { fa_icon("trash-o fw lg") } %>
           </div>
         </div>
       <% end %>
@@ -23,9 +28,14 @@
     <% unless @sorted_tasks[:completed].nil? %>
       <% @sorted_tasks[:completed].each do |task| %>
         <div class="task">
-          <label><input type="checkbox" name="checked[]" value="<%= task.id %>"><span class="complete"><%= link_to task.name, "/tasks/" + task.id.to_s %></span></label>
+          <div class="info">
+            <span class="complete"><%= link_to task.name, "/tasks/#{task.id}" %></span>
+          </div>
+          <div class="task-buttons">
+            <%= button_to("/tasks/#{task.id}", method: "delete", onclick: "return confirm('Are you sure?')", title: "Delete") { fa_icon("trash-o fw lg") } %>
+          </div>
         </div>
       <% end %>
     <% end %>
   </div>
-</form>
+</div>
