@@ -56,12 +56,15 @@ a {
   vertical-align: middle;
 }
 
+.completed_task {
+  -moz-box-shadow: inset 0px 0px 47px 3px #d6d0cb;        -webkit-box-shadow: inset 0px 0px 47px 3px #d6d0cb;
+  box-shadow: inset 0px 0px 277px 3px #d6d0cb;
+}
+
 #task_link:hover {
-  -moz-box-shadow: inset 0px 0px 47px 3px #4c3f37;
-  -webkit-box-shadow: inset 0px 0px 47px 3px #4c3f37;
-  box-shadow: inset 0px 0px 277px 3px #4c3f37;
-  // background-image: none;
-  // background-color: rgb(25, 78, 140);
+  -moz-box-shadow: inset 0px 0px 47px 3px #332f2b;
+  -webkit-box-shadow: inset 0px 0px 47px 3px #332f2b;
+  box-shadow: inset 0px 0px 277px 3px #332f2b;
 }
 
 #option_buttons {

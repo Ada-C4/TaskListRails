@@ -1,8 +1,5 @@
 <h1>Tasks</h1>
 
-<!-- <form class="add_button" method="get" action="/tasks/new">
-  <input type="submit" value="Add a task">
-</form> -->
 
 <a href="/tasks/new">
 <table id="add_task_button">
@@ -22,26 +19,15 @@
 
 <div id="button_box">
 
-
-<!-- <a id="spaceship" href="/tasks/new">
-  <form class="add_button" method="get" action="/tasks/new">
-    <i class="fa fa-space-shuttle fa-4x" style="background-color:blue"></i>
-
-    <i class="fa fa-space-shuttle fa-4x fa-rotate-180 fa-flip-horizontal" style="background-color:blue"></i>
-  </form>
-  </a>
-
-</div> -->
-
   <% @tasks.each do |task| %>
 
 
   <a id="task_link" href="/tasks/<%= task.id %>"
     <% if task.completed_date != nil %>
-      style= "-moz-box-shadow: inset 0px 0px 47px 3px #d6d0cb;        -webkit-box-shadow: inset 0px 0px 47px 3px #d6d0cb;
-      box-shadow: inset 0px 0px 277px 3px #d6d0cb;"
+      class = "completed_task"
     <% end %>
-    ><%= task.name %></a>
+    >
+    <%= task.name %></a>
 
 
   <table id="option_buttons">
