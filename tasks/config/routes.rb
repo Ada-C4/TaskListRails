@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'tasks/:id' => 'tasks#show'
   get 'tasks/:id/edit' => 'tasks#edit'
   patch 'tasks/:id' => 'tasks#update'
+  patch 'tasks/:id/complete' => 'tasks#complete'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
