@@ -2,7 +2,8 @@
 <h1>To Do:</h1>
 <ul>
   <% @tasks.each do |task| %>
-    <li><%= link_to task.name, "/tasks/#{task.id}" %></li>
+    <li><%= link_to task.name, "/tasks/#{task.id}" %>  <%= link_to "[x]", "/tasks/#{task.id}", method: :delete, data: { confirm: 'Confirm Delete' }, class: "delete-link" %></li>
   <% end %>
 </ul>
+<%= link_to "Create A New Task", new_task_path %>
 </div>
