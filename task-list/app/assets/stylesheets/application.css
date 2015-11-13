@@ -79,20 +79,24 @@ ul {
 
 
 .buttonHolder{
-  margin:20px auto;
-  width:200px;
+  display: inline-block;
+  margin:10px auto;
+  padding: 20px;
+  width:50px;
 }
 
 		.button{
+      display:block;
 			background-image: -webkit-linear-gradient(top, #f4f1ee, #fff);
 			background-image: linear-gradient(top, #f4f1ee, #fff);
 			border-radius: 50%;
 			box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, .3), inset 0px 4px 1px 1px white, inset 0px -3px 1px 1px rgba(204,198,197,.5);
 			float:left;
-			height: 70px;
-			margin: 0;
+			/*height: 70px;*/
+      height: 45px;
 			position: relative;
-			width: 70px;
+			/*width: 70px;*/
+      width: 43px;
 			-webkit-transition: all .1s linear;
 			transition: all .1s linear;
 		}
@@ -101,7 +105,7 @@ ul {
 			color:#e9e6e4;
 			content: "";
 			display: block;
-			font-size: 30px;
+			font-size: 25px;
 			height: 30px;
 			text-decoration: none;
 			text-shadow: 0px -1px 1px #bdb5b4, 1px 1px 1px white;
@@ -118,8 +122,8 @@ ul {
 
 		.plus:after{
 			content: "+";
-			left: 19px;
-			top: 19px;
+			left: 7px;
+			top: 8px;
 		}
 
 		.tick:after{
@@ -129,9 +133,9 @@ ul {
 		}
 
 		.cross:after{
-			content: "✖";
-			left: 24px;
-			top: 19px;
+			content: "x";
+			left: 7px;
+			top: 8.5px;
 		}
 
 		.button:hover{
