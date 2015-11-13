@@ -34,6 +34,12 @@ class TasksController < ApplicationController
     redirect_to "/"
   end
 
+  def complete
+    id = params[:id]
+    Task.find(id).update(:completed_date => Time.now)
+    redirect_to "/"
+  end
+
   private
 
   def task_params
