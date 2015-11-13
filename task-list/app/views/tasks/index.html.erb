@@ -15,9 +15,9 @@
             </div>
           </div>
           <div class="task-buttons">
-            <%= button_to "/tasks/#{task.id}/complete", method: "patch" do %> <%= fa_icon("check fw lg") %> <% end %>
-            <%= button_to "/tasks/#{task.id}", method: "patch" do %> <%= fa_icon("pencil-square-o fw lg") %> <% end %>
-            <%= button_to "/tasks/#{task.id}", method: "delete", onclick: "return confirm('Are you sure?')" do %> <%= fa_icon("trash-o fw lg") %> <% end %>
+            <%= button_to("/tasks/#{task.id}/complete", method: "patch", title: "Complete") { fa_icon("check fw lg") } %>
+            <%= button_to("/tasks/#{task.id}", method: "patch", title: "Edit") { fa_icon("pencil-square-o fw lg") } %>
+            <%= button_to("/tasks/#{task.id}", method: "delete", onclick: "return confirm('Are you sure?')", title: "Delete") { fa_icon("trash-o fw lg") } %>
           </div>
         </div>
       <% end %>
@@ -32,7 +32,7 @@
             <span class="complete"><%= link_to task.name, "/tasks/#{task.id}" %></span>
           </div>
           <div class="task-buttons">
-            <%= button_to "/tasks/#{task.id}", method: "delete", onclick: "return confirm('Are you sure?')" do %> <%= fa_icon("trash-o fw lg") %> <% end %>
+            <%= button_to("/tasks/#{task.id}", method: "delete", onclick: "return confirm('Are you sure?')", title: "Delete") { fa_icon("trash-o fw lg") } %>
           </div>
         </div>
       <% end %>
