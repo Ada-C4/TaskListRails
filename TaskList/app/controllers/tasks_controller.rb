@@ -25,6 +25,15 @@ class TasksController < ApplicationController
 		redirect_to '/'
 	end
 
+	def edit
+		
+	end
+
+	def update
+		# if params[:completed] 
+		redirect_to 
+	end
+
 	private
 
 	def task_params

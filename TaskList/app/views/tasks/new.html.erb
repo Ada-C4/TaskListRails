@@ -2,11 +2,11 @@
   <div class='legend'><h1>What Do You Need to Get Done?</h1></div>
   <fieldset>
     <label for='name'>Task:</label>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class: 'form-field'%>
     <br><br>
     <label for='description'>Description:</label>
-    <%= f.text_area :description, html: {class: 'description', placeholder: 'Here\'s some stuff.'}%>
+    <%= f.text_area :description, html: {class: 'form-field', placeholder: 'Here\'s some stuff.'}%>
     <br><br><br>
-    <%= f.submit %>
+    <%= f.submit class:'create-button'%>
   </fieldset>
 <% end %>

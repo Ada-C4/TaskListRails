@@ -92,12 +92,27 @@ label {
   font-size: 24px;
 }
 
-input[type=submit] {
+input.create-button {
   display: block;
   padding:15px; 
+  background:#885673; 
+  opacity: 0.8;
+  margin: 0 auto;
+  border:0 none;
+  cursor:pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; 
+  font-family: 'Special Elite', cursive;
+  font-size: 24px;
+  width: 200px;
+  text-align: center;
+}
+
+input.delete-button {
+  display: block;
+/*  padding:15px; */
   padding-bottom: 33px; 
   background:#885673; 
-  opacity: 0.7;
   margin: 0 auto;
   border:0 none;
   cursor:pointer;
@@ -119,7 +134,7 @@ textarea {
   font-size: 14px;
 }
 
-form input {
+input.form-field {
   font-family: 'Inconsolata', sans-serif;
   width: 360px;
   height: 18px;
