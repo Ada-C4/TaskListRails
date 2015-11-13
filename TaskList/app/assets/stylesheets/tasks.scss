@@ -32,8 +32,12 @@ table {
   width: 570px;
 }
 
-td#delete {
+td.button {
   text-align: right;
+  margin: 2px;
+  padding: 2px;
+  height: 23px;
+  width: 70px;
 }
 
 
@@ -128,7 +132,7 @@ input.delete-button {
 
 input.edit-button {
   display: block;
-  background:#885673; 
+  background:#DE555F; 
   padding-top: 7px;
   margin: 0 auto;
   border:0 none;
