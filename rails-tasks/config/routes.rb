@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   post 'tasks/' => 'tasks#create'
   delete 'tasks/:name' => 'tasks#destroy'
   patch 'tasks/:name/update' => 'tasks#update'
+  put 'tasks/:name/complete' => 'tasks#complete'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

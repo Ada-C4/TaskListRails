@@ -21,6 +21,8 @@ class TasksController < ApplicationController
 
   def new
       @task = Task.new
+      @url = '/tasks/'
+      @method = "post"
   end
 
   def create
@@ -29,8 +31,8 @@ class TasksController < ApplicationController
   end
 
   def destroy
-    to_delete = Task.where(task_params[:name])
-    Task.destroy(to_delete[0].id)
+    to_delete = Task.find_by(name: params[:name])
+    Task.destroy(to_delete.id)
     redirect_to "/"
   end
 
@@ -44,13 +46,13 @@ class TasksController < ApplicationController
   end
 
   def edit
-    @task = Task.find_by(name: "#{params[:name]}")
-    @old_name = params[:name]
-    @old_description = @task.description
+    @task = Task.find_by(name: params[:name])
+    @url = '/tasks/:name/update'
+    @method = "patch"
   end
 
   def update
-    @task = Task.find_by(name: params[:name])
+    @task = Task.find_by(name: task_params[:task][:name])
     @old_name = @task.name
     @old_description = @task.description
     @task.update(task_params[:task])
