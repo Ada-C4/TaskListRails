@@ -11,6 +11,8 @@ class TasksController < ApplicationController
     @title = @task.name
   end
 
+private
+
   def new
     @title = "Create A New Task"
     @task = Task.new
@@ -31,5 +33,5 @@ class TasksController < ApplicationController
   def task_params
     params.require(:task).permit(:name, :description, :completed_at)
   end
-  
+
 end
