@@ -56,17 +56,17 @@
  	background-color:#6F7F4F;
  }*/
 
- ul {
+ /*ul {
    list-style-type: none;
    margin-top: 50px;
-   margin-bottom: 0px;
+   margin-bottom: 0;
    margin-left: 100px;
  }
 
  li {
    display: flex;
    justify-content: space-between;
- }
+ }*/
 
  ::-webkit-input-placeholder {
    color: #1E1902;
@@ -84,7 +84,7 @@
  }
 
  td {
-   text-align: center;
+   text-align: left;
  }
 
  th, td {
@@ -97,12 +97,12 @@
    color: #405421;
  }
 
- .button_to {
+ /*.button_to {
    display: inline-block;
    margin-right: 200px;
- }
+ }*/
 
- .delete_button, .submit {
+ .delete_button, .submit, .done_button {
    background-color: #E8F7D0;
    font-size: 8px;
    border-radius: 5px;
