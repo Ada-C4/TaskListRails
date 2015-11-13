@@ -1,5 +1,11 @@
 class TasksController < ApplicationController
 
+  def complete
+    @task = Task.find(params[:id])
+    @task.update(completed_date: Date.current)
+  end
+
+
   def create
     Task.create(task_params[:task])
     redirect_to action: :index

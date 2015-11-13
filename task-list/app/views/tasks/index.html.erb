@@ -2,7 +2,9 @@
   <h1>Tasks</h1>
   <ul>
     <% @tasks.each do |task| %>
-      <li><a href='/tasks/<%= task.id %>'><%= task.name %></a>
+      <li>
+        <%= button_to "check", /tasks/<%= task.id %>/complete, :class => "button", :method => :complete  %>
+        <a href='/tasks/<%= task.id %>'><%= task.name %></a>
       </li>
     <% end %>
   </ul>
