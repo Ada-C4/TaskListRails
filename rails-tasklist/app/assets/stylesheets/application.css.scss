@@ -16,29 +16,65 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=EB+Garamond);
+@import url(https://fonts.googleapis.com/css?family=Fjalla+One);
 
-.table td, th {
+.table td, {
    text-align: center;
+   font-family: 'EB Garamond', serif;
+    font-size: 16px;
+    line-height: 23px;
+    margin: 0 0 23px 0;
+}
+
+
+.table th {
+  text-align: center;
+  font-family: 'EB Garamond', serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 2px;
+    margin: 0 0 23px 0;
 }
 
 h1 {
   text-align: center;
   padding: 25px;
+  font-family: 'Fjalla One', sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    line-height: 46px;
+    font-size: 43px;
+    margin: 0 0 23px 0;
 }
 
 body {
+  font-family: 'EB Garamond', serif;
+   font-size: 16px;
+   line-height: 23px;
+   margin: 0 0 23px 0;
  margin: 0;
  background-image: url('wood.png');
  background-size: 1440px 800px;
  background-repeat:no-repeat;
  display: compact;
+
  }
 
  div {
    background-color: #F1F2F2;
    opacity: 0.8;
-   padding: 10px;
+   padding: 0px;
  }
+
+ .container {
+   margin-top: 50px;
+   margin-bottom: 20px;
+ }
+
 // body {
 //   margin: 0;
 //   background: url('assets/wood.png') no-repeat center center fixed;
