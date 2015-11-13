@@ -1,7 +1,9 @@
 <h1> Do It To It </h1>
+<%= button_to "Create new task", "/tasks/new", :class => "new_task_button", method: :get %>
 <hr />
 <div class="list">
   <% @tasks.each do |task| %>
-  <div class="task"><%= link_to task.name, "/#{task.id}" %></div>
+    <div class="task"><%= link_to task.name, "/tasks/#{task.id}" %>
+    <%= button_to "Delete", { action: :destroy, id: task.id }, :class => "button", method: :delete, data: { confirm: 'Are you sure?' } %></div>
   <% end %>
 </div>
