@@ -5,5 +5,5 @@
     <li><%= link_to task.name, "/tasks/#{task.id}" %>  <%= link_to "[x]", "/tasks/#{task.id}", method: :delete, data: { confirm: 'Confirm Delete' }, class: "delete-link" %></li>
   <% end %>
 </ul>
-<%= link_to "Create A New Task", new_task_path %>
+<%= link_to "Create A New Task", "tasks/new" %>
 </div>
