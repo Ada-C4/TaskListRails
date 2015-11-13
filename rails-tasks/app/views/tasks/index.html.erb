@@ -4,13 +4,27 @@
 <table>
   <% @tasks.each do |task| %>
     <tr>
-      <td>
-        <% if task.complete == true %>
-          <%= button_to "✘", "/tasks/#{task.name}", :method => :delete, data: { confirm: "delete #{task.name}?" } %>   <a class="complete" href="/tasks/<%= task.name %>"> <%= task.name %> </a>
+        <% if task.complete? %>
+        <td>
+          <a class="complete" href="/tasks/<%= task.name %>"> <%= task.name %> </a>
+        </td>
+        <td>
+          <%= button_to "✘", "/tasks/#{task.name}", :method => :delete, data: { confirm: "delete #{task.name}?" } %>
+        </td>
         <% else %>
-          <%= button_to "✘", "/tasks/#{task.name}", :method => :delete, data: { confirm: "delete #{task.name}?" } %>   <a class="incomplete" href="/tasks/<%= task.name %>"> <%= task.name %> </a>
+        <td>
+          <a class="incomplete" href="/tasks/<%= task.name %>"> <%= task.name %> </a>
+        </td>
+        <td>
+          <%= button_to "✎", "/tasks/#{task.name}/edit", :method => :get%>
+        </td>
+        <td>
+          <%= button_to "✔︎", "/tasks/#{task.name}", :method => :put %>
+        </td>
+        <td>
+          <%= button_to "✘", "/tasks/#{task.name}", :method => :delete, data: { confirm: "delete #{task.name}?" } %>
+        </td>
         <% end %>
-      </td>
     </tr>
   <% end %>
     <tr>
