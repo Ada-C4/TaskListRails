@@ -2,7 +2,10 @@
   <table>
     <thead>
         <tr>
-          <th colspan="2" id="title">Task details</th>
+          <td colspan="2" id="title">Task details</td>
+        </tr>
+        <tr>
+          <td colspan="2" id=edit_link><%= link_to "edit?", "/tasks/#{@task.id}/edit" %></td>
         </tr>
       </thead>
       <tbody>

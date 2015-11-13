@@ -26,7 +26,7 @@ html {
   font-family: 'Gochi Hand', cursive;
   text-align: center;
   font-size: 45px;
-  padding-bottom: 20px;
+  padding-bottom: 5px;
 }
 
 table {
@@ -38,7 +38,19 @@ table {
   border: 2px black dashed;
 }
 
-td {
+#edit_link {
+  font-size: 16px;
+  text-align: center;
+  padding-top: 0px;
+}
+
+#edit_link a {
+  color: #4573ca;
+  text-decoration: none;
+  font-family: 'Asap', sans-serif;
+}
+
+tbody tr td {
   font-family: 'Asap', sans-serif;
   font-size: 18px;
   padding: 2px 10px 2px 10px;
@@ -85,8 +97,8 @@ a {
 div#form {
   background-color: #FCF4AB;
   border: 2px black dashed;
-  width: 500px;
-  height: 350px;
+  width: 400px;
+  height: 400px;
   margin: auto;
   margin-top: 100px;
   text-align: center;
@@ -99,6 +111,7 @@ div#form {
 }
 
 form {
+  color: #CA5A45;
   font-family: 'Asap', sans-serif;
   font-size: 18px;
   text-align: center;
@@ -122,7 +135,7 @@ form input {
 }
 
 #link_back {
-  margin-top: 50px;
+  margin-top: 75px;
   font-family: 'Asap', sans-serif;
   font-size: 18px;
   color: #CA5A45;
