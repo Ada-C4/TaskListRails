@@ -1,12 +1,38 @@
 <h1>Here are the tasks</h1>
 
-<table class = "table table-hover">
+<table class="table table-hover">
   <tr>
     <th>
       Task
     </th>
+    <th>Completed?</th>
+    <th>Delete</th>
+    <th>Edit</th>
   </tr>
   <% @tasks.each do |task| %>
-    <tr><td><%= link_to "#{task.name}", "/tasks/#{task.id}" %></td></tr>
+    <tr>
+      <td>
+        <%= link_to "#{task.name}", "/#{task.id}" %>
+      </td>
+      <% if task.done_date == nil %>
+        <td>
+          <%= button_to "Complete", "/tasks/#{task.id}/complete", :method => :post,
+        class: "btn btn-default", :onclick => 'alert("You sure?")' %>
+      </td>
+      <% else %>
+        <td>
+          completed <%= distance_of_time_in_words(task.done_date, Time.now) %> ago
+        </td>
+      <% end %>
+      <td>
+        <%= button_to "Delete", "/tasks/#{task.id}", :method => :delete,
+      class: "btn btn-default", :onclick => 'alert("You sure?")' %>
+    </td>
+      <td>
+        <%= button_to "Edit", "/tasks/#{task.id}/edit", :method => :get, class: "btn btn-default" %>
+      </td>
+    </tr>
   <% end %>
 </table>
+
+<%= button_to "Add a task", "/tasks/new", :method => :get, class: "btn btn-default btn-lg"%>

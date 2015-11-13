@@ -5,6 +5,7 @@
     <th>Name</th>
     <th>Description</th>
     <th>Completed</th>
+    <th>Delete</th>
   </tr>
   <tr>
       <td><%= @task.name %></td>
@@ -17,9 +18,15 @@
         <% if @task.done_date.nil? %>
           not complete
         <% else %>
-          completed on <%= @task.done_date %>
+          completed <%= distance_of_time_in_words(@task.done_date, Time.now) %> ago
         <% end %>
+      </td>
+      <td>
+        <%= button_to "Delete", "/tasks/#{@task.id}", :method => :delete,
+          :onclick => 'alert("You sure?")', class: "btn btn-default" %>
       </td>
   </tr>
 
 </table>
+
+<%= render 'home_button' %>
