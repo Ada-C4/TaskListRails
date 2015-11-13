@@ -40,7 +40,7 @@ In this wave we will add the first set of user interactivity and persistence.
   - On the home page, add a button or link for each task that will, once clicked...
     1. Ask the user to confirm that they definitely want to delete the task.
     1. Delete the task from the database and redirect the user back to the list of remaining tasks
-<!--
+
 ## Wave 3
 In this wave we will extend the interactivity with users, allowing them to edit existing tasks in a couple of different ways. As always, follow RESTful conventions when implementing these features.
 
@@ -54,7 +54,7 @@ In this wave we will extend the interactivity with users, allowing them to edit 
   - Link to the `edit` action from the task's `show` page.
   - DRY up your code by reusing the view code from the `new` functionality
     - Research: Rendering _partials_ in Rails.
-
+<!--
 ## Final Wave!
 In this wave, we explore creating ActiveRecord associations by creating `belongs_to` and `has_many` relationships.
 
