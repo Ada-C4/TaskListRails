@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'tasks#index'
   get 'tasks/new' => 'tasks#new'
   get 'tasks/:id/edit' => 'tasks#edit'
-  patch 'tasks/:id' => 'tasks#update'
+  patch 'tasks/:id' => 'tasks#update', :as => :task
   delete 'tasks/:id' => 'tasks#delete'
   post 'tasks/' => 'tasks#create'
   get 'tasks/' => 'tasks#index'

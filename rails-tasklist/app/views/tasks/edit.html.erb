@@ -1,17 +1,5 @@
 <div class="container">
   <h1>Edit a Task</h1>
 
-  <%= form_for @task, url: { action: 'update' }, method: :patch do |f| %>
-    <fieldset>
-      <legend> Edit:</legend>
-      <%=f.label :name, "Task:" %>
-      <%=f.text_field :name %>
-      <br><br>
-      <%= f.label :description, "Description:" %>
-      <%= f.text_field :description %>
-      <br>
-    </fieldset>
-    <br>
-    <%= f.submit %>
-  <% end %>
+  <%= render partial: 'form', locals: {method_type: :patch, button_text: "Update", legend: "Edit:"} %>
 </div>
