@@ -15,8 +15,8 @@ body {
 .page_element {
   width: 600px;
   background-color: rgba(255, 255, 255, .6);
-  margin: auto;
-  padding:  50px;
+  margin: 20px auto;
+  padding:  15px 50px;
   line-height: 200%;
 }
 
@@ -60,4 +60,84 @@ a:hover {
 .complete {
   text-decoration: line-through;
 
+}
+
+form {
+  margin: auto;
+  padding: 0px 50px 0px 50px;
+  line-height: 200%;
+}
+
+fieldset {
+  padding-bottom: 20px;
+  border: 0;
+}
+
+legend h1 {
+  font-size: 3em;
+  padding: 10px;
+}
+
+label {
+  margin-left: 10px;
+}
+
+input {
+  border: none;
+  border-glow: none;
+  background-color: rgba(126, 144, 161, .4);
+  outline: none;
+  padding: 5px;
+  font-size: 1.05em;
+  border-radius: 5px;
+}
+
+#task_name {
+  width: 400px;
+}
+
+textarea {
+  width: 400px;
+  height: 120px;
+  border: none;
+  outline: none;
+  background-color: rgba(126, 144, 161, .4);
+  padding: 5px;
+  font-size: 1.05em;
+  border-radius: 5px;
+}
+
+.button_to {
+  font-size: 60%;
+}
+
+.button_to:hover {
+  font-size: 100%;
+}
+
+.delete {
+  text-align: center;
+}
+
+nav {
+  background-color: rgba(52, 99, 143, .5);
+  text-align:center;
+  font-size: 2em;
+  height: 100%;
+  padding: 10px;
+  width: 680px;
+  margin: 20px auto;
+}
+
+footer {
+  color: #FCFCED;
+
+}
+
+footer a:link {
+  color: #FCFCED;
+}
+
+footer a:visited {
+  color: #FCFCED;
 }

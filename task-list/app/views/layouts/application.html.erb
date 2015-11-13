@@ -8,8 +8,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+  <nav>
+    <%= link_to "Your List", "/" %>  |  <%= link_to "Add a Task", "/tasks/new" %>
+  </nav>
+</header>
 
 <%= yield %>
 
+<footer>
+	<p>Webpage by <a href="https://github.com/emgord">Emily Gordon</a>. &copy; <%= Time.now.year %>. </p>
+</footer>
 </body>
 </html>
