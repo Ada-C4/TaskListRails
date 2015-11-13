@@ -12,7 +12,9 @@ class TasksController < ApplicationController
   end
 
   def new
-    @task = Task.new
+    if @edit != true
+      @task = Task.new
+    end
   end
 
   def create
@@ -28,15 +30,14 @@ class TasksController < ApplicationController
 
   def update
     Task.update(params[:id], :completed_at => Time.now)
+    redirect_to "/"
 
+  end
 
-    # if !params[:completed_at].nil?
-    #   @task.completed_at = params[:completed_at]
-      redirect_to "/"
-      #update the task comleted date
-      #make instance varibale boolean so the view will know
-
-      #it is probably an update of the task ->
+  def edit
+    @task = Task.find(params[:id])
+    @edit = true
+    redirect_to 'tasks/new'
   end
 
 

@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root to: 'tasks#index'
   get 'tasks/new' => 'tasks#new'
   get 'tasks/' => 'tasks#index'
+  get 'user/:id/edit' => 'tasks#edit'
   get 'tasks/:id' => 'tasks#show'
   post 'tasks/' => 'tasks#create'
   delete 'tasks/:id' => 'tasks#destroy'

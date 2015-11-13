@@ -1,7 +1,8 @@
 <table>
   <col width="60%">
-  <col width="20%">
-  <col width="20%">
+  <col width="15%">
+  <col width="15%">
+  <col width="10%">
   <tr>
     <th id="task_name">Task</th>
     <th></th>
@@ -19,7 +20,10 @@
           <% end %>
         </td>
         <td>
-          <%= button_to "Delete", {action: 'destroy', id: task.id }, method: :delete, data: { confirm: "Are you sure?"} %></p>
+          <%= button_to "Delete", {action: 'destroy', id: task.id }, method: :delete, data: { confirm: "Are you sure?"} %>
+        </td>
+        <td>
+          <%= button_to "Update", {action: 'edit', id: task.id }, method: :get %>
         </td>
       </tr>
     <% end %>
