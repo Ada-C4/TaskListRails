@@ -193,10 +193,11 @@ h2 {
   text-align: right;
   float: right;
   font-size: 14px;
-  font-weight: bold;
-  border-radius: 50%;
-  
+  // border-radius: 50%;
+  font-family: 'Quicksand', sans-serif;
 }
+
+.delete-button:hover {color: #747070}
 
 .inline {
   display: inline;
