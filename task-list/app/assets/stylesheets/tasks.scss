@@ -31,24 +31,31 @@ h1 {
   margin: 5% 5%;
 }
 
-ul {
-  margin-top: 5%;
-  margin-left: 10%;
-}
-
 table {
   table-layout: fixed;
   width: 500px;
-  margin-left: 12%;
+  margin-left: 14%;
+  border: solid rgb(39, 98, 207);
+  padding: 3%;
+
 }
 
 td {
-  table-layout: fixed;
+  padding-bottom: 2%;
 }
 
+#task_link {
+  width: 70%;
+  word-wrap:break-word;
+  padding-left: 4%;
+}
 
-td .task_link {
-  margin-right: 40%;
+#complete_button {
+  width: 15%;
+}
+
+#delete_button {
+  width: 15%;
 }
 
 nav {
