@@ -40,9 +40,16 @@ class TasksController < ApplicationController
     redirect_to "/"
   end
 
+  def complete
+    @task = Task.find(params[:id])
+    @task.update(completed: true, completed_at: Time.now)
+    @task.save
+    redirect_to "/"
+  end
+
   private
 
   def task_params
-    params.permit(task:[:name, :description])
+    params.permit(task:[:name, :description, :completed, :completed_at])
   end
 end

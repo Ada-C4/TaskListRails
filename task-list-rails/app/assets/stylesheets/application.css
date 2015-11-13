@@ -61,12 +61,12 @@ tbody tr:first-child td {
   border-top: 2px #3399CC solid;
 }
 
-td:nth-child(3) {
+.delete {
   font-size: 12px;
   padding: 4px 10px 2px 10px;
 }
 
-td:nth-child(3) a {
+.delete a {
   color: #4573ca;
   text-decoration: none;
 }
