@@ -3,15 +3,15 @@
 
 
   <div class='tasklist'>
+    <h2>To-Do</h2>
     <table>
-      <thead><h2>To-Do</h2></thead>
       <% @working_tasks.each do |task| %>
         <tr>
           <td id='task'><%= link_to task.name, "/tasks/#{task.id}" %></td> <td id='delete'><%= button_to "Delete", {action: "destroy", id: task.id }, method: :delete, class: "delete-button", data: {confirm: 'Are you sure you want to delete that?'} %></td>
         </tr>
       <% end %> 
     </table>
-</div> 
+</div> <br>
 
 <div id='divider'>-----------------</div>
   
