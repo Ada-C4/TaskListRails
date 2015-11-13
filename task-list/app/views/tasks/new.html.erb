@@ -1,0 +1,25 @@
+<section>
+  <%= form_for @task do |f| %>
+    <fieldset>
+      <legend>Add a Task</legend>
+      <div>
+        <%= f.label :name, "name"%>
+        <%= f.text_field :name %><br />
+      </div>
+
+      <div>
+        <%= f.label :description, "description" %>
+        <%= f.text_field :description %><br />
+      </div>
+
+      <div>
+        <%= f.label :completed_date, "completed date" %>
+        <%= f.text_field :completed_date %><br />
+      </div>
+
+      <div id="submit_button_holder">
+        <%= f.submit %>
+      </div>
+    </fieldset>
+  <% end %>
+</section>

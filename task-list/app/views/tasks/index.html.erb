@@ -2,8 +2,16 @@
   <h1>Tasks</h1>
   <ul>
     <% @tasks.each do |task| %>
-    <li><a href='/tasks/<%= task.id %>'><%= task.name %></a>
-    </li>
+      <li><a href='/tasks/<%= task.id %>'><%= task.name %></a>
+      </li>
     <% end %>
   </ul>
+
+  <div class="buttonHolder">
+    <a href="/tasks/new" class="button plus"></a>
+  </div>
+
+  <div class="buttonHolder">
+    <a href="/tasks/remove" class="button cross"></a>
+  </div>
 </section>
