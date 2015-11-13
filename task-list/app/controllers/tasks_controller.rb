@@ -17,12 +17,21 @@ class TasksController < ApplicationController
     redirect_to action: :index
   end
 
+  def edit
+    id = params[:id]
+    @task = Task.find(id)
+  end
+
   def index
     @tasks = Task.all
   end
 
   def new
     @task = Task.new
+  end
+
+  def pre_edit
+    @tasks = Task.all
   end
 
   def remove

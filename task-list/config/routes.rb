@@ -4,9 +4,11 @@ Rails.application.routes.draw do
   root 'welcome#index'
   get 'tasks/' => 'tasks#index'
   get 'tasks/new' => 'tasks#new'
+  get 'tasks/pre_edit' => 'tasks#pre_edit'
   get 'tasks/remove' => 'tasks#remove'
   delete 'tasks/:id' => 'tasks#destroy'
   get 'tasks/:id' => 'tasks#show'
+  get 'tasks/:id/edit' => 'tasks#edit'
   post 'tasks/' => 'tasks#create'
   patch 'tasks/:id/complete' => 'tasks#complete'
 

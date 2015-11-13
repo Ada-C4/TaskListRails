@@ -1,0 +1,13 @@
+<section>
+  <h1>Tasks</h1>
+  <ul>
+    <% @tasks.each do |task| %>
+      <li><a href='/tasks/<%= task.id %>'><%= task.name %></a>
+        <%= link_to 'Edit',  { action: :edit, id: task.id }, method: :get %>
+
+      </li>
+    <% end %>
+  </ul>
+
+  <%= link_to "Back to List", action: :index %>
+</section>
