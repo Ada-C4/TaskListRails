@@ -23,8 +23,8 @@ class TasksController < ApplicationController
 
   def destroy
     id = params[:id]
-    @task = Task.find(id)
-    @task.delete
+    task = Task.find(id)
+    task.delete
     redirect_to "/"
   end
 
