@@ -15,7 +15,7 @@
           <% if !task.completed_at.nil? %>
             <%= task.completed_at %>
           <<% else %>
-            <%= button_to "Completed", {action: 'update', id: task.id, completed_at: Time.now}, method: :patch %>
+            <%= button_to "Completed", {action: 'update', id: task.id}, method: :patch %>
           <% end %>
         </td>
         <td>

@@ -27,16 +27,16 @@ class TasksController < ApplicationController
   end
 
   def update
-    id = params[:id]
-    @task = Task.find(id)
-    if !params[:completed_at].nil?
-      @task.completed_at = params[:completed_at]
+    Task.update(params[:id], :completed_at => Time.now)
+
+
+    # if !params[:completed_at].nil?
+    #   @task.completed_at = params[:completed_at]
       redirect_to "/"
       #update the task comleted date
       #make instance varibale boolean so the view will know
-    else
+
       #it is probably an update of the task ->
-    end
   end
 
 
