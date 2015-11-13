@@ -7,9 +7,9 @@
     <tr>
       <td id="checkbox_cell">
         <% if task.comp_date.nil? %>
-          <%= link_to "&#9744;".html_safe, "/tasks/#{task.id}",  method: "patch", class: "checkbox_link" %>
+          <%= link_to "&#9744;".html_safe, "/tasks/#{task.id}/complete",  method: "patch", class: "checkbox_link" %>
         <% else %>
-          <%= link_to "&#9745;".html_safe, "/tasks/#{task.id}",  method: "patch", class: "checkbox_link" %>
+          <%= link_to "&#9745;".html_safe, "/tasks/#{task.id}/incomplete",  method: "patch", class: "checkbox_link" %>
         <% end %>
       </td>
       <td id="task_link_cell">

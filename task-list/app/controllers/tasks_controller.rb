@@ -22,9 +22,16 @@ class TasksController < ApplicationController
     redirect_to '/tasks'
   end
 
-  def update
+  def complete
     task = Task.find(params[:id])
     task.comp_date = Time.now
+    task.save
+    redirect_to '/tasks'
+  end
+
+  def incomplete
+    task = Task.find(params[:id])
+    task.comp_date = nil
     task.save
     redirect_to '/tasks'
   end

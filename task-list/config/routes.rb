@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   get 'tasks/:id' => 'tasks#show'
   post 'tasks/' => 'tasks#create'
   delete 'tasks/:id' => 'tasks#destroy'
-  patch '/tasks/:id' => 'tasks#update'
+  patch '/tasks/:id/complete' => 'tasks#complete'
+  patch '/tasks/:id/incomplete' => 'tasks#incomplete'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
