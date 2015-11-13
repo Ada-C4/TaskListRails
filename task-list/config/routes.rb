@@ -8,7 +8,12 @@ Rails.application.routes.draw do
 
   post 'tasks/' => 'tasks#create'
 
+# this is the route for the delete button.
   delete 'tasks/:id' => 'tasks#destroy'
+
+# these are the routes for the completed button.
+  patch 'tasks/:id' => 'tasks#update'
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

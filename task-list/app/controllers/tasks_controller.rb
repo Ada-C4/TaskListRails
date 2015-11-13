@@ -23,11 +23,20 @@ class TasksController < ApplicationController
     redirect_to "/tasks"
   end
 
+  def update
+    task = Task.find(params[:id])
+    @complete_time = Time.now
+    task.save
+    redirect_to "/tasks"
+  end
+
+##### PRIVATE ######
   private
 
   def task_params
     params.permit(task:[:name, :description])
   end
+
 
 
 end
