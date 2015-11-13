@@ -6,12 +6,15 @@ body {
   background-image: image-url("background_sea.png");
   background-size: cover;
   text-align: center;
+  margin: auto;
 }
 
 h1 {
   text-align: center;
-  // font-family: Didot;
+  font-family: Didot;
   font-size: 40px;
+  margin-left: 20px;
+  margin-bottom: 10px;
 }
 
 hr {
@@ -24,18 +27,17 @@ hr {
   margin: auto;
   width: 700px;
   padding: 0px;
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .task {
   margin: auto;
   text-align: center;
   font-size: 18px;
-  color: #671713;
   width: 400px;
   background-color: #ffffff;
-  opacity: 0.6;
+  background-color: opacify(transparent, 0.1);
   border-radius: 5px 5px 5px 5px;
   padding: 10px;
   margin: 15px;
@@ -52,13 +54,21 @@ a {
   margin:auto;
   text-align: center;
   font-size: 18px;
-  color: #671713;
+  color: black;
+  margin-left: 20px;
 }
-
-a:hover { color: #747070}
 
 a:hover {font-weight: bold}
 
 .return_home {
   font-size: 22px;
+}
+
+.button {
+  background-color: transparent;
+
+}
+
+.create_task {
+  color: rgb(181, 36, 26);
 }

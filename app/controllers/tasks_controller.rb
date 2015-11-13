@@ -1,15 +1,18 @@
 class TasksController < ApplicationController
 
   def index
+    @title = "Task List"
     @tasks = Task.all
   end
 
   def show
+    @title = "Task List"
     id = params[:id]
     @task = Task.find(id)
   end
 
   def new
+    @title = "Enter a new task"
     @task = Task.new
   end
 
