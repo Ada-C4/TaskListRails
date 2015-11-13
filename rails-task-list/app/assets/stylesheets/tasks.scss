@@ -56,6 +56,14 @@ a {
   vertical-align: middle;
 }
 
+#task_link:hover {
+  -moz-box-shadow: inset 0px 0px 47px 3px #4c3f37;
+  -webkit-box-shadow: inset 0px 0px 47px 3px #4c3f37;
+  box-shadow: inset 0px 0px 277px 3px #4c3f37;
+  // background-image: none;
+  // background-color: rgb(25, 78, 140);
+}
+
 #option_buttons {
   margin-left: auto;
   margin-right: auto;

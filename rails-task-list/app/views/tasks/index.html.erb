@@ -36,10 +36,12 @@
   <% @tasks.each do |task| %>
 
 
-
-  <div >
-    <a id="task_link" href="/tasks/<%= task.id %>"><%= task.name %></a>
-  </div>
+  <a id="task_link" href="/tasks/<%= task.id %>"
+    <% if task.completed_date != nil %>
+      style= "-moz-box-shadow: inset 0px 0px 47px 3px #d6d0cb;        -webkit-box-shadow: inset 0px 0px 47px 3px #d6d0cb;
+      box-shadow: inset 0px 0px 277px 3px #d6d0cb;"
+    <% end %>
+    ><%= task.name %></a>
 
 
   <table id="option_buttons">
