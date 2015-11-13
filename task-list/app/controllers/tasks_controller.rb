@@ -28,10 +28,28 @@ class TasksController < ApplicationController
     redirect_to "/"
   end
 
+  def edit
+    id = params[:id]
+    @task = Task.find(id)
+    render :edit_form
+  end
+
+  def update
+    id = params[:id]
+    @task = Task.find(id)
+    @task.update(update_params[:task])
+    # @task.update_attributes(post_params)
+    redirect_to "/"
+  end
+
   private
 
   def task_params
     params.require(:task).permit(:name, :description, :completed_at)
+  end
+
+  def update_params
+    params.permit(task: [:name, :description])
   end
 
 end
