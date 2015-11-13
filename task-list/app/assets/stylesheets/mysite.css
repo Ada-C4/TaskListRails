@@ -30,9 +30,9 @@ a:link, a:visited{
   text-decoration: none;
 }
 
-a:hover {color: #6fddbf}
-ol {
-
+a:hover {color: magenta}
+ul {
+  list-style: none;
   padding: 50px;
   margin: 10px;
   text-align: left;
@@ -42,4 +42,8 @@ ol {
 
 li {
   padding: 10px 0;
+}
+
+#completed {
+  text-decoration: line-through;
 }

@@ -1,6 +1,8 @@
 class TasksController < ApplicationController
   def index
     @tasks = Task.all
+    @completed_tasks = @tasks.where.not(completed: nil)
+    @current_tasks = @tasks.where(completed: nil)
   end
 
   def show
@@ -22,6 +24,14 @@ class TasksController < ApplicationController
     @task =Task.find(id).destroy
     redirect_to '/tasks'
   end
+
+  #def completed_tasks
+  #  @tasks.where.not(completed_at: nil)
+  #end
+
+  #def current_tasks
+  #  @tasks.where(completed_at: nil)
+  #end
 
   private
 
