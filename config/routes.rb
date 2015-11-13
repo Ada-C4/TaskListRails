@@ -9,6 +9,7 @@ get '/tasks/new' => 'tasks#new'
 delete '/tasks' => 'tasks#destroy'
 get '/tasks/:id' => 'tasks#show'
 post '/tasks' => 'tasks#create'
+patch '/tasks' => 'tasks#complete'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

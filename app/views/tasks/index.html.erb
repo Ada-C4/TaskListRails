@@ -4,7 +4,11 @@
 <div class="list">
   <% @tasks.each do |task| %>
     <div class="task"><%= link_to task.name, "/tasks/#{task.id}" %>
-    <%= button_to "Delete", { action: :destroy, id: task.id }, :class => "button", method: :delete, data: { confirm: 'Are you sure?' } %></div>
+    <br>
+    <%= button_to "Mark Complete", { action: :complete, id: task.id }, method: :patch, :class => "mark_complete" %>
     <%= link_to "Edit", "/tasks/#{task.id}/edit", :class => "button" %>
+    <%= link_to "Delete", { action: :destroy, id: task.id }, method: :delete, :class => "button", data: { confirm: 'Are you sure?' } %></div>
   <% end %>
 </div>
+
+<% if completed_at.nil? %>

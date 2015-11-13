@@ -26,6 +26,13 @@ class TasksController < ApplicationController
     @task = Task.find(id)
   end
 
+  def complete
+    complete = Task.find(params[:id])
+    complete.completed_at = Time.now
+    complete.save
+    redirect_to "/tasks"
+  end
+
   def update
     id = params[:id]
     @task = Task.find(id)

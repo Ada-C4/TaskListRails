@@ -65,10 +65,19 @@ a:hover {font-weight: bold}
 
 .button {
   background-color: transparent;
+  font-size: 12px;
 }
 
 .new_task_button {
   // color: rgb(181, 36, 26);
   background-color: transparent;
   margin-left: 40px;
+}
+
+.mark_complete {
+  background-color: transparent;
+}
+
+.complete {
+  text-decoration: line-through;
 }
