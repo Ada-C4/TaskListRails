@@ -24,6 +24,13 @@ class TasksController < ApplicationController
   end
 
   def update
+    id = params[:id]
+    @task = Task.find(id)
+    @task.update(
+      name: task_params[:task][:name],
+      description: task_params[:task][:description]
+      )
+    redirect_to "/"
   end
 
   def destroy

@@ -3,7 +3,7 @@
     <link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
   </head>
   <body>
-    <%= form_for @task, url: {action: "edit"} do |f| %>
+    <%= form_for @task, url: {action: 'update'}, method: :patch do |f| %>
       <fieldset>
         <legend>
           Task information:
