@@ -3,8 +3,8 @@
   <ul>
     <% @tasks.each do |task| %>
       <li>
-        <%= button_to "check", /tasks/<%= task.id %>/complete, :class => "button", :method => :complete  %>
-        <a href='/tasks/<%= task.id %>'><%= task.name %></a>
+        <%= button_to "check", "/tasks/#{task.id}/complete", method: :patch, class: "button" %>
+        <a href= "/tasks/<%= task.id %>"><%= task.name %></a>
       </li>
     <% end %>
   </ul>
