@@ -33,7 +33,7 @@ h1 {
 
 table {
   table-layout: fixed;
-  width: 500px;
+  width: 550px;
   margin-left: 14%;
   border: solid rgb(39, 98, 207);
   padding: 3%;
@@ -47,7 +47,7 @@ td {
 #task_link_cell {
   width: 70%;
   word-wrap:break-word;
-  padding-left: 4%;
+  padding: 0 2%;
 }
 
 #checkbox_cell {
@@ -76,4 +76,14 @@ p {
 .new_task {
   width: 72%;
   margin-left: 10%;
+}
+
+.edit_task {
+  width: 72%;
+  margin-left: 10%;
+}
+
+#edit_button {
+  margin-top:4%;
+  margin-left: 7%;
 }

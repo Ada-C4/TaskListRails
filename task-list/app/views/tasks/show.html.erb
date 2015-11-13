@@ -11,3 +11,6 @@
         <p><strong>Completion Status:</strong> Complete</p>
         <p><strong>Completion Date:</strong> <%= @task.comp_date.strftime("%B %d, %Y") %></p>
     <% end %>
+    <div id="edit_button">
+      <%= button_to "Edit", "/tasks/#{@task.id}/edit", method: "get" %>
+    </div>
