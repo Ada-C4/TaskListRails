@@ -15,6 +15,9 @@
   <table id="option_buttons">
     <tr>
       <td>
+        <%= button_to("/tasks", method: :get, :class => "big_button",  title: "Home") { fa_icon("home fw lg 4x") } %>
+      </td>
+      <td>
         <%= button_to("/tasks/#{@task.id}", method: :patch, :class => "big_button",  title: "Complete") { fa_icon("check fw lg 4x") } %>
       </td>
       <td>
