@@ -34,6 +34,8 @@ class TasksController < ApplicationController
     @task = Task.find(id)
   end
 
+  private
+
   def task_params
     params.permit(task:[:name, :description, :completed_date])
   end
