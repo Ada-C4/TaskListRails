@@ -18,6 +18,12 @@ class TasksController < ApplicationController
     redirect_to "/"
   end
 
+  def edit
+  end
+
+  def update
+  end
+
   def destroy
     id = params[:id]
     Task.destroy(id)
