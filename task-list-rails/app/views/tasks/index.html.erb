@@ -2,7 +2,7 @@
   <table>
     <thead>
       <tr>
-        <td colspan="2" id="title">
+        <td colspan="3" id="title">
           My Tasks
         </td>
       </tr>
@@ -12,8 +12,16 @@
       <tr>
         <td><%= task.name %></td>
         <td><%= link_to "details", "/tasks/#{task.id}" %></td>
+        <td>
+          <%= link_to 'delete?',  { action: :destroy, id: task.id }, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
       </tr>
-    <% end %>
+      <% end %>
+      <tr>
+        <td colspan="3" id="table_nav">
+          <%= link_to "new task", "/tasks/new" %>
+        </td>
+      </tr>
     </tbody>
   </table>
 </div>

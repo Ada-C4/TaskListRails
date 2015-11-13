@@ -26,7 +26,7 @@ html {
   font-family: 'Gochi Hand', cursive;
   text-align: center;
   font-size: 45px;
-  padding-bottom: 20px;
+  padding-bottom: 5px;
 }
 
 table {
@@ -38,18 +38,107 @@ table {
   border: 2px black dashed;
 }
 
-td {
+#edit_link {
+  font-size: 16px;
+  text-align: center;
+  padding-top: 0px;
+}
+
+#edit_link a {
+  color: #4573ca;
+  text-decoration: none;
+  font-family: 'Asap', sans-serif;
+}
+
+tbody tr td {
   font-family: 'Asap', sans-serif;
   font-size: 18px;
   padding: 2px 10px 2px 10px;
   border-bottom: 2px #3399CC solid;
 }
 
-#attribute {
+tbody tr:first-child td {
+  border-top: 2px #3399CC solid;
+}
+
+td:nth-child(3) {
+  font-size: 12px;
+  padding: 4px 10px 2px 10px;
+}
+
+td:nth-child(3) a {
+  color: #4573ca;
+  text-decoration: none;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+.attribute {
   color: #CA5A45;
+}
+
+#empty_description {
+  font-size: 12px;
+  padding: 4px 10px 2px 10px;
+}
+
+#table_nav {
+  text-align: center;
+  padding-top: 12px;
 }
 
 a {
   color: #CA5A45;
   text-decoration: none;
+}
+
+div#form {
+  background-color: #FCF4AB;
+  border: 2px black dashed;
+  width: 400px;
+  height: 400px;
+  margin: auto;
+  margin-top: 100px;
+  text-align: center;
+}
+
+#form_title {
+  font-family: 'Gochi Hand', cursive;
+  text-align: center;
+  font-size: 45px;
+}
+
+form {
+  color: #CA5A45;
+  font-family: 'Asap', sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+form section {
+  padding-left: 50px;
+  text-align: left;
+  display: block;
+  margin-bottom: 25px;
+}
+
+form input {
+  font-size: 18px;
+}
+
+.button {
+  border: 1px black dashed;
+  font-family: 'Asap', sans-serif;
+  font-size: 18px;
+}
+
+#link_back {
+  margin-top: 75px;
+  font-family: 'Asap', sans-serif;
+  font-size: 18px;
+  color: #CA5A45;
+  text-decoration: none;
+  text-align: center;
 }
