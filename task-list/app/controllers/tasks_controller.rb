@@ -37,7 +37,7 @@ class TasksController < ApplicationController
   def edit
     @task = Task.find(params[:id])
     @edit = true
-    redirect_to 'tasks/new'
+    redirect_to action: "new"
   end
 
 
