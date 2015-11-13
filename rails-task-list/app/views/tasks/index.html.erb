@@ -29,6 +29,7 @@
           <a href="/tasks/<%= task.id %>/edit">Edit</a> -->
 
           <%= button_to "Delete",  "/tasks/#{task.id}", method: :delete, data: { confirm: "Are you sure you want to delete this task?"}  %>
+          <%= button_to "Mark as Complete", "/tasks/#{task.id}", method: :patch %>
 
     </a>
   <% end %>
