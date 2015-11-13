@@ -59,6 +59,7 @@ td.button {
   overflow: auto;
   width: 700px;
   height: 150px;
+  text-align: center;
 }
 
 #back_button {
@@ -189,9 +190,16 @@ input.form-field {
 }
 
 #show-button {
+  display: block;
+  margin: 5px;
+}
+
+#show-button-row {
   display: inline-block;
+  margin: auto;
   text-align: center;
-  margin: 0 auto;
+  margin: auto;
+  width: 500px;
 }
 
 a:link{
