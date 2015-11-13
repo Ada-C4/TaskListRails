@@ -1,6 +1,6 @@
-<%= form_for @task do |f| %>
+<%= form_for @task, url: "/tasks/#{@task.id}", method: @method do |f| %>
   <fieldset>
-    <legend>Add a Task!</legend>
+    <legend><%= @title %> a Task!</legend>
     <%= f.label :name %>
     <%= f.text_field :name %>
     <br>

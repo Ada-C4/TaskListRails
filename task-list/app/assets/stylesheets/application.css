@@ -41,7 +41,7 @@ span {
   font-size: 22px;
 }
 
-.task-info, .new_task {
+.task-info, .new_task, .edit_task {
   margin: 0 auto;
   width: 50%;
   margin-top: 150px;
@@ -139,7 +139,7 @@ legend {
   font-weight: bold;
 }
 
-.new_task input[type="text"] {
+.new_task input[type="text"], .edit_task input[type="text"] {
   margin: 10px 0 0 10px;
 }
 
