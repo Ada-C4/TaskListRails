@@ -44,18 +44,24 @@ td {
   padding-bottom: 2%;
 }
 
-#task_link {
+#task_link_cell {
   width: 70%;
   word-wrap:break-word;
   padding-left: 4%;
 }
 
-#complete_button {
+#checkbox_cell {
   width: 15%;
 }
 
-#delete_button {
+#delete_button_cell {
   width: 15%;
+}
+
+.checkbox_link {
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
 }
 
 nav {
