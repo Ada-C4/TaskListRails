@@ -15,9 +15,19 @@
 
   <% @tasks.each do |task| %>
 
-    <a class="list_box" href = "/tasks/<%= task.id %>"> <%= task.name %>
+    <!-- <a class="list_box" href = "/tasks/<%= task.id %>"> <%= task.name %> -->
+    <a href="/tasks/<%= task.id %>"><%= task.name %></a>
 
-          <!-- <%= link_to task.name, "/tasks/#{task.id}"  %> -->
+
+
+          <form method="get" action="/tasks/<%= task.id %>/edit">
+            <input type="submit" value="Edit">
+          </form>
+
+          <!-- <%= button_to "Edit", "/tasks/#{task.id}/edit" %>
+
+          <a href="/tasks/<%= task.id %>/edit">Edit</a> -->
+
           <%= button_to "Delete",  "/tasks/#{task.id}", method: :delete, data: { confirm: "Are you sure you want to delete this task?"}  %>
 
     </a>

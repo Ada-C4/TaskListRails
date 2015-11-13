@@ -22,6 +22,12 @@ class TasksController < ApplicationController
     redirect_to "/"
   end
 
+  def edit
+    id = params[:id]
+    @task = Task.find(id)
+    render :new
+  end
+
   private
 
   def task_params
