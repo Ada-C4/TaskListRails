@@ -59,7 +59,7 @@ td#delete {
   font-size: 24px;
 }
 
-.delete_button {
+.submit {
   border: none;
   font-family: 'Inconsolata', sans-serif;
 }
@@ -76,6 +76,30 @@ td#delete {
   margin: 0 auto;
   font-family: 'Special Elite', cursive;
   font-size: 24px;
+}
+
+form {
+  font-family: 'Special Elite', cursive;
+  margin: 0 auto;
+}
+
+fieldset {
+  border: 0px;
+  width: 500px;
+  margin: 0 auto;
+}
+
+label {
+  float: left;
+}
+
+form input {
+  font-family: 'Inconsolata', sans-serif;
+}
+
+form input#description {
+  width: 300px;
+  height: 200px;
 }
 
 a:link{

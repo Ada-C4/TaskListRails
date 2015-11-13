@@ -1,11 +1,12 @@
 <%= form_for @task do |f| %>
+  <div class='legend'><h1>What Do You Need to Get Done?</h1></div>
   <fieldset>
-    <legend>Add a Task</legend>
-    <%= f.label :name %>
+    <%= f.label :name %>:
     <%= f.text_field :name %>
-    <br>
-    <%= f.label :description %>
-    <%= f.text_field :description %>
+    <br><br>
+    <label for='description'>Description:</label>
+    <%= f.text_area :description, html: {class: 'description', placeholder: 'Here\'s some stuff.'}%>
+    <br><br><br>
+    <%= f.submit %>
   </fieldset>
-  <%= f.submit %>
 <% end %>
