@@ -26,7 +26,7 @@
       <tr>
         <td class="bigger_checkbox">
           <% if task.completed_date.nil? %>
-            ☐
+            <%= link_to "☐", "/tasks/#{task.id}", method: :patch %>
             <% strike = "incomplete" %>
           <% else %>
             ☑
