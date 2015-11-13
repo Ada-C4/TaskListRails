@@ -9,7 +9,7 @@
     </p>
     <p class="center_task">
       <% if !@task.completed.nil?  %>
-        Completed on <%= @task.completed %>
+        Completed on <%= @task.completed.to_formatted_s(:long_ordinal) %>
         <% else %>
         Not completed
         <% end %>

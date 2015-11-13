@@ -31,11 +31,13 @@ span {
   font-family: 'Rock Salt', cursive;
   line-height: 40px;
   font-size: 1.5em;
+  word-wrap: break-word;
 }
 
 .center {
   margin: auto;
   width: 50%;
+  padding-left: 200px;
 }
 
 .center_task {
@@ -86,6 +88,12 @@ fieldset {
 
 .complete-button {
   background: transparent;
+  border: 3px solid #FBFBFB;
+  margin-right: 15px;
+}
+
+.completed-button {
+  background: #FBFBFB;
   border: 3px solid #FBFBFB;
   margin-right: 15px;
 }
