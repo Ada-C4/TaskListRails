@@ -20,11 +20,13 @@ body {
 
 a {
   text-decoration: none;
+  color: white;
 }
 
 #add_task_button {
   margin-left: auto;
   margin-right: auto;
+  width: 400px;
   color: black;
   margin-bottom: 20px;
   border: 1px black solid;
@@ -38,6 +40,26 @@ a {
 #add_task_button:hover {
   background-color: rgb(25, 78, 140);
   color: white;
+}
+
+#task_link {
+  width: 400px;
+  height: 80px;
+  display: block;
+  border-radius: 15px;
+  padding-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-image: url(hubble_1.jpeg);
+  font-size: 30px;
+  vertical-align: middle;
+}
+
+#option_buttons {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 // Relevant to the add task button
@@ -84,15 +106,7 @@ a {
 // }
 //
 // */
-//
-// #spaceship {
-//   color:black;
-// }
-//
-//
-// #spaceship:hover {
-//   color: white;
-// }
+
 //
 //
 // /* Relevant to the tasks */
