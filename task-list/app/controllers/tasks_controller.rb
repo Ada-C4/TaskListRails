@@ -25,7 +25,7 @@ class TasksController < ApplicationController
 
   def update
     task = Task.find(params[:id])
-    @complete_time = Time.now
+    task.completed_date = Time.now
     task.save
     redirect_to "/tasks"
   end

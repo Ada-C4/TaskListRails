@@ -2,7 +2,7 @@
   <h1>Tasking is hard.</h1>
   <ul>
     <% @tasks.each do |task| %>
-      <% if @complete_time != nil %>
+      <% if task.completed_date != nil %>
         <li>
         <a href="/tasks/<%= task.id %>" class="strike"><%= task.name %></a>
         <p class="description"><%= task.description %></p>
