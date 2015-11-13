@@ -34,6 +34,15 @@ class TasksController < ApplicationController
     redirect_to "/"
   end
 
+  def update
+    task = Task.find_by(name: "#{params[:name]}")
+    task.update(completed_date: "#{Time.now}", complete: true)
+    @description = task.description
+    date = task.completed_date
+    @completed_date = "#{date.month}/#{date.day}/#{date.year}"
+    binding.pry
+  end
+
   private
 
   def task_params
