@@ -31,7 +31,8 @@ body {
 }
 
 .complete_button {
-  color: grey;
+  color: black;
+  font-weight: bold;
   display: inline;
 }
 
@@ -68,6 +69,11 @@ h2 {
   font: 400 40px/1.5 Helvetica, Verdana, sans-serif;
   margin: 20px;
   padding: 0;
+}
+
+.incomplete_button {
+  color: #E6E3E1;
+  display: inline;
 }
 
 #index_buttons {
@@ -197,9 +203,9 @@ ul {
 	color:#0088cc;
 }
 
-.heart:hover:after {
-	color:#f94e66;
-	text-shadow:0px 0px 6px #f94e66;
+.pencil:hover:after {
+	color:#2CA8D2;
+	text-shadow:0px 0px 6px #2CA8D2;
 }
 
 .plus:hover:after {
