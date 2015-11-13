@@ -1,14 +1,16 @@
 <div class="on_paper">
 <h1><%= @task_name %></h1>
 <p>
-  <%= @description %>:
+  <%= @description %>
+  <br>
   <% if @completed_status == true && @completed_date == nil%>
-    completed
+     completed
   <% elsif @completed_status == true %>
-    completed <%= @completed_date %>
+     completed <%= @completed_date %>
   <% else %>
-    incomplete
+     incomplete
   <% end %>
+<%= button_to "✎", "/tasks/#{params[:name]}/edit", :method => :get%>
 </p>
 <a href="/tasks">List Home</a>
 </div>
