@@ -22,14 +22,7 @@
     <span>Go back</span>
   </a>
 
-  <!--How do I fix the indentation without getting %20s in the URL?  -->
-  <a class="circle-button" href="/tasks/
-  <% if @task.id + 1 == @num_tasks %>
-<%= 1 %>
-  <% else %>
-<%= (@task.id + 1) %>
-  <% end %>
-  ">
+  <a class="circle-button" href="/tasks/<%= @next_id %>">
     <p class="circle-button-title">HMM...</p>
     <span>What's next?</span>
   </a>

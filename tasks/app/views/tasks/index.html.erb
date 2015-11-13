@@ -1,11 +1,3 @@
-<!-- <header>
-  <div class="outer-box">
-    <div class="inner-box">
-      <h1>THINGS TO DO</h1>
-    </div>
-  </div>
-</header>
-<hr> -->
 <div class="list">
   <div class ="title">
     List
@@ -17,12 +9,16 @@
       <% if gray %>
         <div class="gray-box">
           <span><%= num %>    </span><a href="/tasks/<%= task.id %>"><%= task.name.upcase %></a>
+          <%= button_to "-", "/tasks/#{task.id}", method: :delete, data: { :confirm => "Are you sure?" }, class: "delete-button" %>
         </div>
         <% gray = false %>
         <% num += 1 %>
+      <!--else the box is white -->
       <% else %>
         <div class="white-box">
-          <span><%= num %>    </span><a href="/tasks/<%= task.id %>"><%= task.name.upcase %></a>
+          <span class="inline"><%= num %>    </span>
+          <a class="inline" href="/tasks/<%= task.id %>"><%= task.name.upcase %></a>
+          <%= button_to "-", "/tasks/#{task.id}", method: :delete, data: { :confirm => "Are you sure?" }, class: "delete-button" %>
         </div>
         <% gray = true %>
         <% num += 1 %>
@@ -31,20 +27,32 @@
     <% else %>
       <% if gray %>
         <div class="gray-box">
-          <span><%= num %>    </span><a class="done" href="/tasks/<%= task.id %>"><%= task.name.upcase %></a>
+          <span><%= num %>    </span>
+          <a class="done" href="/tasks/<%= task.id %>"><%= task.name.upcase %></a>
+          <%= button_to "-", "/tasks/#{task.id}", method: :delete, data: { :confirm => "Are you sure?" }, class: "delete-button" %>
         </div>
         <% gray = false %>
         <% num += 1 %>
+      <!--else the box is white-->
       <% else %>
         <div class="white-box">
-          <span><%= num %>    </span><a class="done" href="/tasks/<%= task.id %>"><%= task.name.upcase %></a>
+          <span><%= num %>    </span>
+          <a class="done" href="/tasks/<%= task.id %>"><%= task.name.upcase %></a>
+          <%= button_to "-", "/tasks/#{task.id}", method: :delete, data: { :confirm => "Are you sure?" }, class: "delete-button"%>
         </div>
         <% gray = true %>
         <% num += 1 %>
       <% end %>
     <% end %>
-
   <% end %>
+</div>
+
+<div class="square-button-container">
+  <a class="square-button" href="/tasks/new">
+    <p class="circle-button-title">+</p>
+    <span>Add new item</span>
+  </a>
+</div>
 
 <!--This code was used for moving all completed tasks to the bottom of the list-->
 <!--Leaving it here in case I need it later-->

@@ -52,7 +52,9 @@ h1 {
 }
 
 .list {
-  margin: 40px auto;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
   width: 450px;
   border-color: #E7E5E1;
   border-style: groove;
@@ -166,3 +168,73 @@ h2 {
 #gray-button {
   background-color: #E7E5E1;
 }
+
+.square-button {
+  width: 130px;
+  height: 130px;
+  display: inline-block;
+  // border-color: #000000;
+  // border-style: solid;
+  // border-width: 1px;
+  text-align: center;
+  padding-top: 10px;
+  margin: 10px;
+}
+
+.square-button-container {
+  text-align: center;
+}
+
+.delete-button {
+  border-width: 1px;
+  border-style: solid;
+  background-color: transparent;
+  display: inline;
+  text-align: right;
+  float: right;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 50%;
+  
+}
+
+.inline {
+  display: inline;
+}
+
+.button_to {
+  display: inline;
+  text-align: right;
+}
+
+.new_task {
+  width: 400px;
+  margin: auto;
+}
+
+label {
+  display: block;
+}
+
+#task_name {
+  width: 400px;
+}
+
+.create-task-button {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  display: inline-block;
+  border-color: #000000;
+  border-style: solid;
+  border-width: 1px;
+  text-align: center;
+  padding-top: 10px;
+  margin: 10px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.create-task-button:hover {color: #747070}

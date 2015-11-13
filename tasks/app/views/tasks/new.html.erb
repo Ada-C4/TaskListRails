@@ -1,0 +1,19 @@
+<header>
+  <h1 id="page-title" class="title">Enter Details</h1>
+</header>
+
+<%= form_for @task do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br>
+    <%= f.label :description %>
+    <%= f.text_area(:description, size: '64x10') %>
+    <div class="button-container">
+      <a class="circle-button" href="/">
+        <p class="circle-button-title">WAIT</p>
+        <span>Go back</span>
+      </a>
+      <%= f.submit("Add", class: "create-task-button") %>
+    </div>
+
+<% end %>
