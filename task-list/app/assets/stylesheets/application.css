@@ -47,3 +47,6 @@ table{
 table tr td:first-child{
   text-align: right;
 }
+.complete-task {
+  text-decoration: line-through;
+}

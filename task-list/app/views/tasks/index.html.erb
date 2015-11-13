@@ -2,7 +2,14 @@
 <h1>To Do:</h1>
 <ul>
   <% @tasks.each do |task| %>
-    <li><%= link_to task.name, "/tasks/#{task.id}" %>  <%= link_to "[x]", "/tasks/#{task.id}", method: :delete, data: { confirm: 'Confirm Delete' }, class: "delete-link" %></li>
+    <%if task.completed_at == nil %>
+      <li><%= link_to task.name, "/tasks/#{task.id}" %>  <%= link_to "[x]", "/tasks/#{task.id}", method: :delete, data: { confirm: 'Confirm Delete' }, class: "delete-link" %></li>
+    <% end %>
+  <% end %>
+  <% @tasks.each do |task| %>
+    <%if task.completed_at != nil %>
+      <li><%= link_to task.name, "/tasks/#{task.id}", class: "complete-task" %>  <%= link_to "[x]", "/tasks/#{task.id}", method: :delete, data: { confirm: 'Confirm Delete' }, class: "delete-link" %></li>
+    <% end %>
   <% end %>
 </ul>
 <%= link_to "Create A New Task", "tasks/new" %>
