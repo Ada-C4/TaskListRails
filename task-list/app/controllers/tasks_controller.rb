@@ -1,3 +1,4 @@
+require 'pry'
 class TasksController < ApplicationController
 
   def index
@@ -24,9 +25,18 @@ class TasksController < ApplicationController
     redirect_to "/"
   end
 
-  def update
+  def complete
     Task.update(params[:id], :completed_date => Time.now)
     redirect_to "/"
+  end
+
+  def update
+    Task.update(params[:id], task_params[:task] )
+    redirect_to "/"
+  end
+
+  def edit
+    @task = Task.find(params[:id])
   end
 
   private

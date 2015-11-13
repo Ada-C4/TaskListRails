@@ -10,5 +10,7 @@
     <% else %>
       <%= @task.completed_date.strftime("Completed on %m/%d/%Y") %>
     <% end %>
+    <%= button_to "Edit Task", "/tasks/#{@task.id}/edit", method: :get %>
   </p>
+
 </div>
