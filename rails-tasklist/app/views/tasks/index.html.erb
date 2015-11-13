@@ -1,27 +1,15 @@
-<h1>All tasks</h1>
-<div class="container">
-  <ul class="list-inline">
-    <% @tasks.each do |task| %>
-    <li>
-      <%= task.name %>; <%= task.description %>; <%= link_to "Show", "/tasks/#{task.id}" %>
-
-    </li>
-    <% end %>
-  </ul>
-</div>
-
 <div class="container">
   <h1>Task List</h1>
     <table class="table table-hover">
       <tr >
         <th>
-          task view
+          task info
+        </th>
+        <th>
+          delete task
         </th>
         <th id="taskie">
           task
-        </th>
-        <th>
-          description
         </th>
         <th>
           completed
@@ -30,17 +18,27 @@
       <% @tasks.each do |task| %>
         <tr>
           <td>
-            <%= link_to "show", "/tasks/#{task.id}" %>
+            <%= link_to "show", "/tasks/#{task.id}", class: "btn btn-default" %>
+          </td>
+          <td>
+            <%= button_to "delete", "tasks/#{task.id}", method: :delete, class: "btn btn-default", data: { confirm: 'Are you sure?' } %>
+            <!-- onclick="return confirm('Are you sure?')" -->
           </td>
          <td>
           	<div><%= task.name %></div>
          </td>
          <td>
-          	<div><% if task.description == "" %><%= "n/a" %><% end %><%= task.description %></div>
-         </td>
-         <td>
-          	<div><% if task.completed_at.class == NilClass %><%= "in progress :)" %><% end %><%= task.completed_at %></div>
+           <div>
+             <% if task.completed_at.class == NilClass %>
+                <img class="nocheckmark" src="/assets/white.png" alt="no checkmark"/>
+              <% else %>
+                <img class="checkmark" src="/assets/checkmark3.png" alt="checkmark"/>
+              <% end %>
+            </div>
+          	<!-- <div><% if task.completed_at.class == NilClass %><%= "in progress :)" %><% end %><%= task.completed_at %></div> -->
          </td>
        </tr>
       <% end %>
     </table>
+    <a class="btn btn-default" href="/tasks/new"><img src="/assets/edit.png" class = "icon">Add a task here</a>
+</div>
