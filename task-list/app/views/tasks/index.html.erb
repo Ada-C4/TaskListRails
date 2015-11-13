@@ -7,6 +7,11 @@
     <% end %>
   </ul>
 
-  <%= link_to "Create a Task", action: :new %>
-  <%= link_to "Remove a Task", action: :remove %>
+  <div class="buttonHolder">
+    <a href="/tasks/new" class="button plus"></a>
+  </div>
+
+  <div class="buttonHolder">
+    <a href="/tasks/remove" class="button cross"></a>
+  </div>
 </section>
