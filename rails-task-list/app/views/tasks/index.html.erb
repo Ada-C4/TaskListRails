@@ -1,32 +1,50 @@
 <h1>Tasks</h1>
 
+<!-- <form class="add_button" method="get" action="/tasks/new">
+  <input type="submit" value="Add a task">
+</form> -->
+
+<a href="/tasks/new">
+<table id="add_task_button">
+  <tr>
+    <td>
+      <i class="fa fa-space-shuttle fa-4x"></i>
+    </td>
+    <td id="add_text">
+      Add a new task
+    </td>
+    <td>
+      <i class="fa fa-space-shuttle fa-4x fa-rotate-180 fa-flip-horizontal"></i>
+    </td>
+  </tr>
+</table>
+</a>
+
 <div id="button_box">
 
 
-<a id="spaceship" href="/tasks/new">
+<!-- <a id="spaceship" href="/tasks/new">
   <form class="add_button" method="get" action="/tasks/new">
-    <i class="fa fa-space-shuttle fa-4x"></i>
-    <input type="submit" value="Add a task">
-    <i class="fa fa-space-shuttle fa-4x fa-rotate-180 fa-flip-horizontal"></i>
+    <i class="fa fa-space-shuttle fa-4x" style="background-color:blue"></i>
+
+    <i class="fa fa-space-shuttle fa-4x fa-rotate-180 fa-flip-horizontal" style="background-color:blue"></i>
   </form>
   </a>
 
-</div>
+</div> -->
 
   <% @tasks.each do |task| %>
 
-    <!-- <a class="list_box" href = "/tasks/<%= task.id %>"> <%= task.name %> -->
+
     <a href="/tasks/<%= task.id %>"><%= task.name %></a>
 
 
 
-          <form method="get" action="/tasks/<%= task.id %>/edit">
+          <!-- <form method="get" action="/tasks/<%= task.id %>/edit">
             <input type="submit" value="Edit">
-          </form>
+          </form> -->
 
-          <!-- <%= button_to "Edit", "/tasks/#{task.id}/edit" %>
-
-          <a href="/tasks/<%= task.id %>/edit">Edit</a> -->
+          <%= button_to "Edit", "/tasks/#{task.id}/edit", method: :get %>
 
           <%= button_to "Delete",  "/tasks/#{task.id}", method: :delete, data: { confirm: "Are you sure you want to delete this task?"}  %>
           <%= button_to "Mark as Complete", "/tasks/#{task.id}", method: :patch %>

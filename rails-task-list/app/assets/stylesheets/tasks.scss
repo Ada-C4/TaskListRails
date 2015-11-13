@@ -3,26 +3,44 @@
 // // You can use Sass (SCSS) here: http://sass-lang.com/
 //
 // /*Relevant to all pages*/
-//
-// h1 {
-//   font-family: 'Codystar', cursive;
-//   text-align: center;
-//   font-size: 80px;
-//   letter-spacing: 10px;
-// }
-//
-// body {
-//   font-family: 'Lato', sans-serif;
-//   width: 500px;
-//   margin-left: auto;
-//   margin-right: auto;
-// }
-//
-// p {
-//   padding-top: 10px;
-// }
-//
-// /*Relevant to the add task button */
+
+h1 {
+  font-family: 'Codystar', cursive;
+  text-align: center;
+  font-size: 70px;
+  letter-spacing: 10px;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+#add_task_button {
+  margin-left: auto;
+  margin-right: auto;
+  color: black;
+  margin-bottom: 20px;
+  border: 1px black solid;
+  border-radius: 15px;
+}
+
+#add_text {
+  font-size: 30px;
+}
+
+#add_task_button:hover {
+  background-color: rgb(25, 78, 140);
+  color: white;
+}
+
+// Relevant to the add task button
 //
 // #button_box {
 //   text-align: center;
@@ -34,7 +52,6 @@
 // .add_button input {
 //   -webkit-appearance: button;
 //   font-size: 30px;
-//   margin-bottom: 30px;
 //   border: none;
 //   background-color: inherit;
 // }
