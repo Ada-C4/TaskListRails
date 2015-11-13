@@ -9,7 +9,7 @@ class TasksController < ApplicationController
 	def show
 		id = params[:id]
 		@task = Task.find(id)
-		@completed_time = @task.completed_at.strftime("Completed %B %e, %Y.")
+		@completed_time = @task.completed_at.strftime("Completed %B %e, %Y.") if !@task.completed_at.nil?
 	end
 
 	def new

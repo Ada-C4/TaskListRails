@@ -9,4 +9,8 @@
   <% end %>
 </div>
 
+<div id='show-button'><%= button_to "Done!", {action:'update', id: @task.id}, method: :patch, class:"complete-button", :params => {completed: :true} %></div>
+<div id='show-button'><%= button_to "Edit", {action: 'edit', id: @task.id}, method: :get, class: 'edit-button' %></div>
+<div id='show-button'><%= button_to "Delete", {action: "destroy", id: @task.id }, method: :delete, data: {confirm: 'Are you sure you want to delete that?'}, class: "delete-button"%></div>
+
 <p id='back_button'><%= link_to 'back to Task List', '/tasks' %></p>

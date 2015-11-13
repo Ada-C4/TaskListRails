@@ -8,7 +8,7 @@
       <% @working_tasks.each do |task| %>
         <tr>
           <td id='task'><%= link_to task.name, "/tasks/#{task.id}" %></td>
-          <td id='edit' class='button'><%= button_to "Edit", {action: 'edit', id: task.id}, method: :get, class: 'edit-button' %> 
+          <td id='edit' class='button'><%= button_to "Edit", {action: 'edit', id: task.id}, method: :get, class: 'edit-button' %> </td>
           <td id='delete' class='button'><%= button_to "Delete", {action: "destroy", id: task.id }, method: :delete, data: {confirm: 'Are you sure you want to delete that?'}, class: "delete-button"%></td>
           <td id="mark-complete" class='button'><%= button_to "Done!", {action:'update', id: task.id}, method: :patch, class:"complete-button", :params => {completed: :true} %></td>
         </tr>
