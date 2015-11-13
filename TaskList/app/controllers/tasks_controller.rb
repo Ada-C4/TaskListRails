@@ -2,7 +2,7 @@ class TasksController < ApplicationController
 
 	def index
 		@tasks = Task.all
-		@working_tasks = Task.where('completed_at IS NULL')
+		@working_tasks = Task.working
 		@completed_tasks = Task.completed
 	end
 
