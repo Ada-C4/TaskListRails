@@ -1,9 +1,4 @@
-<header>
-  <h1 id="page-title" class="title">Enter Details</h1>
-</header>
-
-<%= render partial: 'form', locals: {method_type: :patch, button_text: "Add"} %>
-<!-- <%= form_for @task do |f| %>
+<%= form_for @task do |f| %>
     <%= f.label :name %>
     <%= f.text_field :name %>
     <br>
@@ -15,7 +10,6 @@
         <p class="circle-button-title">WAIT</p>
         <span>Go back</span>
       </a>
-      <%= f.submit("Add", class: "create-task-button") %>
+      <%= f.submit(button_text, class: "create-task-button") %>
     </div>
-
-<% end %> -->
+<% end %>
