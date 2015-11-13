@@ -12,6 +12,7 @@ h1 {
   text-align: center;
   color: #FBFBFB;
   font-family: 'Rock Salt', cursive;
+  font-size: 2.5em;
 }
 
 a {
@@ -22,18 +23,19 @@ a {
 p {
   color: #FBFBFB;
   font-family: 'Rock Salt', cursive;
+  font-size: 1.5em;
 }
 
 span {
   color: #FBFBFB;
   font-family: 'Rock Salt', cursive;
   line-height: 40px;
+  font-size: 1.5em;
 }
 
 .center {
   margin: auto;
-  width: 400px;
-  padding-left: 200px;
+  width: 50%;
 }
 
 .center_task {
@@ -69,6 +71,7 @@ fieldset {
 #add_new {
   margin-top: 20px;
   font-size: 1.5em;
+  text-align: center;
 }
 
 .new_button {
@@ -79,4 +82,10 @@ fieldset {
   outline: none;
   cursor: pointer;
   font-weight: bold;
+}
+
+.complete-button {
+  background: transparent;
+  border: 3px solid #FBFBFB;
+  margin-right: 15px;
 }
