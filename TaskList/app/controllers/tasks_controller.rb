@@ -33,7 +33,8 @@ class TasksController < ApplicationController
 		time = Time.now
 		id = params[:id]
 		if params[:completed] == true
-
+		
+		end
 		redirect_to '/'
 	end
 
