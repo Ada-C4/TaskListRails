@@ -28,6 +28,12 @@ class TasksController < ApplicationController
     render :new
   end
 
+  def update
+    id = params[:id]
+    Task.find(id).update(task_params[:task])
+    redirect_to "/"
+  end
+
   private
 
   def task_params
