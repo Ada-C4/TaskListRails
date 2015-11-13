@@ -3,6 +3,19 @@
     <link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
   </head>
   <body>
-    <h1>This will be an edit form</h1>
+    <%= form_for @task, url: {action: "edit"} do |f| %>
+      <fieldset>
+        <legend>
+          Task information:
+        </legend>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+        <%= f.label :description %>
+        <%= f.text_field :description %>
+        <%= f.label :completed %>
+        <%= f.date_field :completed %>
+        <%= f.submit class: 'update_button'%>
+      </fieldset>
+      <% end %>
   </body>
 </html>
