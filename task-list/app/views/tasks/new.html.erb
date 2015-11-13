@@ -1,6 +1,6 @@
-<header>
-  🔅🔅🔆 Task Organizer 🔆🔅🔅
-</header>
+<nav>
+  <%= link_to "Task List", "/tasks" %>
+</nav>
 <h1>New Task</h1>
 <%= form_for @task do |f| %>
   <fieldset>
@@ -19,6 +19,3 @@
   <br>
   <%= f.submit %>
 <% end %>
-<footer>
-  🔅🔅🔆🔆🔅🔅
-</footer>
