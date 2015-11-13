@@ -3,7 +3,6 @@ h1 {
   text-align: center;
   font-size: 80px;
   letter-spacing: 10px;
-  margin-left: 10px;
 }
 
 body {
@@ -42,17 +41,24 @@ body {
 
 .list_box {
   width: 400px;
+  display: block;
   margin-left: auto;
   margin-right: auto;
   font-size: 20px;
   margin-top: 10px;
-  list-style-type: none;
   text-align: center;
-  padding-top: 30px;
+  padding-top: 20px;
   padding-bottom: 20px;
   border-radius: 15px;
 
 }
+
+/*.list_box a {
+  display: block;
+  height: 50px;
+  padding-top: 20px;
+
+}*/
 
 .list_box:nth-child(10n+1) {
   background-image: url(hubble_1.jpeg);
@@ -100,14 +106,14 @@ a {
 }
 
 a:hover {
-  color: #FFFFFF;
-  background-color: #FF0000;
+  color: white;
+
+  background-color: rgb(25, 78, 140);
+  border-radius: 15px;
+
 }
 
-a:visited:hover {
-  color: #000000;
-  background-color: #FF0000;
-}
+
 
 p {
   padding-top: 10px;
