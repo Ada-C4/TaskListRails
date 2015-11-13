@@ -6,8 +6,9 @@ Rails.application.routes.draw do
 
   get 'tasks/:id' => 'tasks#show'
 
-### is this correct? 
   post 'tasks/' => 'tasks#create'
+
+  delete 'tasks/:id' => 'tasks#destroy'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
