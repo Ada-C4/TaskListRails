@@ -25,6 +25,13 @@ class TasksController < ApplicationController
     redirect_to '/tasks'
   end
 
+  def update
+    id = params[:id]
+    task = Task.find(id)
+    task.update(completed: Time.now)
+    redirect_to '/tasks'
+  end
+
   #def completed_tasks
   #  @tasks.where.not(completed_at: nil)
   #end
