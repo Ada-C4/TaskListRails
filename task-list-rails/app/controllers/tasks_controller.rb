@@ -40,10 +40,13 @@ class TasksController < ApplicationController
     redirect_to "/"
   end
 
-  def complete
-    @task = Task.find(params[:id])
-    @task.update(completed: true, completed_at: Time.now)
-    @task.save
+  def toggle_complete
+    task = Task.find(params[:id])
+    if !task.completed
+      task.update(completed: true, completed_at: Time.now)
+    else
+      task.update(completed: false, completed_at: nil)
+    end
     redirect_to "/"
   end
 

@@ -13,7 +13,7 @@
         <% if !task.completed %>
           <td><%= link_to '<i class="icon-check-empty"></i>'.html_safe, "/tasks/#{task.id}/complete", method: :patch %></td>
         <% else %>
-          <td><%= link_to '<i class="fa fa-check-square-o"></i>'.html_safe, "/tasks/#{task.id}/complete", method: :patch, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to '<i class="fa fa-check-square-o"></i>'.html_safe, "/tasks/#{task.id}/complete", method: :patch %></td>
         <% end %>
         <td><%= task.name %></td>
         <td><%= link_to "details", "/tasks/#{task.id}" %></td>
