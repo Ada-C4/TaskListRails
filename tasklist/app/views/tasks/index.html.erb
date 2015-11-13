@@ -4,14 +4,18 @@
 <html>
   <body>
     <h1> What's Da Happs </h1>
+    <h2><a class = "new" href="/tasks/new">add a new task</a></h2>
+    <div>
     <ul>
       <% @tasks.each do |task| %>
       <li> <a href="./tasks/<%= task.id %>"><br><%= task.name %></a><br>
+      <%= link_to 'DELETE TASK',  { action: :destroy, id: task.id }, method: :delete, data: { confirm: 'Delete Task, For Real?' } %> <br>
       <% if !task.date_completed.nil? %>
       STATUS: DONE, DONE, and DONE!
       <% end %>
       </li>
       <% end %>
     </ul>
+  </div>
   </body>
 </html>
