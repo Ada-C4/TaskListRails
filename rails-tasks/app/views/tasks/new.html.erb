@@ -1,17 +1,18 @@
-<div class="form">
+<div class="on_paper">
+<h1>Remember to...</h1>
+  <%= form_for @task do |f| %>
 
-<%= form_tag do %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    <br>
+      <%= f.label :description %>
+      <%= f.text_field :description %>
 
-  <label id="top" for="name">task name:</label>
-  <input type="text" size=40 id="name">
+    <br>
+    <%= f.submit%>
 
-  <br>
-  <label for="description">task description:</label>
-  <textarea id="description" cols="40%"></textarea>
+  <% end %>
 
-  <br>
-  <button class="button" type="submit">add task</button>
-
-<% end %>
+  <%= link_to "back to the list", "/" %>
 
 </div>

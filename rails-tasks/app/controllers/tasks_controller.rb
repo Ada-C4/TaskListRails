@@ -12,7 +12,6 @@ class TasksController < ApplicationController
     @description = task.description
     @completed_status = task.complete
     date = task.completed_date
-    binding.pry
     if date == nil
       @completed_date = nil
     else
@@ -21,7 +20,24 @@ class TasksController < ApplicationController
   end
 
   def new
+    @task = Task.new
+  end
 
+  def create
+    Task.create(task_params[:task])
+    redirect_to "/"
+  end
+
+  def destroy
+    to_delete = Task.where(task_params[:name])
+    Task.destroy(to_delete[0].id)
+    redirect_to "/"
+  end
+
+  private
+
+  def task_params
+    params.permit(task:[:name, :description])
   end
 
 end

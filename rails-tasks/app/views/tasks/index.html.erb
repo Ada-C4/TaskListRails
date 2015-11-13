@@ -1,19 +1,37 @@
+<div class="on_paper">
+
 <h1>note to self<br>must do:</h1>
-<table align="center">
+<table>
   <% @tasks.each do |task| %>
     <tr>
-      <td>
-        <% if task.complete == true %>
-          <a id=complete href="/task_list/<%= task.name %>"> <%= task.name %> </a>
+        <% if task.complete? %>
+        <td>
+          <a class="complete" href="/tasks/<%= task.name %>"> <%= task.name %> </a>
+        </td>
+        <td>
+          <%= button_to "✘", "/tasks/#{task.name}", :method => :delete, data: { confirm: "delete #{task.name}?" } %>
+        </td>
         <% else %>
-          <a id=incomplete href="/task_list/<%= task.name %>"> <%= task.name %> </a>
+        <td>
+          <a class="incomplete" href="/tasks/<%= task.name %>"> <%= task.name %> </a>
+        </td>
+        <td>
+          <%= button_to "✎", "/tasks/#{task.name}/edit", :method => :get%>
+        </td>
+        <td>
+          <%= button_to "✔︎", "/tasks/#{task.name}", :method => :put %>
+        </td>
+        <td>
+          <%= button_to "✘", "/tasks/#{task.name}", :method => :delete, data: { confirm: "delete #{task.name}?" } %>
+        </td>
         <% end %>
-      </td>
     </tr>
   <% end %>
     <tr>
       <td>
-        <a href="/task_list/new">+ add a task</a>
+        <a href="/tasks/new">+ add a task</a>
       </td>
     </tr>
 </table>
+
+</div>
