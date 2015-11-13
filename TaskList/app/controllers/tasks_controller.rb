@@ -9,6 +9,7 @@ class TasksController < ApplicationController
 	def show
 		id = params[:id]
 		@task = Task.find(id)
+		@completed_time = @task.completed_at.strftime("Completed %B %e, %Y.")
 	end
 
 	def new
@@ -30,10 +31,12 @@ class TasksController < ApplicationController
 	end
 
 	def update
-		time = Time.now
 		id = params[:id]
-		if params[:completed] == true
-		
+		@task = Task.find(id)
+		if params[:completed] == "true"
+			@task.update(:completed_at => Time.now)
+		else
+			@task.update(update_params[:task])
 		end
 		redirect_to '/'
 	end
@@ -43,5 +46,9 @@ class TasksController < ApplicationController
 	def task_params
 		params.permit(task:[:name, :description])
 	end
+
+	def update_params
+    params.permit(task: [:name, :description, :completed])
+  end
 
 end

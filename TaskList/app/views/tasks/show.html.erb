@@ -3,7 +3,7 @@
   <h3><%= @task.name %></h3>
   <p><%= @task.description %></p>
   <% unless @task.completed_at.nil? %>
-    <p>Completed on: <%= @task.completed_at %></p>
+    <p><%= @completed_time %></p>
   <% else %>
   <h3>This task is not complete yet. Get to it!</h3>
   <% end %>
