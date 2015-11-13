@@ -47,7 +47,7 @@ p {
 a {
   text-decoration: none;
   font-size: 1.5em;
-  color: #4d5f6d;
+  color: black;
   line-height: 60px;
 }
 
@@ -57,4 +57,19 @@ ul {
 
 .add-task {
   color: hotpink;
+}
+
+form {
+margin-top: 0;
+font-size: 1.5em;
+opacity: 0.6;
+}
+
+.form-field {
+  margin-left: 360px;
+  margin-top: -50px;
+}
+
+.new-input {
+  margin-top: 0;
 }
