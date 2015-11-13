@@ -24,10 +24,16 @@ p {
   font-family: 'Rock Salt', cursive;
 }
 
+span {
+  color: #FBFBFB;
+  font-family: 'Rock Salt', cursive;
+  line-height: 40px;
+}
+
 .center {
   margin: auto;
   width: 400px;
-  padding-left: 250px;
+  padding-left: 200px;
 }
 
 .center_task {
@@ -36,4 +42,41 @@ p {
 
 .strikethrough {
   text-decoration: line-through;
+}
+
+.x-button {
+  border: none;
+  display: inline;
+  background: transparent;
+  font-family: 'Rock Salt', cursive;
+  color: #FBFBFB;
+  outline: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+form {
+  display: inline!important;
+  margin: 0;
+  padding: 0;
+}
+
+fieldset {
+  font-family: 'Rock Salt', cursive;
+  color: #FBFBFB;
+}
+
+#add_new {
+  margin-top: 20px;
+  font-size: 1.5em;
+}
+
+.new_button {
+  margin-left: 20px;
+  font-family: 'Rock Salt', cursive;
+  color: #FBFBFB;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  font-weight: bold;
 }
