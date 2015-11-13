@@ -15,5 +15,6 @@
     <span>Completion Date:</span> <%= @task.completed_at.to_date %>
   </p>
   <% end %>
+  <%= button_to("/tasks/#{@task.id}/edit", method: "get", title: "Edit") { fa_icon("pencil-square-o fw 3x") } %>
   <%= image_tag "https://33.media.tumblr.com/8092a0b1f2aa7d8cf7fc8d58f7f36155/tumblr_n4fkyi9suN1qdwrtpo1_400.gif" %>
 </div>

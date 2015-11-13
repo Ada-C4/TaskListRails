@@ -147,3 +147,8 @@ fieldset {
   border: none;
   text-align: center;
 }
+
+button {
+  background: transparent;
+  border: none;
+}
