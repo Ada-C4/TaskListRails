@@ -3,14 +3,24 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-  background-color: #999933;
+  background-image: url(vacuuming.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: 0 auto;
-  width: 960px
+  width: 960px;
+}
+
+img {
+  opacity: 0.4;
 }
 
 .content {
   width: 650px;
   margin: inherit;
+  background-color: #fff;
+  opacity: 0.6;
+  margin-left: 500px;
+  padding: 30px;
 }
 
 h1 {
