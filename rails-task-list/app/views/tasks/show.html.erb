@@ -10,3 +10,21 @@
 <% else %>
   <p>Task has not been completed.</p>
 <% end %>
+
+
+  <table id="option_buttons">
+    <tr>
+      <td>
+        <%= button_to("/tasks/#{@task.id}", method: :patch, :class => "big_button",  title: "Complete") { fa_icon("check fw lg 4x") } %>
+      </td>
+      <td>
+        <%= button_to("/tasks/#{@task.id}/edit", method: :get, :class => "big_button", title: "Edit") { fa_icon("pencil fw lg 4x") } %>
+      </td>
+      <td>
+        <%= button_to("/tasks/#{@task.id}", method: :delete, :class => "big_button", data: { confirm: "Are you sure you want to delete this task?"}, title: "Delete") { fa_icon("trash-o fw 4x") } %>
+      </td>
+      <td>
+        <%= button_to("/tasks/#{@task.id+1}", method: :get, :class => "big_button", title: "Next") { fa_icon("arrow-right fw 4x") } %>
+      </td>
+    </tr>
+  </table>
