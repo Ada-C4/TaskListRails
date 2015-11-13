@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  #root 'tasks#index'
+  root 'tasks#index'
 
   get 'tasks/' => 'tasks#index'
 
@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   delete 'tasks/:id' => 'tasks#destroy'
 
-  patch 'tasks/' => 'tasks#update'
+  patch 'tasks/:id/completed' => 'tasks#toggle_completed'
 
   #post 'tasks/:id' => 'tasks#create'
 

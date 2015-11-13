@@ -14,6 +14,11 @@ class TasksController < ApplicationController
     @task = Task.new
   end
 
+  def edit
+    id = params[:id]
+    @task = Task.find(id)
+  end
+
   def create
     Task.create(task_params[:task])
     redirect_to '/tasks'
@@ -25,7 +30,7 @@ class TasksController < ApplicationController
     redirect_to '/tasks'
   end
 
-  def update
+  def toggle_completed
     id = params[:id]
     task = Task.find(id)
     task.update(completed: Time.now)
