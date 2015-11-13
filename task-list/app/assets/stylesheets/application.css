@@ -92,7 +92,7 @@ li a:hover {
 section {
   background-color: white;
   width: 400px;
-  height: 100vh;
+  height: 100%;
   margin: 0 auto;
 }
 
@@ -145,16 +145,16 @@ ul {
 }
 
 
-.heart:after {
-	content: "❤";
-	left: 21px;
-	top: 21px;
+.pencil:after {
+	content: "✐";
+	left: 7.5px;
+	top:10px;
 }
 
 .plus:after {
 	content: "+";
-	left: 7px;
-	top: 8px;
+	left: 6px;
+	top: 7px;
 }
 
 .tick:after {
@@ -165,8 +165,8 @@ ul {
 
 .cross:after {
 	content: "x";
-	left: 7px;
-	top: 8.5px;
+	left: 6.5px;
+	top: 8px;
 }
 
 .button:hover {
