@@ -1,11 +1,23 @@
 <h1>Tasks</h1>
 
-<ul>
+<div id="button_box">
+
+
+
+  <form class="add_button" method="get" action="/tasks/new">
+    <i class="fa fa-space-shuttle fa-4x"></i>
+    <input type="submit" value="Add a task">
+    <i class="fa fa-space-shuttle fa-4x fa-rotate-180 fa-flip-horizontal"></i>
+  </form>
+
+</div>
+
   <% @tasks.each do |task| %>
-  <div class="list_box">
-  <li>
-    <%= link_to task.name, "/#{task.id}"  %>
-  </li>
-  </div>
+
+    <a class="list_box" href = "/tasks/<%= task.id %>"> <%= task.name %>
+
+          <!-- <%= link_to task.name, "/tasks/#{task.id}"  %> -->
+          <%= button_to "Delete",  "/tasks/#{task.id}", method: :delete, data: { confirm: "Are you sure you want to delete this task?"}  %>
+
+    </a>
   <% end %>
-</ul>

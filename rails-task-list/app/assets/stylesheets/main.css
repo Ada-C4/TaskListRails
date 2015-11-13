@@ -1,9 +1,8 @@
 h1 {
   font-family: 'Codystar', cursive;
   text-align: center;
-  font-size: 60px;
+  font-size: 80px;
   letter-spacing: 10px;
-  margin-left: 40px;
 }
 
 body {
@@ -13,18 +12,53 @@ body {
   margin-right: auto;
 }
 
-.list_box {
-  width: 400px;
-  font-size: 20px;
-  margin-top: 10px;
+#button_box {
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
-  list-style-type: none;
+  padding-top: 10px;
+}
+
+.add_button input {
+  -webkit-appearance: button;
+  font-size: 30px;
+  margin-bottom: 30px;
+  border: none;
+  background-color: inherit;
+}
+
+#button_box:hover input {
+  color: white;
+}
+
+#button_box:hover {
+  width: 400px;
+  color: white;
+  background-color: rgb(25, 78, 140);
+  border-radius: 15px;
+}
+
+
+.list_box {
+  width: 400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+  margin-top: 10px;
   text-align: center;
-  padding-top: 40px;
-  padding-bottom: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 15px;
 
 }
+
+/*.list_box a {
+  display: block;
+  height: 50px;
+  padding-top: 20px;
+
+}*/
 
 .list_box:nth-child(10n+1) {
   background-image: url(hubble_1.jpeg);
@@ -72,14 +106,14 @@ a {
 }
 
 a:hover {
-  color: #FFFFFF;
-  background-color: #FF0000;
+  color: white;
+
+  background-color: rgb(25, 78, 140);
+  border-radius: 15px;
+
 }
 
-a:visited:hover {
-  color: #000000;
-  background-color: #FF0000;
-}
+
 
 p {
   padding-top: 10px;
