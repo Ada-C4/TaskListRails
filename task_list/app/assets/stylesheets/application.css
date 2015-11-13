@@ -58,9 +58,14 @@
 
  ul {
    list-style-type: none;
-   text-align: center;
    margin-top: 50px;
    margin-bottom: 0px;
+   margin-left: 100px;
+ }
+
+ li {
+   display: flex;
+   justify-content: space-between;
  }
 
  ::-webkit-input-placeholder {
@@ -94,6 +99,7 @@
 
  .button_to {
    display: inline-block;
+   margin-right: 200px;
  }
 
  .delete_button, .submit {
@@ -104,6 +110,16 @@
  }
 
  fieldset{
-   margin-top: 150px;
+   margin-top: 75px;
    width: 800px;
+ }
+
+ div {
+   padding-top: 25px;
+   text-align: center;
+ }
+
+ .add_task {
+   color: #405421;
+   font-size: 28px;
  }
