@@ -50,3 +50,6 @@ table tr td:first-child{
 .complete-task {
   text-decoration: line-through;
 }
+.delete-link {
+  color: #BA506E;
+}
