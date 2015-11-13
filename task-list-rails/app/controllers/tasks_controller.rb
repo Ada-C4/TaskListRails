@@ -27,6 +27,19 @@ class TasksController < ApplicationController
     redirect_to "/"
   end
 
+  def edit
+    id = params[:id]
+    @task = Task.find(id)
+  end
+
+  def update
+    Task.update(params[:id],
+      name: task_params[:task][:name],
+      description: task_params[:task][:description]
+      )
+    redirect_to "/"
+  end
+
   private
 
   def task_params

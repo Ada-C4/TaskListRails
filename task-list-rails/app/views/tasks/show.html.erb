@@ -5,7 +5,7 @@
           <td colspan="2" id="title">Task details</td>
         </tr>
         <tr>
-          <td colspan="2" id=edit_link><%= link_to "edit?", "/tasks/#{@task.id}/edit" %></td>
+          <td colspan="2" id=edit_link><%= link_to "edit?", {controller: "tasks", action: "edit", id: @task.id} %></td>
         </tr>
       </thead>
       <tbody>
@@ -21,7 +21,7 @@
           <td class="attribute">
             <strong>description:</strong>
           </td>
-          <% if @task.description == "" || @task.description.nil? %>
+          <% if !@task.description.present? %>
             <td id="empty_description">
               <em>empty</em>
             </td>
@@ -55,7 +55,7 @@
               <strong>date completed:</strong>
             </td>
             <td>
-              <%= "#{@task.completed_at.to_date}" %>
+              <%= @task.completed_at.to_date %>
             </td>
           </tr>
         <% end %>
