@@ -8,4 +8,8 @@
       <p>Incomplete!</p>
     <% end %>
     <p><%= @task.completed_date %></p>
+
+    <%= link_to 'Edit',  { action: :edit, id: @task.id }, method: :get %>
+
+
 </section>

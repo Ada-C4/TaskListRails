@@ -43,6 +43,13 @@ class TasksController < ApplicationController
     @task = Task.find(id)
   end
 
+  def update
+    id = params[:id]
+    @task = Task.find(id)
+    @task.update(task_params[:task])
+    redirect_to action: :index
+  end
+
   private
 
   def task_params
