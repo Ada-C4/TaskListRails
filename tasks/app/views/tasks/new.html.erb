@@ -1,21 +1,14 @@
-<html>
-  <head>
-    <link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
-  </head>
-  <body>
-    <%= form_for @task do |f| %>
-      <fieldset>
-        <legend>
-          Task information:
-        </legend>
-        <%= f.label :name %>
-        <%= f.text_field :name %>
-        <%= f.label :description %>
-        <%= f.text_field :description %>
-        <%= f.label :completed %>
-        <%= f.date_field :completed %>
-        <%= f.submit class: 'new_button'%>
-      </fieldset>
-      <% end %>
-  </body>
-</html>
+<%= form_for @task do |f| %>
+  <fieldset>
+    <legend>
+      Task information:
+    </legend>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+    <%= f.label :completed %>
+    <%= f.date_field :completed %>
+    <%= f.submit class: 'new_button'%>
+  </fieldset>
+  <% end %>

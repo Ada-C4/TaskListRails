@@ -1,21 +1,14 @@
-<html>
-  <head>
-    <link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
-  </head>
-  <body>
-    <h1><%= @task.name %></h1>
-    <p class="center_task">
-      <%= @task.description %>
-    </p>
-    <p class="center_task">
-      <% if !@task.completed.nil?  %>
-        Completed on <%= @task.completed.to_formatted_s(:long_ordinal) %>
-        <% else %>
-        Not completed
-        <% end %>
-    </p>
-    <p class="center_task">
-      <a href="/tasks/<%= @task.id %>/edit" >Edit task</a>
-    </p>
-  </body>
-</html>
+<h1><%= @task.name %></h1>
+<p class="center_task">
+  <%= @task.description %>
+</p>
+<p class="center_task">
+  <% if !@task.completed.nil?  %>
+    Completed on <%= @task.completed.to_formatted_s(:long_ordinal) %>
+    <% else %>
+    Not completed
+    <% end %>
+</p>
+<p class="center_task">
+  <a href="/tasks/<%= @task.id %>/edit" >Edit task</a>
+</p>
