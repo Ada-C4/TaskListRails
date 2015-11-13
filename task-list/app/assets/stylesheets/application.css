@@ -22,6 +22,14 @@ body {
   background-size: cover;
 }
 
+.bottom_of_page_link {
+  margin: 0 auto;
+  display: block;
+  padding-bottom: 30px;
+  padding-top: 10px;
+
+}
+
 .complete_button {
   color: grey;
   display: inline;
