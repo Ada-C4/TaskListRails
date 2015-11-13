@@ -6,15 +6,15 @@
     <%= f.label :name %>
     <%= f.text_field :name %>
     <br>
+    <br>
     <%= f.label :description %>
-    <%= f.text_area(:description, size: '64x10') %>
+    <%= f.text_area(:description, size: '48x10') %>
     <div  class="button-container">
       <a id="gray-button" class="circle-button" href="/">
         <p class="circle-button-title">WAIT</p>
         <span>Go back</span>
       </a>
       <%= f.submit("Add", class: "create-task-button") %>
-      <!-- <%= image_submit_tag("add-button.png", :class => 'create-task-button') %> -->
     </div>
 
 <% end %>

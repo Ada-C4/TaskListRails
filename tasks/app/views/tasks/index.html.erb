@@ -4,6 +4,7 @@
   </div>
   <% gray = true %>
   <% num = 1 %>
+  <!--Creates task list with alternating gray and white boxes, and strikes through completed tasks  -->
   <% @tasks.each do |task| %>
     <% if task.complete.nil? %>
       <% if gray %>

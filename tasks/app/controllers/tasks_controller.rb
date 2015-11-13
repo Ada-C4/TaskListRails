@@ -25,6 +25,7 @@ class TasksController < ApplicationController
     redirect_to "/"
   end
 
+# Finds the id of the next item in the task list
   def find_next_id(current_id)
     if current_id == Task.last.id
       next_id = Task.first.id
