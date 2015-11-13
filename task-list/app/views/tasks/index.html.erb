@@ -3,12 +3,13 @@
   <ul>
     <% @tasks.each do |task| %>
       <li>
-        <%= button_to "check", "/tasks/#{task.id}/complete", method: :patch, class: "button" %>
+        <%= button_to "✓","/tasks/#{task.id}/complete", method: :patch, class: "complete_button" %>
         <a href= "/tasks/<%= task.id %>"><%= task.name %></a>
       </li>
     <% end %>
   </ul>
 
+<section id="index_buttons">
   <div class="button_holder">
     <a href="/tasks/new" class="button plus"></a>
   </div>
@@ -20,4 +21,5 @@
   <div class="button_holder">
     <a href="/tasks/remove" class="button cross"></a>
   </div>
+</section>
 </section>
