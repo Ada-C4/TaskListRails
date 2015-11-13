@@ -1,19 +1,91 @@
 // Place all the styles related to the tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-body {
-  // background-image: url("/assets/note.jpg");
-  background-color: #C0C0C0;
-}
+
 
 h1 {
   color: purple;
+  text-align: center;
+  margin-top: 60px;
 }
 
 li {
-  color:yellow;
+  padding: 20px;
+  display:inline-block;
 }
 
-footer {
-  color: green;
+a{
+  color: black;
+}
+
+
+#name {
+  text-align: center;
+}
+
+#description {
+  width: 300px;
+  height: 200px;
+  margin-left: 276px;
+}
+
+#task_description {
+  width: 200px;
+  height: 150px;
+}
+
+#task_name {
+  width: 200px;
+}
+
+legend {
+  text-align: center;
+  font-size: 25px;
+  color: purple
+}
+
+#task_name {
+  text-align: left;
+  font-size: 20px;
+}
+
+.button_to {
+  background-color: #663399;
+  padding: 2px;
+  display:inline-block;
+}
+
+.submit {
+  border-color: #663399;
+  padding: 1px;
+  display:inline-block;
+  margin-top: 20px;
+  margin-left: 410px;
+  width: 100px;
+  height: 40px;
+  font-size: 15px;
+}
+
+footer  {
+  display: block;
+  font-size: 0.9em;
+  margin-top: 90;
+  font-size: 15px;
+  margin-top: 20%;
+
+}
+
+
+
+table {
+  width: 600px;
+  margin-left:auto;
+  margin-right:auto;
+
+}
+
+td, th {
+border: 1px solid transparent; /* No more visible border */
+height: 30px;
+transition: all 0.3s;  /* Simple transition for hover effect */
 }

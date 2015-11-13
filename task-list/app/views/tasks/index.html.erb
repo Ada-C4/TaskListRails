@@ -1,7 +1,18 @@
-<div class="tasks">
-  <ul>
+<table>
+  <col width="80%">
+  <col width="20%">
+  <tr>
+    <th id="task_name">Task</th>
+    <th></th>
+  </tr>
     <% @tasks.each do |task| %>
-      <li> <%= link_to "Task: #{task.name}", "/tasks/#{task.id}" %></p>
+      <tr>
+        <td >
+          <%= link_to "Task: #{task.name}", "/tasks/#{task.id}" %>
+        </td>
+        <td>
+          <%= button_to "delete", {action: 'destroy', id: task.id }, method: :delete, data: { confirm: "Are you sure?"} %></p>
+        </td>
+      </tr>
     <% end %>
-  </ul>
-</div>
+</table>
