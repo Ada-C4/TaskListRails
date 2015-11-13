@@ -94,7 +94,8 @@ label {
 
 input.create-button {
   display: block;
-  padding:15px; 
+  padding:10px; 
+  padding-top: 16px;
   background:#885673; 
   opacity: 0.8;
   margin: 0 auto;
@@ -110,19 +111,38 @@ input.create-button {
 
 input.delete-button {
   display: block;
-/*  padding:15px; */
-  padding-bottom: 33px; 
   background:#885673; 
+  padding-top: 7px;
   margin: 0 auto;
   border:0 none;
+  opacity: .8;
   cursor:pointer;
   -webkit-border-radius: 5px;
   border-radius: 5px; 
   font-family: 'Special Elite', cursive;
-  font-size: 24px;
-  width: 200px;
+  font-size: 14px;
+  height: 23px;
+  width: 70px;
   text-align: center;
 }
+
+input.edit-button {
+  display: block;
+  background:#885673; 
+  padding-top: 7px;
+  margin: 0 auto;
+  border:0 none;
+  opacity: .8;
+  cursor:pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; 
+  font-family: 'Special Elite', cursive;
+  font-size: 14px;
+  height: 23px;
+  width: 70px;
+  text-align: center;
+}
+
 
 textarea {
   outline: none;
