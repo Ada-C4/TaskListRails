@@ -18,7 +18,7 @@
         <td><%= task.name %></td>
         <td><%= link_to "details", "/tasks/#{task.id}" %></td>
         <td class="delete">
-          <%= link_to 'delete?',  { action: :destroy, id: task.id }, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to '<i class="fa fa-trash-o"></i>'.html_safe,  { action: :destroy, id: task.id }, method: :delete, data: { confirm: 'Are you sure?' } %>
         </td>
       </tr>
       <% end %>

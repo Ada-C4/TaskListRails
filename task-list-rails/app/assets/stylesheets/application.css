@@ -62,8 +62,8 @@ tbody tr:first-child td {
 }
 
 .delete {
-  font-size: 12px;
-  padding: 4px 10px 2px 10px;
+  font-size: 16px;
+  padding: 2px 10px 2px 10px;
 }
 
 .delete a {
@@ -97,7 +97,7 @@ a {
 div#form {
   background-color: #FCF4AB;
   border: 2px black dashed;
-  width: 400px;
+  width: 350px;
   height: 400px;
   margin: auto;
   margin-top: 100px;
@@ -111,17 +111,17 @@ div#form {
 }
 
 form {
-  color: #CA5A45;
+  color: #4573ca;
   font-family: 'Asap', sans-serif;
   font-size: 18px;
   text-align: center;
 }
 
 form section {
-  padding-left: 50px;
+  padding-left: 25px;
   text-align: left;
   display: block;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 form input {
