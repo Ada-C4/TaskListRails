@@ -30,10 +30,15 @@ class TasksController < ApplicationController
     redirect_to '/tasks'
   end
 
+  def update
+    Task.update(params[:id], task_params[:task])
+    redirect_to '/tasks'
+  end
+
   def toggle_completed
     id = params[:id]
     task = Task.find(id)
-    task.update(completed: Time.now)
+    task.update(id)
     redirect_to '/tasks'
   end
 

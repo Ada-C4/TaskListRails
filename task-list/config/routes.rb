@@ -8,10 +8,13 @@ Rails.application.routes.draw do
 
   get 'tasks/:id' => 'tasks#show'
 
+  get 'tasks/:id/edit' => 'tasks#edit'
+
   delete 'tasks/:id' => 'tasks#destroy'
 
   patch 'tasks/:id/completed' => 'tasks#toggle_completed'
 
+  patch 'tasks/:id/edit' => 'tasks#update'
   #post 'tasks/:id' => 'tasks#create'
 
   post 'tasks/' => 'tasks#create'
