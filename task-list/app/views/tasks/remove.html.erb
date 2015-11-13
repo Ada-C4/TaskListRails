@@ -2,9 +2,9 @@
   <h1>Tasks</h1>
   <ul>
     <% @tasks.each do |task| %>
-    <li><a href='/tasks/<%= task.id %>'><%= task.name %></a>
-      <%= link_to 'Destroy',  { action: :destroy, id: task.id }, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </li>
+      <li><a href='/tasks/<%= task.id %>'><%= task.name %></a>
+        <%= link_to 'Destroy',  { action: :destroy, id: task.id }, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </li>
     <% end %>
   </ul>
 
