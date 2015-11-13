@@ -1,15 +1,12 @@
 <%= image_tag "homer2.png", class: "homer" %>
 <ul>
-  <%= form_for @tasks do |task| %>
+  <% @tasks.each do |task| %>
     <li>
-      <%= label_tag(:task, "Mark Complete") %>
-      <%= check_box_tag(:task)%>
-      <%= task.name %> <%= link_to "Show", "/tasks/#{task.id}" %>
+      <%= link_to "Mark Complete", "/tasks/#{task.id}", :method => :patch %>
+      <%= task.name %> <%= task.completed_at %><%= link_to "Show", "/tasks/#{task.id}" %>
       <%= link_to "Delete", "/tasks/#{task.id}", :method => :delete,
       :onclick => "return confirm('Are you sure?')"%>
     </li>
-    <%= task.submit "Mark Complete" %>
   <% end %>
 </ul>
 <%= link_to "Add a New Task", "tasks/new" %>
-<%end%>
