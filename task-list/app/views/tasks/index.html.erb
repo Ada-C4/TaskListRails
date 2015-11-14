@@ -3,6 +3,13 @@
 </nav>
 <h1>Task List</h1>
 <table>
+  <th id="status_header">
+    Status
+  </th>
+  <th id="name_header">
+    Name
+  </th>
+  <th></th>
   <% @tasks.each do |task| %>
     <tr>
       <td id="checkbox_cell">

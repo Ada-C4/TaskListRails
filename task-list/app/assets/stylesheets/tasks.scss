@@ -44,6 +44,21 @@ td {
   padding-bottom: 2%;
 }
 
+th {
+  text-align: left;
+  padding-bottom: 2%;
+  border-bottom: dotted rgb(39, 98, 207);
+}
+
+#status_header {
+  width: 15%;
+}
+
+#name_header {
+  width: 70%;
+  padding-left: 2%;
+}
+
 #task_link_cell {
   width: 70%;
   word-wrap:break-word;
@@ -57,6 +72,7 @@ td {
 #delete_button_cell {
   width: 15%;
 }
+
 
 .checkbox_link {
   text-decoration: none;
