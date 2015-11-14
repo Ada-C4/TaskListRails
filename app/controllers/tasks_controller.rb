@@ -2,7 +2,7 @@ class TasksController < ApplicationController
 
   def index
     @title = "Task List"
-    @tasks = Task.all
+    @tasks = Task.all.order(:completed_at)
   end
 
   def show

@@ -4,11 +4,13 @@
 
 <a class="return_home" href="/">Return to task list</a>
 
-<div class="task"><%= @task.name %></div>
+<div class="edit_task"><%= @task.name %>
   <% if !@task.description.nil? %>
+  <br>
     <%= @task.description %>
   <% end %>
 
 <% if !@task.completed_at.nil? %>
-    <div class="task">Completed at <%= @task.completed_at %></div>
+    <div class="edit_task">Completed at <%= @task.completed_at %></div>
   <% end %>
+</div>

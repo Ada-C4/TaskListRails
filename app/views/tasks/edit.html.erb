@@ -1,5 +1,6 @@
 <h1>Create a new task</h1>
 
+<div class="edit_task">
 <%= form_for @task, url: "/tasks/#{@task.id}" do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
@@ -11,3 +12,4 @@
   <%= f.datetime_field :completed_at %> -->
   <%= f.submit %>
 <% end %>
+</div>
