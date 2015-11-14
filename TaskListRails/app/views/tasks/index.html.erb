@@ -1,11 +1,12 @@
 <%= image_tag "homer2.png", class: "homer" %>
-<h2>Dumb Stuff I Gotta Do Today</h2>
+<h2>Dumb Stuff I Gotta Do</h2>
 <ul>
   <% @tasks.each do |task| %>
     <% if task.completed_at == nil %>
     <li>
       <%= link_to "Mark Complete", "/tasks/#{task.id}", :method => :patch %>
       <%= task.name %> <%= link_to "Show", "/tasks/#{task.id}" %>
+      <%= link_to "Edit", "/tasks/#{task.id}/edit" %>
       <%= link_to "Delete", "/tasks/#{task.id}", :method => :delete,
       :onclick => "return confirm('Are you sure?')"%>
     </li>
@@ -13,7 +14,7 @@
   <% end %>
 </ul>
 <%= link_to "Add a New Task", "tasks/new" %>
-<h2>Dumb Stuff I Did Today</h2>
+<h2>Dumb Stuff I Did</h2>
 <ul>
   <% @tasks.each do |task| %>
     <% if task.completed_at != nil %>

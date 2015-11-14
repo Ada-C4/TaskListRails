@@ -4,8 +4,7 @@ class TasksController < ApplicationController
   end
 
   def show
-    id = params[:id]
-    @task = Task.find(id)
+    @task = Task.find(params[:id])
   end
 
   def new
@@ -23,12 +22,22 @@ class TasksController < ApplicationController
   end
 
   def update
-    Task.update(params[:id], :completed_at => Time.now)
+    @task = Task.find(params[:id])
+    if params[:completed_at] == nil
+      @task.update(:completed_at => Time.now)
+    else
+      @task.update(task_params)
+    end
     redirect_to "/"
   end
+
+  def edit
+    @task = Task.find(params[:id])
+  end
+
   private
 
   def task_params
-    params.permit(task:[:name, :description])
+    params.permit(task:[:name, :description, :completed_at])
   end
 end

@@ -1,0 +1,9 @@
+<%= form_for @task, url: "/tasks/#{@task.id}"  do |f| %>
+<ul>
+  <li>Task Description: <%= f.text_field :description %></li>
+  <li> Task Completed At: <%= f.text_field :completed_at %></li>
+  <li>Task Created At: <%= f.text_field :created_at %></li>
+  <li>Task Updated At: <%= f.text_field :updated_at %></li>
+</ul>
+<%= f.submit "Save" %>
+<% end %>
