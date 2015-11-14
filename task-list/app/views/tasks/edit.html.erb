@@ -1,12 +1,1 @@
-<%= form_for @task, url: { action: 'update'}, method: :patch do |f| %>
-  <fieldset>
-    <legend><%=@title%></legend>
-    <%= f.label :name %>
-    <%= f.text_field :name%>
-    <br>
-    <%= f.label :description %>
-    <%= f.text_field :description %>
 
-  </fieldset>
-  <%= f.submit %>
-<% end %>
