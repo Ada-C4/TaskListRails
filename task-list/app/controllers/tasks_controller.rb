@@ -17,7 +17,7 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.create(task_params)
+    task = Task.create(task_params)
     redirect_to "/"
   end
 
@@ -29,16 +29,28 @@ class TasksController < ApplicationController
   end
 
   def edit
-    id = params[:id]
-    @task = Task.find(id)
+    @task = Task.find(params[:id])
     render :edit_form
   end
 
   def update
     id = params[:id]
-    @task = Task.find(id)
-    @task.update(update_params[:task])
-    # @task.update_attributes(post_params)
+    task = Task.find(id)
+    task.update_attributes(task_params)
+    redirect_to "/"
+  end
+
+  def complete
+    task = Task.find(params[:id])
+    task.completed_at = Time.now
+    task.save!
+    redirect_to "/"
+  end
+
+  def incomplete
+    task = Task.find(params[:id])
+    task.completed_at = nil
+    task.save!
     redirect_to "/"
   end
 
@@ -46,10 +58,6 @@ class TasksController < ApplicationController
 
   def task_params
     params.require(:task).permit(:name, :description, :completed_at)
-  end
-
-  def update_params
-    params.permit(task: [:name, :description])
   end
 
 end

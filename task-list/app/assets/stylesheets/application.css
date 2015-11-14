@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
 body{
   width: 100%;
   font-family: 'Raleway', sans-serif;
@@ -39,7 +40,7 @@ a{
   line-height: 160%;
   text-align: left;
   margin: auto;
-  width: 35%;
+  width: 40%;
 }
 table{
   margin: 0 auto;
@@ -53,4 +54,5 @@ table tr td:first-child{
 }
 .delete-link {
   color: #BA506E;
+  text-decoration: none;
 }
