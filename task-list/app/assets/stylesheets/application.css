@@ -41,6 +41,7 @@ a{
   text-align: left;
   margin: auto;
   width: 40%;
+  min-width: 350px;
 }
 table{
   margin: 0 auto;
@@ -55,4 +56,7 @@ table tr td:first-child{
 .delete-link {
   color: #BA506E;
   text-decoration: none;
+}
+li{
+  list-style-type: none;
 }
