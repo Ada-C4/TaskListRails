@@ -8,6 +8,7 @@
         <p class="description"><%= task.description %></p>
         <%= button_to "ain't gonna do it", "/tasks/#{task.id}", method: :delete, data: { :confirm => "Are you sure you want to delete this?" } %>
         <%= button_to "already done did it", "/tasks/#{task.id}", method: :patch %>
+        <%= button_to "edit", "/tasks/#{task.id}/edit", method: :get %>
         </li>
       <% else %>
         <li>
@@ -15,6 +16,7 @@
         <p class="description"><%= task.description %></p>
         <%= button_to "ain't gonna do it", "/tasks/#{task.id}", method: :delete, data: { :confirm => "Are you sure you want to delete this?" } %>
         <%= button_to "already done did it", "/tasks/#{task.id}", method: :patch %>
+        <%= button_to "edit", "/tasks/#{task.id}/edit", method: :get %>
         </li>
       <% end %>
     <% end %>
