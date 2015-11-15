@@ -13,6 +13,7 @@ class TasksController < ApplicationController
 
   def new
       @task = Task.new
+      @action = "create"
   end
 
   def create
@@ -26,21 +27,21 @@ class TasksController < ApplicationController
     redirect_to "/"
   end
 
+  def set_completed
+    Task.update(params[:id], :completed_at => Time.now)
+    redirect_to "/"
+  end
+
   def update
-    @task = Task.find(params[:id])
-    # if params[:commit] == "Completed"
-      if params[:Completed] == true
-        Task.update(params[:id], :completed_at => Time.now)
-        redirect_to "/"
-      else
-        @task.update(update_params[:task])
-        redirect_to "/"
-      end
+    @task.update(params[:id], name: task_params[:task][:name], description: task_params[:task][:description])
+
   end
 
   def edit
     @task = Task.find(params[:id])
-    render :edit
+    @action = "update"
+
+    render :new
   end
 
 
@@ -50,11 +51,6 @@ class TasksController < ApplicationController
   def task_params
     params.permit(task:[:name, :description, :completed_at])
   end
-
-  def update_params
-    params.permit(task: [:name, :description])
-  end
-
 
 
 end

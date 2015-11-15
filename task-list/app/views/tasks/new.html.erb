@@ -1,13 +1,6 @@
-<%= form_for @task do |f| %>
-  <fieldset>
-    <legend> Add new Task </legend>
-      <p id="name"><%= f.label :name %>:
-      <%= f.text_field :name %> </p>
+<form >
 
-      <p id="description"> <%= f.label :description %>
-      <%= f.text_field :description %></p>
-      <%= f.submit class: "submit"%>
-  </fieldset>
+<% render "form" %>
 
 
-  <% end %>
+</form>
