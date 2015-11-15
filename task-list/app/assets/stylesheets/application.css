@@ -31,9 +31,15 @@ body {
 }
 
 .complete_button {
-  color: black;
-  font-weight: bold;
-  display: inline;
+  vertical-align: middle;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  backface-visibility: hidden;
+  transition-property: transform;
+}
+
+.complete_button:hover {
+  transform: scale(1.1);
 }
 
 label {
@@ -74,6 +80,15 @@ h2 {
 .incomplete_button {
   color: #E6E3E1;
   display: inline;
+  vertical-align: middle;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  backface-visibility: hidden;
+  transition-property: transform;
+}
+
+.incomplete_button:hover {
+  transform: scale(1.1);
 }
 
 #index_buttons {
@@ -139,7 +154,7 @@ ul {
   align-self: center;
 }
 
-
+/*all css below is for buttons to navigate from index page- add, edit, delete */
 .button_holder {
   display: inline-block;
   padding: 20px;
