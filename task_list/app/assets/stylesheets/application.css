@@ -104,7 +104,7 @@
    margin-right: 200px;
  }*/
 
- .delete_button, .submit, .done_button {
+ .delete_button, .submit, .done_button, .complete_button {
    background-color: #E8F7D0;
    font-size: 8px;
    border-radius: 5px;
