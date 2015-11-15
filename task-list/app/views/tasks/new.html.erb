@@ -1,4 +1,4 @@
-<%= form_for @task, url: "/tasks/#{@task.id}", method: @method do |f| %>
+<%= form_for @task, url: { action: @action } do |f| %>
   <fieldset>
     <legend><%= @title %> a Task!</legend>
     <%= f.label :name %>

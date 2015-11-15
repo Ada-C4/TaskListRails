@@ -11,7 +11,7 @@ class TasksController < ApplicationController
   def new
     @task = Task.new
     @title = "Add"
-    @method = "post"
+    @action = "create"
   end
 
   def create
@@ -36,7 +36,7 @@ class TasksController < ApplicationController
     id = params[:id]
     @task = Task.find(id)
     @title = "Modify"
-    @method = "patch"
+    @action = "update"
 
     render :new
   end
