@@ -90,9 +90,17 @@ span {
   font-style: italic;
 }
 
-.task-buttons {
-  display: inline-block;
+.task-buttons, .task-detail {
   vertical-align: top;
+  display: none;
+}
+
+.task:hover .task-buttons {
+  display: inline-block;
+}
+
+.task:hover .task-detail {
+  display: block;
 }
 
 .complete {
