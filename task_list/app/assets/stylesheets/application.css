@@ -39,6 +39,7 @@
    /*background-color: #367237;*/
    background-repeat: no-repeat;
    background-size: 950px, 950px;
+   background-attachment: fixed;
  }
 
  /*.button {
@@ -74,7 +75,8 @@
  }
 
  table {
-   padding-bottom: 20;
+   padding-bottom: 20px;
+   padding-left: 150px;
    font-size: 12px;
  }
 
@@ -109,17 +111,18 @@
    color: #405421;
  }
 
- fieldset{
+ .form {
    margin-top: 75px;
    width: 800px;
  }
 
- div {
-   padding-top: 25px;
+
+ .add_task {
+   padding-top: 10px;
    text-align: center;
  }
 
- .add_task {
+ .add_task_link {
    color: #405421;
    font-size: 28px;
  }

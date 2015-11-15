@@ -1,11 +1,14 @@
-<table align="center">
+<table>
   <thead>
     <tr>
       <th>
         Task
       </th>
       <th>
-        Done?
+        Complete Date
+      </th>
+      <th>
+        Edit?
       </th>
     </tr>
   </thead>
@@ -20,10 +23,14 @@
       </td>
       <td>
         <% if @task.completed_at == nil %>
-          <input type="checkbox" name="completed[]" value="incomplete">
+              <!-- <% puts "No" %> -->
+          <!-- <input type="checkbox" name="completed[]" value="incomplete"> -->
         <% else %>
           <%= @task.completed_at %>
         <% end %>
+      </td>
+      <td>
+        <%= button_to "Edit", { action: "edit", id: @task.id }, method: :get %>
       </td>
     </tr>
   </tbody>
