@@ -5,17 +5,19 @@
     <%if task.completed_at == nil %>
       <li>
         <%= link_to '<i class="fa fa-square-o fa-fw"></i>'.html_safe, "tasks/#{task.id}/complete", method: :patch %>
-        <%= link_to task.name, "/tasks/#{task.id}" %>  <%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, "/tasks/#{task.id}",
-        method: :delete, data: { confirm: 'Confirm Delete' }, class: "delete-link" %>
+        <%= link_to task.name, "/tasks/#{task.id}" %>
+        <%= link_to '<i class="fa fa-pencil"></i>'.html_safe, "/tasks/#{task.id}/edit", class: "edit-link" %>
+        <%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, "/tasks/#{task.id}", method: :delete, data: { confirm: 'Confirm Delete' }, class: "delete-link" %>
       </li>
     <% end %>
   <% end %>
   <% @tasks.each do |task| %>
     <%if task.completed_at != nil %>
       <li>
-          <%= link_to '<i class="fa fa-check-square-o fa-fw"></i>'.html_safe, "tasks/#{task.id}/incomplete", method: :patch %>
-        <%= link_to task.name, "/tasks/#{task.id}", class: "complete-task" %>  <%=link_to '<i class="fa fa-trash-o"></i>'.html_safe, "/tasks/#{task.id}",
-        method: :delete, data: { confirm: 'Confirm Delete' }, class: "delete-link" %>
+        <%= link_to '<i class="fa fa-check-square-o fa-fw"></i>'.html_safe, "tasks/#{task.id}/incomplete", method: :patch %>
+        <%= link_to task.name, "/tasks/#{task.id}", class: "completed-task" %>
+        <%= link_to '<i class="fa fa-pencil"></i>'.html_safe, "/tasks/#{task.id}/edit", class: "edit-link"%>
+        <%=link_to '<i class="fa fa-trash-o"></i>'.html_safe, "/tasks/#{task.id}", method: :delete, data: { confirm: 'Confirm Delete' }, class: "delete-link" %>
       </li>
     <% end %>
   <% end %>

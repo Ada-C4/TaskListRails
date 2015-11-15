@@ -50,13 +50,15 @@ table{
 table tr td:first-child{
   text-align: right;
 }
-.complete-task {
+.completed-task {
   color: #C4C0C2;
   text-decoration: line-through;
 }
 .delete-link {
   color: #BA506E;
-  text-decoration: none;
+}
+.edit-link {
+  color: #90D4BB;
 }
 li{
   list-style-type: none;
