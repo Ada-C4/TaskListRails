@@ -1,23 +1,5 @@
 <div class="page_element">
-<%= form_for @task, url:{action: "update"} do |f| %>
-  <fieldset>
-    <legend><h1>Edit Task</h1>  </legend>
-    <%= f.label :name %>
-    <br>
-    <%=f.text_field :name %>
-    <br>
-    <%= f.label :description %>
-    <br>
-    <%= f.text_area :description %>
-    <br>
-    <%= f.label :completed_date %>
-    <br>
-    <%= f.date_field :completed_date %>
-    <br>
-    <br>
-    <%= f.submit %>
 
-  </fieldset>
+<%= render "form" %>
 
-  <% end %>
 </div>
