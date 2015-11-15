@@ -55,7 +55,7 @@ span {
   background-image: url("flower-of-life.jpg");
   background-attachment: fixed;
   background-size: cover;
-  border-radius: 10%;
+  border-radius: 20%;
   margin-top: 70px;
 }
 
@@ -162,4 +162,9 @@ fieldset {
 button {
   background: transparent;
   border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  margin-left: -2px;
 }
