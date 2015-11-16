@@ -17,6 +17,10 @@
       <%= f.text_field :completed_date %><br />
     </div>
 
+    <div>
+      <%= f.collection_select(:person_id, Person.all, :id, :name, prompt: "Person to do task:") %>
+    </div>
+
     <div id="submit_button_holder">
       <%= f.submit %>
     </div>

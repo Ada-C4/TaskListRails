@@ -15,7 +15,9 @@
           <a href= "/tasks/<%= task.id %>"><%= task.name %></a>
         </div>
         <div id="person_name">
-          <%= task.person.name %>
+          <% if !task.person.nil? %>
+            <%= task.person.name %>
+          <% end %>
         <div>
       </li>
     <% end %>
