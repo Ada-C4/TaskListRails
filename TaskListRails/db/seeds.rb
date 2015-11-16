@@ -12,8 +12,8 @@ end
 people = [
   {name: "Homer Simpson", age: 39, occupation: "Nuclear Safety Technician"},
   {name: "Marge Simpson", age: 34, occupation: "Homemaker"},
-  {name: "Bart Simpson"}, age: 10, occupation: "Student",
-  {name: "Lisa Simpson"}, age: 8, occupation: "Student",
+  {name: "Bart Simpson", age: 10, occupation: "Student"},
+  {name: "Lisa Simpson", age: 8, occupation: "Student"},
   {name: "Maggie Simpson", age: 1, occupation: "Baby"}
 ]
 
