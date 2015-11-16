@@ -4,6 +4,9 @@
         <tr>
           <td colspan="3" id="title"><%= "#{@person.name}'s Tasks" %></td>
         </tr>
+        <tr>
+          <td colspan="3" id=edit_link><%= link_to "back to #{@person.name}", "/people/#{@person.id}" %></td>
+        </tr>
       </thead>
     <tbody>
       <% @tasks.each do |task| %>
