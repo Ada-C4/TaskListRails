@@ -2,43 +2,22 @@
 <div id='divider'>-----------------</div>
 
 
-  <div class='tasklist'>
-    <h2>To-Do</h2>
-    <table>
-      <% @working_tasks.each do |task| %>
-        <tr>
-          <td id='task'><%= link_to task.name, "/tasks/#{task.id}" %></td>
-          <td id='edit' class='button'><%= button_to "Edit", {action: 'edit', id: task.id}, method: :get, class: 'edit-button' %> </td>
-          <td id='delete' class='button'><%= button_to "Delete", {action: "destroy", id: task.id }, method: :delete, data: {confirm: 'Are you sure you want to delete that?'}, class: "delete-button"%></td>
-          <td id="mark-complete" class='button'><%= button_to "Done!", {action:'update', id: task.id}, method: :patch, class:"complete-button", :params => {completed: :true} %></td>
-        </tr>
-      <% end %> 
-    </table>
-</div> <br>
+<h2>To-Do</h2>
 
-<div id='divider'>-----------------</div>
+<%= render 'working_tasks_table' %>
+
+<%= render 'divider' %>
   
-  <div class='add_task'>
-    <%= button_to 'Add a Task', {action: 'new'}, method: :get, class:'create-button'%>
-  </div>
+<%= render 'add_task' %>
 
-<div id='divider'>-----------------</div>
+<%= render 'divider' %>
 
 
-<div class='tasklist'>
-  <table>
-     <thead><h2>Completed Tasks</h2></thead>
-     <% @completed_tasks.each do |task| %>
-       <tr>
-         <td id='task'><%= link_to task.name, "/tasks/#{task.id}" %></td><td id='delete'><%= button_to "Delete", {action: "destroy", id: task.id }, method: :delete, data: {confirm: 'Are you sure you want to delete that?'}, class: 'delete-button' %></td>
-       </tr>
-    <% end %> 
-  </table>
-</div> 
+<%= render 'completed_tasks_table' %>
 
 <br>
-<div id='divider'>-----------------</div>
+<%= render 'divider' %>
 
-<p id='back_button'><%= link_to 'switch to People List', '/people' %></p>
+<%= render 'people_list_button' %>
 
 

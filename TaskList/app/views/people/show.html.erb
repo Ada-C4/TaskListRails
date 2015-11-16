@@ -2,20 +2,8 @@
 
 <h2><%= @person.working_tasks.length %> <%= link_to 'tasks', "/people/#{@person.id}/tasks" %> left.</h2>
 
-<div class='add_task'>
-  <%= button_to 'Add a Task', {action: 'new', controller: 'tasks'}, method: :get, class:'create-button', :params => {owner: @person.id}%>
-</div>
+<%= render 'add_task' %>
 
-<div class='tasklist' id='people'>
-  <table>
-    <h3>Completed Tasks</h3>
-    <% @person.completed_tasks.each do |task|%>
-      <tr>
-        <td><%= link_to task.name, "/tasks/#{task.id}" %></td>
-        <td id='delete' class='button'><%= button_to "Delete", {action: "destroy", id: task.id, controller: 'tasks' }, method: :delete, data: {confirm: 'Are you sure you want to delete that?'}, class: "delete-button"%></td>
-      <tr>
-    <% end %>
-  </table>
-</div>
+<%= render 'completed_tasks_table' %>
 
-<p id='back_button'><%= link_to 'back to People List', '/people' %></p>
+<%= render 'people_list' %>
