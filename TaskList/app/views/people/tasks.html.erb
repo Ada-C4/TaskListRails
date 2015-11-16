@@ -1,6 +1,7 @@
 <h1><%= @person.name %>'s To Do List</h1>
 
-<%= render 'working_task_list_rows' %>
+<%= render 'working_tasks_table' %>
 
 <p id='back_button'><%= link_to "back to #{@person.name}", "/people/#{@person.id}" %></p>
-<p id='back_button'><%= link_to 'back to People List', '/people' %></p>
+
+<%= render 'people_list_button' %>
