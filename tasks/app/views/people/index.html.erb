@@ -9,5 +9,13 @@
       <% end %>
       <% end %>
       Tasks to do: <%= count %>
+      <%= button_to "", "/people/#{person.id}", method: :delete, data: { :confirm => "Are you sure?" }, class: "delete-button" %>
   <% end %>
 </ul>
+
+<div class="square-button-container">
+  <a class="square-button" href="/people/new">
+    <p class="circle-button-title">+</p>
+    <span>Add new owner</span>
+  </a>
+</div>
