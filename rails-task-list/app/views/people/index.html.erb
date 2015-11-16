@@ -6,10 +6,10 @@
     <%= link_to person.name, "/people/#{person.id}" %>
     <ul>
       <li>
-        <%= person.tasks_completed %> completed tasks
+        <%= person.tasks.where.not(completed_date: nil).length %> completed tasks
       </li>
       <li>
-        XXX uncompleted tasks
+        <%= person.tasks.where(completed_date: nil).length %> incomplete tasks
       </li>
     </ul>
 

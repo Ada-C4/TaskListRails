@@ -7,5 +7,10 @@
   Description: <%= @person.description %>
 </p>
 <p>
-  Tasks Completed: <%= @person.tasks_completed %>
+  Completed Tasks: <%= @person.tasks.where(completed_date: nil).length %>
 </p>
+<p>
+  Incomplete Tasks: <%= @person.tasks.where(completed_date: nil).length %>
+</p>
+
+<%= link_to "#{@person.name}'s Tasks", "/people/#{@person.id}/tasks" %>

@@ -11,7 +11,9 @@ Rails.application.routes.draw do
   delete '/tasks/:id'         => 'tasks#destroy'
 
   get '/people'               => 'people#index'
+  get '/people/:id/tasks'     => 'people#tasks'
   get '/people/:id'           => 'people#show'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
