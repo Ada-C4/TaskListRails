@@ -43,11 +43,12 @@
 h1 {
   text-align: center;
   padding: 25px;
+      padding-top: 40px;
   font-family: 'Fjalla One', sans-serif;
     font-weight: normal;
     text-transform: uppercase;
-    line-height: 46px;
-    font-size: 43px;
+    line-height: 50px;
+    font-size: 50px;
     margin: 0 0 23px 0;
 }
 
@@ -59,7 +60,6 @@ body {
  margin: 0;
  background-image: url('wood.png');
  background-size: 1440px 800px;
- background-repeat:no-repeat;
  display: compact;
 
  }
@@ -73,46 +73,14 @@ body {
  .container {
    margin-top: 50px;
    margin-bottom: 20px;
+   padding-bottom: 20px;
  }
 
-// body {
-//   margin: 0;
-//   background: url('assets/wood.png') no-repeat center center fixed;
-//   -webkit-background-size: cover;
-//   -moz-background-size: cover;
-//   -o-background-size: cover;
-//   background-size: cover;
-// }
+.butt {
+  text-align: center;
+  display: inline;
+}
 
-
-// #add_task {
-//   font-family: Playfair Display;
-//   font-size: 1cm;
-//   font-weight: normal;
-// }
-//
-// body {
-//   margin: 0 auto;
-//   text-align: center;
-// }
-//
-// .check {
-//   width: 1;
-//   height: initial;
-// }
-//
-// div {
-//   padding: 10px;
-// }
-//
-// form {
-//   padding-bottom: 50px;
-// }
-//
-// #taskie {
-//   padding-left: 70px;
-// }
-//
 .checkmark {
   height: 20px;
   width: 20px;
@@ -130,96 +98,8 @@ body {
   display: inline-block;
   vertical-align: middle;
 }
-//
-// td {
-//   display: inline-block;
-// }
-//
-// td {
-//   vertical-align: middle;
-//   line-height: normal;
-//   display: inline-block;
-//   height: 100%;
-// }
-//
-// .icon {
-//   height: 15px;
-//   width: 15px;
-//   margin-right: 5px
-// }
-//
-// td div {
-//   display: inline-block;
-//   vertical-align: middle;
-//   width: 180px;
-// }
-//
-// h1 {
-//   font-family: Playfair Display;
-//   font-size: 1.4cm;
-//   font-weight: normal;
-//   padding-top: 40px;
-//   margin-bottom: 40px;
-// }
-//
-// h3 {
-//   font-family: Playfair Display;
-//   font-size: 0.8cm;
-//   font-weight: normal;
-// }
-//
-//
-// fieldset div {
-//   vertical-align: middle;
-//   line-height: normal;
-//   display: inline-block;
-//   height: 20%;
-// }
-//
-//
-// input {
-//   margin-top: 25px;
-// }
-//
-// table {
-//   text-align: center;
-//   margin: 0 auto;
-// }
-//
-// tbody {
-//   padding-bottom: 50px;
-// }
-//
-// th {
-//   width: 30%;
-//   font-size: 0.5cm;
-//   text-align: center;
-//   padding-left: 10px;
-//   padding-right: 10px;
-// }
-//
-//
-// label {
-//   text-align: left;
-//   margin: 0 auto;
-//   display:block;
-//   height: 2px;
-//   font-weight: bold;
-//   font-size: 16;
-// }
-//
-//
-// ul {
-//   font-family: Open Sans;
-//   font-size: normal;
-//   padding: 20px;
-//   list-style-type: none;
-// }
-//
-// ul li{
-//   text-align: left;
-// }
-//
+
+
 // a:link {
 //   text-decoration: none;
 //   color: black;
