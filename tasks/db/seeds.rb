@@ -10,6 +10,18 @@ def random_time
   Time.at(rand * Time.now.to_i)
 end
 
+seed_people = [
+  {name: "Katherine"},
+  {name: "Jared"},
+  {name: "Maxwell"},
+  {name: "Mom"}
+]
+
+seed_people.each do |seed|
+  Person.create(seed)
+end
+
+
 tasks = [
   { name: "The First Task", description: "", completed: random_time },
   { name: "Go to Brunch", description: "" },
