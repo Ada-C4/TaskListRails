@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   delete 'tasks/:id' => 'tasks#destroy'
   patch 'tasks/:id/complete' => 'tasks#complete'
   patch 'tasks/:id' => 'tasks#update'
+  get 'people' => 'people#index'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,5 +1,5 @@
 <fieldset>
-  <%= form_for @task, url:{action: "#{@action}" } do |f| %>
+  <%= form_for @task, url:{action: @action } do |f| %>
   <legend><h1><%= @title %></h1>  </legend>
   <%= f.label :name %>
   <br>
@@ -16,7 +16,6 @@
   <%= f.date_field :completed_date %>
   <br>
   <br>
-
 
   <%= f.submit %>
 

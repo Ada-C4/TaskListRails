@@ -9,6 +9,6 @@
     <% else %>
       <%= @task.completed_date.strftime("Completed on %m/%d/%Y") %>
     <% end %>
-    <%= "by #{ @task.person.name }" if !@task.person.name.nil? %>
+    <%= "by #{ @task.person.name }" if !@task.person_id.nil? %>
 
   </p>
