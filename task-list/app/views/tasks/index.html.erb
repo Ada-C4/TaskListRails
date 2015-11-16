@@ -1,6 +1,3 @@
-<nav>
-  <%= link_to "New Task", "/tasks/new" %>
-</nav>
 <h1>Task List</h1>
 <table>
   <th id="status_header">
@@ -9,8 +6,8 @@
   <th id="name_header">
     Name
   </th>
-  <th id ="owner_header">
-    Owner
+  <th>
+    Person
   </th>
   <th></th>
   <% @tasks.each do |task| %>
@@ -25,7 +22,7 @@
       <td id="task_link_cell">
         <%= link_to task.name, "/tasks/#{task.id}" %>
       </td>
-      <td id="owner_cell">
+      <td id="person_cell">
         <% if !task.person.nil? %>
           <%= task.person.name %>
         <% end %>
