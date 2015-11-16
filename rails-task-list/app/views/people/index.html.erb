@@ -1,0 +1,18 @@
+<h1>People</h1>
+
+<ul>
+  <% @people.each do |person| %>
+  <li>
+    <%= link_to person.name, "/people/#{person.id}" %>
+    <ul>
+      <li>
+        <%= person.tasks_completed %> completed tasks
+      </li>
+      <li>
+        XXX uncompleted tasks
+      </li>
+    </ul>
+
+  </li>
+  <% end %>
+</ul>

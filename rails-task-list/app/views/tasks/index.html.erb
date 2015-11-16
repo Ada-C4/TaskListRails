@@ -29,7 +29,9 @@
     <% end %>
     >
     <%= task.name %>
-    <span id="assignment">Assigned to <%= task.person.name %></span>
+    <% if !task.person.nil? %>
+      <span id="assignment">Assigned to <%= task.person.name %></span>
+    <% end %>
   </a>
 
   <!-- </div> -->
