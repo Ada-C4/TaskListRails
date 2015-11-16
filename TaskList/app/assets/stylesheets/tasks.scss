@@ -1,10 +1,10 @@
 body {
-  background-image: url('hood_moon_smaller.jpg');
+  background-image: url('hood_moon_smaller_2.jpg');
   background-attachment: fixed;
 }
 
 #wrap {
-  max-width: 800px;
+  max-width: 1200px;
 }
 
 h1 {
@@ -12,6 +12,10 @@ h1 {
   font-family: 'Special Elite', cursive;
   padding: 10px;
   margin: 5 auto;
+}
+
+h2 {
+  font-family: 'Special Elite', cursive;
 }
 
 h3 {
@@ -22,22 +26,31 @@ p {
   font-family: 'Inconsolata', sans-serif;
 }
 
-#task {
+table {
   font-family: 'Special Elite', cursive;
-  margin: 3px;
+  margin: 5px auto;
+  width: 570px;
 }
 
-#task:before {
-  content: "+";
-  margin-right: 4px;
+td {
+  word-wrap: break-word;
 }
 
-#tasklist {
-  padding: 20px;
+td.button {
+  text-align: right;
+  margin: 2px;
+  padding: 2px;
+  height: 23px;
+  width: 70px;
+}
+
+
+.tasklist {
+  padding: 15px;
   margin: 10px auto;
   overflow: auto;
   width: 600px;
-  height: 300px;
+  height: 150px;
 }
 
 #task_details {
@@ -46,12 +59,147 @@ p {
   overflow: auto;
   width: 700px;
   height: 150px;
+  text-align: center;
 }
 
 #back_button {
   text-align: center;
   margin: 15px;
   font-size: 24px;
+}
+
+.add_task {
+  text-align: center;
+  margin: 0 auto;
+  font-family: 'Special Elite', cursive;
+  font-size: 24px;
+}
+
+#divider {
+  text-align: center;
+  margin: 0 auto;
+  font-family: 'Special Elite', cursive;
+  font-size: 24px;
+}
+
+form {
+  margin: 0 auto;
+}
+
+fieldset {
+  display: block;
+  border: 1px black solid;
+  width: 550px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+label {
+  float: left;
+  margin: 3px 0px;
+  font-family: 'Special Elite', cursive;
+  font-size: 24px;
+}
+
+input.create-button {
+  display: block;
+  padding:10px; 
+  padding-top: 16px;
+  background:#885673; 
+  opacity: 0.8;
+  margin: 0 auto;
+  border:0 none;
+  cursor:pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; 
+  font-family: 'Special Elite', cursive;
+  font-size: 24px;
+  width: 200px;
+  text-align: center;
+}
+
+input.delete-button {
+  display: block;
+  background:#885673; 
+  padding-top: 7px;
+  margin: 0 auto;
+  border:0 none;
+  opacity: .8;
+  cursor:pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; 
+  font-family: 'Special Elite', cursive;
+  font-size: 14px;
+  height: 23px;
+  width: 70px;
+  text-align: center;
+}
+
+input.edit-button {
+  display: block;
+  background:#DE555F; 
+  padding-top: 7px;
+  margin: 0 auto;
+  border:0 none;
+  opacity: .8;
+  cursor:pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; 
+  font-family: 'Special Elite', cursive;
+  font-size: 14px;
+  height: 23px;
+  width: 70px;
+  text-align: center;
+}
+
+input.complete-button {
+  display: block;
+  background:#4A537E; 
+  padding-top: 7px;
+  margin: 0 auto;
+  border:0 none;
+  opacity: .8;
+  cursor:pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; 
+  font-family: 'Special Elite', cursive;
+  font-size: 14px;
+  height: 23px;
+  width: 70px;
+  text-align: center;
+}
+
+
+textarea {
+  outline: none;
+  margin: 0px 5px;
+  width: 300px;
+  height: 200px;
+  font-family: 'Inconsolata', sans-serif;
+  opacity: 0.3;
+  font-size: 14px;
+}
+
+input.form-field {
+  font-family: 'Inconsolata', sans-serif;
+  width: 360px;
+  height: 18px;
+  margin: 0px 5px;
+  opacity: 0.3;
+  font-size: 14px;
+}
+
+#show-button {
+  display: block;
+  margin: 5px;
+}
+
+#show-button-row {
+  display: inline-block;
+  margin: auto;
+  text-align: center;
+  margin: auto;
+  width: 500px;
 }
 
 a:link{
