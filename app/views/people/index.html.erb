@@ -1,0 +1,9 @@
+<h1>Task Masters</h1>
+<hr />
+
+<div class="list_of_taskers">
+  <% @people.each do |p| %>
+    <ul><li> <%= link_to p.name, "/people/" %> </li></ul>
+      <% end %>
+</div>
+<a class="return_home" href="/">Return to task list</a>
