@@ -16,5 +16,6 @@ patch 'tasks/:id' => 'tasks#update'
 get '/people/' => 'people#index'
 get '/people/new' => 'people#new'
 get '/people/:id' => 'people#show'
+get 'people/:id/tasks' => 'people#tasks'
 
 end

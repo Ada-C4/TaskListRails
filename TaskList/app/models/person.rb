@@ -1,10 +1,18 @@
 class Person < ActiveRecord::Base
 	has_many :tasks
 
-	# def self.completed_tasks
-	# 	return Task.where("completed_at < ?", Time.now)
-	# end
-	# def self.working_tasks
-	# 	return Task.where('completed_at IS NULL', 'person_id ?'), self.id
-	# end
+	def completed_tasks
+		tasks = self.tasks.find_all do |task|
+			!task.completed_at.nil?
+		end
+		return tasks
+	end
+
+	def working_tasks
+		tasks = self.tasks.find_all do |task|
+			task.completed_at.nil?
+		end
+		return tasks
+	end
+
 end

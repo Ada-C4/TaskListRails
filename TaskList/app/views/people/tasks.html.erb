@@ -1,0 +1,17 @@
+<h1><%= @person.name %>'s To Do List</h1>
+
+<div class='tasklist'>
+  <table>
+    <% @person.working_tasks.each do |task|%>
+      <tr>
+        <td><%= link_to task.name, "/tasks/#{task.id}" %></td>
+       <td id='edit' class='button'><%= button_to "Edit", {action: 'edit', id: task.id, controller: 'tasks'}, method: :get, class: 'edit-button' %> </td> 
+        <td id='delete' class='button'><%= button_to "Delete", {action: "destroy", id: task.id, controller: 'tasks' }, method: :delete, data: {confirm: 'Are you sure you want to delete that?'}, class: "delete-button"%></td>
+        <td id="mark-complete" class='button'><%= button_to "Done!", {action:'update', id: task.id, controller: 'tasks'}, method: :patch, class:"complete-button", :params => {completed: :true} %></td>
+      <tr>
+    <% end %>
+  </table>
+</div>
+
+<p id='back_button'><%= link_to "back to #{@person.name}", "/people/#{@person.id}" %></p>
+<p id='back_button'><%= link_to 'back to People List', '/people' %></p>
