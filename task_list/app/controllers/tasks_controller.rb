@@ -14,6 +14,7 @@ class TasksController < ApplicationController
   def new
     @task = Task.new
     @title = "New Task"
+    @action = "create"
   end
 
   def create
@@ -26,8 +27,24 @@ class TasksController < ApplicationController
     redirect_to '/'
   end
 
+  def edit
+    @task = Task.find(params[:id])
+    @title = "Edit Task"
+    @action = "update"
+  end
+
+  def toggle_complete
+    Task.update(params[:id], :completed_at => Time.now)
+    redirect_to '/'
+  end
+
+  def update
+    Task.update(params[:id], name: task_params[:task][:name], description: task_params[:task][:description])
+    redirect_to '/'
+  end
+
   private
   def task_params
-    params.permit(task:[:name, :description])
+    params.permit(task:[:name, :description, :completed_at])
   end
 end

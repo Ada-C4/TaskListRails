@@ -39,6 +39,7 @@
    /*background-color: #367237;*/
    background-repeat: no-repeat;
    background-size: 950px, 950px;
+   background-attachment: fixed;
  }
 
  /*.button {
@@ -56,17 +57,17 @@
  	background-color:#6F7F4F;
  }*/
 
- ul {
+ /*ul {
    list-style-type: none;
    margin-top: 50px;
-   margin-bottom: 0px;
+   margin-bottom: 0;
    margin-left: 100px;
  }
 
  li {
    display: flex;
    justify-content: space-between;
- }
+ }*/
 
  ::-webkit-input-placeholder {
    color: #1E1902;
@@ -74,7 +75,8 @@
  }
 
  table {
-   padding-bottom: 20;
+   padding-bottom: 20px;
+   padding-left: 150px;
    font-size: 12px;
  }
 
@@ -84,7 +86,7 @@
  }
 
  td {
-   text-align: center;
+   text-align: left;
  }
 
  th, td {
@@ -97,29 +99,30 @@
    color: #405421;
  }
 
- .button_to {
+ /*.button_to {
    display: inline-block;
    margin-right: 200px;
- }
+ }*/
 
- .delete_button, .submit {
+ .delete_button, .submit, .done_button, .complete_button {
    background-color: #E8F7D0;
    font-size: 8px;
    border-radius: 5px;
    color: #405421;
  }
 
- fieldset{
+ .form {
    margin-top: 75px;
    width: 800px;
  }
 
- div {
-   padding-top: 25px;
+
+ .add_task {
+   padding-top: 10px;
    text-align: center;
  }
 
- .add_task {
+ .add_task_link {
    color: #405421;
    font-size: 28px;
  }

@@ -1,7 +1,10 @@
 <div class="form">
 
   <%= render "form" %>
-<!-- <%= form_for @task do |f| %>
+
+</div>
+
+<!-- <%= form_for @task, url: "/tasks/#{@task.id}" do |f| %>
   <fieldset>
     <legend>Task Information</legend>
     <%= f.label :name %>
@@ -9,7 +12,5 @@
     <%= f.label :description %>
     <%= f.text_field :description %>
   </fieldset>
-  <%= f.submit class: "submit"%>
+  <%= f.submit class: "submit", method: "patch"%>
 <% end %> -->
-
-</div>

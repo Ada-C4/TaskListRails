@@ -1,7 +1,4 @@
-<div class="form">
-
-  <%= render "form" %>
-<!-- <%= form_for @task do |f| %>
+<%= form_for @task, url:({action: "#{@action}"}) do |f| %>
   <fieldset>
     <legend>Task Information</legend>
     <%= f.label :name %>
@@ -10,6 +7,4 @@
     <%= f.text_field :description %>
   </fieldset>
   <%= f.submit class: "submit"%>
-<% end %> -->
-
-</div>
+<% end %>
