@@ -2,7 +2,7 @@
   <table>
     <thead>
       <tr>
-        <td colspan="2" id="title">
+        <td colspan="3" id="title">
           People
         </td>
       </tr>
@@ -11,11 +11,12 @@
       <% @people.each do |person| %>
       <tr>
         <td><%= person.name %></td>
+        <td id="task_number"><%= "#{Person.num_not_completed(person.id)} uncompleted tasks" %></td>
         <td><%= link_to "details", "/people/#{person.id}" %></td>
       </tr>
       <% end %>
       <tr>
-        <td colspan="2" id="table_nav">
+        <td colspan="3" id="table_nav">
           <%= link_to "new person", "/people/new" %>
         </td>
       </tr>

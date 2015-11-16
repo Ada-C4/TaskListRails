@@ -16,7 +16,7 @@
           <td><%= link_to '<i class="fa fa-check-square-o"></i>'.html_safe, "/tasks/#{task.id}/complete", method: :patch %></td>
         <% end %>
         <td><%= task.name %></td>
-        <td id="person_name"><%= task.person.name %></td>
+        <td><%= link_to "#{task.person.name}", "/people/#{task.person.id}", {:id => "person_name"} %></td>
         <td><%= link_to "details", "/tasks/#{task.id}" %></td>
         <td class="delete">
           <%= link_to '<i class="fa fa-trash-o"></i>'.html_safe,  { action: :destroy, id: task.id }, method: :delete, data: { confirm: 'Are you sure?' } %>

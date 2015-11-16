@@ -42,6 +42,10 @@ table {
   color: #354169;
 }
 
+#task_number {
+  color: #354169;
+}
+
 #edit_link {
   font-size: 16px;
   text-align: center;
@@ -49,6 +53,20 @@ table {
 }
 
 #edit_link a {
+  color: #4573ca;
+  text-decoration: none;
+  font-family: 'Asap', sans-serif;
+}
+
+#link_to_tasks {
+  font-size: 20px;
+  text-align: center;
+  padding-top: 0px;
+  border-bottom: none;
+  padding-top: 15px;
+}
+
+#link_to_tasks a {
   color: #4573ca;
   text-decoration: none;
   font-family: 'Asap', sans-serif;
