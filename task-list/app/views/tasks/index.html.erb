@@ -15,7 +15,7 @@
             <% end %>
             <% unless task.person.nil? %>
               <div class="task-detail">
-                &hearts; <%= task.person.name %>
+                &hearts; <%= link_to task.person.name, "/people/#{task.person_id}" %>
               </div>
             <% end %>
           </div>
@@ -44,3 +44,4 @@
     <% end %>
   </div>
 </div>
+<a href="people/"><h3>View Task Authors!</h3></a>

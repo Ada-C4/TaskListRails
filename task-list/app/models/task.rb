@@ -5,7 +5,7 @@ class Task < ActiveRecord::Base
 		sorted_tasks = {completed: [], todo: []}
 		Task.all.each do |task|
       if task.completed_at.nil?
-        sorted_tasks[:todo] << task if task.completed_at.nil?
+        sorted_tasks[:todo] << task
       else
         sorted_tasks[:completed] << task
       end
