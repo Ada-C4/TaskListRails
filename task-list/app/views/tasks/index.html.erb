@@ -8,9 +8,16 @@
         <div class="task">
           <div class="info">
             <span><%= link_to task.name, "/tasks/#{task.id}" %></span>
-            <div class="task-detail">
-              <%= task.description %>
-            </div>
+            <% unless task.description.empty? %>
+              <div class="task-detail">
+                <%= task.description %>
+              </div>
+            <% end %>
+            <% unless task.person.nil? %>
+              <div class="task-detail">
+                &hearts; <%= task.person.name %>
+              </div>
+            <% end %>
           </div>
           <div class="task-buttons">
             <%= button_to("/tasks/#{task.id}/complete", method: "patch", title: "Complete") { fa_icon("check fw lg") } %>
