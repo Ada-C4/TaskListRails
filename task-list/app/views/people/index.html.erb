@@ -1,0 +1,7 @@
+<h1> Here are each of the people you can assign to a task </h1>
+<ul id=people_list>
+  <% @people.each do |p| %>
+    <li><a href=people/<%=p.id%>><%= p.name %></a>
+    </li>
+  <%end%>
+</ul>

@@ -49,3 +49,7 @@ li {
 #completed {
   text-decoration: line-through;
 }
+
+#people_list {
+  text-align: center;
+}
