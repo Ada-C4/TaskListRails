@@ -6,6 +6,9 @@
         <div>
           <a href= "/people/<%= person.id %>"><%= person.name %></a>
         </div>
+        <div>
+          <%= person.count_incomplete %>
+        </div>
       </li>
     <% end %>
   </ul>
