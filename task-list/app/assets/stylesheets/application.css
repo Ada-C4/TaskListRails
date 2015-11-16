@@ -63,3 +63,6 @@ table tr td:first-child{
 li{
   list-style-type: none;
 }
+.person{
+  color: #C5C5D4;
+}
