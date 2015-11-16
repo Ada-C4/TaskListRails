@@ -61,6 +61,6 @@ class TasksController < ApplicationController
 
   def task_params
     #this makes strong params
-    params.permit(task:[:name, :description])
+    params.permit(task:[:name, :description, :person_id])
   end
 end
