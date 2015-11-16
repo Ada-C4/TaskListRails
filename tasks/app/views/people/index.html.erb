@@ -2,7 +2,14 @@
 <div class="center">
 <% @people.each do |person| %>
   <span>
-    <a href="/people/<%= person.id %>" ><%= person.name %></a>
+    <a href="/people/<%= person.id %>" >
+      <%= person.name %> - <%= person.tasks.where({:completed => nil}).length %>
+      <% unless person.tasks.where({:completed => nil}).length == 1 %>
+        uncompleted tasks
+        <% else %>
+        uncompleted task
+        <% end %>
+    </a>
   </span>
   <br />
 <% end %>
