@@ -33,11 +33,6 @@ class TasksController < ApplicationController
 
   def create
     task= Task.create(task_params)
-
-  # OR
-  #
-  # t= Task.new(param[:task])
-  # t.save
     redirect_to "/"
   end
 
@@ -49,7 +44,6 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    # params.permit(task:[:name, :descript, :date_completed])
     params.require(:task).permit(:name, :descript, :date_completed)
   end
 end
