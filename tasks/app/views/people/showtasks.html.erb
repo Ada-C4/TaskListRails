@@ -2,7 +2,7 @@
 <div class="center">
 <% @tasks.each do |task| %>
   <span>
-    <a href="/tasks/<%= task.id %>"><%= task.name %> </a>
+    <a href="/tasks/<%= task.id %>"<% if !task.completed.nil? %>class="strikethrough"<% end %>><%= task.name %></a>
   </span>
   <br />
 <% end %>
