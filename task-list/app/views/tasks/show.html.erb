@@ -2,6 +2,7 @@
 <h1><%= @task.name %></h1>
 
     <p><%= @task.description %></p>
+    <p><%= @task.person.name %></p>
     <% if @task.completed_date != nil %>
       <p>Completed!</p>
     <% else %>
