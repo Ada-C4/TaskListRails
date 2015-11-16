@@ -1,6 +1,7 @@
 <%= form_for @task, url: {action: "#{@action}"} do |f| %>
   <fieldset>
     <legend> <%= @title %> </legend>
+      <%= f.collection_select(:person_id, Person.all, :id, :name, prompt: "Who this task belongs to?") %>
       <p id="name"><%= f.label :name %>:
       <%= f.text_field :name %> </p>
 
