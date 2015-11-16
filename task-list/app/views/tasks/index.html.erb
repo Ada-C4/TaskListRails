@@ -1,10 +1,14 @@
 <div class="content">
-  <h1>This took a lot of work. I promise.</h1>
+  <h1>Tasking is hard.</h1>
   <ul>
     <% @tasks.each do |task| %>
     <li>
-    <a href="/tasks/<%= task.id %>"><%= task.name %>: <%= task.description %></a>
-    <% end %>
+    <a href="/tasks/<%= task.id %>"><%= task.name %></a>
+    <p class="description"><%= task.description %></p>
+    <%= button_to "Delete Task", "/tasks/#{task.id}", method: :delete, data: { :confirm => "Are you sure?" } %>
     </li>
+    <% end %>
   </ul>
+
+  <%= link_to "add ANOTHER task", "/tasks/new", class: "add-task" %>
 </div>

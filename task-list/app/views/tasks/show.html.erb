@@ -1,17 +1,18 @@
 <h1>Work on this:</h1>
   <h3>Task </h3>
-    <p><%= @task.name%></p>
+  <p><%= @task.name%></p>
   <h3>Description </h3>
-    <p><%= @task.description%></p>
+  <p><%= @task.description%></p>
 
   <h3>Completed?</h3>
-    <% if @task.completed == false %>
-      <p>nope</p>
-    <% else %>
-      <p>yes</p>
-    <% end %>
+  <% if @task.completed == false %>
+    <p>nope</p>
+  <% else %>
+    <p>yes</p>
+  <% end %>
 
-  <% if @task.completed == true %>
+<!-- @task.completed == true is implied on the following line. -->
+  <% if @task.completed %>
     <h3>On: </h3>
       <% if @task.completed_date != nil %>
         <p><%= @task.completed_date%></p>
