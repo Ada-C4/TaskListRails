@@ -1,15 +1,15 @@
 <table>
   <tbody>
     <tr>
-      <td><%= f.label :name, "Name:" %></td>
+      <td class="first"><%= f.label :name, "Name:" %></td>
       <td><%= f.text_field :name %></td>
     </tr>
     <tr>
-      <td><%= f.label "Description:" %></td>
+      <td class="first"><%= f.label "Description:" %></td>
       <td><%= f.text_field :description %></td>
     </tr>
     <tr>
-      <td><%= f.label :person_id, "Person:" %></td>
+      <td class="first"><%= f.label :person_id, "Person:" %></td>
       <td><%= f.collection_select(:person_id, Person.all, :id, :name, prompt: "Select The Person To Complete This:") %></td>
     </tr>
   </tbody>

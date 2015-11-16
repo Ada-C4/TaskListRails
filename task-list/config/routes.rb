@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   patch 'tasks/:id/complete' => 'tasks#complete'
   patch 'tasks/:id/incomplete' => 'tasks#incomplete'
 
+  get 'people/' => 'people#index'
+
 
   # resources :tasks do
   #   patch 'tasks/:id/complete' => 'tasks#complete'
