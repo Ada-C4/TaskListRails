@@ -11,7 +11,11 @@
       <% @people.each do |person| %>
       <tr>
         <td><%= person.name %></td>
-        <td id="task_number"><%= "#{Person.num_not_completed(person.id)} uncompleted tasks" %></td>
+        <% if Person.num_not_completed(person.id) == 1 %>
+          <td id="task_number"><%= "#{Person.num_not_completed(person.id)} uncompleted task" %></td>
+        <% else %>
+          <td id="task_number"><%= "#{Person.num_not_completed(person.id)} uncompleted tasks" %></td>
+        <% end %>
         <td><%= link_to "details", "/people/#{person.id}" %></td>
       </tr>
       <% end %>
