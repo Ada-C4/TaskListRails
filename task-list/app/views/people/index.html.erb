@@ -10,7 +10,7 @@
   <tbody>
     <% @people.each do |person| %>
       <tr>
-        <td><%= person.name %></td>
+        <td><%= link_to person.name, "/people/#{person.id}" %></td>
         <% incomplete = person.tasks.reject {|task| task.completed_at == nil }.length %>
         <td class="number"><%= incomplete %></td>
       </tr>

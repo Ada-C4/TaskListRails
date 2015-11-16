@@ -1,0 +1,5 @@
+<h1><%= @person.name %></h1>
+
+<%= link_to "#{@person.name}'s Task List", "/people/#{@person.id}/tasks"%>
+<br>
+<%= link_to "Back to People", "/people/" %>
