@@ -1,0 +1,13 @@
+<%= form_for @person do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br>
+    <br>
+    <div  class="button-container">
+      <a id="gray-button" class="circle-button" href="/">
+        <p class="circle-button-title">WAIT</p>
+        <span>Go back</span>
+      </a>
+      <%= f.submit("Create", class: "create-task-button") %>
+    </div>
+<% end %>

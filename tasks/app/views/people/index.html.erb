@@ -1,0 +1,13 @@
+<h1>People</h1>
+<ul>
+  <% @people.each do |person| %>
+    <li><a href="/people/<%= person.id %>"><%= person.name %></a></li>
+    <% count = 0 %>
+    <% person.tasks.each do |task| %>
+      <% if task.complete.nil? %>
+        <% count += 1 %>
+      <% end %>
+      <% end %>
+      Tasks to do: <%= count %>
+  <% end %>
+</ul>

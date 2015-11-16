@@ -9,6 +9,9 @@
   <p class="task-description">
     <%= @task.description %>
   </p>
+  <p class="task-owner">
+    Owner: <%= @task.person.name %>
+  </p>
   <p class="task-complete-date">
     <% if !@task.complete.nil? %>
     <span>Completed on: </span><%= @task.complete.strftime("%D") %>
