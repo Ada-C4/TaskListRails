@@ -106,7 +106,22 @@ body {
   height: 15px;
   border-style: none;
   margin-top: 10px;
+}
 
+.profile-pic {
+  max-width: 50%;
+  max-height: 50%;
+  opacity: 1.0;
+  text-align: center;
+  border: 2px solid black;
+
+}
+
+.show-person {
+  display: inline-block;
+  text-align: center;
+  opacity: 1.0;
+  padding-bottom: 20px;
 }
 
 
