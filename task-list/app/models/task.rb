@@ -2,8 +2,11 @@ class Task < ActiveRecord::Base
   def self.list
 		sorted_tasks = {completed: [], todo: []}
 		Task.all.each do |task|
-			sorted_tasks[:completed] << task unless task.completed_at.nil?
-			sorted_tasks[:todo] << task if task.completed_at.nil?
+      if task.completed_at.nil?
+        sorted_tasks[:todo] << task if task.completed_at.nil?
+      else
+        sorted_tasks[:completed] << task
+      end
 		end
 
     return sorted_tasks

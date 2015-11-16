@@ -1,6 +1,6 @@
-<%= form_for @task do |f| %>
+<%= form_for @task, url: { action: @action } do |f| %>
   <fieldset>
-    <legend>Add a Task!</legend>
+    <legend><%= @title %> a Task!</legend>
     <%= f.label :name %>
     <%= f.text_field :name %>
     <br>
@@ -8,5 +8,5 @@
     <%= f.text_field :description %>
   </fieldset>
   <%= f.submit %>
-  <%= image_tag "https://33.media.tumblr.com/8092a0b1f2aa7d8cf7fc8d58f7f36155/tumblr_n4fkyi9suN1qdwrtpo1_400.gif" %>
+  <%= link_to(image_tag("https://33.media.tumblr.com/8092a0b1f2aa7d8cf7fc8d58f7f36155/tumblr_n4fkyi9suN1qdwrtpo1_400.gif"), "/" ) %>
 <% end %>

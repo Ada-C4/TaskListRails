@@ -41,7 +41,7 @@ span {
   font-size: 22px;
 }
 
-.task-info, .new_task {
+.task-info, .new_task, .edit_task {
   margin: 0 auto;
   width: 50%;
   margin-top: 150px;
@@ -55,8 +55,8 @@ span {
   background-image: url("flower-of-life.jpg");
   background-attachment: fixed;
   background-size: cover;
-  border-radius: 10%;
-  margin-top: 100px;
+  border-radius: 20%;
+  margin-top: 70px;
 }
 
 .task {
@@ -90,9 +90,17 @@ span {
   font-style: italic;
 }
 
-.task-buttons {
-  display: inline-block;
+.task-buttons, .task-detail {
   vertical-align: top;
+  display: none;
+}
+
+.task:hover .task-buttons {
+  display: inline-block;
+}
+
+.task:hover .task-detail {
+  display: block;
 }
 
 .complete {
@@ -114,22 +122,25 @@ span {
   background-color: white;
 }
 
-input#submit, form input[type="submit"] {
+form input[type="submit"] {
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0);
   font-family: "Josefin Slab", serif;
+  font-size: 24px;
+  text-align: center;
   font-weight: bold;
   border: none;
+  border: 1px solid black;
+  font-weight: normal;
+  margin: 15px;
+  padding: 5px;
 }
 
-input#submit, legend {
+legend {
   font-size: 24px;
 }
 
 form input[type="submit"] {
-  font-size: 24px;
-  text-align: center;
-  margin: 10px;
 }
 
 legend {
@@ -139,7 +150,7 @@ legend {
   font-weight: bold;
 }
 
-.new_task input[type="text"] {
+.new_task input[type="text"], .edit_task input[type="text"] {
   margin: 10px 0 0 10px;
 }
 
@@ -147,3 +158,13 @@ fieldset {
   border: none;
   text-align: center;
 }
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/*button:hover {
+  margin-left: -2px;
+}*/

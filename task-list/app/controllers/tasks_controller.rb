@@ -10,6 +10,8 @@ class TasksController < ApplicationController
 
   def new
     @task = Task.new
+    @title = "Add"
+    @action = "create"
   end
 
   def create
@@ -26,6 +28,21 @@ class TasksController < ApplicationController
 
   def destroy
     Task.destroy(params[:id])
+
+    redirect_to "/"
+  end
+
+  def edit
+    id = params[:id]
+    @task = Task.find(id)
+    @title = "Modify"
+    @action = "update"
+
+    render :new
+  end
+
+  def update
+    Task.update(params[:id], task_params[:task])
 
     redirect_to "/"
   end

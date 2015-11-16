@@ -1,8 +1,6 @@
 <div class= "wrapper-front">
   <div class="button-farm">
     <a href="tasks/new"><h1>Add a new task!</h1></a>
-
-    <input type="submit" id="submit" name="submit" onclick="return confirm('Are you sure?')" value="Clear Completed">
   </div>
   <div>
     <% unless @sorted_tasks[:todo].nil? %>
@@ -16,7 +14,7 @@
           </div>
           <div class="task-buttons">
             <%= button_to("/tasks/#{task.id}/complete", method: "patch", title: "Complete") { fa_icon("check fw lg") } %>
-            <%= button_to("/tasks/#{task.id}", method: "patch", title: "Edit") { fa_icon("pencil-square-o fw lg") } %>
+            <%= button_to("/tasks/#{task.id}/edit", method: "get", title: "Edit") { fa_icon("pencil-square-o fw lg") } %>
             <%= button_to("/tasks/#{task.id}", method: "delete", onclick: "return confirm('Are you sure?')", title: "Delete") { fa_icon("trash-o fw lg") } %>
           </div>
         </div>
