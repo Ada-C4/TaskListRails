@@ -12,8 +12,13 @@ Rails.application.routes.draw do
   patch 'tasks/:id/complete' => 'tasks#complete'
 
   get 'people/' => 'people#index'
+  get 'people/new' => 'people#new'
+  post 'people/' => 'people#create'
+  get 'people/:id/edit' => 'people#edit'
   get 'people/:id/tasks' => 'people#showtasks'
   get 'people/:id' => 'people#show'
+  patch 'people/:id' => 'people#update', :as => :person
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
