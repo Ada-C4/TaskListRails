@@ -1,7 +1,12 @@
-<h1> Add a new task </h1>
+<% title = params[:action] %>
+<% if title == "edit" %>
+  <h1> Edit a task</h1>
+<% else %>
+  <h1> Add a new task </h1>
+<% end %>
 
+<h2>Task Information</h2>
 <%= form_for @task do |f| %>
-  <legend>Task Information</legend>
   <%= f.label :name %>
   <%= f.text_field :name %>
   <%= f.label :description %>
