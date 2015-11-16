@@ -8,7 +8,7 @@ class TasksController < ApplicationController
 
   def show
     @task_name = params[:name]
-    task = Task.where(name: @task_name)[0]
+    task = Task.find_by(name: params[:name])
     @description = task.description
     @completed_status = task.complete
     date = task.completed_date
@@ -49,7 +49,7 @@ class TasksController < ApplicationController
     @task = Task.find_by(name: params[:name])
     @url = '/tasks/:name/update'
     @method = "patch"
-  end
+  end«»
 
   def update
     @task = Task.find_by(name: task_params[:task][:name])
