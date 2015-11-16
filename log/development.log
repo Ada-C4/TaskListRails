@@ -21810,3 +21810,1327 @@ ActionController::RoutingError (No route matches [GET] "/tasks/40/favicon.png"):
   Rendered /Users/Sarah/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
   Rendered /Users/Sarah/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
   Rendered /Users/Sarah/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (127.0ms)
+
+
+Started GET "/tasks/40" for ::1 at 2015-11-15 21:03:27 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[35mTask Load (0.5ms)[0m  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1  [["id", 40]]
+  Rendered tasks/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 245ms (Views: 204.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tasks/40" for ::1 at 2015-11-15 21:04:03 -0800
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1[0m  [["id", 40]]
+  Rendered tasks/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 42ms (Views: 40.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-15 21:04:03 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-15 21:04:03 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-15 21:04:03 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-15 21:04:03 -0800
+
+
+Started GET "/assets/tasks.self-73b8f58374e124fa100f28be1959bb795de69385906327d6a73f836d61813075.css?body=1" for ::1 at 2015-11-15 21:04:03 -0800
+
+
+Started GET "/assets/tasks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-15 21:04:03 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-15 21:04:03 -0800
+
+
+Started GET "/tasks/40" for ::1 at 2015-11-15 21:04:10 -0800
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[35mTask Load (0.2ms)[0m  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1  [["id", 40]]
+  Rendered tasks/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 49ms (Views: 46.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/tasks.self-73b8f58374e124fa100f28be1959bb795de69385906327d6a73f836d61813075.css?body=1" for ::1 at 2015-11-15 21:04:11 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-15 21:04:11 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-15 21:04:11 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-15 21:04:11 -0800
+
+
+Started GET "/assets/tasks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-15 21:04:11 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-15 21:04:11 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-15 21:04:11 -0800
+
+
+Started GET "/tasks/40" for ::1 at 2015-11-15 21:04:32 -0800
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1[0m  [["id", 40]]
+  Rendered tasks/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 129ms (Views: 127.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-15 21:04:32 -0800
+
+
+Started GET "/assets/tasks.self-5a1b2b1533211bea696fe11b4c2f9e120d53a49929eb8303eb43fa9745a38d7b.css?body=1" for ::1 at 2015-11-15 21:04:32 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-15 21:04:32 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-15 21:04:32 -0800
+
+
+Started GET "/assets/tasks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-15 21:04:32 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-15 21:04:32 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-15 21:04:32 -0800
+
+
+Started GET "/assets/background_sea-61ec635f6f3fbf79d21e97c01f723a62ae0df90f27daed7edf6457ff33929e94.png" for ::1 at 2015-11-15 21:04:32 -0800
+
+
+Started GET "/" for ::1 at 2015-11-15 21:04:35 -0800
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.3ms)[0m  SELECT "tasks".* FROM "tasks"  ORDER BY "tasks"."completed_at" ASC
+  Rendered tasks/index.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 55ms (Views: 54.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-11-15 21:06:23 -0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT "tasks".* FROM "tasks"  ORDER BY "tasks"."completed_at" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 112ms (Views: 111.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/tasks.self-924d6a04dba3d5f5b90403551f71337f1fd9fcbbcbe6e5c56d5c1dc6aac54864.css?body=1" for ::1 at 2015-11-15 21:06:23 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-15 21:06:23 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-15 21:06:23 -0800
+
+
+Started GET "/assets/tasks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-15 21:06:23 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-15 21:06:23 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-15 21:06:23 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-15 21:06:23 -0800
+
+
+Started GET "/assets/background_sea-61ec635f6f3fbf79d21e97c01f723a62ae0df90f27daed7edf6457ff33929e94.png" for ::1 at 2015-11-15 21:06:23 -0800
+
+
+Started GET "/" for ::1 at 2015-11-15 21:07:05 -0800
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"  ORDER BY "tasks"."completed_at" ASC
+  Rendered tasks/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 129ms (Views: 127.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/tasks.self-c363480559636e12aff3316d5e502ec24ea114d9befa3dfc39c6a79107554478.css?body=1" for ::1 at 2015-11-15 21:07:06 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-15 21:07:06 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-15 21:07:06 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-15 21:07:06 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-15 21:07:06 -0800
+
+
+Started GET "/assets/tasks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-15 21:07:06 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-15 21:07:06 -0800
+
+
+Started GET "/assets/background_sea-61ec635f6f3fbf79d21e97c01f723a62ae0df90f27daed7edf6457ff33929e94.png" for ::1 at 2015-11-15 21:07:06 -0800
+
+
+Started GET "/tasks/new" for ::1 at 2015-11-15 21:07:07 -0800
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 67ms (Views: 66.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for ::1 at 2015-11-15 21:07:17 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"xEpEtQgeW1F0DhbcEJx8X/aTHmh6a453xPVO6BV97vIahV8RrZvIbuKfzhp4k7ukm3zVvnc2sfM2mWy6+f+Lmg=="}
+Unpermitted parameter: authenticity_token
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "tasks" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-11-16 05:07:17.152218"], ["updated_at", "2015-11-16 05:07:17.152218"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2015-11-15 21:07:17 -0800
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.5ms)[0m  SELECT "tasks".* FROM "tasks"  ORDER BY "tasks"."completed_at" ASC
+  Rendered tasks/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 50ms (Views: 48.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2015-11-15 21:08:04 -0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT "tasks".* FROM "tasks"  ORDER BY "tasks"."completed_at" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 103ms (Views: 102.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/tasks.self-addc5c28df479e1aa3e78c668eeee3a6eb352c6aee65478b970e3329c8d14ae2.css?body=1" for ::1 at 2015-11-15 21:08:04 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-15 21:08:04 -0800
+
+
+Started GET "/assets/tasks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-15 21:08:04 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-15 21:08:04 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-15 21:08:04 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-15 21:08:04 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-15 21:08:04 -0800
+
+
+Started GET "/assets/background_sea-61ec635f6f3fbf79d21e97c01f723a62ae0df90f27daed7edf6457ff33929e94.png" for ::1 at 2015-11-15 21:08:04 -0800
+
+
+Started DELETE "/tasks?id=43" for ::1 at 2015-11-15 21:08:17 -0800
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"YmVlbV13czH3jJp/8xQIeIFY8bcFlm38qtqh/F+YgrG8qn7J+PLgDmEdQrmbG8+D7Lc6YQjLUnhYtoOusxrn2Q==", "id"=>"43"}
+  [1m[35mTask Load (0.2ms)[0m  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1  [["id", 43]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  DELETE FROM "tasks" WHERE "tasks"."id" = ?  [["id", 43]]
+  [1m[36m (3.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/" for ::1 at 2015-11-15 21:08:17 -0800
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.3ms)[0m  SELECT "tasks".* FROM "tasks"  ORDER BY "tasks"."completed_at" ASC
+  Rendered tasks/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 90ms (Views: 89.1ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/tasks?id=44" for ::1 at 2015-11-15 21:08:20 -0800
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0NwI3/cZ5zut1QFiCqnEYPHOhcX5Muh85KJP/OLc5pUOExN7Upx0BDtE2aRipgObnCFOE/Rv1/gWzm2uDl6D/Q==", "id"=>"44"}
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1[0m  [["id", 44]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 44]]
+  [1m[35m (3.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/" for ::1 at 2015-11-15 21:08:20 -0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.4ms)[0m  [1mSELECT "tasks".* FROM "tasks"  ORDER BY "tasks"."completed_at" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 64ms (Views: 61.8ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/tasks?id=45" for ::1 at 2015-11-15 21:08:24 -0800
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"bZlzEZkFzk451+QvBI2e3YeBSj3Qz9Pgv55FS2QZPy6zVmi1PIBdca9GPOlsglkm6m6B692S7GRN8mcZiJtaRg==", "id"=>"45"}
+  [1m[35mTask Load (0.2ms)[0m  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1  [["id", 45]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "tasks" WHERE "tasks"."id" = ?  [["id", 45]]
+  [1m[36m (4.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/" for ::1 at 2015-11-15 21:08:24 -0800
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.3ms)[0m  SELECT "tasks".* FROM "tasks"  ORDER BY "tasks"."completed_at" ASC
+  Rendered tasks/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 89ms (Views: 87.6ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/tasks?id=46" for ::1 at 2015-11-15 21:08:26 -0800
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3gG5NC1Pb/sF068bbdQXVu9cuuDXFQCbR2d1tbxrloUAzqKQiMr8xJNCd90F29CtgrNxNtpIPx+1C1fnUOnz7Q==", "id"=>"46"}
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1[0m  [["id", 46]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 46]]
+  [1m[35m (3.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-15 21:08:26 -0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT "tasks".* FROM "tasks"  ORDER BY "tasks"."completed_at" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 63ms (Views: 61.7ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks?id=40" for ::1 at 2015-11-15 21:08:31 -0800
+Processing by TasksController#complete as HTML
+  Parameters: {"authenticity_token"=>"pCyjPvZR5x5vv4ThM2VVwf2sU6+hkBkLCPLsWS76MqR647iaU9R0IfkuXCdbapI6kEOYeazNJo/6ns4LwnhXzA==", "id"=>"40"}
+  [1m[35mTask Load (0.1ms)[0m  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1  [["id", 40]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "tasks" SET "completed_at" = ?, "updated_at" = ? WHERE "tasks"."id" = ?  [["completed_at", "2015-11-16 05:08:31.564047"], ["updated_at", "2015-11-16 05:08:31.564672"], ["id", 40]]
+  [1m[36m (3.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 8ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/tasks" for ::1 at 2015-11-15 21:08:31 -0800
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.3ms)[0m  SELECT "tasks".* FROM "tasks"  ORDER BY "tasks"."completed_at" ASC
+  Rendered tasks/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 49ms (Views: 47.4ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/tasks?id=41" for ::1 at 2015-11-15 21:08:34 -0800
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"MDCPuH+0Di8pPhIoZP+1coqTm2SBwizbVQNr0OBfbbDu/5Qc2jGdEL+vyu4M8HKJ53xQsoyfE1+nb0mCDN0I2A==", "id"=>"41"}
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1[0m  [["id", 41]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 41]]
+  [1m[35m (3.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/" for ::1 at 2015-11-15 21:08:34 -0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.4ms)[0m  [1mSELECT "tasks".* FROM "tasks"  ORDER BY "tasks"."completed_at" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 74ms (Views: 71.2ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/tasks?id=42" for ::1 at 2015-11-15 21:08:36 -0800
+Processing by TasksController#complete as HTML
+  Parameters: {"authenticity_token"=>"UYf3ppoPOBHehWJIRG+RKo8UDHDb6yfZ6LN3YWim9N2PSOwCP4qrLkgUuo4sYFbR4vvHpta2GF0a31UzhCSRtQ==", "id"=>"42"}
+  [1m[35mTask Load (0.1ms)[0m  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1  [["id", 42]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  UPDATE "tasks" SET "completed_at" = ?, "updated_at" = ? WHERE "tasks"."id" = ?  [["completed_at", "2015-11-16 05:08:36.129171"], ["updated_at", "2015-11-16 05:08:36.130053"], ["id", 42]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 6ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/tasks" for ::1 at 2015-11-15 21:08:36 -0800
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.6ms)[0m  SELECT "tasks".* FROM "tasks"  ORDER BY "tasks"."completed_at" ASC
+  Rendered tasks/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 67ms (Views: 65.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tasks/new" for ::1 at 2015-11-15 21:10:39 -0800
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 59ms (Views: 58.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for ::1 at 2015-11-15 21:10:46 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n+81bY6Kgq2zNLtLpZSVzPsbUYkFAQ4GDjCSffarPBpBIC7JKw8RkiWlY43Nm1I3lvSaXwhcMYL8XLAvGilZcg==", "task"=>{"name"=>"test task 1", "description"=>""}, "commit"=>"Create Task"}
+Unpermitted parameters: utf8, authenticity_token, commit
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "tasks" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "test task 1"], ["description", ""], ["created_at", "2015-11-16 05:10:46.282848"], ["updated_at", "2015-11-16 05:10:46.282848"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2015-11-15 21:10:46 -0800
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.4ms)[0m  SELECT "tasks".* FROM "tasks"  ORDER BY "tasks"."completed_at" ASC
+  Rendered tasks/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 57ms (Views: 55.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks/new" for ::1 at 2015-11-15 21:10:47 -0800
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 43ms (Views: 42.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for ::1 at 2015-11-15 21:10:50 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nc2bZ54jygvhhKZPnHoM1aPP3F3j+0YS1m5tG2OCuKtDAoDDO6ZZNHcVfon0dcsuziAXi+6meZYkAk9JjwDdww==", "task"=>{"name"=>"test task 2", "description"=>""}, "commit"=>"Create Task"}
+Unpermitted parameters: utf8, authenticity_token, commit
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "tasks" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "test task 2"], ["description", ""], ["created_at", "2015-11-16 05:10:50.970900"], ["updated_at", "2015-11-16 05:10:50.970900"]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 12ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/" for ::1 at 2015-11-15 21:10:50 -0800
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.3ms)[0m  SELECT "tasks".* FROM "tasks"  ORDER BY "tasks"."completed_at" ASC
+  Rendered tasks/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 52ms (Views: 49.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-11-15 21:14:31 -0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.4ms)[0m  [1mSELECT "tasks".* FROM "tasks"  ORDER BY "tasks"."completed_at" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 49ms (Views: 45.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/tasks.self-addc5c28df479e1aa3e78c668eeee3a6eb352c6aee65478b970e3329c8d14ae2.css?body=1" for ::1 at 2015-11-15 21:14:31 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-15 21:14:31 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-15 21:14:31 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-15 21:14:31 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-15 21:14:31 -0800
+
+
+Started GET "/assets/tasks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-15 21:14:31 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-15 21:14:31 -0800
+
+
+Started GET "/tasks/new" for ::1 at 2015-11-15 21:14:32 -0800
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 54ms (Views: 52.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for ::1 at 2015-11-15 21:14:36 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l4AVU2u7i/1NLKzgqgmZv3nO2+4m7hw+76IiDGRlrVVJTw73zj4Ywtu9dCbCBl5EFCEQOCuzI7odzgBeiOfIPQ==", "task"=>{"name"=>"test task 3", "description"=>""}, "commit"=>"Create Task"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "tasks" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-11-16 05:14:36.273273"], ["updated_at", "2015-11-16 05:14:36.273273"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Unpermitted parameters: utf8, authenticity_token, commit
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 1.6ms)
+
+NoMethodError - undefined method `order' for #<Task:0x007fc261943d30>:
+  activemodel (4.2.4) lib/active_model/attribute_methods.rb:433:in `method_missing'
+  app/controllers/tasks_controller.rb:25:in `create'
+  actionpack (4.2.4) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.4) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.4) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.4) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/Sarah/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/Sarah/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/Sarah/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/7317d2fef8462aae/variables" for ::1 at 2015-11-15 21:14:36 -0800
+
+
+Started GET "/tasks" for ::1 at 2015-11-15 21:15:03 -0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.5ms)[0m  [1mSELECT "tasks".* FROM "tasks"  ORDER BY "tasks"."completed_at" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 56ms (Views: 53.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tasks/new" for ::1 at 2015-11-15 21:15:04 -0800
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 46ms (Views: 44.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for ::1 at 2015-11-15 21:15:12 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TWr46yrYwWIs9Vb1Cjx7PsZuQukVYeT7ibpnlCFxKU+TpeNPj11SXbpkjjNiM7zFq4GJPxg823971kXGzfNMJw==", "task"=>{"name"=>"test task 3 ", "description"=>"should be at top"}, "commit"=>"Create Task"}
+Unpermitted parameters: utf8, authenticity_token, commit
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "test task 3 "], ["description", "should be at top"], ["created_at", "2015-11-16 05:15:12.829579"], ["updated_at", "2015-11-16 05:15:12.829579"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 2.0ms)
+
+NoMethodError - undefined method `order' for #<Task:0x007fc25b43b708>:
+  activemodel (4.2.4) lib/active_model/attribute_methods.rb:433:in `method_missing'
+  app/controllers/tasks_controller.rb:26:in `create'
+  actionpack (4.2.4) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.4) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.4) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.4) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/Sarah/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/Sarah/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/Sarah/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/9fcdff0db71204f9/variables" for ::1 at 2015-11-15 21:15:12 -0800
+
+
+Started GET "/tasks" for ::1 at 2015-11-15 21:15:57 -0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.5ms)[0m  [1mSELECT "tasks".* FROM "tasks"  ORDER BY "tasks"."completed_at" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 58ms (Views: 55.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tasks/new" for ::1 at 2015-11-15 21:15:58 -0800
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 45ms (Views: 44.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for ::1 at 2015-11-15 21:16:01 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xMoP0itemaxLWNQVOvkSv99Xr/4UrOpOVOtzLbZGnEoaBRR2jtsKk93JDNNS9tVEsrhkKBnx1cqmh1F/WsT5Ig==", "task"=>{"name"=>"asdfas", "description"=>""}, "commit"=>"Create Task"}
+Unpermitted parameters: utf8, authenticity_token, commit
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "asdfas"], ["description", ""], ["created_at", "2015-11-16 05:16:01.946055"], ["updated_at", "2015-11-16 05:16:01.946055"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2015-11-15 21:16:01 -0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.5ms)[0m  [1mSELECT "tasks".* FROM "tasks"  ORDER BY "tasks"."completed_at" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 53ms (Views: 51.7ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/tasks?id=49" for ::1 at 2015-11-15 21:16:13 -0800
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"sxwRQ/OAc1+4audFY89+tmEWF+OUIWkFEgiIbUSM5Yxt0wrnVgXgYC77P4MLwLlNDPncNZl8VoHgZKo/qA6A5A==", "id"=>"49"}
+  [1m[35mTask Load (0.2ms)[0m  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1  [["id", 49]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  DELETE FROM "tasks" WHERE "tasks"."id" = ?  [["id", 49]]
+  [1m[36m (3.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/" for ::1 at 2015-11-15 21:16:13 -0800
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.3ms)[0m  SELECT "tasks".* FROM "tasks"  ORDER BY "tasks"."completed_at" ASC
+  Rendered tasks/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 61ms (Views: 59.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-11-15 21:18:01 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TasksController#index as HTML
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms)
+
+NameError - uninitialized constant TasksController::Tasks:
+  activesupport (4.2.4) lib/active_support/dependencies.rb:533:in `load_missing_constant'
+  activesupport (4.2.4) lib/active_support/dependencies.rb:184:in `const_missing'
+  app/controllers/tasks_controller.rb:5:in `index'
+  actionpack (4.2.4) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.4) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.4) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.4) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/Sarah/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/Sarah/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/Sarah/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/3c13d4c7821aa026/variables" for ::1 at 2015-11-15 21:18:02 -0800
+
+
+Started GET "/" for ::1 at 2015-11-15 21:18:10 -0800
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.5ms)[0m  SELECT "tasks".* FROM "tasks"  ORDER BY "tasks"."completed_at" ASC
+  Rendered tasks/index.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 238ms (Views: 234.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-15 21:18:11 -0800
+
+
+Started GET "/assets/tasks.self-addc5c28df479e1aa3e78c668eeee3a6eb352c6aee65478b970e3329c8d14ae2.css?body=1" for ::1 at 2015-11-15 21:18:11 -0800
+
+
+Started GET "/assets/tasks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-15 21:18:11 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-15 21:18:11 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-15 21:18:11 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-15 21:18:11 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-15 21:18:11 -0800
+
+
+Started GET "/tasks/new" for ::1 at 2015-11-15 21:18:14 -0800
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 66ms (Views: 65.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for ::1 at 2015-11-15 21:18:17 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4Jj/dtRelv4TsDsqO2wkBN1sRP39iMQ8GXQPfAwzTjY+V+TScdsFwYUh4+xTY+P/sIOPK/DV+7jrGC0u4LErXg==", "task"=>{"name"=>"top?", "description"=>""}, "commit"=>"Create Task"}
+Unpermitted parameters: utf8, authenticity_token, commit
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "tasks" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "top?"], ["description", ""], ["created_at", "2015-11-16 05:18:17.071933"], ["updated_at", "2015-11-16 05:18:17.071933"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2015-11-15 21:18:17 -0800
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.3ms)[0m  SELECT "tasks".* FROM "tasks"  ORDER BY "tasks"."completed_at" ASC
+  Rendered tasks/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 85ms (Views: 82.4ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/tasks?id=47" for ::1 at 2015-11-15 21:18:22 -0800
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"UAEI2W95QtfLYNvHRQpHr30aLcyirwU7xcHUvTFTn66OzhN9yvzR6F3xAwEtBYBUEPXmGq/yOr83rfbv3dH6xg==", "id"=>"47"}
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1[0m  [["id", 47]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 47]]
+  [1m[35m (1.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 18ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/" for ::1 at 2015-11-15 21:18:22 -0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT "tasks".* FROM "tasks"  ORDER BY "tasks"."completed_at" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 58ms (Views: 57.1ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/tasks?id=48" for ::1 at 2015-11-15 21:18:24 -0800
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ZRDhguj/aK2m2dnZiFIgahIaop2JfwhXR6uJnqz7IlS73/omTXr7kjBIAR/gXeeRf/VpS4QiN9O1x6vMQHlHPA==", "id"=>"48"}
+  [1m[35mTask Load (0.2ms)[0m  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1  [["id", 48]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "tasks" WHERE "tasks"."id" = ?  [["id", 48]]
+  [1m[36m (5.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/" for ::1 at 2015-11-15 21:18:24 -0800
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.4ms)[0m  SELECT "tasks".* FROM "tasks"  ORDER BY "tasks"."completed_at" ASC
+  Rendered tasks/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 54ms (Views: 53.0ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/tasks?id=50" for ::1 at 2015-11-15 21:18:26 -0800
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"59Kg6odBaa0IMPMBN3x1OtWrs4xq4PzzI9uaKYJFb3o5HbtOIsT6kp6hK8dfc7LBuER4Wme9w3fRt7h7bscKEg==", "id"=>"50"}
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1[0m  [["id", 50]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 50]]
+  [1m[35m (6.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/" for ::1 at 2015-11-15 21:18:26 -0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.4ms)[0m  [1mSELECT "tasks".* FROM "tasks"  ORDER BY "tasks"."completed_at" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 64ms (Views: 63.2ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/tasks?id=51" for ::1 at 2015-11-15 21:18:27 -0800
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"EPr7GWapwFs6K1E1gR09xcNQx0qtDWukUH1gP2GsLtTONeC9wyxTZKy6ifPpEvo+rr8MnKBQVCCiEUJtjS5LvA==", "id"=>"51"}
+  [1m[35mTask Load (0.1ms)[0m  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1  [["id", 51]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  DELETE FROM "tasks" WHERE "tasks"."id" = ?  [["id", 51]]
+  [1m[36m (3.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 4.8ms)
+
+
+Started GET "/" for ::1 at 2015-11-15 21:18:27 -0800
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.3ms)[0m  SELECT "tasks".* FROM "tasks"  ORDER BY "tasks"."completed_at" ASC
+  Rendered tasks/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 61ms (Views: 52.7ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/tasks?id=52" for ::1 at 2015-11-15 21:18:29 -0800
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0UtCh1Wr9kcoKuGOV0iKLemCmi+u7xy0X9t9o/ihdbwPhFkj8C5leL67OUg/R03WhG1R+aOyIzCtt1/xFCMQ1A==", "id"=>"52"}
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1[0m  [["id", 52]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.2ms)[0m  [1mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 52]]
+  [1m[35m (5.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/" for ::1 at 2015-11-15 21:18:29 -0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT "tasks".* FROM "tasks"  ORDER BY "tasks"."completed_at" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 79ms (Views: 77.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/new" for ::1 at 2015-11-15 21:18:29 -0800
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 45ms (Views: 44.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for ::1 at 2015-11-15 21:18:31 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0jqbrR6DRonD6vokNtbPy30HIdGecZbJZHhHfOJaNcsM9YAJuwbVtlV7IuJe2QgwEOjqB5MsqU2WFGUuDthQow==", "task"=>{"name"=>"1", "description"=>""}, "commit"=>"Create Task"}
+Unpermitted parameters: utf8, authenticity_token, commit
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "1"], ["description", ""], ["created_at", "2015-11-16 05:18:31.229438"], ["updated_at", "2015-11-16 05:18:31.229438"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2015-11-15 21:18:31 -0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT "tasks".* FROM "tasks"  ORDER BY "tasks"."completed_at" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 59ms (Views: 57.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/new" for ::1 at 2015-11-15 21:18:32 -0800
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 57ms (Views: 55.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for ::1 at 2015-11-15 21:18:33 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KqNPBLa3FdNFdubUuy1DF7YeEzQUmWZsiRGa56kxnw30bFSgEzKG7NPnPhLTIoTs2/HY4hnEWeh7fbi1RbP6ZQ==", "task"=>{"name"=>"2", "description"=>""}, "commit"=>"Create Task"}
+Unpermitted parameters: utf8, authenticity_token, commit
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "2"], ["description", ""], ["created_at", "2015-11-16 05:18:33.865497"], ["updated_at", "2015-11-16 05:18:33.865497"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2015-11-15 21:18:33 -0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT "tasks".* FROM "tasks"  ORDER BY "tasks"."completed_at" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 63ms (Views: 61.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-11-16 11:31:46 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.3ms)[0m  SELECT "tasks".* FROM "tasks"  ORDER BY "tasks"."completed_at" ASC
+  Rendered tasks/index.html.erb within layouts/application (23.8ms)
+Completed 200 OK in 251ms (Views: 236.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/tasks.self-addc5c28df479e1aa3e78c668eeee3a6eb352c6aee65478b970e3329c8d14ae2.css?body=1" for ::1 at 2015-11-16 11:31:46 -0800
+
+
+Started GET "/assets/tasks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-16 11:31:46 -0800
+
+
+Started GET "/assets/background_sea-61ec635f6f3fbf79d21e97c01f723a62ae0df90f27daed7edf6457ff33929e94.png" for ::1 at 2015-11-16 11:31:46 -0800
+
+
+Started GET "/favicon.png" for ::1 at 2015-11-16 11:31:47 -0800
+
+ActionController::RoutingError (No route matches [GET] "/favicon.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/Sarah/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/Sarah/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/Sarah/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/Sarah/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/Sarah/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Users/Sarah/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.4ms)
+  Rendered /Users/Sarah/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/Sarah/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (96.6ms)
+  Rendered /Users/Sarah/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/Sarah/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Sarah/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Sarah/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Sarah/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (73.2ms)
+  Rendered /Users/Sarah/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Sarah/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Sarah/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (177.8ms)
+  [1m[36m (3.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateTasks (20151110001747)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  CREATE TABLE "tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" varchar, "complete" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151110001747"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+Migrating to AddCompletedAtColumn (20151110214613)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  ALTER TABLE "tasks" ADD "completed_at" datetime
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151110214613"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "complete", "completed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "The First Task"], ["description", ""], ["complete", "f"], ["completed_at", "1973-01-09 11:51:46.341372"], ["created_at", "2015-11-16 19:49:23.504260"], ["updated_at", "2015-11-16 19:49:23.504260"]]
+  [1m[35m (3.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tasks" ("name", "description", "complete", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Go to Brunch"], ["description", ""], ["complete", "f"], ["created_at", "2015-11-16 19:49:23.513553"], ["updated_at", "2015-11-16 19:49:23.513553"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "complete", "completed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Go to Lunch"], ["description", ""], ["complete", "f"], ["completed_at", "1977-12-03 04:37:29.574601"], ["created_at", "2015-11-16 19:49:23.516373"], ["updated_at", "2015-11-16 19:49:23.516373"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tasks" ("name", "description", "complete", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Go to Second Lunch"], ["description", ""], ["complete", "f"], ["created_at", "2015-11-16 19:49:23.518684"], ["updated_at", "2015-11-16 19:49:23.518684"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "complete", "completed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Play Video Games"], ["description", ""], ["complete", "f"], ["completed_at", "1979-04-22 04:21:27.277594"], ["created_at", "2015-11-16 19:49:23.523111"], ["updated_at", "2015-11-16 19:49:23.523111"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tasks" ("name", "complete", "description", "completed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "High Five Somebody You Don't Know"], ["complete", "f"], ["description", ""], ["completed_at", "1991-01-23 07:10:21.508769"], ["created_at", "2015-11-16 19:49:23.527246"], ["updated_at", "2015-11-16 19:49:23.527246"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "complete", "completed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Plant Flowers"], ["description", ""], ["complete", "f"], ["completed_at", "2012-11-21 18:35:53.702913"], ["created_at", "2015-11-16 19:49:23.530114"], ["updated_at", "2015-11-16 19:49:23.530114"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tasks" ("name", "description", "complete", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Call Mom"], ["description", ""], ["complete", "f"], ["created_at", "2015-11-16 19:49:23.533066"], ["updated_at", "2015-11-16 19:49:23.533066"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "complete", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "She worries, you know."], ["description", ""], ["complete", "f"], ["created_at", "2015-11-16 19:49:23.535942"], ["updated_at", "2015-11-16 19:49:23.535942"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "tasks" ("name", "description", "complete", "completed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Nap."], ["description", ""], ["complete", "f"], ["completed_at", "2013-02-10 19:53:35.451770"], ["created_at", "2015-11-16 19:49:23.538345"], ["updated_at", "2015-11-16 19:49:23.538345"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePeople (20151116195007)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151116195007"]]
+  [1m[36m (3.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "complete", "completed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "The First Task"], ["description", ""], ["complete", "f"], ["completed_at", "1981-03-12 19:51:33.215548"], ["created_at", "2015-11-16 19:50:46.942373"], ["updated_at", "2015-11-16 19:50:46.942373"]]
+  [1m[35m (3.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tasks" ("name", "description", "complete", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Go to Brunch"], ["description", ""], ["complete", "f"], ["created_at", "2015-11-16 19:50:46.950088"], ["updated_at", "2015-11-16 19:50:46.950088"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "complete", "completed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Go to Lunch"], ["description", ""], ["complete", "f"], ["completed_at", "2001-08-21 03:00:52.829504"], ["created_at", "2015-11-16 19:50:46.952722"], ["updated_at", "2015-11-16 19:50:46.952722"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tasks" ("name", "description", "complete", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Go to Second Lunch"], ["description", ""], ["complete", "f"], ["created_at", "2015-11-16 19:50:46.955138"], ["updated_at", "2015-11-16 19:50:46.955138"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "complete", "completed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Play Video Games"], ["description", ""], ["complete", "f"], ["completed_at", "1987-10-03 10:55:19.010892"], ["created_at", "2015-11-16 19:50:46.959139"], ["updated_at", "2015-11-16 19:50:46.959139"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "tasks" ("name", "complete", "description", "completed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "High Five Somebody You Don't Know"], ["complete", "f"], ["description", ""], ["completed_at", "1974-04-22 05:09:51.878271"], ["created_at", "2015-11-16 19:50:46.962836"], ["updated_at", "2015-11-16 19:50:46.962836"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "complete", "completed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Plant Flowers"], ["description", ""], ["complete", "f"], ["completed_at", "2009-10-17 20:03:14.709613"], ["created_at", "2015-11-16 19:50:46.966049"], ["updated_at", "2015-11-16 19:50:46.966049"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tasks" ("name", "description", "complete", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Call Mom"], ["description", ""], ["complete", "f"], ["created_at", "2015-11-16 19:50:46.968856"], ["updated_at", "2015-11-16 19:50:46.968856"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "complete", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "She worries, you know."], ["description", ""], ["complete", "f"], ["created_at", "2015-11-16 19:50:46.971448"], ["updated_at", "2015-11-16 19:50:46.971448"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "tasks" ("name", "description", "complete", "completed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Nap."], ["description", ""], ["complete", "f"], ["completed_at", "1999-10-16 10:03:55.462174"], ["created_at", "2015-11-16 19:50:46.973952"], ["updated_at", "2015-11-16 19:50:46.973952"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "complete", "completed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "The First Task"], ["description", ""], ["complete", "f"], ["completed_at", "2012-06-01 18:19:21.297371"], ["created_at", "2015-11-16 19:51:23.101467"], ["updated_at", "2015-11-16 19:51:23.101467"]]
+  [1m[35m (3.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tasks" ("name", "description", "complete", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Go to Brunch"], ["description", ""], ["complete", "f"], ["created_at", "2015-11-16 19:51:23.109143"], ["updated_at", "2015-11-16 19:51:23.109143"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "complete", "completed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Go to Lunch"], ["description", ""], ["complete", "f"], ["completed_at", "1987-11-18 05:56:12.537484"], ["created_at", "2015-11-16 19:51:23.111823"], ["updated_at", "2015-11-16 19:51:23.111823"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tasks" ("name", "description", "complete", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Go to Second Lunch"], ["description", ""], ["complete", "f"], ["created_at", "2015-11-16 19:51:23.114159"], ["updated_at", "2015-11-16 19:51:23.114159"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "complete", "completed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Play Video Games"], ["description", ""], ["complete", "f"], ["completed_at", "2003-12-12 13:19:41.245263"], ["created_at", "2015-11-16 19:51:23.118222"], ["updated_at", "2015-11-16 19:51:23.118222"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tasks" ("name", "complete", "description", "completed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "High Five Somebody You Don't Know"], ["complete", "f"], ["description", ""], ["completed_at", "1998-12-11 23:11:32.854617"], ["created_at", "2015-11-16 19:51:23.121996"], ["updated_at", "2015-11-16 19:51:23.121996"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "complete", "completed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Plant Flowers"], ["description", ""], ["complete", "f"], ["completed_at", "2009-03-26 12:24:08.039800"], ["created_at", "2015-11-16 19:51:23.124758"], ["updated_at", "2015-11-16 19:51:23.124758"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tasks" ("name", "description", "complete", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Call Mom"], ["description", ""], ["complete", "f"], ["created_at", "2015-11-16 19:51:23.127444"], ["updated_at", "2015-11-16 19:51:23.127444"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "complete", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "She worries, you know."], ["description", ""], ["complete", "f"], ["created_at", "2015-11-16 19:51:23.129736"], ["updated_at", "2015-11-16 19:51:23.129736"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tasks" ("name", "description", "complete", "completed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Nap."], ["description", ""], ["complete", "f"], ["completed_at", "2006-10-09 04:54:38.228334"], ["created_at", "2015-11-16 19:51:23.132225"], ["updated_at", "2015-11-16 19:51:23.132225"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "people" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Sarah"], ["created_at", "2015-11-16 19:51:23.141011"], ["updated_at", "2015-11-16 19:51:23.141011"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Cynthia"], ["created_at", "2015-11-16 19:51:23.146162"], ["updated_at", "2015-11-16 19:51:23.146162"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "David"], ["created_at", "2015-11-16 19:51:23.149083"], ["updated_at", "2015-11-16 19:51:23.149083"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36mPerson Load (1.3ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[36m (4.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateTasks (20151110001747)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" varchar, "complete" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151110001747"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Migrating to AddCompletedAtColumn (20151110214613)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "tasks" ADD "completed_at" datetime
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151110214613"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Migrating to CreatePeople (20151116195007)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePeople (20151116195007)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePeople (20151116195007)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePeople (20151116195007)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePeople (20151116195007)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mPerson Load (0.8ms)[0m  [1mSELECT "people".* FROM "people"[0m
+SQLite3::SQLException: no such table: people: SELECT "people".* FROM "people"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePeople (20151116195007)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePeople (20151116195007)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.1ms)[0m  [1mCREATE  INDEX "index_people_on_person_id" ON "people" ("person_id")[0m
+SQLite3::SQLException: table people has no column named person_id: CREATE  INDEX "index_people_on_person_id" ON "people" ("person_id")
+  [1m[35m (3.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePeople (20151116195007)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151116195007"]]
+  [1m[36m (3.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to ModifyTasks (20151116202815)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to ModifyTasks (20151116202815)
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to ModifyTasks (20151116202815)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to ModifyTasks (20151116202815)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to ModifyTasks (20151116202815)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mCREATE TEMPORARY TABLE "atasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" varchar, "complete" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "completed_at" datetime) [0m
+  [1m[35m (0.2ms)[0m  SELECT * FROM "tasks"
+  [1m[36m (0.4ms)[0m  [1mDROP TABLE "tasks"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "completed_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "atasks"[0m
+  [1m[35m (0.3ms)[0m  DROP TABLE "atasks"
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "tasks" ADD "person_id" integer[0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_tasks_on_person_id" ON "tasks" ("person_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151116202815"]]
+  [1m[36m (4.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tasks_on_person_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tasks_on_person_id' AND type='index'
+[0m
+  [1m[36mPerson Load (1.7ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[36m (3.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateTasks (20151110001747)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" varchar, "complete" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151110001747"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Migrating to AddCompletedAtColumn (20151110214613)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "tasks" ADD "completed_at" datetime
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151110214613"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Migrating to CreatePeople (20151116195007)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151116195007"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Migrating to ModifyTasks (20151116202815)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  CREATE TEMPORARY TABLE "atasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" varchar, "complete" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "completed_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "tasks"[0m
+  [1m[35m (0.7ms)[0m  DROP TABLE "tasks"
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "completed_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "atasks"
+  [1m[36m (0.4ms)[0m  [1mDROP TABLE "atasks"[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "tasks" ADD "person_id" integer
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_tasks_on_person_id" ON "tasks" ("person_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151116202815"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tasks_on_person_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tasks_on_person_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "completed_at", "person_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "The First Task"], ["description", ""], ["completed_at", "2007-01-21 14:58:50.112161"], ["person_id", 1], ["created_at", "2015-11-16 21:29:58.608828"], ["updated_at", "2015-11-16 21:29:58.608828"]]
+  [1m[35m (3.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tasks" ("name", "description", "person_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Go to Brunch"], ["description", ""], ["person_id", 2], ["created_at", "2015-11-16 21:29:58.616592"], ["updated_at", "2015-11-16 21:29:58.616592"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "completed_at", "person_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Go to Lunch"], ["description", ""], ["completed_at", "1994-02-21 08:40:45.540361"], ["person_id", 3], ["created_at", "2015-11-16 21:29:58.619181"], ["updated_at", "2015-11-16 21:29:58.619181"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tasks" ("name", "description", "person_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Go to Second Lunch"], ["description", ""], ["person_id", 1], ["created_at", "2015-11-16 21:29:58.621673"], ["updated_at", "2015-11-16 21:29:58.621673"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "completed_at", "person_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Play Video Games"], ["description", ""], ["completed_at", "2001-09-16 09:11:35.298474"], ["person_id", 3], ["created_at", "2015-11-16 21:29:58.624471"], ["updated_at", "2015-11-16 21:29:58.624471"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tasks" ("name", "description", "completed_at", "person_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "High Five Somebody You Don't Know"], ["description", ""], ["completed_at", "2012-04-19 12:31:48.947291"], ["person_id", 2], ["created_at", "2015-11-16 21:29:58.627758"], ["updated_at", "2015-11-16 21:29:58.627758"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "completed_at", "person_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Plant Flowers"], ["description", ""], ["completed_at", "1991-06-21 04:27:17.913839"], ["person_id", 3], ["created_at", "2015-11-16 21:29:58.631326"], ["updated_at", "2015-11-16 21:29:58.631326"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tasks" ("name", "description", "person_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Call Mom"], ["description", ""], ["person_id", 1], ["created_at", "2015-11-16 21:29:58.635637"], ["updated_at", "2015-11-16 21:29:58.635637"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "person_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "She worries, you know."], ["description", ""], ["person_id", 3], ["created_at", "2015-11-16 21:29:58.638193"], ["updated_at", "2015-11-16 21:29:58.638193"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tasks" ("name", "description", "completed_at", "person_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Nap."], ["description", ""], ["completed_at", "2012-09-06 19:00:13.421495"], ["person_id", 2], ["created_at", "2015-11-16 21:29:58.640732"], ["updated_at", "2015-11-16 21:29:58.640732"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("name") VALUES (?)[0m  [["name", "Sarah"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("name") VALUES (?)  [["name", "Cynthia"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("name") VALUES (?)[0m  [["name", "David"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36mPerson Load (1.3ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[35mTask Load (0.3ms)[0m  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mTask Load (0.6ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m

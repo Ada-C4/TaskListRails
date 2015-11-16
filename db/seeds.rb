@@ -3,18 +3,28 @@ def random_time
 end
 
 tasks = [
-  { name: "The First Task", description: "", complete: "false", completed_at: random_time },
-  { name: "Go to Brunch", description: "", complete: "false"},
-  { name: "Go to Lunch", description: "", complete: "false", completed_at: random_time },
-  { name: "Go to Second Lunch", description: "", complete: "false"},
-  { name: "Play Video Games", description: "", complete: "false", completed_at: random_time },
-  { name: "High Five Somebody You Don't Know", complete: "false", description: "", completed_at: random_time },
-  { name: "Plant Flowers", description: "", complete: "false", completed_at: random_time },
-  { name: "Call Mom", description: "", complete: "false"},
-  { name: "She worries, you know.", description: "", complete: "false"},
-  { name: "Nap.", description: "", complete: "false", completed_at: random_time }
+  { name: "The First Task", description: "", completed_at: random_time, person_id: 1 },
+  { name: "Go to Brunch", description: "", person_id: 2},
+  { name: "Go to Lunch", description: "", completed_at: random_time, person_id: 3 },
+  { name: "Go to Second Lunch", description: "", person_id: 1 },
+  { name: "Play Video Games", description: "", completed_at: random_time, person_id: 3 },
+  { name: "High Five Somebody You Don't Know", description: "", completed_at: random_time, person_id: 2 },
+  { name: "Plant Flowers", description: "", completed_at: random_time, person_id: 3 },
+  { name: "Call Mom", description: "", person_id: 1 },
+  { name: "She worries, you know.", description: "", person_id: 3 },
+  { name: "Nap.", description: "", completed_at: random_time, person_id: 2 }
 ]
 
 tasks.each do |task|
   Task.create task
+end
+
+people = [
+  { name: "Sarah"},
+  { name: "Cynthia"},
+  { name: "David"},
+]
+
+people.each do |p|
+  Person.create p
 end

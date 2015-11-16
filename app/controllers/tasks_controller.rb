@@ -10,7 +10,7 @@ class TasksController < ApplicationController
 
   def show
     @title = "Task List"
-    id = params[:id]  
+    id = params[:id]
     #here's a bundle of info and here's the the object you should do the method on. find(by)
     # is a ActiveRecord verb to take action on database.
     @task = Task.find(id)
