@@ -28,7 +28,8 @@ class TasksController < ApplicationController
     @task = Task.find(id)
     @task.update(
       name: task_params[:task][:name],
-      description: task_params[:task][:description]
+      description: task_params[:task][:description],
+      person_id: task_params[:task][:person_id]
       )
     redirect_to "/"
   end
