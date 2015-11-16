@@ -66,10 +66,42 @@ a {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  background-image: url(hubble_1.jpeg);
+  //background-image: url(hubble_1.jpeg);
   font-size: 30px;
   vertical-align: middle;
   color: white;
+}
+
+#task_link:nth-child(10n+1) {
+  background-image: url(hubble_1.jpeg);
+}
+
+#task_link:nth-child(10n+2) {
+  background-image: url(hubble_2.jpeg);
+}
+#task_link:nth-child(10n+3) {
+  background-image: url(hubble_2_5.jpeg);
+}
+#task_link:nth-child(10n+4) {
+  background-image: url(hubble_3.jpeg);
+}
+#task_link:nth-child(10n+5) {
+  background-image: url(hubble_4.jpeg);
+}
+#task_link:nth-child(10n+6) {
+  background-image: url(hubble_5.jpeg);
+}
+#task_link:nth-child(10n+7) {
+  background-image: url(hubble_6.jpeg);
+}
+#task_link:nth-child(10n+8) {
+  background-image: url(hubble_7.jpeg);
+}
+#task_link:nth-child(10n+9) {
+  background-image: url(hubble_8.jpeg);
+}
+#task_link:nth-child(10n+0) {
+  background-image: url(hubble_9.jpeg);
 }
 
 
