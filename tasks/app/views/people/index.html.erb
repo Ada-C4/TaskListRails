@@ -1,0 +1,9 @@
+<h1>People</h1>
+<div class="center">
+<% @people.each do |person| %>
+  <span>
+    <a href="/people/<%= person.id %>" ><%= person.name %></a>
+  </span>
+  <br />
+<% end %>
+</div>
