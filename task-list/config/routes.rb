@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   patch 'tasks/:id/set_completed' => 'tasks#set_completed'
 
   get 'people' => 'people#index'
+  get 'people/:id' => 'people#show'
+  get 'people/:id/tasks' => 'people#show_tasks'
 
 
 

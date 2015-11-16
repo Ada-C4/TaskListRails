@@ -9,7 +9,7 @@
     <tr>
       <td>
         <%if !person.name.nil? %>
-          <%= person.name %>
+          <%= link_to "#{person.name}", "/people/#{person.id}/tasks" %>
         <% end %>
       </td>
       <td>
