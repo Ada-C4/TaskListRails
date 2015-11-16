@@ -21,7 +21,7 @@ def random_time
 end
 
 tasks = [
-  { name: "The First Task", description: "" },
+  { name: "The First Task", description: "", person_id: 2 },
   { name: "Go to Brunch", description: "", person_id: 2 },
   { name: "Go to Lunch", description: "", person_id: 3 },
   { name: "Go to Second Lunch", description: "" , person_id: 3},
