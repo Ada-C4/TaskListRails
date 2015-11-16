@@ -1,0 +1,30 @@
+<h1>Here is One Person</h1>
+
+<table class = "table table-hover">
+  <tr>
+    <th>Name</th>
+    <th>Favorite Color</th>
+    <th>Tasks</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  <tr>
+    <td><%= @person.name %></td>
+    <td><%= @person.fav_color %></td>
+    <td>
+      <%= button_to "View Tasks", "/people/#{@person.id}/tasks", method: :get,
+      class: "btn btn-default" %>
+    </td>
+    <td>
+      <%= render partial: 'edit_button', locals:
+        { button_path: "/people/#{@person.id}/edit" } %>
+    </td>
+    <td>
+      <%= render partial: 'delete_button', locals:
+        { button_path: "/people/#{@person.id}" } %>
+    </td>
+  </tr>
+
+</table>
+
+<%= render partial: 'home_button' %>

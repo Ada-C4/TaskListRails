@@ -1,0 +1,11 @@
+<%= form_for @person, :html => {:class => "form-inline"} do |f| %>
+  <fieldset>
+    <legend>Do it Here</legend>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :fav_color %>
+    <%= f.text_field :fav_color %>
+
+    <%= f.submit value: "#{button_text} Person", class: "btn btn-default"%>
+  </fieldset>
+<% end %>

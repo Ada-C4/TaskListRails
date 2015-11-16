@@ -2,9 +2,8 @@
 
 <table class="table table-hover">
   <tr>
-    <th>
-      Task
-    </th>
+    <th>Task</th>
+    <th>Person</th>
     <th>Completed</th>
     <th>Delete</th>
     <th>Edit</th>
@@ -13,6 +12,11 @@
     <tr>
       <td>
         <%= link_to "#{task.name}", "/tasks/#{task.id}" %>
+      </td>
+      <td>
+        <% if !task.person_id.nil? %>
+          <%= link_to "#{task.person.name}", "/people/#{task.person.id}" %>
+        <% end %>
       </td>
       <% if task.done_date.nil? %>
         <td>
@@ -35,3 +39,5 @@
 </table>
 
 <%= render 'add_task' %>
+
+<%= render partial: 'view_all_button', locals: { view: "People", button_path: "/people/" } %>

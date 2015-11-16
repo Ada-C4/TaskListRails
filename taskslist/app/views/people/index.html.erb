@@ -1,0 +1,39 @@
+<h1>Here are the People</h1>
+
+<table class="table table-hover">
+  <tr>
+    <th>Person</th>
+    <th>Uncompleted Tasks</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+    <% @people.each do |person| %>
+      <tr>
+        <td>
+          <%= link_to "#{person.name}", "/people/#{person.id}" %>
+        </td>
+        <td>
+          <% count = 0 %>
+          <% person.tasks.each do |task| %>
+            <% if task.done_date.nil? %>
+              <% count += 1 %>
+            <% end %>
+          <% end %>
+          <%= count %>
+        </td>
+        <td>
+          <%= render partial: 'edit_button', locals:
+            { button_path: "/people/#{person.id}/edit" } %>
+        </td>
+        <td>
+          <%= render partial: 'delete_button', locals:
+            { button_path: "/people/#{person.id}" } %>
+        </td>
+      </tr>
+    <% end %>
+
+</table>
+
+<%= render 'add_person_button' %>
+
+<%= render partial: 'view_all_button', locals: { view: "Tasks", button_path: "/tasks/" } %>
