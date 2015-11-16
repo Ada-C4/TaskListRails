@@ -1,0 +1,21 @@
+<header>
+  <h1 id="page-title" class="title">Edit Details</h1>
+</header>
+
+<%= render partial: 'form', locals: {method_type: :patch, button_text: "Update"} %>
+<!-- <%= form_for @task, url: { action: 'update' }, method: :patch do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name%>
+    <br>
+    <br>
+    <%= f.label :description %>
+    <%= f.text_area(:description, size: '48x10') %>
+    <div  class="button-container">
+      <a id="gray-button" class="circle-button" href="/">
+        <p class="circle-button-title">WAIT</p>
+        <span>go back</span>
+      </a>
+      <%= f.submit("Update", class: "create-task-button") %>
+    </div>
+
+<% end %> -->
