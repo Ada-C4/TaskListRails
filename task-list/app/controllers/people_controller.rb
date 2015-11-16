@@ -7,7 +7,10 @@ class PeopleController < ApplicationController
 
   def show
     id = params[:id]
-    @task = Task.find(id)
+    @person = Person.find(id)
+  end
+
+  def show_tasks
   end
 
 end
