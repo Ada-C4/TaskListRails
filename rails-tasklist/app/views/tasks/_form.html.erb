@@ -6,6 +6,9 @@
     <br><br>
     <%= f.label :description %>
     <%= f.text_field :description %>
+    <br><br>
+    <%= f.label :person_id, "Owner:" %>
+    <%= f.collection_select(:person_id, Person.all, :id, :name, prompt: "Select the owner:")%>
     <br>
   </fieldset>
   <br>

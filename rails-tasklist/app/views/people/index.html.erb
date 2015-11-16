@@ -1,0 +1,18 @@
+<h1>PEOPLE</h1>
+<div>
+<ul>
+  <% @people.each do |person| %>
+    <li>
+      <%= person.name %>
+      <%= link_to "show", "/people/#{person.id}", class: "btn btn-default" %>
+      <% count = 0 %>
+      <% person.tasks.each do |task| %>
+        <% if task.completed_at.nil? %>
+          <% count += 1 %>
+        <% end %>
+      <% end %>
+        <%= count %>
+    </li>
+    <% end %>
+</ul>
+</div>

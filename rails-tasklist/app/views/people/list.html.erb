@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>Task List</h1>
+  <h1><%= @person.name %></h1>
     <table class="table table-hover">
       <tr >
         <th>
@@ -16,7 +16,7 @@
           <strong>task</strong>
         </th>
       </tr>
-      <% @tasks.each do |task| %>
+      <% @person.tasks.each do |task| %>
         <tr>
           <td>
             <%= link_to "show", "/tasks/#{task.id}", class: "btn btn-default" %>
