@@ -16,6 +16,9 @@ people = [
   {name: "Lisa Simpson", age: 8, occupation: "Student"},
   {name: "Maggie Simpson", age: 1, occupation: "Baby"}
 ]
+people.each do |person|
+  Person.create person
+end
 
 tasks = [
   { name: "The First Task", description: "", completed_at: random_time },
