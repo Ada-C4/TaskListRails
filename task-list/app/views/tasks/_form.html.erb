@@ -9,11 +9,15 @@
   <br>
   <%= f.text_area :description %>
   <br>
-  <%= f.label :completed_date %>
+  <%= f.label :person_id, "Task Owner" %>
+  <%= f.collection_select(:person_id, Person.all, :id, :name, prompt:"Select a person to complete this task") %>
   <br>
+  <%= f.label :completed_date %>
   <%= f.date_field :completed_date %>
   <br>
   <br>
+
+
   <%= f.submit %>
 
 </fieldset>
