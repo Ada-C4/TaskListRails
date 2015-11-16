@@ -25,7 +25,10 @@ Rails.application.routes.draw do
 # people routes
     # index
     get 'people/' => 'people#index'
-    
+
+    # show person
+    get 'people/:id' => 'people#show', as: :person
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

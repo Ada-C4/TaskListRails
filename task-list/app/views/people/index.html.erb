@@ -1,5 +1,10 @@
 <h1>People</h1>
 <% @people.each do |person| %>
-  <p><%= person.name %></p>
+  <p><%= link_to person.name, "/people/#{person.id}" %> is assigned
+  <% uncomplete = 0 %>
+  <% person.tasks.each do |task| %>
+    <% uncomplete += 1 if task.comp_date.nil? %>
+  <% end %>
+  <strong><%= uncomplete %></strong> uncompleted task(s). </p>
   <br>
 <% end %>
