@@ -2,16 +2,29 @@
   <h1>Tasks</h1>
   <ul>
     <% @tasks.each do |task| %>
-      <li><a href='/tasks/<%= task.id %>'><%= task.name %></a>
+      <% if task.completed_date == nil %>
+        <% @completion_class = "incomplete_button" %>
+      <% else %>
+        <% @completion_class = "complete_button" %>
+      <% end %>
+      <li>
+        <%= button_to "✓","/tasks/#{task.id}/complete", method: :patch, class: @completion_class %>
+        <a href= "/tasks/<%= task.id %>"><%= task.name %></a>
       </li>
     <% end %>
   </ul>
 
-  <div class="buttonHolder">
+<section id="index_buttons">
+  <div class="button_holder">
     <a href="/tasks/new" class="button plus"></a>
   </div>
 
-  <div class="buttonHolder">
+  <div class="button_holder">
+    <a href="/tasks/pre_edit" class="button pencil"></a>
+  </div>
+
+  <div class="button_holder">
     <a href="/tasks/remove" class="button cross"></a>
   </div>
+</section>
 </section>
