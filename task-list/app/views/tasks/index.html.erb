@@ -9,6 +9,9 @@
   <th id="name_header">
     Name
   </th>
+  <th id ="owner_header">
+    Owner
+  </th>
   <th></th>
   <% @tasks.each do |task| %>
     <tr>
@@ -21,6 +24,9 @@
       </td>
       <td id="task_link_cell">
         <%= link_to task.name, "/tasks/#{task.id}" %>
+      </td>
+      <td id="owner_cell">
+        <%= task.person.name %>
       </td>
       <td id="delete_button_cell">
         <%= button_to "Delete", "/tasks/#{task.id}", method: "delete", data: { confirm: "Are you sure you want to delete this task?" } %>
