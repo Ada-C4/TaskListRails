@@ -4,6 +4,7 @@
 
 
 <p>Task Name: <%= @task.name %></p>
+<p>This task is assigned to <%= @task.person.name %></p>
 <% if @task.description != nil && @task.description != "" %>
   <p>Task Description: <%= @task.description %></p>
 <% end %>
