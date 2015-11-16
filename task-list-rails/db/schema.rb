@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151110202714) do
+ActiveRecord::Schema.define(version: 20151113223109) do
 
   create_table "tasks", force: :cascade do |t|
     t.string   "name"
@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20151110202714) do
     t.boolean  "completed"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
-    t.time     "completed_at"
+    t.datetime "completed_at"
   end
 
 end
