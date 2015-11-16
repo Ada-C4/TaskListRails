@@ -7,4 +7,10 @@ class PeopleController < ApplicationController
     id = params[:person_id]
     @person = Person.find(id)
   end
+
+  def tasks
+    id = params[:person_id]
+    @person = Person.find(id)
+    @remaining_tasks= @person.incomplete_tasks
+  end
 end

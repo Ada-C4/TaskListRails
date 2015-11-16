@@ -1,0 +1,9 @@
+<h1> <%=t.name%>Tasks: </h1>
+<ul id=person_task_list>
+  <% @remaining_tasks.each do |t| %>
+    <li>
+      Task: <%=t.name%>
+      <br>Description: <%=t.description%>
+    </li>
+  <%end%>
+</ul>

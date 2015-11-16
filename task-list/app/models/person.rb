@@ -1,3 +1,9 @@
 class Person < ActiveRecord::Base
-    has_many :tasks
+  has_many :tasks
+
+  def incomplete_tasks
+    t = self.tasks
+    t = t.where(completed: nil)
+    return t
+  end
 end
