@@ -16,7 +16,7 @@
         </div>
         <div class="task_list", id="right">
           <% if !task.person.nil? %>
-            <%= task.person.name %>
+            <a href= "/people/<%= task.person.id %>"><%= task.person.name %></a>
           <% end %>
         <div>
       </li>
