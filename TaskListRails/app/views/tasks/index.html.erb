@@ -1,9 +1,29 @@
 <%= image_tag "homer2.png", class: "homer" %>
+<h2>Dumb Stuff I Gotta Do</h2>
 <ul>
-    <% @tasks.each do |task| %>
-      <li><%= task.name %> <%= link_to "Show", "/tasks/#{task.id}" %>
-          <%= link_to "Delete", "/tasks/#{task.id}", :method => :delete,
-          :onclick => "return confirm('Are you sure?')"%></li>
+  <% @tasks.each do |task| %>
+    <% if task.completed_at == nil %>
+    <li>
+      <%= link_to "Mark Complete", "/tasks/#{task.id}/mark_complete", :method => :patch %>
+      <%= task.name %> <%= link_to "Show", "/tasks/#{task.id}" %>
+      <%= link_to "Edit", "/tasks/#{task.id}/edit" %>
+      <%= link_to "Delete", "/tasks/#{task.id}", :method => :delete,
+      :onclick => "return confirm('Are you sure?')"%>
+    </li>
     <% end %>
-    <%= link_to "Add a New Task", "tasks/new" %>
-  </ul>
+  <% end %>
+</ul>
+<%= link_to "Add a New Task", "tasks/new" %>
+<h2>Dumb Stuff I Did</h2>
+<ul>
+  <% @tasks.each do |task| %>
+    <% if task.completed_at != nil %>
+    <li>
+      <%= task.name %> <%= task.completed_at %><%= link_to "Show", "/tasks/#{task.id}" %>
+      <%= link_to "Edit", "/tasks/#{task.id}/edit" %>
+      <%= link_to "Delete", "/tasks/#{task.id}", :method => :delete,
+      :onclick => "return confirm('Are you sure?')"%>
+    </li>
+    <% end %>
+  <% end %>
+</ul>

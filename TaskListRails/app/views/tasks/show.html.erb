@@ -5,3 +5,4 @@
     <li>Task Created At: <%= @task.created_at %></li>
     <li>Task Updated At: <%= @task.updated_at %></li>
   </ul>
+<%= link_to "Edit", "/tasks/#{@task.id}/edit" %>
