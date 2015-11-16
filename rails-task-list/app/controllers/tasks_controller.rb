@@ -30,7 +30,8 @@ class TasksController < ApplicationController
 
   def update
     id = params[:id]
-    Task.find(id).update(task_params[:task])
+    #Task.find(id).update(task_params[:task])
+    Task.update(id, task_params[:task])
     redirect_to "/"
   end
 
