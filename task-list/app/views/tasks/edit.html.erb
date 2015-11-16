@@ -1,5 +1,5 @@
 <!-- the next like is rails magic and makes it so the text area is populated with the task -->
-<%= form_for @task, url: "/tasks/#{@task.id}", html: {method: "patch"} do |f| %>
+<%= form_for @task, url: "/tasks/#{@task.id}/edit", html: {method: "patch"} do |f| %>
     <h1 class="new-input">Edit your task here</h1>
       <div class="form-field">
       <%= f.label :task %>

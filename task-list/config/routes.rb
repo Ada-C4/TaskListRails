@@ -2,7 +2,10 @@ Rails.application.routes.draw do
 
 # these are the routes for the edit link
   get 'tasks/:id/edit' => 'tasks#edit'
-  patch 'tasks/:id/' => 'tasks#update'
+  patch 'tasks/:id/edit' => 'tasks#update'
+
+# this is the route for the completed button.
+  patch 'tasks/:id' => 'tasks#complete'
 
   get 'tasks/' => 'tasks#index'
 
@@ -15,8 +18,6 @@ Rails.application.routes.draw do
 # this is the route for the delete button.
   delete 'tasks/:id' => 'tasks#destroy'
 
-# this is the route for the completed button.
-  patch 'tasks/:id' => 'tasks#complete'
 
 
 

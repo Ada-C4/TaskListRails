@@ -5,7 +5,7 @@
   <p><%= @task.description%></p>
 
   <h3>Completed?</h3>
-  <% if @task.completed == false %>
+  <% if @task.completed == false || @task.completed == nil %>
     <p>nope</p>
   <% else %>
     <p>yes</p>
@@ -19,4 +19,5 @@
       <% end %>
   <% end %>
 
+  <%= link_to "Edit", "/tasks/#{@task.id}/edit", method: :get %>
   <%= link_to "Take me back", "/tasks" %>
