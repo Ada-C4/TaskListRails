@@ -31,15 +31,52 @@ h1 {
   margin: 5% 5%;
 }
 
-ul {
-  margin-top: 5%;
-  margin-left: 10%;
+table {
+  table-layout: fixed;
+  width: 550px;
+  margin-left: 14%;
+  border: solid rgb(39, 98, 207);
+  padding: 3%;
+
 }
 
-li {
+td {
   padding-bottom: 2%;
-  display: flex;
-  justify-content: space-between;
+}
+
+th {
+  text-align: left;
+  padding-bottom: 2%;
+  border-bottom: dotted rgb(39, 98, 207);
+}
+
+#status_header {
+  width: 15%;
+}
+
+#name_header {
+  width: 70%;
+  padding-left: 2%;
+}
+
+#task_link_cell {
+  width: 70%;
+  word-wrap:break-word;
+  padding: 0 2%;
+}
+
+#checkbox_cell {
+  width: 15%;
+}
+
+#delete_button_cell {
+  width: 15%;
+}
+
+.checkbox_link {
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
 }
 
 nav {
@@ -51,12 +88,17 @@ p {
   margin-bottom: 3%;
 }
 
-.button_to {
-  display: inline-block;
-  margin-right: 40%;
-}
-
 .new_task {
   width: 72%;
   margin-left: 10%;
+}
+
+.edit_task {
+  width: 72%;
+  margin-left: 10%;
+}
+
+#edit_button {
+  margin-top:4%;
+  margin-left: 7%;
 }

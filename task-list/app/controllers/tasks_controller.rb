@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
   def index
-    @tasks = Task.all
+    @tasks = Task.all.order(:comp_date)
   end
 
   def show
@@ -22,10 +22,34 @@ class TasksController < ApplicationController
     redirect_to '/tasks'
   end
 
+  def complete
+    task = Task.find(params[:id])
+    task.comp_date = Time.now
+    task.save
+    redirect_to '/tasks'
+  end
+
+  def incomplete
+    task = Task.find(params[:id])
+    task.comp_date = nil
+    task.save
+    redirect_to '/tasks'
+  end
+
+  def edit
+    id = params[:id]
+    @task = Task.find(id)
+  end
+
+  def update
+    task = Task.find(params[:id])
+    task.update(task_params[:task])
+    redirect_to '/'
+  end
+
   private
 
   def task_params
     params.permit(task:[:name, :description, :comp_date])
   end
-
 end
