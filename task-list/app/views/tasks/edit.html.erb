@@ -8,6 +8,9 @@
       <%= f.label :description %>
       <%= f.text_field :description %>
 
+      <%= f.label :writer_id, "Whose Task?" %>
+      <%= f.collection_select(:writer_id, Person.all, :id, :alt_name, prompt: "Select the Tasker") %>
+
       <%= f.submit %>
       </div>
 <% end %>

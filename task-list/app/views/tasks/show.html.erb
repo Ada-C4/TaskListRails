@@ -3,6 +3,7 @@
   <p><%= @task.name%></p>
   <h3>Description </h3>
   <p><%= @task.description%></p>
+  <p>This task belongs to <% %></p>
 
   <h3>Completed?</h3>
   <% if @task.completed_date == nil %>

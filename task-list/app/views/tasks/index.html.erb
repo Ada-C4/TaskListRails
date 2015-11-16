@@ -17,6 +17,7 @@
       <% else %>
         <li>
         <div class="task-wrapper">
+          <p>This task belongs to <%  %></p>
           <a href="/tasks/<%= task.id %>"><%= task.name %></a>
           <p class="description"><%= task.description %></p>
         </div>
