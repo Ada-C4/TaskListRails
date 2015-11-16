@@ -11,9 +11,14 @@
       <%= f.text_field :description %>
     </section>
 
+    <section>
+      <%= f.label :person_id, "Assigned to:" %>
+      <%= f.collection_select(:person_id, Person.all, :id, :name, {}, {:id => "dropdown"}) %>
+    </section>
+
     <%= f.submit "#{button_text}", :class => "button" %>
   <% end %>
   <div id="link_back">
-    <%= link_to "back", "/tasks/" %>
+    <%= link_to "tasks", "/tasks/" %> | <span id="middle_link"><%= link_to "new task", "/tasks/new" %></span> | <%= link_to "people", "/people/" %>
   </div>
 </div>

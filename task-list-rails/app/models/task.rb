@@ -1,5 +1,3 @@
 class Task < ActiveRecord::Base
-  def completed?
-
-  end
+  belongs_to :person
 end

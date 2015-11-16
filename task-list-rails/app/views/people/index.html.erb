@@ -1,0 +1,29 @@
+<div id="table">
+  <table>
+    <thead>
+      <tr>
+        <td colspan="3" id="title">
+          People
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <% @people.each do |person| %>
+      <tr>
+        <td><%= person.name %></td>
+        <% if Person.num_not_completed(person.id) == 1 %>
+          <td id="task_number"><%= "#{Person.num_not_completed(person.id)} uncompleted task" %></td>
+        <% else %>
+          <td id="task_number"><%= "#{Person.num_not_completed(person.id)} uncompleted tasks" %></td>
+        <% end %>
+        <td><%= link_to "details", "/people/#{person.id}" %></td>
+      </tr>
+      <% end %>
+      <tr>
+        <td colspan="3" id="table_nav">
+          <%= link_to "tasks", "/tasks/" %> | <span id="middle_link"><%= link_to "new task", "/tasks/new" %></span> | <%= link_to "people", "/people/" %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

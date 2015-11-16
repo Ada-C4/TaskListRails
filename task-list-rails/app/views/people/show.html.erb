@@ -1,0 +1,59 @@
+<div id="table">
+  <table>
+    <thead>
+        <tr>
+          <td colspan="2" id="title">Person details</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="attribute">
+            <strong>name:</strong>
+          </td>
+          <td>
+            <%= @person.name %>
+          </td>
+        </tr>
+        <tr>
+          <td class="attribute">
+            <strong>tag line:</strong>
+          </td>
+          <% if !@person.tag_line.present? %>
+            <td id="empty_description">
+              <em>empty</em>
+            </td>
+          <% else %>
+            <td>
+              <%= @person.tag_line %>
+            </td>
+          <% end %>
+        </tr>
+        <tr>
+          <td class="attribute">
+            <strong>tasks completed:</strong>
+          </td>
+          <td>
+            <%= Person.num_completed(@person.id) %>
+          </td>
+        </tr>
+        <tr>
+          <td class="attribute">
+            <strong>tasks not completed:</strong>
+          </td>
+          <td>
+            <%= Person.num_not_completed(@person.id) %>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" id="link_to_tasks">
+            <%= link_to '<i class="fa fa-binoculars"></i>'.html_safe + "  #{@person.name}'s tasks", "/people/#{@person.id}/tasks" %>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" id="table_nav">
+            <%= link_to "tasks", "/tasks/" %> | <span id="middle_link"><%= link_to "new task", "/tasks/new" %></span> | <%= link_to "people", "/people/" %>
+          </td>
+        </tr>
+      </tbody>
+  </table>
+</div>

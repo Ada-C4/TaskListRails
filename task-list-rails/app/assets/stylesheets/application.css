@@ -38,6 +38,14 @@ table {
   border: 2px black dashed;
 }
 
+#person_name {
+  color: #354169;
+}
+
+#task_number {
+  color: #354169;
+}
+
 #edit_link {
   font-size: 16px;
   text-align: center;
@@ -45,6 +53,20 @@ table {
 }
 
 #edit_link a {
+  color: #4573ca;
+  text-decoration: none;
+  font-family: 'Asap', sans-serif;
+}
+
+#link_to_tasks {
+  font-size: 20px;
+  text-align: center;
+  padding-top: 0px;
+  border-bottom: none;
+  padding-top: 15px;
+}
+
+#link_to_tasks a {
   color: #4573ca;
   text-decoration: none;
   font-family: 'Asap', sans-serif;
@@ -89,6 +111,10 @@ tr:last-child td {
   padding-top: 12px;
 }
 
+#middle_link a {
+  color: #4573ca;
+}
+
 a {
   color: #CA5A45;
   text-decoration: none;
@@ -129,16 +155,21 @@ form input {
 }
 
 .button {
+  margin-top: 10px;
   border: 1px black dashed;
   font-family: 'Asap', sans-serif;
   font-size: 18px;
 }
 
 #link_back {
-  margin-top: 75px;
+  margin-top: 65px;
   font-family: 'Asap', sans-serif;
   font-size: 18px;
   color: #CA5A45;
   text-decoration: none;
   text-align: center;
+}
+
+#dropdown {
+  font-size: 18px;
 }

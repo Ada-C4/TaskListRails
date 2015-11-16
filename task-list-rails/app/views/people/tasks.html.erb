@@ -1,0 +1,30 @@
+<div id="table">
+  <table>
+    <thead>
+        <tr>
+          <td colspan="3" id="title"><%= "#{@person.name}'s Tasks" %></td>
+        </tr>
+        <tr>
+          <td colspan="3" id=edit_link><%= link_to "back to #{@person.name}", "/people/#{@person.id}" %></td>
+        </tr>
+      </thead>
+    <tbody>
+      <% @tasks.each do |task| %>
+      <tr>
+        <% if !task.completed %>
+          <td><i class="icon-check-empty"></i></td>
+        <% else %>
+          <td><i class="fa fa-check-square-o"></i></td>
+        <% end %>
+        <td><%= task.name %></td>
+        <td><%= link_to "details", "/tasks/#{task.id}" %></td>
+      </tr>
+      <% end %>
+      <tr>
+        <td colspan="5" id="table_nav">
+          <%= link_to "tasks", "/tasks/" %> | <span id="middle_link"><%= link_to "new task", "/tasks/new" %></span> | <%= link_to "people", "/people/" %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
