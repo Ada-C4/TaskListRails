@@ -1,15 +1,26 @@
 Rails.application.routes.draw do
+	# Home page
 	root 'tasks#index'
-	get '/tasks/new' => 'tasks#new'
-	post '/tasks' => 'tasks#create'
 
-	get '/tasks/:id' => 'tasks#show', as: :task
-	delete '/tasks/:id' => 'tasks#delete'
+	# Add a task
+	get 'tasks/new' => 'tasks#new' # Method and the data
+	post 'tasks' => 'tasks#create' # Just the action
+
+	# Show individual page
+	get 'tasks/:id' => 'tasks#show', as: :task
+
+	# Delete
+	delete 'tasks/:id' => 'tasks#delete'
 
 	# Edit
-	# get '/update/:id' => 'tasks#edit'
+	get 'tasks/:id/edit' => 'tasks#edit'
+	patch 'tasks/:id' => 'tasks#update'
 
-	# Testing out my 404s, lowest priority
-	# get '/:anything' => 'tasks/missing'
-	# get '/:anything/:anything' => 'tasks/missing'
+	# Update to complete
+	get 'tasks/complete/:id' => 'tasks#complete'
+	patch 'tasks/complete/:id' => 'tasks#complete'
+
+	# Update to incomplete
+	get 'tasks/incomplete/:id' => 'tasks#incomplete'
+	patch 'tasks/incomplete/:id' => 'tasks#incomplete'
 end
