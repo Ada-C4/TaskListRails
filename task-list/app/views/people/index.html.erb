@@ -1,0 +1,20 @@
+<table>
+  <col width="80%">
+  <col width="20%">
+  <tr>
+    <th> Name </th>
+    <th> # uncompleted tasks</th>
+  </tr>
+  <% @people.each do |person| %>
+    <tr>
+      <td>
+        <%if !person.name.nil? %>
+          <%= person.name %>
+        <% end %>
+      </td>
+      <td>
+        <%= person.uncompleted %>
+      </td>
+    </tr>
+  <% end %>
+</table>
