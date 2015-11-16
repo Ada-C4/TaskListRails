@@ -1,0 +1,14 @@
+<h2>List of Simpson Family Members</h2>
+<ul>
+
+<% @people.each do |person| %>
+  <% count = 0 %>
+  <li><%= person.name %></li>
+    <% person.tasks.each do |task| %>
+      <% if task.completed_at.nil? %>
+        <% count += 1 %>
+      <% end %>
+    <% end %>
+  <%= count %>
+<% end %>
+</ul>
