@@ -34,6 +34,7 @@ p {
 
 
 
+
 a {
   text-decoration: none;
 }
@@ -46,16 +47,20 @@ a {
   margin-bottom: 20px;
   border: 1px black solid;
   border-radius: 15px;
+  height: 80px;
 }
 
 #add_text {
   font-size: 30px;
+  text-align: center;
 }
 
 #add_task_button:hover {
-  background-color: rgb(25, 78, 140);
-  color: white;
+  -moz-box-shadow: inset 0px 0px 47px 3px #194E8C;
+  -webkit-box-shadow: inset 0px 0px 47px 3px #194E8C;
+  box-shadow: inset 0px 0px 277px 3px #194E8C;
 }
+
 
 #task_link {
   width: 400px;
@@ -67,7 +72,7 @@ a {
   margin-right: auto;
   text-align: center;
   //background-image: url(hubble_1.jpeg);
-  font-size: 30px;
+  font-size: 20px;
   vertical-align: middle;
   color: white;
 }
@@ -105,15 +110,6 @@ a {
 }
 
 
-//
-// #background_mod:first-child {
-//   width: 350px;
-//   border-radius: 15px;
-//   background-image: url(galaxy.jpg);
-//   margin-left: auto;
-//   margin-right: auto;
-// }
-
 .completed_task {
   -moz-box-shadow: inset 0px 0px 47px 3px #d6d0cb;        -webkit-box-shadow: inset 0px 0px 47px 3px #d6d0cb;
   box-shadow: inset 0px 0px 277px 3px #d6d0cb;
@@ -142,6 +138,15 @@ input {
   margin-left: auto;
   margin-bottom: 50px;
 
+}
+
+select {
+  margin-bottom: 30px;
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  font-size: 20px;
 }
 
 .big_button {

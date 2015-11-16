@@ -13,4 +13,4 @@
   Incomplete Tasks: <%= @person.tasks.where(completed_date: nil).length %>
 </p>
 
-<%= link_to "#{@person.name}'s Tasks", "/people/#{@person.id}/tasks" %>
+<%= link_to "#{@person.name}'s Tasks", "/people/#{@person.id}/tasks", :class => "person_name_link" %>
