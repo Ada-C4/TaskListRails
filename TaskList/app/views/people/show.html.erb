@@ -14,7 +14,7 @@
 </div>
 
 <div class='add_task'>
-  <%= button_to 'Add a Task', {action: 'new'}, method: :get, class:'create-button'%>
+  <%= button_to 'Add a Task', {action: 'new', controller: 'tasks'}, method: :get, class:'create-button'%>
 </div>
 
 <p id='back_button'><%= link_to 'back to People List', '/people' %></p>
