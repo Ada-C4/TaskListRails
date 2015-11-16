@@ -1,6 +1,3 @@
-<link href="tasklist/app/assets/stylesheets/application.css" rel="stylesheet">
-<link href='https://fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Megrim' rel='stylesheet' type='text/css'>
 <html>
   <body>
     <h1> What's Da Happs </h1>
@@ -8,12 +5,15 @@
     <div>
     <ul>
       <% @tasks.each do |task| %>
-      <li> <a href="./tasks/<%= task.id %>"><br><%= task.name %></a><br>
-      <%= link_to 'DELETE TASK',  { action: :destroy, id: task.id }, method: :delete, data: { confirm: 'Delete Task, For Real?' } %> <br>
-      <% if !task.date_completed.nil? %>
-      STATUS: DONE, DONE, and DONE!
-      <% end %>
-      </li>
+        <li>
+          <%= link_to task.name, "/tasks/#{task.id}" %> ✍ <br>
+          <%= link_to 'DELETE TASK ⌧',  { action: :destroy, id: task.id }, method: :delete, data: { confirm: 'Delete Task, For Real?' } %> <br>
+          <% if !task.date_completed.nil? %>
+              <div class ="status"> STATUS: COMPLETED </div>
+          <% else %>
+              <%= link_to 'MARK AS COMPLETE ✔︎', "/tasks/#{task.id}/completed", method: :patch %>
+          <% end %>
+        </li>
       <% end %>
     </ul>
   </div>

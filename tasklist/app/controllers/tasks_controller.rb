@@ -12,13 +12,27 @@ class TasksController < ApplicationController
     @task = Task.new
   end
 
-  def create
-    Task.create(task_params[:task])
+  def update
+    id = params[:id]
+    task = Task.find(id)
+    task.update_attributes(task_params)
+    redirect_to "/tasks/"
+  end
 
-  # OR
-  #
-  # t= Task.new(param[:task])
-  # t.save
+  def completed
+    task = Task.find(params[:id])
+    task.date_completed = Time.now
+    task.save!
+    redirect_to "/"
+  end
+
+  def edit
+    @task = Task.find(params[:id])
+    render :edit
+  end
+
+  def create
+    task= Task.create(task_params)
     redirect_to "/"
   end
 
@@ -26,9 +40,10 @@ class TasksController < ApplicationController
     Task.destroy(params[:id])
     redirect_to "/tasks"
   end
+
   private
 
   def task_params
-    params.permit(task:[:name, :descript, :date_completed])
+    params.require(:task).permit(:name, :descript, :date_completed)
   end
 end
