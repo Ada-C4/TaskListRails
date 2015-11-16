@@ -1,7 +1,6 @@
 <section>
-<h1> showing the tasks </h1>
-<%= @person.name %>
-<% @tasks.each do |task|%>
-  <%= task.name %>
-<% end %>
+<h1> Tasks for <%= @person.name %> </h1>
+  <% @tasks.each do |task|%>
+    <%= task.name %>
+  <% end %>
 </section>

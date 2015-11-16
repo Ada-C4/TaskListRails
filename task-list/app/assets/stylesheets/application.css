@@ -70,7 +70,7 @@ fieldset input {
 }
 
 h1 {
-  padding-top: 30px;
+  padding-top: 50px;
   padding-bottom: 10px;
 }
 
@@ -84,6 +84,8 @@ h3 {
   font: 400 40px/1.5 Crimson Text, Helvetica, Verdana, sans-serif;
   font-style: italic;
   font-size: 0.5cm;
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 .incomplete_button {
@@ -170,6 +172,29 @@ ul {
   padding: 0;
   width: 400px;
   align-self: center;
+}
+
+.welcome_links {
+  margin-left: 35px;
+  margin-right: 35px;
+  padding: 5px;
+}
+
+.welcome_links a {
+  font-weight: 200;
+}
+
+#welcome_link_holder {
+  margin: 0 auto;
+}
+
+#welcome_title {
+  padding-bottom: 0px;
+  margin-bottom: 5px;
+}
+
+#welcome_subtitle {
+  padding-bottom: 40px;
 }
 
 /*all css below is for buttons to navigate from index page- add, edit, delete */
