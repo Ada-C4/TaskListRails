@@ -99,6 +99,16 @@ body {
   vertical-align: middle;
 }
 
+.delete {
+  background: url(remove.png);
+  background-size: 15px 15px;
+  width: 15px;
+  height: 15px;
+  border-style: none;
+  margin-top: 10px;
+
+}
+
 
 // a:link {
 //   text-decoration: none;

@@ -18,3 +18,57 @@
 </ul>
 <a class="btn btn-default" href="/people/new"><img src="/assets/edit.png" class = "icon">Add a person here</a>
 </div>
+
+<div class="container">
+  <h1>Owners</h1>
+    <table class="table table-hover">
+      <tr >
+        <th>
+        </th>
+        <th>
+        </th>
+        <th>
+          OWNER
+        </th>
+        <th>
+          TASK
+        </th>
+        <th>
+        </th>
+        <th>
+        </th>
+      </tr>
+      <% @people.each do |person| %>
+        <tr>
+          <td>
+            <%= link_to "show person", "/people/#{person.id}", class: "btn btn-default" %>
+          </td>
+          <td>
+          </td>
+          <td>
+            <div><%= person.name %></div>
+          </td>
+         <td>
+          	<div><%= task.name %></div>
+         </td>
+         <td>
+           <div>
+             <% if task.completed_at.nil? %>
+              <%= button_to "complete", "/tasks/#{task.id}/complete", method: :patch, class: "btn btn-default" %>
+                <!-- <img class="nocheckmark" src="/assets/white.png" alt="no checkmark"/> -->
+              <% else %>
+                <img class="checkmark" src="/assets/checkmark3.png" alt="checkmark"/>
+              <% end %>
+            </div>
+          	<!-- <div><% if task.completed_at.class == NilClass %><%= "in progress :)" %><% end %><%= task.completed_at %></div> -->
+         </td>
+         <td>
+           <%= button_to "", "/people/#{person.id}", method: :delete, class: "btn btn-default", class: "delete", data: { confirm: 'Are you sure?' } %>
+           <!-- onclick="return confirm('Are you sure?')" -->
+         </td>
+       </tr>
+      <% end %>
+    </table>
+    <a class="btn btn-default" href="/tasks/new"><img src="/assets/edit.png" class = "icon">Add a task here</a>
+    <a class="btn btn-default" href="/people/new"><img src="/assets/edit.png" class = "icon">Add a person here</a>
+</div>

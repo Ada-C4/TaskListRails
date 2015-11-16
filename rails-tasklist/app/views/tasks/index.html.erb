@@ -7,29 +7,23 @@
         <th>
         </th>
         <th>
+          OWNER
+        </th>
+        <th>
+          TASK
         </th>
         <th>
         </th>
         <th>
-        </th>
-        <th>
-          <strong>task</strong>
         </th>
       </tr>
       <% @tasks.each do |task| %>
         <tr>
           <td>
-            <%= link_to "show", "/tasks/#{task.id}", class: "btn btn-default" %>
+            <%= link_to "show task", "/tasks/#{task.id}", class: "btn btn-default" %>
           </td>
           <td>
-            <%= button_to "delete", "/tasks/#{task.id}", method: :delete, class: "btn btn-default", data: { confirm: 'Are you sure?' } %>
-            <!-- onclick="return confirm('Are you sure?')" -->
-          </td>
-          <td>
-            <!-- <%= button_to "complete", "/tasks/#{task.id}/complete", method: :patch, class: "btn btn-default" %> -->
-          </td>
-          <td>
-            <%= button_to "edit", "/tasks/#{task.id}/edit", method: :get, class: "btn btn-default" %>
+            <%= button_to "edit task", "/tasks/#{task.id}/edit", method: :get, class: "btn btn-default" %>
           </td>
           <td>
             <div><%= task.person.name %></div>
@@ -48,8 +42,13 @@
             </div>
           	<!-- <div><% if task.completed_at.class == NilClass %><%= "in progress :)" %><% end %><%= task.completed_at %></div> -->
          </td>
+         <td>
+           <%= button_to "", "/tasks/#{task.id}", method: :delete, class: "btn btn-default", class: "delete", data: { confirm: 'Are you sure?' } %>
+           <!-- onclick="return confirm('Are you sure?')" -->
+         </td>
        </tr>
       <% end %>
     </table>
     <a class="btn btn-default" href="/tasks/new"><img src="/assets/edit.png" class = "icon">Add a task here</a>
+    <a class="btn btn-default" href="/people/new"><img src="/assets/edit.png" class = "icon">Add a person here</a>
 </div>
