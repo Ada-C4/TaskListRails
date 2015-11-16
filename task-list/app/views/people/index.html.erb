@@ -1,6 +1,13 @@
 <section>
-<h1> showing people </h1>
-
-
+  <h1>Worker Bees</h1>
+  <ul>
+    <% @people.each do |person| %>
+      <li>
+        <div>
+          <a href= "/people/<%= person.id %>"><%= person.name %></a>
+        </div>
+      </li>
+    <% end %>
+  </ul>
 
 </section>
