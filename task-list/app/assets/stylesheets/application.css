@@ -133,6 +133,10 @@ li a:hover {
   padding: 20px;
 }
 
+#person_name {
+  padding-left: 40px;
+}
+
 section {
   background-color: white;
   width: 400px;
@@ -143,6 +147,11 @@ section {
 #submit_button_holder input {
   float: none;
   margin: 20px;
+}
+
+#task_list {
+  display: flex;
+  justify-content: left;
 }
 
 ul {

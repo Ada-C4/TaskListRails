@@ -7,9 +7,16 @@
       <% else %>
         <% @completion_class = "complete_button" %>
       <% end %>
-      <li>
-        <%= button_to "✓","/tasks/#{task.id}/complete", method: :patch, class: @completion_class %>
-        <a href= "/tasks/<%= task.id %>"><%= task.name %></a>
+      <li id="task_list">
+        <div>
+          <%= button_to "✓","/tasks/#{task.id}/complete", method: :patch, class: @completion_class %>
+        </div>
+        <div>
+          <a href= "/tasks/<%= task.id %>"><%= task.name %></a>
+        </div>
+        <div id="person_name">
+          <%= task.person.name %>
+        <div>
       </li>
     <% end %>
   </ul>
