@@ -9,8 +9,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+    <nav>
+      <%= link_to "View Tasks", "/" %> |
+      <%= link_to "View People", "/people/" %> |
+      <%= link_to "Create Task", "tasks/new" %>
+    </nav>
+  </header>
 
-<%= yield %>
+  <%= yield %>
 
 </body>
 </html>

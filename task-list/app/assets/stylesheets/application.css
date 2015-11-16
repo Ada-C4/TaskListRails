@@ -70,3 +70,7 @@ td, th{
 .number{
   text-align: center;
 }
+footer{
+  text-align: left;
+  font-size: 12px;
+}
