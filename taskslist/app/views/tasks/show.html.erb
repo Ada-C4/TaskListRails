@@ -6,6 +6,7 @@
     <th>Description</th>
     <th>Completed</th>
     <th>Delete</th>
+    <th>Edit</th>
   </tr>
   <tr>
       <td><%= @task.name %></td>
@@ -22,8 +23,10 @@
         <% end %>
       </td>
       <td>
-        <%= button_to "Delete", "/tasks/#{@task.id}", :method => :delete,
-          :onclick => 'alert("You sure?")', class: "btn btn-default" %>
+        <%= render partial: 'delete_button', locals: { button_path: "/tasks/#{@task.id}" } %>
+      </td>
+      <td>
+        <%= render partial: 'edit_button', locals: { button_path: "/tasks/#{@task.id}/edit" } %>
       </td>
   </tr>
 

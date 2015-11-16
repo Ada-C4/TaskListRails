@@ -1,19 +1,5 @@
-<% if @edit == true %>
-  <h1>Edit a Task</h1>
-<% else %>
-  <h1>Add a Task</h1>
-<% end %>
+<h1>Create a Task</h1>
 
-<%= form_for @task, :html => {:class => "form-inline"} do |f| %>
-  <fieldset>
-    <legend>Do it Here</legend>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-    <%= f.label :description %>
-    <%= f.text_field :description %>
-
-    <%= f.submit class: "btn btn-default"%>
-  </fieldset>
-<% end %>
+<%= render partial: 'form', locals: {button_text: "Create"} %>
 
 <%= render 'home_button' %>

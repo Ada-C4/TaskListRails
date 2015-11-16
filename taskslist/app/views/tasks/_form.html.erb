@@ -1,0 +1,11 @@
+<%= form_for @task, :html => {:class => "form-inline"} do |f| %>
+  <fieldset>
+    <legend>Do it Here</legend>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+
+    <%= f.submit value: "#{button_text} Task", class: "btn btn-default"%>
+  </fieldset>
+<% end %>

@@ -3,13 +3,13 @@ class TasksController < ApplicationController
     @tasks = Task.all
   end
 
+  def new
+    @task = Task.new
+  end
+
   def show
     id = params[:id]
     @task = Task.find(id)
-  end
-
-  def new
-    @task = Task.new
   end
 
   def create
@@ -31,12 +31,20 @@ class TasksController < ApplicationController
 
   def edit
     @task = Task.find(params[:id])
-    @edit = true
-    render 'tasks/new'
+  end
+
+  def update
+    update_name = task_params[:task][:name]
+    update_desc = task_params[:task][:description]
+    task = Task.find(params[:id])
+    task.update(name: update_name, description: update_desc)
+
+    redirect_to '/tasks/'
   end
 
   private
   def task_params
     params.permit(task:[:name, :description])
   end
+
 end
