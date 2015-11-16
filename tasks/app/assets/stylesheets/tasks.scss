@@ -12,6 +12,7 @@ h1 {
   text-align: center;
   color: #FBFBFB;
   font-family: 'Rock Salt', cursive;
+  font-size: 2.5em;
 }
 
 a {
@@ -22,17 +23,20 @@ a {
 p {
   color: #FBFBFB;
   font-family: 'Rock Salt', cursive;
+  font-size: 1.5em;
 }
 
 span {
   color: #FBFBFB;
   font-family: 'Rock Salt', cursive;
   line-height: 40px;
+  font-size: 1.5em;
+  word-wrap: break-word;
 }
 
 .center {
   margin: auto;
-  width: 400px;
+  width: 50%;
   padding-left: 200px;
 }
 
@@ -69,6 +73,7 @@ fieldset {
 #add_new {
   margin-top: 20px;
   font-size: 1.5em;
+  text-align: center;
 }
 
 .new_button {
@@ -79,4 +84,16 @@ fieldset {
   outline: none;
   cursor: pointer;
   font-weight: bold;
+}
+
+.complete-button {
+  background: transparent;
+  border: 3px solid #FBFBFB;
+  margin-right: 15px;
+}
+
+.completed-button {
+  background: #FBFBFB;
+  border: 3px solid #FBFBFB;
+  margin-right: 15px;
 }

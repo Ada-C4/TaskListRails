@@ -18,6 +18,28 @@ class TasksController < ApplicationController
     redirect_to "/"
   end
 
+  def edit
+    id = params[:id]
+    @task = Task.find(id)
+  end
+
+  def update
+    id = params[:id]
+    @task = Task.find(id)
+    @task.update(
+      name: task_params[:task][:name],
+      description: task_params[:task][:description]
+      )
+    redirect_to "/"
+  end
+
+  def complete
+    id = params[:id]
+    @task = Task.find(id)
+    @task.update(completed: Time.now)
+    redirect_to "/tasks/#{id}"
+  end
+
   def destroy
     id = params[:id]
     Task.destroy(id)
