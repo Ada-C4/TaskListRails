@@ -65,15 +65,25 @@ a:hover {font-weight: bold}
 
 .button {
   background-color: transparent;
-
+  font-size: 12px;
+  margin-top: 10px;
 }
 
 .new_task_button {
-  color: rgb(181, 36, 26);
+  // color: rgb(181, 36, 26);
   background-color: transparent;
   margin-left: 40px;
 }
 
-.task {
-  margin: auto;
+.completed_time {
+  font-size: 12px;
+}
+
+.completed_task {
+  color: gray;
+  text-decoration: line-through;
+}
+
+.edit_task {
+  text-align: center;
 }

@@ -1,13 +1,15 @@
 <h1>Create a new task</h1>
 
-<%= form_for @task do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <br>
-  <%= f.label :description %>
-  <%= f.text_field :description %>
-  <br>
-  <%= f.label :completed_at %>
-  <%= f.datetime_field :completed_at %>
-  <%= f.submit %>
-<% end %>
+<%= button_to "Return to Task List", "/tasks", :class => "button" %>
+
+<hr />
+
+  <%= form_for @task do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+    <br>
+    <%= f.submit class: "button" %>
+  <% end %>
