@@ -130,7 +130,6 @@ li a {
   color: #000;
   width: 300px;
   text-align: center;
-  padding-left: 20px;
 }
 
 li a:hover {
@@ -160,9 +159,20 @@ section {
   margin: 20px;
 }
 
-#task_list {
-  display: flex;
-  justify-content: left;
+#left.task_list {
+  display: inline-block;
+  float: left;
+}
+
+#second_to_left.task_list {
+  padding-left: 10px;
+  display: inline-block;
+  max-width: 180px;
+  text-align: left;
+}
+
+#right.task_list {
+  float: right;
 }
 
 ul {
