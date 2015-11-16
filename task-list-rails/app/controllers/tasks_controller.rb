@@ -33,10 +33,7 @@ class TasksController < ApplicationController
   end
 
   def update
-    Task.update(params[:id],
-      name: task_params[:task][:name],
-      description: task_params[:task][:description]
-      )
+    Task.update(params[:id], task_params[:task])
     redirect_to "/"
   end
 

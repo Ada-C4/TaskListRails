@@ -38,6 +38,10 @@ table {
   border: 2px black dashed;
 }
 
+#person_name {
+  color: #354169;
+}
+
 #edit_link {
   font-size: 16px;
   text-align: center;
