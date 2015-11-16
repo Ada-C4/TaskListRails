@@ -10,7 +10,7 @@
     </tr>
     <tr>
       <td><%= f.label :person_id, "Person:" %></td>
-      <td><%= f.collection_select(:person_id, Person.all, :id, :name, prompt: "Select the Person:") %></td>
+      <td><%= f.collection_select(:person_id, Person.all, :id, :name, prompt: "Select The Person To Complete This:") %></td>
     </tr>
   </tbody>
 </table>
