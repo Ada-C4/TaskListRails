@@ -9,7 +9,7 @@
       <br>
       <%= link_to "Mark Complete", { action: :complete, id: task.id }, method: :patch, :class => "button" %>
       <%= link_to "Edit", "/tasks/#{task.id}/edit", :class => "button" %>
-      <%= link_to "Delete", { action: :destroy, id: task.id }, method: :delete, :class => "button", data: { confirm: 'Are you sure?' } %>
+      <%= link_to "Delete", { action: :destroy, id: task.id }, method: :delete, :class => "button", data: { confirm: 'Are you sure you want to delete this task?' } %>
       </div>
     <% else %>
       <div class="task"><%= link_to task.name, "/tasks/#{task.id}", :class => "completed_task" %>
