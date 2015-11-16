@@ -1,4 +1,5 @@
 class TasksController < ApplicationController
+  before_filter :last_page
 
   def index
     @tasks = Task.all
@@ -51,6 +52,10 @@ class TasksController < ApplicationController
 
   def task_params
     params.permit(task:[:name, :description, :completed, :person_id])
+  end
+
+  def last_page
+    session[:last_page] = request.env['HTTP_REFERER']
   end
 
 end

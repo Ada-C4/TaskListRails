@@ -1,4 +1,5 @@
 class PeopleController < ApplicationController
+  before_filter :last_page
 
   def index
     @people = Person.all
@@ -44,4 +45,7 @@ class PeopleController < ApplicationController
     params.permit(person:[:id, :name])
   end
 
+  def last_page
+    session[:last_page] = request.env['HTTP_REFERER']
+  end
 end
