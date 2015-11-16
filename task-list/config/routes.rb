@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
 
+# these are the routes for the edit link
+  get 'tasks/:id/edit' => 'tasks#edit'
+  patch 'tasks/:id/edit' => 'tasks#update'
+
+# this is the route for the completed button.
+  patch 'tasks/:id' => 'tasks#complete'
+
   get 'tasks/' => 'tasks#index'
 
   get 'tasks/new' => 'tasks#new'
@@ -8,7 +15,10 @@ Rails.application.routes.draw do
 
   post 'tasks/' => 'tasks#create'
 
+# this is the route for the delete button.
   delete 'tasks/:id' => 'tasks#destroy'
+
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
