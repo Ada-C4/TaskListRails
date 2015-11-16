@@ -1,5 +1,8 @@
 <h1>Task Details</h1>
 
+<div id="task_details">
+
+
 <p>Task Name: <%= @task.name %></p>
 <% if @task.description != nil && @task.description != "" %>
   <p>Task Description: <%= @task.description %></p>
@@ -31,3 +34,6 @@
       </td>
     </tr>
   </table>
+
+
+</div>

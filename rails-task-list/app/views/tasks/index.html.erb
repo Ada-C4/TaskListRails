@@ -19,9 +19,10 @@
 
 <div id="button_box">
 
+  <div id="background_mod">
+
+
   <% @tasks.each do |task| %>
-
-
   <a id="task_link" href="/tasks/<%= task.id %>"
     <% if task.completed_date != nil %>
       class = "completed_task"
@@ -29,7 +30,8 @@
     >
     <%= task.name %></a>
 
-
+  </div>
+  
   <table id="option_buttons">
     <tr>
       <td>
