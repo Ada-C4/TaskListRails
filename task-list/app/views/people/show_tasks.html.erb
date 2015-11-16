@@ -1,3 +1,7 @@
 <section>
 <h1> showing the tasks </h1>
+<%= @person.name %>
+<% @tasks.each do |task|%>
+  <%= task.name %>
+<% end %>
 </section>
