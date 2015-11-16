@@ -1,4 +1,6 @@
 class Task < ActiveRecord::Base
+  belongs_to :person
+
   def self.list
 		sorted_tasks = {completed: [], todo: []}
 		Task.all.each do |task|
