@@ -1,3 +1,4 @@
+require 'pry'
 class TasksController < ApplicationController
 
   def index
@@ -12,6 +13,9 @@ class TasksController < ApplicationController
 
   def new
     @task = Task.new
+    @title = "Add Task"
+    @action = :create
+
   end
 
   def create
@@ -22,6 +26,23 @@ class TasksController < ApplicationController
   def destroy
     Task.destroy(params[:id])
     redirect_to "/"
+  end
+
+  def complete
+    Task.update(params[:id], :completed_date => Time.now)
+    redirect_to "/"
+  end
+
+  def update
+    Task.update(params[:id], task_params[:task] )
+    redirect_to "/tasks/#{params[:id]}"
+  end
+
+  def edit
+    @task = Task.find(params[:id])
+    @title = "Edit Task"
+    @action = :update
+
   end
 
   private

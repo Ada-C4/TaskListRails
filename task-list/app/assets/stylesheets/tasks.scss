@@ -34,7 +34,7 @@ td {
 
 h1 {
   font-size: 4em;
-  font-family: 'Lobster';
+  font-family: 'Lobster', sans-serif;
   color: #1F3E5D;
   text-align: center;
 }
@@ -50,7 +50,7 @@ a:visited {
 }
 
 a:hover {
-  font-size: 150%;
+  font-size: 130%;
 }
 
 .bigger_checkbox {
@@ -107,15 +107,7 @@ textarea {
   border-radius: 5px;
 }
 
-.button_to {
-  font-size: 60%;
-}
-
-.button_to:hover {
-  font-size: 100%;
-}
-
-.delete {
+.edit_delete {
   text-align: center;
 }
 

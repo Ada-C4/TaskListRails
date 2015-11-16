@@ -13,8 +13,11 @@
     <%= link_to "Your List", "/" %>  |  <%= link_to "Add a Task", "/tasks/new" %>
   </nav>
 </header>
+<div class="page_element">
 
-<%= yield %>
+  <%= yield %>
+
+</div>
 
 <footer>
 	<p>Webpage by <a href="https://github.com/emgord">Emily Gordon</a>. &copy; <%= Time.now.year %>. </p>
