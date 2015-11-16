@@ -1,14 +1,10 @@
-<link href="tasklist/app/assets/stylesheets/application.css" rel="stylesheet">
-<link href='https://fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Megrim' rel='stylesheet' type='text/css'>
-
 <html>
   <body>
     <h1><%= @task.name %></h1>
     <h2><%= @task.descript %></h2>
     <h2>COMPLETED ON:</h2>
     <h2><%= @task.date_completed %> </h2>
-
     <p><%= link_to "BACK TO TASK LIST", "/tasks/" %> </p>
+    <p><%= link_to "EDIT TASK", "/tasks/#{@task.id}/edit" %> </p>
   </body>
 </html>

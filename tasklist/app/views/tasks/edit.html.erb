@@ -1,18 +1,19 @@
 <html>
   <body>
-<%= form_for @task do |f| %>
+  <%= form_for @task, url: {action: 'update'}, method: :patch do |f| %>
   <fieldset>
-    <legend> Add a New Task </legend>
+    <legend> Edit Task </legend>
     <%= f.label :name %>
     <%= f.text_field :name %>
     <br>
     <%= f.label :descript %>
-    <%= f.text_field :descript %>
+    <%= f.text_area :descript %>
     <br>
     <%= f.label :date_completed %>
     <%= f.date_field :date_completed %>
+    <br>
   </fieldset>
-  <%= f.submit %>
-<% end %>
+    <%= f.submit %>
+    <% end %>
   </body>
 </html>
