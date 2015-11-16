@@ -4,7 +4,7 @@
   <% @tasks.each do |task| %>
     <% if task.completed_at == nil %>
     <li>
-      <%= link_to "Mark Complete", "/tasks/#{task.id}", :method => :patch %>
+      <%= link_to "Mark Complete", "/tasks/#{task.id}/mark_complete", :method => :patch %>
       <%= task.name %> <%= link_to "Show", "/tasks/#{task.id}" %>
       <%= link_to "Edit", "/tasks/#{task.id}/edit" %>
       <%= link_to "Delete", "/tasks/#{task.id}", :method => :delete,
@@ -20,6 +20,7 @@
     <% if task.completed_at != nil %>
     <li>
       <%= task.name %> <%= task.completed_at %><%= link_to "Show", "/tasks/#{task.id}" %>
+      <%= link_to "Edit", "/tasks/#{task.id}/edit" %>
       <%= link_to "Delete", "/tasks/#{task.id}", :method => :delete,
       :onclick => "return confirm('Are you sure?')"%>
     </li>

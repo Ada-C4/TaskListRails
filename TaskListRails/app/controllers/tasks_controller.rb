@@ -8,6 +8,8 @@ class TasksController < ApplicationController
   end
 
   def new
+    @url = "create"
+    @legend = "Create a Task"
     @task = Task.new
   end
 
@@ -22,16 +24,19 @@ class TasksController < ApplicationController
   end
 
   def update
+    Task.update(params[:id], task_params[:task])
+    redirect_to "/"
+  end
+
+  def mark_complete
     @task = Task.find(params[:id])
-    if params[:completed_at] == nil
-      @task.update(:completed_at => Time.now)
-    else
-      @task.update(task_params)
-    end
+    @task.update(:completed_at => Time.now)
     redirect_to "/"
   end
 
   def edit
+    @url = "update"
+    @legend = "Update a Task"
     @task = Task.find(params[:id])
   end
 
