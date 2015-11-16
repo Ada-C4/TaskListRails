@@ -1,4 +1,3 @@
-<div class="page_element">
   <table>
     <thead>
       <tr>
@@ -24,7 +23,7 @@
     <tbody>
       <% @tasks.each do |task| %>
       <tr>
-        <td class="bigger_checkbox">
+        <td class="bigger_checkbox" class="bigger">
           <% if task.completed_date.nil? %>
             <%= link_to "☐", "/tasks/#{task.id}/complete", method: :patch %>
             <% strike = "incomplete" %>
@@ -33,17 +32,17 @@
             <% strike = "complete" %>
           <% end %>
         </td>
-        <td class=<%= strike %>>
+        <td class=<%= strike %> >
           <%= link_to task.name, "/tasks/#{task.id}" %>
         </td>
         <td>
           <%= task.completed_date.strftime("%m/%d/%Y") if !task.completed_date.nil? %>
         </td>
-        <td class="delete">
-          <%= button_to "Delete", "/tasks/#{task.id}", method: :delete, data: { confirm: "Are you sure?" } %>
+        <td class="edit_delete">
+          <%= link_to "✎", "/tasks/#{task.id}/edit", method: :get %>
+          <%= link_to "♻︎", "/tasks/#{task.id}", method: :delete, data: { confirm: "Are you sure?" } %>
         </td>
       </tr>
       <% end %>
   </tbody>
 </table>
-</div>
