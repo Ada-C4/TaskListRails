@@ -1,0 +1,10 @@
+<h1>Edit Task</h1>
+
+<%= form_for @task, url: { action: 'update' }, method: :patch do |f| %>
+  <%= render partial: 'form', locals: { f: f } %>
+<% end %>
+<br>
+<%= link_to "'#{@task.name}' Info", "/tasks/#{@task.id}" %>
+<br>
+<br>
+<%= link_to "Back to Tasks List", "/" %>
