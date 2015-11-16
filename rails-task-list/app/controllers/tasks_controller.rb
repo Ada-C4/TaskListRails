@@ -37,7 +37,11 @@ class TasksController < ApplicationController
 
   def complete
     id = params[:id]
-    Task.find(id).update(:completed_date => Time.now)
+    task = Task.find(id)
+    task.update(:completed_date => Time.now)
+    num_tasks = task.person.lifetime_tasks
+    num_tasks += 1
+    task.person.update(:lifetime_tasks => num_tasks)
     redirect_to "/"
   end
 

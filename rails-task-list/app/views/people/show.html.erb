@@ -6,8 +6,11 @@
 <p>
   Description: <%= @person.description %>
 </p>
+<p id="lifetime_completions">
+  Lifetime Completed Tasks: <%= @person.lifetime_tasks %>
+</p>
 <p>
-  Completed Tasks: <%= @person.tasks.where(completed_date: nil).length %>
+  Completed Tasks: <%= @person.tasks.where.not(completed_date: nil).length %>
 </p>
 <p>
   Incomplete Tasks: <%= @person.tasks.where(completed_date: nil).length %>

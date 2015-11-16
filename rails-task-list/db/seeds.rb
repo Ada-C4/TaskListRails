@@ -7,9 +7,9 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 seed_people = [
-  { name: "Jessica", description: "Always hungry", tasks_completed: 0},
-  { name: "Lolita", description: "Music Listener", tasks_completed: 0},
-  { name: "Kepler", description: "Freeloader", tasks_completed: 0}
+  { name: "Jessica", description: "Always hungry", lifetime_tasks: 0},
+  { name: "Lolita", description: "Music Listener", lifetime_tasks: 0},
+  { name: "Kepler", description: "Freeloader", lifetime_tasks: 0}
 ]
 
 seed_people.each do |seed|
@@ -21,16 +21,16 @@ def random_time
 end
 
 tasks = [
-  { name: "The First Task", description: "", completed_date: random_time, person_id: 1 },
+  { name: "The First Task", description: "" },
   { name: "Go to Brunch", description: "", person_id: 2 },
-  { name: "Go to Lunch", description: "", completed_date: random_time, person_id: 3 },
+  { name: "Go to Lunch", description: "", person_id: 3 },
   { name: "Go to Second Lunch", description: "" , person_id: 3},
-  { name: "Play Video Games", description: "", completed_date: random_time, person_id: 1 },
-  { name: "High Five Somebody You Don't Know", description: "", completed_date: random_time, person_id: 3 },
-  { name: "Plant Flowers", description: "", completed_date: random_time, person_id: 2 },
+  { name: "Play Video Games", description: "",  person_id: 1 },
+  { name: "High Five Somebody You Don't Know", description: "", person_id: 3 },
+  { name: "Plant Flowers", description: "", person_id: 2 },
   { name: "Call Mom", description: "", person_id: 2 },
   { name: "She worries, you know.", description: "" , person_id: 1},
-  { name: "Nap.", description: "", completed_date: random_time, person_id: 1 }
+  { name: "Nap.", description: "", person_id: 1 }
 ]
 
 tasks.each do |task|
