@@ -8,7 +8,10 @@
     <br>
       <%= f.label :description %>
       <%= f.text_field :description %>
-
+    <br>
+    <!-- for this form.make a drop down selector(value from the current form where you want the collection saved, database you used to populate the select, from the database which field do you want to save, which thing you want to display) -->
+      <%= f.label :person %>
+      <%= f.collection_select(:person_id, Person.all, :id, :name) %>
     <br>
     <%= f.submit%>
 

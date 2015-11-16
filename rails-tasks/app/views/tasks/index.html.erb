@@ -9,7 +9,7 @@
           <a class="complete" href="/tasks/<%= task.name %>"> <%= task.name %> </a>
         </td>
         <td>
-          <%= task.person %>
+          <%= task.person.name %>
         </td>
         <td>
           <%= button_to "✘", "/tasks/#{task.name}", :method => :delete, data: { confirm: "delete #{task.name}?" } %>
@@ -19,7 +19,7 @@
           <a class="incomplete" href="/tasks/<%= task.name %>"> <%= task.name %> </a>
         </td>
         <td>
-          <%= task.person %>
+          <%= task.person.name %>
         </td>
         <td>
           <%= button_to "✎", "/tasks/#{task.name}/edit", :method => :get%>

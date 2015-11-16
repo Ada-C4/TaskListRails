@@ -1,0 +1,16 @@
+<div class="on_paper">
+
+<h1>Task-Doers</h1>
+
+<table>
+  <% @people.each do |person| %>
+    <tr>
+      <td>
+        <a href="/people/<%= person.id %>"><%= person.name %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
+
+</div>
