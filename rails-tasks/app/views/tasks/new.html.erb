@@ -1,18 +1,1 @@
-<div class="on_paper">
-<h1>Remember to...</h1>
-  <%= form_for @task do |f| %>
-
-      <%= f.label :name %>
-      <%= f.text_field :name %>
-    <br>
-      <%= f.label :description %>
-      <%= f.text_field :description %>
-
-    <br>
-    <%= f.submit%>
-
-  <% end %>
-
-  <%= link_to "back to the list", "/" %>
-
-</div>
+<%= render 'form' %>
