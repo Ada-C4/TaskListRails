@@ -9,7 +9,10 @@
           <td><%= link_to task.name, "/tasks/#{task.id}" %></td>
           <td><%= link_to '<i class="fa fa-pencil"></i>'.html_safe, "/tasks/#{task.id}/edit", class: "edit-link" %></td>
           <td><%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, "/tasks/#{task.id}", method: :delete, data: { confirm: 'Confirm Delete' }, class: "delete-link" %></td>
-          <td><span class="person">Task for: <%= task.person.name %></span></td>
+          <td><% if !task.person.nil? %>
+                <span class="person">Task for: <%= task.person.name %></span>
+              <% end %>
+          </td>
         </tr>
       <% end %>
     <% end %>
@@ -20,7 +23,10 @@
           <td><%= link_to task.name, "/tasks/#{task.id}", class: "completed-task" %></td>
           <td><%= link_to '<i class="fa fa-pencil"></i>'.html_safe, "/tasks/#{task.id}/edit", class: "edit-link" %></td>
           <td><%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, "/tasks/#{task.id}", method: :delete, data: { confirm: 'Confirm Delete' }, class: "delete-link" %></td>
-          <td><span class="person">    Task for: <%= task.person.name %></span></td>
+          <td><% if !task.person.nil? %>
+                <span class="person">Task for: <%= task.person.name %></span>
+              <% end %>
+          </td>
         </tr>
       <% end %>
     <% end %>
