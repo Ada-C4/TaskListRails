@@ -1,0 +1,9 @@
+<h1><%= @person.name %></h1>
+<div class="center">
+<% @tasks.each do |task| %>
+  <span>
+    <a href="/tasks/<%= task.id %>"><%= task.name %> </a>
+  </span>
+  <br />
+<% end %>
+</div>
