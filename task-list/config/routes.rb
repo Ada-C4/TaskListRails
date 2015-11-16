@@ -29,6 +29,9 @@ Rails.application.routes.draw do
     # show person
     get 'people/:id' => 'people#show', as: :person
 
+    # display person's tasks
+    get 'people/:id/tasks' => 'people#tasks'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
