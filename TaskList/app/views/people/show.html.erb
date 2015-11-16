@@ -1,0 +1,9 @@
+<h1><%= @person.name %>'s Task List</h1>
+
+<div class='tasklist' id='people'>
+  <% @person.tasks.each do |task|%>
+    <%= link_to task.name, "/tasks/#{task.id}" %>
+  <% end %>
+</div>
+
+<p id='back_button'><%= link_to 'back to People List', '/people' %></p>

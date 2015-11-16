@@ -1,0 +1,9 @@
+<h1>People Doing Things</h1>
+
+<div class='tasklist '>
+  <% @people.each do |person|%>
+    <h3><%= link_to person.name, "/people/#{person.id}" %></h3>
+  <% end %>
+</div>
+
+<p id='back_button'><%= link_to 'switch to Task List', '/tasks' %></p>

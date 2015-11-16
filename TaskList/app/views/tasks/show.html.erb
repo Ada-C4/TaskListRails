@@ -1,7 +1,7 @@
 <div id='task_details'>
   <h1><%= @task.name %></h1> 
   <% if !@task.person.nil? %>
-    <h3><%= @task.person.name %></h3>
+    <h3>Task Owner: <%= link_to @task.person.name, "/people/#{@task.person.id}" %></h3>
   <% end %>
   <p><%= @task.description %></p>
   <% unless @task.completed_at.nil? %>
