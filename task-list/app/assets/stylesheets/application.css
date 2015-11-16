@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Crimson Text|Open Sans|');
+
+
 a {
   text-decoration: none;
   color: #000;
@@ -75,6 +78,12 @@ h2 {
   font: 400 40px/1.5 Helvetica, Verdana, sans-serif;
   margin: 20px;
   padding: 0;
+}
+
+h3 {
+  font: 400 40px/1.5 Crimson Text, Helvetica, Verdana, sans-serif;
+  font-style: italic;
+  font-size: 0.5cm;
 }
 
 .incomplete_button {
