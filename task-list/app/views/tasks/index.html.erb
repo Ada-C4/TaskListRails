@@ -22,7 +22,7 @@
     <tbody>
       <% @tasks.each do |task| %>
       <tr>
-        <td class="bigger_checkbox" class="bigger">
+        <td class="bigger_checkbox">
           <% if task.completed_date.nil? %>
             <%= link_to "☐", "/tasks/#{task.id}/complete", method: :patch %>
             <% strike = "incomplete" %>
@@ -31,7 +31,7 @@
             <% strike = "complete" %>
           <% end %>
         </td>
-        <td class=<%= strike %> >
+        <td class="<%= strike %>" >
           <%= link_to task.name.capitalize, "/tasks/#{task.id}" %>
         </td>
         <td>
