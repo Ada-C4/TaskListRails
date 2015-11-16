@@ -1,0 +1,144 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+html {
+  width: 960px;
+  margin: auto;
+  background-image: url("cats.png");
+  background-repeat: repeat;
+
+}
+
+#title {
+  font-family: 'Gochi Hand', cursive;
+  text-align: center;
+  font-size: 45px;
+  padding-bottom: 5px;
+}
+
+table {
+  background-color: #FCF4AB;
+  margin: auto;
+  border-spacing: 0px;
+  margin-top: 100px;
+  padding: 20px 10px;
+  border: 2px black dashed;
+}
+
+#edit_link {
+  font-size: 16px;
+  text-align: center;
+  padding-top: 0px;
+}
+
+#edit_link a {
+  color: #4573ca;
+  text-decoration: none;
+  font-family: 'Asap', sans-serif;
+}
+
+tbody tr td {
+  font-family: 'Asap', sans-serif;
+  font-size: 18px;
+  padding: 2px 10px 2px 10px;
+  border-bottom: 2px #3399CC solid;
+}
+
+tbody tr:first-child td {
+  border-top: 2px #3399CC solid;
+}
+
+.delete {
+  font-size: 16px;
+  padding: 2px 10px 2px 10px;
+}
+
+.delete a {
+  color: #4573ca;
+  text-decoration: none;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+.attribute {
+  color: #CA5A45;
+}
+
+#empty_description {
+  font-size: 12px;
+  padding: 4px 10px 2px 10px;
+}
+
+#table_nav {
+  text-align: center;
+  padding-top: 12px;
+}
+
+a {
+  color: #CA5A45;
+  text-decoration: none;
+}
+
+div#form {
+  background-color: #FCF4AB;
+  border: 2px black dashed;
+  width: 350px;
+  height: 400px;
+  margin: auto;
+  margin-top: 100px;
+  text-align: center;
+}
+
+#form_title {
+  font-family: 'Gochi Hand', cursive;
+  text-align: center;
+  font-size: 45px;
+}
+
+form {
+  color: #4573ca;
+  font-family: 'Asap', sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+form section {
+  padding-left: 25px;
+  text-align: left;
+  display: block;
+  margin-bottom: 15px;
+}
+
+form input {
+  font-size: 18px;
+}
+
+.button {
+  border: 1px black dashed;
+  font-family: 'Asap', sans-serif;
+  font-size: 18px;
+}
+
+#link_back {
+  margin-top: 75px;
+  font-family: 'Asap', sans-serif;
+  font-size: 18px;
+  color: #CA5A45;
+  text-decoration: none;
+  text-align: center;
+}

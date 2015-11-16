@@ -1,0 +1,69 @@
+<div id="table">
+  <table>
+    <thead>
+        <tr>
+          <td colspan="2" id="title">Task details</td>
+        </tr>
+        <tr>
+          <td colspan="2" id=edit_link><%= link_to "edit?", {controller: "tasks", action: "edit", id: @task.id} %></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="attribute">
+            <strong>name:</strong>
+          </td>
+          <td>
+            <%= @task.name %>
+          </td>
+        </tr>
+        <tr>
+          <td class="attribute">
+            <strong>description:</strong>
+          </td>
+          <% if !@task.description.present? %>
+            <td id="empty_description">
+              <em>empty</em>
+            </td>
+          <% else %>
+            <td>
+              <%= @task.description %>
+            </td>
+          <% end %>
+        </tr>
+        <tr>
+          <td class="attribute">
+            <strong>date created:</strong>
+          </td>
+          <td>
+            <%= @task.created_at.to_date %>
+          </td>
+        </tr>
+        <tr>
+          <td class="attribute">
+            <strong>completed?</strong>
+          </td>
+          <% if @task.completed %>
+            <td>yes</td>
+          <% else %>
+            <td>no</td>
+          <% end %>
+        </tr>
+        <% if @task.completed == true && !@task.completed_at.nil? %>
+          <tr>
+            <td class="attribute">
+              <strong>date completed:</strong>
+            </td>
+            <td>
+              <%= @task.completed_at.to_date %>
+            </td>
+          </tr>
+        <% end %>
+        <tr>
+          <td colspan="2" id="table_nav">
+            <%= link_to "back", "/tasks/" %>
+          </td>
+        </tr>
+      </tbody>
+  </table>
+</div>
