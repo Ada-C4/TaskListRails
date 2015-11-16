@@ -2,6 +2,7 @@ require 'pry'
 class TasksController < ApplicationController
 
   def index
+    @name = nil
     tasks = Task.all
     @tasks = tasks.order(:completed_date)
   end

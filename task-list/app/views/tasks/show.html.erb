@@ -10,5 +10,6 @@
       <%= @task.completed_date.strftime("Completed on %m/%d/%Y") %>
     <% end %>
     <%= "by #{ @task.person.name }" if !@task.person_id.nil? %>
-
+    <br>
+    <%= link_to "#{@task.person.name}'s Complete List", "/people/#{@task.person.id}/tasks" if !@task.person_id.nil?  %>
   </p>

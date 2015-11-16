@@ -12,6 +12,7 @@ class PeopleController < ApplicationController
   def task_show
     id = params[:id]
     person = Person.find(id)
+    @name = person.name + "'s"
     tasks = person.tasks
     @tasks = tasks.order(:completed_date)
   end
