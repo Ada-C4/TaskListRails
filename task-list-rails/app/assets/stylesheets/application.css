@@ -111,6 +111,10 @@ tr:last-child td {
   padding-top: 12px;
 }
 
+#middle_link a {
+  color: #4573ca;
+}
+
 a {
   color: #CA5A45;
   text-decoration: none;
