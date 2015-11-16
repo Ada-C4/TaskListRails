@@ -10,6 +10,9 @@
 
     <%= f.label :comp_date, 'Completion Date' %>
     <%= f.datetime_field :comp_date %>
+
+    <%= f.label :person_id, 'Owner' %>
+    <%= f.collection_select(:person_id, Person.all, :id, :name, prompt: "Select Owner") %>
   </fieldset>
   <br>
   <br>
