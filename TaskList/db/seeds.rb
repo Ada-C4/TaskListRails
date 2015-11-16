@@ -16,10 +16,10 @@ tasks = [
   { name: "Go to Second Lunch", description: "" },
   { name: "Play Video Games", description: "", completed_at: random_time },
   { name: "High Five Somebody You Don't Know", description: "", completed_at: random_time },
-  { name: "Plant Flowers", description: "", completed_at: random_time },
-  { name: "Call Mom", description: "" },
+  { name: "Plant Flowers", description: "", completed_at: random_time, person_id: 4 },
+  { name: "Call Mom", description: "", person_id: 3 },
   { name: "She worries, you know.", description: "" },
-  { name: "Nap.", description: "", completed_at: random_time }
+  { name: "Nap.", description: "", completed_at: random_time, person_id: 1 }
 ]
 
 tasks.each do |task|
