@@ -1,10 +1,10 @@
 <%= form_for @person do |f| %>
   <fieldset>
-    <legend><%= legend %></legend>
+    <legend>Add Person:</legend>
     <%=f.label :name %>
     <%=f.text_field :name %>
     <br><br>
   </fieldset>
   <br>
-  <%= f.submit(button_text) %>
+  <%= f.submit("Add") %>
 <% end %>

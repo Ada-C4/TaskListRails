@@ -14,10 +14,23 @@ class PeopleController < ApplicationController
   end
 
   def new
-
+    @person = Person.new
   end
 
   def create
+    Person.create(person_params[:person])
+    redirect_to "/people/"
+  end
 
+  def delete
+    id = params[:id]
+    Person.destroy(id)
+    redirect_to "/people/"
+  end
+
+  private
+
+  def person_params
+    params.permit(person:[:name])
   end
 end

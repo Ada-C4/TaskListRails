@@ -5,6 +5,7 @@
     <li>
       <%= person.name %>
       <%= link_to "show", "/people/#{person.id}", class: "btn btn-default" %>
+        <%= button_to "delete", "/people/#{person.id}", method: :delete, class: "btn btn-default", data: { confirm: 'Are you sure?' } %>
       <% count = 0 %>
       <% person.tasks.each do |task| %>
         <% if task.completed_at.nil? %>
@@ -15,4 +16,5 @@
     </li>
     <% end %>
 </ul>
+<a class="btn btn-default" href="/people/new"><img src="/assets/edit.png" class = "icon">Add a person here</a>
 </div>
