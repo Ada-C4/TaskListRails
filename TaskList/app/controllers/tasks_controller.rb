@@ -9,7 +9,7 @@ class TasksController < ApplicationController
 	def show
 		id = params[:id]
 		@task = Task.find(id)
-		@completed_time = @task.completed_at.strftime("Completed %B %e, %Y.") if !@task.completed_at.nil?
+		@completed_time = @task.completed_at.strftime("%B %e, %Y") if !@task.completed_at.nil?
 	end
 
 	def new
@@ -31,8 +31,7 @@ class TasksController < ApplicationController
 	end
 
 	def update
-		id = params[:id]
-		@task = Task.find(id)
+		@task = Task.find(params[:id])
 		if params[:completed] == "true"
 			@task.update(:completed_at => Time.now)
 		else
@@ -44,11 +43,11 @@ class TasksController < ApplicationController
 	private
 
 	def task_params
-		params.permit(task:[:name, :description])
+		params.permit(task:[:name, :description, :person_id])
 	end
 
 	def update_params
-    params.permit(task: [:name, :description, :completed])
+    params.permit(task: [:name, :description, :completed, :person_id])
   end
 
 end

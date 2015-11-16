@@ -1,8 +1,11 @@
 <div id='task_details'>
-  <h1><%= @task.name %></h1>
+  <h1><%= @task.name %></h1> 
+  <% if !@task.person.nil? %>
+    <h3><%= @task.person.name %></h3>
+  <% end %>
   <p><%= @task.description %></p>
   <% unless @task.completed_at.nil? %>
-    <p><%= @completed_time %></p>
+    <p>Completed on <%= @completed_time %>.</p>
   <% else %>
   <h2>This task is not complete yet. Get to it!</h2>
   <% end %>
