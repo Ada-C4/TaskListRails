@@ -133,16 +133,21 @@ form input {
 }
 
 .button {
+  margin-top: 10px;
   border: 1px black dashed;
   font-family: 'Asap', sans-serif;
   font-size: 18px;
 }
 
 #link_back {
-  margin-top: 75px;
+  margin-top: 65px;
   font-family: 'Asap', sans-serif;
   font-size: 18px;
   color: #CA5A45;
   text-decoration: none;
   text-align: center;
+}
+
+#dropdown {
+  font-size: 18px;
 }
