@@ -1,6 +1,8 @@
 <h1>Create a new task</h1>
 
 <div class="edit_task">
+   <!-- for URL, you could also use a string. You can also define a specific action which would refer to methods defined.  -->
+   <!-- When using `method` in forms, refers to the HTTP verb. Action refers to the #edit or #show methods defined in route.  -->
 <%= form_for @task, url: "/tasks/#{@task.id}" do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
