@@ -10,7 +10,7 @@
           <td><%= link_to '<i class="fa fa-pencil"></i>'.html_safe, "/tasks/#{task.id}/edit", class: "edit-link" %></td>
           <td><%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, "/tasks/#{task.id}", method: :delete, data: { confirm: 'Confirm Delete' }, class: "delete-link" %></td>
           <td><% if !task.person.nil? %>
-                <span class="person">Task for: <%= task.person.name %></span>
+                - <%= link_to task.person.name, "/people/#{task.person.id}", class: "person" %>
               <% end %>
           </td>
         </tr>
@@ -24,7 +24,7 @@
           <td><%= link_to '<i class="fa fa-pencil"></i>'.html_safe, "/tasks/#{task.id}/edit", class: "edit-link" %></td>
           <td><%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, "/tasks/#{task.id}", method: :delete, data: { confirm: 'Confirm Delete' }, class: "delete-link" %></td>
           <td><% if !task.person.nil? %>
-                <span class="person">Task for: <%= task.person.name %></span>
+                - <%= link_to task.person.name, "/people/#{task.person.id}", class: "person" %>
               <% end %>
           </td>
         </tr>
