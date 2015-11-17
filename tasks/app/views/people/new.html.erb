@@ -1,0 +1,25 @@
+<header>
+  <h1 id="page-title" class="title">Enter Details</h1>
+</header>
+
+<%= form_for @person do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br>
+    <br>
+    <%= f.label :photo, "Photo URL" %>
+    <%= f.text_field :photo %>
+    <br>
+    <br>
+    <%= f.label :bio%>
+    <%= f.text_area(:bio, size: '64x10') %>
+    <br>
+    <br>
+    <div  class="button-container">
+      <a id="gray-button" class="circle-button" href="/people">
+        <p class="circle-button-title">WAIT</p>
+        <span>Go back</span>
+      </a>
+      <%= f.submit("Create", class: "create-task-button") %>
+    </div>
+<% end %>

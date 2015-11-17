@@ -5,6 +5,10 @@
     <br>
     <%= f.label :description %>
     <%= f.text_area(:description, size: '48x10') %>
+    <%= f.label :person_id, "Owner" %>
+    <%= f.collection_select(:person_id, Person.all, :id, :name, class: "select-dropdown") %>
+    <br>
+    <br>
     <div  class="button-container">
       <a id="gray-button" class="circle-button" href="/">
         <p class="circle-button-title">WAIT</p>

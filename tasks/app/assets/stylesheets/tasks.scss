@@ -177,7 +177,6 @@ h2 {
   width: 20px;
   height: 20px;
   display: inline;
-  border-width: 1px;
   border-style: none;
   float:right;
   margin: 0 5px;
@@ -218,7 +217,7 @@ h2 {
   text-align: right;
 }
 
-.new_task, .edit_task {
+.new_task, .edit_task, .new_person {
   width: 400px;
   margin: auto;
 }
@@ -227,7 +226,7 @@ label {
   display: block;
 }
 
-#task_name {
+#task_name, #person_name, #person_photo {
   width: 400px;
 }
 
@@ -250,7 +249,25 @@ label {
 
 .create-task-button:hover {color: #747070}
 
-#task_description, #task_name {
+#task_description, #task_name, #person_name {
   font-family: 'Quicksand', sans-serif;
   font-size: 14px;
+}
+
+.select-dropdown {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 24px;
+}
+
+.tasks-to-do {
+  font-size: 12px;
+}
+
+.person-photo {
+  width: 300px;
+}
+
+.person-info {
+  width: 300px;
+  margin: auto;
 }

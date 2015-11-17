@@ -6,17 +6,22 @@ class TasksController < ApplicationController
 
   def show
     id = params[:id]
-    @next_id = find_next_id(id.to_i)
     @task = Task.find(id)
   end
 
   def new
-    @task = Task.new
+    @task = Task.new(person_id: params[:person_id])
+    session[:return_to] = request.referer
   end
 
   def create
     Task.create(task_params[:task])
-    redirect_to "/"
+    if session[:return_to].nil?
+      redirect_to "/"
+    else
+      redirect_to session[:return_to]
+    end
+    session[:return_to] = nil
   end
 
   def destroy
@@ -33,7 +38,11 @@ class TasksController < ApplicationController
   def update
     id = params[:id]
     task = Task.find(id)
-    task.update(name: task_params[:task][:name], description: task_params[:task][:description])
+    task.update(
+    name: task_params[:task][:name],
+    description: task_params[:task][:description],
+    person_id: task_params[:task][:person_id]
+    )
     redirect_to "/"
   end
 
@@ -48,19 +57,9 @@ class TasksController < ApplicationController
     redirect_to "/"
   end
 
-# Finds the id of the next item in the task list
-  def find_next_id(current_id)
-    if current_id == Task.last.id
-      next_id = Task.first.id
-    else
-      next_id = Task.where('id > ?', current_id).first.id
-    end
-    return next_id
-  end
-
   private
 
   def task_params
-    params.permit(task:[:name, :description])
+    params.permit(task:[:name, :description, :person_id])
   end
 end

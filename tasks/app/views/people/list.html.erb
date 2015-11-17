@@ -1,15 +1,15 @@
 <div class="list">
   <div class ="title">
-    List
+    <%= @person.name %>'s List
   </div>
   <% gray = true %>
   <% num = 1 %>
   <!--Creates task list with alternating gray and white boxes, and strikes through completed tasks  -->
-  <% @tasks.each do |task| %>
+  <% @person.tasks.each do |task| %>
     <% if task.complete.nil? %>
       <% if gray %>
         <div class="gray-box">
-          <span><%= num %>    </span><a href="/tasks/<%= task.id %>"><%= task.name.upcase %></a><a href="/people/<%= task.person.id %>">  (<%= task.person.name %>)</a>
+          <span><%= num %>    </span><a href="/tasks/<%= task.id %>"><%= task.name.upcase %></a>
           <%= button_to "", "/tasks/#{task.id}/complete", method: :patch, class: "complete-button" %>
           <%= button_to "", "/tasks/#{task.id}/edit", method: :get, class: "edit-button" %>
           <%= button_to "", "/tasks/#{task.id}", method: :delete, data: { :confirm => "Are you sure?" }, class: "delete-button" %>
@@ -21,7 +21,6 @@
         <div class="white-box">
           <span class="inline"><%= num %>    </span>
           <a class="inline" href="/tasks/<%= task.id %>"><%= task.name.upcase %></a>
-          <a href="/people/<%= task.person.id %>">  (<%= task.person.name %>)</a>
           <%= button_to "", "/tasks/#{task.id}/complete", method: :patch, class: "complete-button" %>
           <%= button_to "", "/tasks/#{task.id}/edit", method: :get, class: "edit-button" %>
           <%= button_to "", "/tasks/#{task.id}", method: :delete, data: { :confirm => "Are you sure?" }, class: "delete-button" %>
@@ -34,7 +33,7 @@
       <% if gray %>
         <div class="gray-box">
           <span><%= num %>    </span>
-          <a class="done" href="/tasks/<%= task.id %>"><%= task.name.upcase %></a><a href="/people/<%= task.person.id %>">  (<%= task.person.name %>)</a>
+          <a class="done" href="/tasks/<%= task.id %>"><%= task.name.upcase %></a>
           <%= button_to "", "/tasks/#{task.id}/complete", method: :patch, class: "complete-button" %>
           <%= button_to "", "/tasks/#{task.id}/edit", method: :get, class: "edit-button" %>
           <%= button_to "", "/tasks/#{task.id}", method: :delete, data: { :confirm => "Are you sure?" }, class: "delete-button" %>
@@ -45,7 +44,7 @@
       <% else %>
         <div class="white-box">
           <span><%= num %>    </span>
-          <a class="done" href="/tasks/<%= task.id %>"><%= task.name.upcase %></a><a href="/people/<%= task.person.id %>">  (<%= task.person.name %>)</a>
+          <a class="done" href="/tasks/<%= task.id %>"><%= task.name.upcase %></a>
           <%= button_to "", "/tasks/#{task.id}/complete", method: :patch, class: "complete-button" %>
           <%= button_to "", "/tasks/#{task.id}/edit", method: :get, class: "edit-button" %>
           <%= button_to "", "/tasks/#{task.id}", method: :delete, data: { :confirm => "Are you sure?" }, class: "delete-button"%>
@@ -58,12 +57,20 @@
 </div>
 
 <div class="square-button-container">
-  <a class="square-button" href="/tasks/new">
+  <a class="square-button" href="/">
+    <p class="circle-button-title"><-</p>
+    <span>View list</span>
+  </a>
+  <a class="square-button" href="/people/">
+    <p class="circle-button-title"><-</p>
+    <span>View owners</span>
+  </a>
+  <a class="square-button" href="/people/<%= @person.id %>">
+    <p class="circle-button-title"><-</p>
+    <span><%= @person.name %> </span>
+  </a>
+  <a class="square-button" href="/tasks/new/?person_id=<%= @person.id %>">
     <p class="circle-button-title">+</p>
     <span>Add new item</span>
-  </a>
-  <a class="square-button" href="/people">
-    <p class="circle-button-title">-></p>
-    <span>View owners</span>
   </a>
 </div>

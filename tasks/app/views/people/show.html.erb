@@ -1,0 +1,24 @@
+<h1 class="title"><%= @person.name %></h1>
+<div class= "person-info">
+  <img class="person-photo" src="<%= @person.photo %>">
+  <p>
+    <%= @person.bio %>
+  </p>
+</div>
+
+<div  class="button-container">
+  <!-- <a id="gray-button" class="circle-button" href= :back>
+    <p class="circle-button-title">OK</p>
+    <span>go back</span>
+  </a> -->
+
+  <%= link_to(:back, :class => "circle-button", :id => "gray-button") do %>
+    <p class="circle-button-title">OK</p>
+    <span>go back</span>
+  <% end %>
+
+  <a class="circle-button" href="/people/<%= @person.id %>/tasks">
+    <p class="circle-button-title">SHOW</p>
+    <span>tasks</span>
+  </a>
+</div>
