@@ -1,0 +1,46 @@
+<div class= "wrapper-front">
+  <div class="button-farm">
+    <h1><a href="tasks/new">New Task</a> | <a href="people/">People</a> | <a href="people/new">New Person</a></h1>
+  </div>
+  <div>
+    <% unless @sorted_tasks[:todo].nil? %>
+      <% @sorted_tasks[:todo].each do |task| %>
+        <div class="task">
+          <div class="info">
+            <span><%= link_to task.name, "/tasks/#{task.id}" %></span>
+            <% unless task.description.empty? %>
+              <div class="task-detail">
+                <%= task.description %>
+              </div>
+            <% end %>
+            <% unless task.person.nil? %>
+              <div class="task-detail">
+                &hearts; <%= link_to task.person.name, "/people/#{task.person_id}" %>
+              </div>
+            <% end %>
+          </div>
+          <div class="task-buttons">
+            <%= button_to("/tasks/#{task.id}/complete", method: "patch", title: "Complete") { fa_icon("check fw lg") } %>
+            <%= button_to("/tasks/#{task.id}/edit", method: "get", title: "Edit") { fa_icon("pencil-square-o fw lg") } %>
+            <%= button_to("/tasks/#{task.id}", method: "delete", onclick: "return confirm('Are you sure?')", title: "Delete") { fa_icon("trash-o fw lg") } %>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div>
+    <% unless @sorted_tasks[:completed].nil? %>
+      <% @sorted_tasks[:completed].each do |task| %>
+        <div class="task">
+          <div class="info">
+            <span class="complete"><%= link_to task.name, "/tasks/#{task.id}" %></span>
+          </div>
+          <div class="task-buttons">
+            <%= button_to("/tasks/#{task.id}", method: "delete", onclick: "return confirm('Are you sure?')", title: "Delete") { fa_icon("trash-o fw lg") } %>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

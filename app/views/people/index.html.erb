@@ -1,0 +1,29 @@
+<div class="person-info">
+  <table>
+    <tr>
+      <th>
+        NAME
+      </th>
+      <th>
+        TASKS
+      </th>
+    </tr>
+    <% @people.each do |person| %>
+    <tr>
+      <td>
+        <%= link_to person.name, "/people/#{person.id}" %>
+      </td>
+      <td>
+        <%= person.tasks.where(completed_at: nil).length %>
+      </td>
+      <td class="table-button">
+        <%= button_to("/people/#{person.id}/edit", method: "get", title: "Edit") { fa_icon("pencil-square-o fw lg") } %>
+      </td>
+      <td class="table-button">
+        <%= button_to("/people/#{person.id}", method: "delete", onclick: "return confirm('Are you sure?')", title: "Delete") { fa_icon("trash-o fw lg") } %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+  <%= link_to(image_tag("https://33.media.tumblr.com/8092a0b1f2aa7d8cf7fc8d58f7f36155/tumblr_n4fkyi9suN1qdwrtpo1_400.gif"), "/" ) %>
+</div>
