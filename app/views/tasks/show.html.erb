@@ -16,7 +16,7 @@
     <%= render partial: 'done_button', locals: {id: @task.id}, controller: 'tasks' %>
     <%= render partial: 'edit_button', locals: {id: @task.id, controller: 'tasks'} %>
   <% end %>
-  <%= render partial: 'delete_button', locals: {id: @task.id} %>
+  <%= render partial: 'delete_button', locals: {id: @task.id, controller: 'tasks'} %>
 </div>
 
 <%= render 'task_home_button' %>
