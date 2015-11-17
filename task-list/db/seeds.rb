@@ -3,12 +3,12 @@ def random_time
 end
 
 tasks = [
-  { name: "Eat Lunch", description: "grilled cheese. Butter bread this time", completed: false, completed_date: random_time, writer_id: 2 },
-  { name: "Hike", description: "Discovery Park at noon", completed: true, completed_date: random_time, writer_id: 2},
-  { name: "sleep", description: "at night", completed: true, completed_date: random_time, writer_id: 2 },
-  { name: "re-read notes", description: "rails, rails, rails", completed: false, completed_date: random_time, writer_id: 2 },
-  { name: "get invited to dinner at ricky's or emily's", description: "food", completed: false, completed_date: random_time, writer_id: 2 },
-  { name: "thanksgiving!", description: "Evan, Ohio, food", completed: false, completed_date: random_time, writer_id: 2 }
+  { name: "Eat Lunch", description: "grilled cheese. Butter bread this time", completed_date: random_time, person_id: 2 },
+  { name: "Hike", description: "Discovery Park at noon", completed_date: random_time, person_id: 2},
+  { name: "sleep", description: "at night", completed_date: random_time, person_id: 2 },
+  { name: "re-read notes", description: "rails, rails, rails", completed_date: random_time, person_id: 2 },
+  { name: "get invited to dinner at ricky's or emily's", description: "food", completed_date: random_time, person_id: 2 },
+  { name: "thanksgiving!", description: "Evan, Ohio, food", completed_date: random_time, person_id: 2 }
 ]
 
 tasks.each do |task|

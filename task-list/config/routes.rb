@@ -15,8 +15,10 @@ Rails.application.routes.draw do
 # this is the route for the delete button.
   delete 'tasks/:id' => 'tasks#destroy'
 
+# When i go to this url, give me this page.
   get '/people/' => 'people#index'
-
+  get '/people/:id' => 'people#show'
+  get '/people/:id/tasks' => 'people#task_by_person'
 
 
 

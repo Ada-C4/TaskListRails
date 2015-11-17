@@ -3,7 +3,7 @@
 <ul>
   <% @people.each do |person| %>
     <li>
-      <%= person.name %>, aka <%= person.alt_name %>
+    <%= link_to "#{person.name}", "/people/#{person.id}" %>, aka <%= person.alt_name %>
     </li>
   <% end %>
 </ul>

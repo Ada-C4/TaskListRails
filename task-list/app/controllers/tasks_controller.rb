@@ -3,6 +3,8 @@ class TasksController < ApplicationController
 # the instance variables make it possible for you to view information on the page
   def index
     @tasks = Task.all
+    # raise
+    @peeps = Person.all
   end
 
   def show
@@ -51,7 +53,7 @@ class TasksController < ApplicationController
 
 # changing this, along with my update method, made editing my task from the show page possible.
   def task_params
-    params.require(:task).permit(:name, :description)
+    params.require(:task).permit(:name, :description, :person_id)
   end
 
 

@@ -1,0 +1,17 @@
+<h1> All of <%= @person.name %>'s Tasks:</h1>
+
+<ul>
+  <% @person_tasks.each do |task| %>
+    <% if task.completed_date != nil %>
+      <li>
+        <p class="strike"><%= task.name %></p>
+      </li>
+      <% else %>
+      <li>
+        <p><%= task.name %></p>
+      </li>
+    <% end %>
+  <% end %>
+</ul>
+
+<%= link_to "Take me back", "/tasks" %>
