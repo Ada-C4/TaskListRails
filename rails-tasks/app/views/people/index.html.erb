@@ -7,15 +7,13 @@
     <tr>
       <td>
         <a href="/people/<%= person.id %>"><%= person.name %>
-      </td>
-      <td>
         <% if person.incomplete.length == 0 %>
-        is all caught up
+        is all caught up </a>
         <% else %>
           <% if person.incomplete.length == 1 %>
-            has <%= person.incomplete.length %> task to finish
+            has <%= person.incomplete.length %> task to finish </a>
           <% else %>
-            has <%= person.incomplete.length %> tasks to finish
+            has <%= person.incomplete.length %> tasks to finish </a>
           <% end %>
         <% end %>
       </td>
@@ -23,7 +21,7 @@
   <% end %>
   <tr>
     <td>
-      <%= button_to "⏎", "/" %>
+      <%= link_to "⏎ to task list", "/" %>
     </td>
   </tr>
 </table>

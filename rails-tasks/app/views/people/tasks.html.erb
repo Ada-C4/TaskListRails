@@ -9,7 +9,7 @@ to complete:
       <% elsif task.complete == true %>
         <% @complete_tasks_array.push(task.name) %>
       <% else %>
-      <li>        
+      <li>
         <%= task.name %>
       </li>
       <% end %>
@@ -24,5 +24,9 @@ completed:
       </li>
   <% end %>
 </ul>
+
+<a href="/tasks/new">+ a task</a>
+<br>
+<%= link_to "⏎ to task list", "/" %>
 
 </div>

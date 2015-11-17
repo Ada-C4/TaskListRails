@@ -51,7 +51,6 @@ class TasksController < ApplicationController
 
   def update
     @task = Task.find_by(name: task_params[:task][:name])
-    binding.pry
     @old_name = @task.name
     @old_description = @task.description
     @old_person = @task.person.name

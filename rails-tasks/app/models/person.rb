@@ -3,7 +3,7 @@ class Person < ActiveRecord::Base
 
   def incomplete
     t = self.tasks
-    t = t.where(complete: false)
+    t = t.where(complete: nil)
     return t
   end
 end
