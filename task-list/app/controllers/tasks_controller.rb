@@ -2,6 +2,7 @@ require 'pry'
 class TasksController < ApplicationController
 
   def index
+    @name = nil
     tasks = Task.all
     @tasks = tasks.order(:completed_date)
   end
@@ -48,7 +49,7 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    params.permit(task:[:name, :description, :completed_date])
+    params.permit(task:[:name, :description, :completed_date, :person_id])
   end
 
 end

@@ -1,0 +1,17 @@
+<h1>People with Stuff to Do</h1>
+<% @people.each do |person| %>
+  <ul>
+    <li>
+    <%= link_to person.name.capitalize, "/people/#{person.id}" %>
+    <% all_tasks = person.tasks %>
+    <% incomplete_tasks = all_tasks.reject { |task| !task.completed_date.nil? }.length %>
+    has <%= incomplete_tasks %> incomplete
+      <% if incomplete_tasks == 1 %>
+        task.
+      <% else %>
+        tasks.
+      <% end %>
+
+    </li>
+  </ul>
+<% end %>
