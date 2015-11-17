@@ -9,6 +9,10 @@
     Not completed
     <% end %>
 </p>
+<p class = "center_task">
+  Assigned to: <%= @task.person.name %>
+</p>
 <p class="center_task">
   <a href="/tasks/<%= @task.id %>/edit" >Edit task</a>
 </p>
+<%= render partial: 'backbutton' %>

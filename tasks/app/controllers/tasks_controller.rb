@@ -1,4 +1,5 @@
 class TasksController < ApplicationController
+  before_filter :last_page
 
   def index
     @tasks = Task.all
@@ -28,7 +29,8 @@ class TasksController < ApplicationController
     @task = Task.find(id)
     @task.update(
       name: task_params[:task][:name],
-      description: task_params[:task][:description]
+      description: task_params[:task][:description],
+      person_id: task_params[:task][:person_id]
       )
     redirect_to "/"
   end
@@ -49,7 +51,11 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    params.permit(task:[:name, :description, :completed])
+    params.permit(task:[:name, :description, :completed, :person_id])
+  end
+
+  def last_page
+    session[:last_page] = request.env['HTTP_REFERER']
   end
 
 end
