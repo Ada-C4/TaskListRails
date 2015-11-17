@@ -44,6 +44,8 @@ hr {
   word-wrap: break-word;
 }
 
+
+
 .list {
   margin: auto;
   width: 400px;
@@ -60,7 +62,7 @@ a {
 a:hover {font-weight: bold}
 
 .return_home {
-  font-size: 22px;
+  font-size: 18px;
 }
 
 .button {
@@ -69,10 +71,18 @@ a:hover {font-weight: bold}
   margin-top: 10px;
 }
 
+.button:hover {
+  font-weight: bold;
+}
+
 .new_task_button {
   // color: rgb(181, 36, 26);
   background-color: transparent;
   margin-left: 40px;
+}
+
+.new_task_button:hover {
+  font-weight: bold;
 }
 
 .completed_time {
@@ -85,5 +95,9 @@ a:hover {font-weight: bold}
 }
 
 .edit_task {
+  text-align: center;
+}
+
+.list_of_taskers {
   text-align: center;
 }

@@ -1,0 +1,20 @@
+<h1>Task Masters</h1>
+<hr />
+
+<div class="list">
+  <% @people.each do |p| %>
+      <div class="task">
+        <%= link_to p.name, "/people/#{p.id}" %>
+        <br>
+        Number of tasks to complete:
+        <% total_tasks = 0 %>
+        <% p.tasks.each do |task| %>
+          <% if task.completed_at.nil? %>
+          <% total_tasks += 1 %>
+          <% end %>
+        <% end %>
+        <%= total_tasks %>
+      </div>
+  <% end %>
+</div>
+<a class="return_home" href="/">Return to task list</a>

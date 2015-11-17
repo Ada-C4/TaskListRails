@@ -2,8 +2,6 @@
 
 <hr />
 
-<a class="return_home" href="/">Return to task list</a>
-
 <div class="edit_task"><%= @task.name %>
   <% if !@task.description.nil? %>
   <br>
@@ -14,3 +12,5 @@
     <div class="edit_task">Completed at <%= @task.completed_at %></div>
   <% end %>
 </div>
+<br>
+<a class="return_home" href="/">Return to task list</a>

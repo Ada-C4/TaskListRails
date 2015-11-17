@@ -10,7 +10,7 @@ class TasksController < ApplicationController
 
   def show
     @title = "Task List"
-    id = params[:id]  
+    id = params[:id]
     #here's a bundle of info and here's the the object you should do the method on. find(by)
     # is a ActiveRecord verb to take action on database.
     @task = Task.find(id)
@@ -59,7 +59,7 @@ class TasksController < ApplicationController
 # Refers to task.rb model. Task is object that we're modifying and we're asking for the specific params of that hash.
 # use binding.pry
   def task_params
-    params.permit(task:[:name, :description])
+    params.permit(task:[:name, :description, :person_id])
   end
 
 
