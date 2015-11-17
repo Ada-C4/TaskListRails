@@ -1,0 +1,17 @@
+<h2>List of Simpson Family Members</h2>
+<%= image_tag "simpsonfamily.jpg", class: "simpson_family"%>
+<ul>
+  <% @people.each do |person| %>
+    <% count = 0 %>
+    <li><%= person.name %></li>
+    <%= link_to "Show", "/people/#{person.id}/tasks" %>
+    <% person.tasks.each do |task| %>
+      <% if task.completed_at.nil? %>
+        <% count += 1 %>
+      <% end %>
+    <% end %>
+    <ul>
+      <li>Number of Tasks to be Completed: <%= count %></li>
+    </ul>
+  <% end %>
+</ul>

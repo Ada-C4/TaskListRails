@@ -8,7 +8,9 @@ Rails.application.routes.draw do
   patch 'tasks/:id' => 'tasks#update'
   delete 'tasks/:id' => 'tasks#destroy'
   patch 'tasks/:id/mark_complete' => 'tasks#mark_complete'
-  
+  get 'people/' => 'people#index'
+  get 'people/:id/tasks' => 'people#show'
+
 
 
 

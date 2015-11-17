@@ -1,0 +1,11 @@
+<h1><%= @person.name %></h1>
+  <ul>
+    <li>Age: <%=@person.age %></li>
+    <li>Occupation: <%= @person.occupation %></li>
+    <li>Tasks Assigned to <%= @person.name %>:
+      <ul>
+        <% @person.tasks.each do |task| %>
+          <li><%= task.name %>: <%= task.completed_at %></li>
+        <% end %>
+      </ul>
+  </ul>

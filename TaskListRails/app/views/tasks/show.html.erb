@@ -4,5 +4,6 @@
     <li> Task Completed At: <%= @task.completed_at %></li>
     <li>Task Created At: <%= @task.created_at %></li>
     <li>Task Updated At: <%= @task.updated_at %></li>
+    <li>Task Assigned To: <%= @task.person.name %></li>
   </ul>
 <%= link_to "Edit", "/tasks/#{@task.id}/edit" %>
