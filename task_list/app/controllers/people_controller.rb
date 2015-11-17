@@ -14,6 +14,6 @@ class PeopleController < ApplicationController
   def show_tasks
     id = params[:id]
     @tasks = Person.find(id).tasks
-    @title = "Peep's Tasks"
+    @title = "#{Person.find(id).name}'s Tasks"
   end
 end
