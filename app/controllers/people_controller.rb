@@ -23,6 +23,17 @@ class PeopleController < ApplicationController
 		redirect_to '/people'
 	end
 
+	def update
+		@person = Person.find(params[:id])
+		@person.update(people_params[:person])
+		redirect_to '/people'
+	end
+
+	def destroy
+		Person.find(params[:id]).destroy
+		redirect_to '/people'
+	end
+
 	private
 
 	def people_params

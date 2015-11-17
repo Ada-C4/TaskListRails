@@ -13,8 +13,8 @@
 
 <div id='show-buttons-row'>
   <% if @task.completed_at.nil? %>
-    <%= render partial: 'done_button', locals: {id: @task.id} %>
-    <%= render partial: 'edit_button', locals: {id: @task.id} %>
+    <%= render partial: 'done_button', locals: {id: @task.id}, controller: 'tasks' %>
+    <%= render partial: 'edit_button', locals: {id: @task.id, controller: 'tasks'} %>
   <% end %>
   <%= render partial: 'delete_button', locals: {id: @task.id} %>
 </div>

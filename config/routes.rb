@@ -15,8 +15,10 @@ patch 'tasks/:id' => 'tasks#update'
 
 get '/people/' => 'people#index'
 get '/people/new' => 'people#new'
-get '/people/:id' => 'people#show'
-get 'people/:id/tasks' => 'people#tasks'
+get '/people/:id' => 'people#show', :as => :person
+get 'people/:id/tasks' => 'people#tasks' 
+get 'people/:id/edit' => 'people#edit'
 post '/people/' => 'people#create'
+delete '/people/:id' => 'people#destroy'
 
 end
