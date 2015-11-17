@@ -18,12 +18,12 @@ class TasksController < ApplicationController
 
 	def create
 		Task.create(task_params[:task])
-		redirect_to '/'
+		redirect_to '/tasks'
 	end
 
 	def destroy
 		Task.find(params[:id]).destroy
-		redirect_to '/'
+		redirect_to '/tasks'
 	end
 
 	def edit
@@ -37,7 +37,7 @@ class TasksController < ApplicationController
 		else
 			@task.update(update_params[:task])
 		end
-		redirect_to '/'
+		redirect_to '/tasks'
 	end
 
 	private
