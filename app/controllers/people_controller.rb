@@ -2,7 +2,7 @@ class PeopleController < ApplicationController
 	def index
 		@people = Person.all
 	end
-	
+
 	def show
 		@person = Person.find(params[:id])
 		@completed_tasks = @person.completed_tasks
@@ -15,13 +15,17 @@ class PeopleController < ApplicationController
 	end
 
 	def new
-		People.create(people_params[:person])
-		redirect to '/people'
+		@person = Person.new
+	end
+
+	def create
+		Person.create(people_params[:person])
+		redirect_to '/people'
 	end
 
 	private
 
 	def people_params
-		params.permit(:person[:name, :bio, :tasks])
+		params.permit(person:[:name, :bio])
 	end
 end
