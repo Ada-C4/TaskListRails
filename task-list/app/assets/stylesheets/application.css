@@ -45,7 +45,7 @@ span {
   font-size: 22px;
 }
 
-.task-info, .new_task, .edit_task, .person-info, .new_person {
+.task-info, .new_task, .edit_task, .person-info, .new_person, .edit_person {
   margin: 0 auto;
   width: 50%;
   margin-top: 150px;
@@ -66,16 +66,16 @@ table th {
   font-family: "Josefin Slab", serif;
   font-weight: bolder;
   font-size: 22px;
-  border-bottom: 1px solid black;
+  text-decoration: underline;
 }
 
 table td {
   padding: 5px;
 }
 
-/*table td form.button_to {
-  display: inline-block;
-}*/
+.table-button {
+  padding: 0;
+}
 
 .wrapper-front {
   background-image: url("flower-of-life.jpg");

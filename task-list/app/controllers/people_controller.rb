@@ -26,9 +26,9 @@ class PeopleController < ApplicationController
   end
 
   def destroy
-    Task.destroy(params[:id])
+    Person.destroy(params[:id])
 
-    redirect_to "/"
+    redirect_to "/people"
   end
 
   def edit
@@ -41,9 +41,9 @@ class PeopleController < ApplicationController
   end
 
   def update
-    Task.update(params[:id], task_params[:task])
+    Person.update(params[:id], person_params[:person])
 
-    redirect_to "/"
+    redirect_to "/people"
   end
 
   private
