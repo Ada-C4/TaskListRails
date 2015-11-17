@@ -1,8 +1,8 @@
 <div class="person-info">
   <table>
     <tr>
-      <% if @tasks.empty? %>
-      <h1>This person has no tasks to show.</h1>
+      <% if @tasks[:todo].empty? && @tasks[:completed].empty? %>
+      <h3>This person has no tasks to show.</h3>
       <% else %>
         <th>
           TASK
