@@ -28,10 +28,11 @@ tasks.each do |task|
   Task.create task
 end
 
+
 people = [
-  {name:"Emily"},
-  {name:"Ely"},
-  {name:"Robin"},
+  {name:"Emily", favorite_cat:"Ely", favorite_food:"Thai", hometown:"Brookline, MA", favorite_pie:"Apple", picture:"emily.jpg"},
+  {name:"Ely", favorite_cat:"Cooter", favorite_food:"Burger", hometown:"Evening Shade, AR", favorite_pie:"Lemon Icebox", picture:"ely.jpg"},
+  {name:"Robin", favorite_cat:"Nori", favorite_food:"Chocolate", hometown:"Seattle, WA", favorite_pie:"Pumpkin", picture:"robin.jpg"},
 ]
 
 people.each do |person|

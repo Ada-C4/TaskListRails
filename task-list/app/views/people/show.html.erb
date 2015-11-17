@@ -1,3 +1,12 @@
 <h1><%= @person.name.capitalize %> </h1>
 
-<%= link_to "#{@person.name.capitalize}'s Task List", "/people/#{@person.id}/tasks" %>
+<%= image_tag "#{@person.picture}" %>
+
+<ul>
+  <li>Hometown: <%= @person.hometown %></li>
+  <li>Favorite Cat: <%= @person.favorite_cat %></li>
+  <li>Favorite Food: <%= @person.favorite_food %></li>
+  <li>Favorite Pie: <%= @person.favorite_pie %></li>
+</ul>
+
+<%= link_to "Go to #{@person.name.capitalize}'s Task List", "/people/#{@person.id}/tasks" %>
