@@ -20,7 +20,7 @@
         </td>
         <td>
           <% if !task.completed_at.nil? %>
-            <%= task.completed_at %>
+            <%= task.completed_at.strftime("%d/%m/%Y %H:%M") %>
           <<% else %>
             <%= button_to "Completed", {action: 'set_completed', id: task.id}, method: :patch %>
           <% end %>

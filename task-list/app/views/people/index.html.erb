@@ -9,7 +9,7 @@
     <tr>
       <td>
         <%if !person.name.nil? %>
-          <%= link_to "#{person.name}", "/people/#{person.id}/tasks" %>
+          <%= link_to "#{person.name}", {controller: "people", action: "show_tasks", id: person.id} %>
         <% end %>
       </td>
       <td>
@@ -18,3 +18,5 @@
     </tr>
   <% end %>
 </table>
+
+\
