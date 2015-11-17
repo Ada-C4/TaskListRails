@@ -7,7 +7,7 @@
         <th>
           TASK
         </th>
-        <th>
+        <th class="status">
           STATUS
         </th>
       </tr>
@@ -16,7 +16,7 @@
         <td>
           <%= link_to task.name, "/tasks/#{task.id}" %>
         </td>
-        <td>
+        <td class="status">
           <%= task.status %>
         </td>
       </tr>
@@ -26,7 +26,7 @@
         <td>
           <%= link_to task.name, "/tasks/#{task.id}" %>
         </td>
-        <td>
+        <td class="status">
           <%= task.status %>
         </td>
       </tr>
