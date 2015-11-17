@@ -10,4 +10,10 @@ class PeopleController < ApplicationController
     @people = Person.find(id)
     @title = "Peep Info"
   end
+
+  def show_tasks
+    id = params[:id]
+    @tasks = Person.find(id).tasks
+    @title = "Peep's Tasks"
+  end
 end

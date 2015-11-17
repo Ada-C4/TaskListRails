@@ -21,7 +21,7 @@
         <%= @people.interests %>
       </td>
       <td>
-        <%= @tasks %>
+        <%= button_to "See Tasks", { action: "show_tasks", id: @people.id }, method: :get %>
       </td>
     </tr>
   </tbody>
