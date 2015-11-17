@@ -23,11 +23,12 @@ tasks = [
 ]
 
 people = [
-  {name: "Irene Adler", photo: "http://images5.fanpop.com/image/photos/30800000/Sherlock-sherlock-on-bbc-one-30801762-500-667.jpg" },
-  {name: "Mycroft Holmes", photo: "http://img3.wikia.nocookie.net/__cb20130218233027/bakerstreet/images/thumb/0/07/Mark-gatiss.jpg/500px-Mark-gatiss.jpg" },
-  {name: "John Watson", photo: "http://images6.fanpop.com/image/photos/36500000/Dr-John-Watson-Sherlock-BBC-One-image-dr-john-watson-sherlock-bbc-one-36513680-500-300.png"},
-  {name: "Sherlock Holmes", photo: "https://lifebeinggirly.files.wordpress.com/2014/01/sherlock-holmes-bbc.jpg"},
-  {name: "Moriarty", photo: "http://33.media.tumblr.com/tumblr_lxk4fbQ6eb1qeyqjwo1_500.gif"}
+  {name: "Irene Adler", photo: "https://media.giphy.com/media/M3y9Ouxs8Y1zy/giphy.gif" },
+  {name: "Mycroft Holmes", photo: "https://media.giphy.com/media/gHzFOS60y62v6/giphy.gif" },
+  {name: "John Watson", photo: "https://media.giphy.com/media/YX2nszi4twRbO/giphy.gif"},
+  {name: "Sherlock Holmes", photo: "https://media.giphy.com/media/MtsKydwXTY0q4/giphy.gif"},
+  {name: "Moriarty", photo: "http://33.media.tumblr.com/tumblr_lxk4fbQ6eb1qeyqjwo1_500.gif"},
+  {name: "Mrs. Hudson", photo: "https://media.giphy.com/media/SL1POQnCQo7Ti/giphy.gif"}
 ]
 
 people.each do |person|
