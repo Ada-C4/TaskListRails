@@ -6,4 +6,10 @@ class Person < ActiveRecord::Base
     t = t.where(completed: nil)
     return t
   end
+
+  def complete_tasks
+    t = self.tasks
+    t = t.where.not(completed: nil)
+    return t
+  end
 end
