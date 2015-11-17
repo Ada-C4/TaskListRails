@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
-
 # these are the routes for the edit link
   get 'tasks/:id/edit' => 'tasks#edit'
   patch 'tasks/:id/edit' => 'tasks#update'
-
 # this is the route for the completed button.
   patch 'tasks/:id' => 'tasks#complete'
 
@@ -14,10 +12,13 @@ Rails.application.routes.draw do
   get 'tasks/:id' => 'tasks#show'
 
   post 'tasks/' => 'tasks#create'
-
 # this is the route for the delete button.
   delete 'tasks/:id' => 'tasks#destroy'
 
+# When i go to this url, give me this page.
+  get '/people/' => 'people#index'
+  get '/people/:id' => 'people#show'
+  get '/people/:id/tasks' => 'people#task_by_person'
 
 
 

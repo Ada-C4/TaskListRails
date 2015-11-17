@@ -3,16 +3,17 @@
   <p><%= @task.name%></p>
   <h3>Description </h3>
   <p><%= @task.description%></p>
+  <p>This task belongs to <% %></p>
 
   <h3>Completed?</h3>
-  <% if @task.completed == false || @task.completed == nil %>
+  <% if @task.completed_date == nil %>
     <p>nope</p>
   <% else %>
     <p>yes</p>
   <% end %>
 
 <!-- @task.completed == true is implied on the following line. -->
-  <% if @task.completed %>
+  <% if @task.completed_date != nil %>
     <h3>On: </h3>
       <% if @task.completed_date != nil %>
         <p><%= @task.completed_date%></p>

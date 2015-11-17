@@ -1,0 +1,9 @@
+<h1> These people do tasks: </h1>
+
+<ul>
+  <% @people.each do |person| %>
+    <li>
+    <%= link_to "#{person.name}", "/people/#{person.id}" %>, aka <%= person.alt_name %>
+    </li>
+  <% end %>
+</ul>

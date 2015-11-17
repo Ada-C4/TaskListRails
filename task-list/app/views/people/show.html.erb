@@ -1,0 +1,16 @@
+<h1> All of <%= @person.name %>'s Uncompleted Tasks:</h1>
+
+<ul>
+  <% @tasks.each do |task| %>
+    <% if task.completed_date == nil %>
+      <li>
+        <p><%= @person.alt_name %>'s chore: <%= task.name %></p>
+      </li>
+    <% end %>
+  <% end %>
+  <p>You have <%= Person.incomplete(@person.id) %> chores left to do</p>
+</ul>
+
+<%= link_to "Back to my page", "/people/#{@person.id}/tasks" %>
+
+<%= link_to "Back to my peeps", "/people" %>
