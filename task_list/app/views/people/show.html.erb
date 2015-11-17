@@ -1,0 +1,28 @@
+<table>
+  <thead>
+    <tr>
+      <th>
+        Person
+      </th>
+      <th>
+        What's Special About Them?
+      </th>
+      <th>
+        Tasks
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <%= @people.name %>
+      </td>
+      <td>
+        <%= @people.interests %>
+      </td>
+      <td>
+        <%= button_to "See Tasks", { action: "show_tasks", id: @people.id }, method: :get %>
+      </td>
+    </tr>
+  </tbody>
+</table>

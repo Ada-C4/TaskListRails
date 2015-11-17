@@ -1,0 +1,23 @@
+<table>
+  <thead>
+  <tr>
+    <th>
+      Person
+    </th>
+    <th>
+      # of Incomplete Tasks
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+      <% @people.each do |person| %>
+      <tr>
+        <td><%= link_to person.name, "/people/#{person.id}" %>
+        </td>
+        <td>
+          <%= person.not_complete %>
+        <% end %>
+        </td>
+      </tr>
+  </tbody>
+</table>
