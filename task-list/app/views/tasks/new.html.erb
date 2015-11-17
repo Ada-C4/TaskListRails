@@ -7,6 +7,12 @@
     <br>
     <%= f.label :description %>
     <%= f.text_field :description %>
+    <br>
+    <%= f.label :person_id, "Person" %>
+
+    <%= f.collection_select(:person_id, Person.all, :id, :name,
+    prompt: "Select Person for Task:") %>
+
 
   </fieldset>
   <%= f.submit %>

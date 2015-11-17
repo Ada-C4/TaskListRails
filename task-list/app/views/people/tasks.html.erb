@@ -1,0 +1,22 @@
+<h1> <%=@person.name%>'s' Incomplete Tasks: </h1>
+<ul id=person_task_list>
+  <% @remaining_tasks.each do |t| %>
+    <li>
+      Task: <%=t.name%>
+      <br>Description: <%=t.description%>
+    </li>
+  <%end%>
+</ul>
+
+<br>
+
+<h1> <%=@person.name%>'s' Completed Tasks: </h1>
+<ul id=person_task_list>
+  <% @finished_tasks.each do |t| %>
+    <li>
+      Task: <%=t.name%>
+      <br>Description: <%=t.description%>
+      <br>Completed: <%=t.completed%>
+    </li>
+  <%end%>
+</ul>
