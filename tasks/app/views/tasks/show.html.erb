@@ -10,7 +10,7 @@
     <%= @task.description %>
   </p>
   <p class="task-owner">
-    Owner: <%= @task.person.name %>
+    <a href="/people/<%= @task.person.id %>">Owner: <%= @task.person.name %></a>
   </p>
   <p class="task-complete-date">
     <% if !@task.complete.nil? %>
@@ -29,9 +29,4 @@
     <p class="circle-button-title">EDIT</p>
     <span>this item</span>
   </a>
-<!--
-  <a class="circle-button" href="/tasks/<%= @next_id %>">
-    <p class="circle-button-title">HMM...</p>
-    <span>what's next?</span>
-  </a> -->
 </div>

@@ -10,10 +10,10 @@ def random_time
 end
 
 people = [
-  {name: "Draco"},
-  {name: "Fred"},
-  {name: "George"},
-  {name: "Neville"}
+  {name: "Draco", photo: "http://www.mdvstyle.com/wp-content/uploads/2015/07/una-foto-promo-di-draco-malfoy-tom-felton-per-il-film-harry-potter-e-la-pietra-filosofale-129105.jpg" , bio: "A Slytherin sometimes mistaken for Kim Kardashian"},
+  {name: "Fred", photo: "http://sp5.fotolog.com/photo/37/49/110/phelpsaholics/1286321715330_f.jpg" , bio: "A gingery twin who is currently dead"},
+  {name: "George", photo: "http://vignette4.wikia.nocookie.net/harrypotter/images/f/f5/PHELPS2.jpg/revision/latest/scale-to-width-down/250?cb=20150828154311", bio: "A gingery twin who is currently alive"},
+  {name: "Hermione", photo: "https://upload.wikimedia.org/wikipedia/en/d/d3/Hermione_Granger_poster.jpg", bio: "A very logical Gryffindor who is smarter than Harry"}
 ]
 
 people.each do |person|

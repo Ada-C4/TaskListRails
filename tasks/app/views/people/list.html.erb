@@ -57,6 +57,18 @@
 </div>
 
 <div class="square-button-container">
+  <a class="square-button" href="/">
+    <p class="circle-button-title"><-</p>
+    <span>View list</span>
+  </a>
+  <a class="square-button" href="/people/">
+    <p class="circle-button-title"><-</p>
+    <span>View owners</span>
+  </a>
+  <a class="square-button" href="/people/<%= @person.id %>">
+    <p class="circle-button-title"><-</p>
+    <span><%= @person.name %> </span>
+  </a>
   <a class="square-button" href="/tasks/new/?person_id=<%= @person.id %>">
     <p class="circle-button-title">+</p>
     <span>Add new item</span>
