@@ -45,7 +45,7 @@ span {
   font-size: 22px;
 }
 
-.task-info, .new_task, .edit_task, .person-info {
+.task-info, .new_task, .edit_task, .person-info, .new_person {
   margin: 0 auto;
   width: 50%;
   margin-top: 150px;
@@ -72,6 +72,10 @@ table th {
 table td {
   padding: 5px;
 }
+
+/*table td form.button_to {
+  display: inline-block;
+}*/
 
 .wrapper-front {
   background-image: url("flower-of-life.jpg");

@@ -16,6 +16,10 @@
       <td>
         <%= person.tasks.where(completed_at: nil).length %>
       </td>
+      <td>
+        <%= button_to("/people/#{person.id}/edit", method: "get", title: "Edit") { fa_icon("pencil-square-o fw lg") } %>
+        <%= button_to("/people/#{person.id}", method: "delete", onclick: "return confirm('Are you sure?')", title: "Delete") { fa_icon("trash-o fw lg") } %>
+      </td>
     </tr>
     <% end %>
   </table>
