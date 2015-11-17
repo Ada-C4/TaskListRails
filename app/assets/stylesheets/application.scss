@@ -21,6 +21,13 @@ body {
   margin: 0 auto;
 }
 
+img {
+  object-fit: none;
+  object-position: center;
+  height: 225px;
+  width: 350px;
+}
+
 /*div {
   border: 1px solid magenta;
 }*/
@@ -46,12 +53,12 @@ span {
 }
 
 .task-info, .new_task, .edit_task, .person-info, .new_person, .edit_person {
-  margin: 0 auto;
+  margin: auto;
   width: 50%;
-  margin-top: 150px;
   border: 1px solid black;
   text-align: center;
   padding: 20px;
+  margin-top: 62px;
   background-color: rgba(246, 245, 231, .85);
 }
 
@@ -59,10 +66,11 @@ table {
   margin: 0 auto;
   margin-bottom: 20px;
   width: 100%;
+  text-align: left;
+  padding-left: 55px;
 }
 
 table th {
-  width: 50%;
   font-family: "Josefin Slab", serif;
   font-weight: bolder;
   font-size: 22px;
@@ -70,11 +78,15 @@ table th {
 }
 
 table td {
-  padding: 5px;
+  padding-top: 5px;
+}
+
+table .button_to {
+  display: inline;
 }
 
 .table-button {
-  padding: 0;
+  text-align: center;
 }
 
 .wrapper-front {
@@ -116,17 +128,22 @@ table td {
   font-style: italic;
 }
 
-.task-buttons, .task-detail {
+// .task-buttons, .task-detail {
+//   vertical-align: top;
+//   display: none;
+// }
+//
+// .task:hover .task-buttons {
+//   display: inline-block;
+// }
+//
+// .task:hover .task-detail {
+//   display: block;
+// }
+
+.task-buttons {
   vertical-align: top;
-  display: none;
-}
-
-.task:hover .task-buttons {
   display: inline-block;
-}
-
-.task:hover .task-detail {
-  display: block;
 }
 
 .complete {
@@ -163,20 +180,13 @@ form input[type="submit"] {
 }
 
 legend {
-  font-size: 24px;
-}
-
-form input[type="submit"] {
-}
-
-legend {
   font-size: 26px;
   font-family: "Josefin Slab", serif;
   text-align: center;
   font-weight: bold;
 }
 
-.new_task input[type="text"], .edit_task input[type="text"] {
+.new_task input[type="text"], .edit_task input[type="text"], .new_person input[type="text"], .edit_person input[type="text"] {
   margin: 10px 0 0 10px;
 }
 
@@ -190,7 +200,3 @@ button {
   border: none;
   cursor: pointer;
 }
-
-/*button:hover {
-  margin-left: -2px;
-}*/
