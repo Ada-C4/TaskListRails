@@ -1,26 +1,35 @@
-<div class = "tasks">
 <h1>To Do:</h1>
-<ul>
-  <% @tasks.each do |task| %>
-    <%if task.completed_at == nil %>
-      <li>
-        <%= link_to '<i class="fa fa-square-o fa-fw"></i>'.html_safe, "tasks/#{task.id}/complete", method: :patch %>
-        <%= link_to task.name, "/tasks/#{task.id}" %>
-        <%= link_to '<i class="fa fa-pencil"></i>'.html_safe, "/tasks/#{task.id}/edit", class: "edit-link" %>
-        <%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, "/tasks/#{task.id}", method: :delete, data: { confirm: 'Confirm Delete' }, class: "delete-link" %>
-      </li>
+<div class = "tasks">
+<table>
+  <tbody>
+    <% @tasks.each do |task| %>
+      <%if task.completed_at == nil %>
+        <tr>
+          <td><%= link_to '<i class="fa fa-square-o fa-fw"></i>'.html_safe, "tasks/#{task.id}/complete", method: :patch %></td>
+          <td><%= link_to task.name, "/tasks/#{task.id}" %></td>
+          <td><%= link_to '<i class="fa fa-pencil"></i>'.html_safe, "/tasks/#{task.id}/edit", class: "edit-link" %></td>
+          <td><%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, "/tasks/#{task.id}", method: :delete, data: { confirm: 'Confirm Delete' }, class: "delete-link" %></td>
+          <td><% if !task.person.nil? %>
+                - <%= link_to task.person.name, "/people/#{task.person.id}", class: "person" %>
+              <% end %>
+          </td>
+        </tr>
+      <% end %>
     <% end %>
-  <% end %>
-  <% @tasks.each do |task| %>
-    <%if task.completed_at != nil %>
-      <li>
-        <%= link_to '<i class="fa fa-check-square-o fa-fw"></i>'.html_safe, "tasks/#{task.id}/incomplete", method: :patch %>
-        <%= link_to task.name, "/tasks/#{task.id}", class: "completed-task" %>
-        <%= link_to '<i class="fa fa-pencil"></i>'.html_safe, "/tasks/#{task.id}/edit", class: "edit-link"%>
-        <%=link_to '<i class="fa fa-trash-o"></i>'.html_safe, "/tasks/#{task.id}", method: :delete, data: { confirm: 'Confirm Delete' }, class: "delete-link" %>
-      </li>
+    <% @tasks.each do |task| %>
+      <%if task.completed_at != nil %>
+        <tr>
+          <td><%= link_to '<i class="fa fa-check-square-o fa-fw"></i>'.html_safe, "tasks/#{task.id}/incomplete", method: :patch %></td>
+          <td><%= link_to task.name, "/tasks/#{task.id}", class: "completed-task" %></td>
+          <td><%= link_to '<i class="fa fa-pencil"></i>'.html_safe, "/tasks/#{task.id}/edit", class: "edit-link" %></td>
+          <td><%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, "/tasks/#{task.id}", method: :delete, data: { confirm: 'Confirm Delete' }, class: "delete-link" %></td>
+          <td><% if !task.person.nil? %>
+                - <%= link_to task.person.name, "/people/#{task.person.id}", class: "person" %>
+              <% end %>
+          </td>
+        </tr>
+      <% end %>
     <% end %>
-  <% end %>
-</ul>
-<%= link_to "Create A New Task", "tasks/new" %>
+  </tbody>
+</table>
 </div>

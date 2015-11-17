@@ -4,6 +4,10 @@
   <p>Description: <%= @task.description %></p>
 <% end %>
 
+<% if !@task.person.nil? %>
+  <p>Person: <%= @task.person.name %></p>
+<% end %>
+
 <p>Created At: <%= @task.created_at %></p>
 
 <% if !@task.completed_at.nil? %>
@@ -17,4 +21,3 @@
 <%= link_to "Edit Task", "/tasks/#{@task.id}/edit" %>
 <br>
 <br>
-<%= link_to "Back to Tasks", "/" %>

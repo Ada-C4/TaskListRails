@@ -1,0 +1,21 @@
+<h1>List of People</h1>
+<div class = "people">
+<table>
+  <thead>
+    <tr>
+      <th>Name: </th>
+      <th>Incomplete Tasks:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @people.each do |person| %>
+      <tr>
+        <td><%= link_to person.name, "/people/#{person.id}" %></td>
+        <% incomplete = person.tasks.reject {|task| task.completed_at != nil }.length %>
+        <td class="number"><%= incomplete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<br>
