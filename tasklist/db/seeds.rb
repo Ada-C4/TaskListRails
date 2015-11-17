@@ -9,17 +9,28 @@ def random_time
   Time.at(rand * Time.now.to_i)
 end
 
+people = [
+  {name: "Annalee"},
+  {name: "Imari"},
+  {name: "Davin"},
+  {name: "Jaxson"}
+]
+
+people.each do |person|
+  Person.create(person)
+end
+
 tasks = [
-  { name: "The First Task", descript: "do this first", date_completed: random_time },
-  { name: "Go to Brunch", descript: "go to Cafe Presse" },
-  { name: "Go to Lunch", descript: "eat", date_completed: random_time },
-  { name: "Go to Second Lunch", descript: "eat more" },
-  { name: "Play Video Games", descript: "Super Mario", date_completed: random_time },
-  { name: "High Five Somebody You Don't Know", descript: "Everyone", date_completed: random_time },
-  { name: "Plant Flowers", descript: "Magnolias!", date_completed: random_time },
-  { name: "Call Mom", descript: "Hi MOM" },
-  { name: "She worries, you know.", descript: "Yup" },
-  { name: "Nap", descript: "ZZZZZZZZ", date_completed: random_time }
+  { name: "The First Task", descript: "do this first", date_completed: random_time, person_id: 1 },
+  { name: "Go to Brunch", descript: "go to Cafe Presse", person_id: 2 },
+  { name: "Go to Lunch", descript: "eat", date_completed: random_time, person_id: 3 },
+  { name: "Go to Second Lunch", descript: "eat more", person_id: 4 },
+  { name: "Play Video Games", descript: "Super Mario", date_completed: random_time, person_id: 1 },
+  { name: "High Five Somebody You Don't Know", descript: "Everyone", date_completed: random_time, person_id: 2 },
+  { name: "Plant Flowers", descript: "Magnolias!", date_completed: random_time, person_id: 3 },
+  { name: "Call Mom", descript: "Hi MOM", person_id: 4 },
+  { name: "She worries, you know.", descript: "Yup", person_id: 1 },
+  { name: "Nap", descript: "ZZZZZZZZ", date_completed: random_time, person_id: 2 }
 ]
 
 tasks.each do |task|

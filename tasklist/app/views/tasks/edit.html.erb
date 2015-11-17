@@ -1,5 +1,3 @@
-<html>
-  <body>
   <%= form_for @task, url: {action: 'update'}, method: :patch do |f| %>
   <fieldset>
     <legend> Edit Task </legend>
@@ -9,11 +7,12 @@
     <%= f.label :descript %>
     <%= f.text_area :descript %>
     <br>
+    <%= f.label :person_id, "Task For:" %>
+    <%= f.collection_select(:person_id, Person.all, :id, :name, prompt: "Select a Person") %>
+    <br>
     <%= f.label :date_completed %>
     <%= f.date_field :date_completed %>
     <br>
   </fieldset>
     <%= f.submit %>
     <% end %>
-  </body>
-</html>
