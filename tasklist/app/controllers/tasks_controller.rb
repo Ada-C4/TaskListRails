@@ -1,11 +1,14 @@
 class TasksController < ApplicationController
 	def index
-		@tasks = Task.all
-		@tasks = @tasks.order(:complete_date, :name)
+		@tasks = Task.all.order(:complete_date, :name)
+	end
+
+	def find_task
+		@task = Task.find(params[:id])
 	end
 
 	def show
-		@task = Task.find(params[:id])
+		find_task
 	end
 
 	def new 
@@ -14,7 +17,6 @@ class TasksController < ApplicationController
 
 	def delete
 		@task = Task.destroy(params[:id])
-
 		redirect_to "/"
 	end
 
@@ -24,11 +26,11 @@ class TasksController < ApplicationController
 	end
 
 	def edit 
-		show
+		find_task
 	end
 
 	def update
-		show
+		find_task
 
 		@task.update(task_params[:task])
 
@@ -36,7 +38,7 @@ class TasksController < ApplicationController
 	end
 
 	def complete
-		show
+		find_task
 
 		@task.complete_date = Time.now
 		@task.save
@@ -45,7 +47,7 @@ class TasksController < ApplicationController
 	end
 
 	def incomplete
-		show
+		find_task
 		@task.complete_date = nil
 		@task.save
 
@@ -55,6 +57,6 @@ class TasksController < ApplicationController
 	private
 
 	def task_params
-		params.permit(task:[:name, :description])
+		params.permit(task:[:name, :description, :complete_date, :person_id])
 	end
 end

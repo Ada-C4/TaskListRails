@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+	#### TASK ROUTES ####
+
 	# Home page
 	root 'tasks#index'
 
@@ -17,10 +19,30 @@ Rails.application.routes.draw do
 	patch 'tasks/:id' => 'tasks#update'
 
 	# Update to complete
-	get 'tasks/complete/:id' => 'tasks#complete'
 	patch 'tasks/complete/:id' => 'tasks#complete'
 
 	# Update to incomplete
-	get 'tasks/incomplete/:id' => 'tasks#incomplete'
 	patch 'tasks/incomplete/:id' => 'tasks#incomplete'
+
+	#### PEOPLE ROUTES ####
+
+	# Home page
+	get 'people' => 'people#index'
+
+	# Add a person
+	get 'people/new' => 'people#new'
+	post 'people' => 'people#create'
+
+	#Show indvidual person page
+	get 'people/:id' => 'people#show', as: :person
+
+	# Show individual tasks page
+  get 'people/:id/tasks' => 'people#tasks'
+
+  # Delete
+	delete 'people/:id' => 'people#delete'
+
+	# Edit
+	get 'people/:id/edit' => 'people#edit'
+	patch 'people/:id' => 'people#update'
 end
