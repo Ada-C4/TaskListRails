@@ -1,0 +1,22 @@
+<table>
+  <col width="80%">
+  <col width="20%">
+  <tr>
+    <th> Name </th>
+    <th> # uncompleted tasks</th>
+  </tr>
+  <% @people.each do |person| %>
+    <tr>
+      <td>
+        <%if !person.name.nil? %>
+          <%= link_to "#{person.name}", {controller: "people", action: "show_tasks", id: person.id} %>
+        <% end %>
+      </td>
+      <td>
+        <%= person.uncompleted %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
+\

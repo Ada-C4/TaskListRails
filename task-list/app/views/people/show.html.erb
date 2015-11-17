@@ -1,0 +1,4 @@
+<h1> User Information </h1>
+<h2> name: <%= @person.name %> </h2>
+<h3>Favorite Color: <%= @person.favorite_color %></h3>
+<p> <%= link_to "Check out #{@person.name} tasks", "/people/#{@person.id}/tasks" %></p>

@@ -1,0 +1,14 @@
+<%= link_to "Uncompleted Tasks", {action: "index", controller: "people"} %>
+<h1>This is The task list of <%= @person.name %> </h1>
+<ul>
+<% @tasks.each do |task| %>
+  <li> Task: <%= task.name %> description: <%= task.description %> </li>
+  <ul>
+    <% if !task.completed_at.nil? %>
+      <li class="comp_date">completed_at: <%= task.completed_at %></li>
+    <% else %>
+      <li class="comp_date">This task is not yet completed</li>
+    <% end %>
+  </ul>
+<% end %>
+</ul>

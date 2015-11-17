@@ -5,6 +5,7 @@
   <col width="10%">
   <tr>
     <th id="task_name">Task</th>
+    <th id="person_name">Person</th>
     <th></th>
   </tr>
     <% @tasks.each do |task| %>
@@ -13,8 +14,13 @@
           <%= link_to "Task: #{task.name}", "/tasks/#{task.id}" %>
         </td>
         <td>
+          <% if !task.person.nil? %>
+            <%= link_to "#{task.person.name}", "/people/#{task.person.id}" %>
+          <% end %>
+        </td>
+        <td>
           <% if !task.completed_at.nil? %>
-            <%= task.completed_at %>
+            <%= task.completed_at.strftime("%d/%m/%Y %H:%M") %>
           <<% else %>
             <%= button_to "Completed", {action: 'set_completed', id: task.id}, method: :patch %>
           <% end %>

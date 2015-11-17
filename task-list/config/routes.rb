@@ -10,6 +10,12 @@ Rails.application.routes.draw do
   patch 'tasks/:id' => 'tasks#update',  as: :task
   patch 'tasks/:id/set_completed' => 'tasks#set_completed'
 
+  get 'people' => 'people#index'
+  get 'people/:id' => 'people#show'
+  get 'people/:id/tasks' => 'people#show_tasks'
+
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

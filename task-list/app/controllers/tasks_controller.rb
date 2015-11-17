@@ -35,7 +35,7 @@ class TasksController < ApplicationController
 
   def update
     task = Task.find(params[:id])
-    task.update(name: task_params[:task][:name], description: task_params[:task][:description])
+    task.update(task_params[:task])
     redirect_to '/tasks/'
   end
 
@@ -52,7 +52,7 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    params.permit(task:[:name, :description])
+    params.permit(task:[:name, :description, :person_id])
   end
 
 
