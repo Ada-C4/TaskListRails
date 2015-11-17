@@ -1,0 +1,42 @@
+<div class="container">
+  <h1>Owners</h1>
+    <table class="table table-hover">
+      <tr >
+        <th>
+        </th>
+        <th>
+          OWNER
+        </th>
+        <th>
+          # TO DO
+        </th>
+        <th>
+        </th>
+      </tr>
+      <% @people.each do |person| %>
+        <tr>
+          <td>
+            <%= link_to "show person", "/people/#{person.id}", class: "btn btn-default" %>
+          </td>
+          <td>
+            <div><%= person.name %></div>
+          </td>
+         <td>
+           <div>
+             <% count = 0 %>
+             <% person.tasks.each do |task| %>
+               <% if task.completed_at.nil? %>
+                 <% count += 1 %>
+               <% end %>
+             <% end %>
+               <%= count %>
+            </div>
+         </td>
+         <td>
+           <%= button_to "", "/people/#{person.id}", method: :delete, class: "btn btn-default", class: "delete", data: { confirm: 'Are you sure?' } %>
+           <!-- onclick="return confirm('Are you sure?')" -->
+         </td>
+       </tr>
+      <% end %>
+    </table>
+</div>

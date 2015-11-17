@@ -30,7 +30,8 @@ class TasksController < ApplicationController
     task = Task.find(id)
     task.update(
       name: task_params[:task][:name],
-      description: task_params[:task][:description]
+      description: task_params[:task][:description],
+      person_id: task_params[:task][:person_id]
       )
     # task.update(task_params[:task])
     redirect_to "/"
@@ -52,12 +53,20 @@ class TasksController < ApplicationController
     @task = Task.find(id)
     name = params[:name]
     description = params[:description]
+  end
 
+  def find_next_id(current_id)
+    if current_id == Task.last.id
+      next_id = Task.first.id
+    else
+      next_id = Task.where('id > ?', current_id).first.id
+    end
+    return next_id
   end
 
   private
 
   def task_params
-    params.permit(task:[:name, :description, :completed_at])
+    params.permit(task:[:name, :description, :completed_at, :person_id])
   end
 end
