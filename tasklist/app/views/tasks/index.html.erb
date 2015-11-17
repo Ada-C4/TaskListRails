@@ -6,7 +6,8 @@
         <li>
           <%= link_to task.name, "/tasks/#{task.id}" %> ✍ <br>
             <% if !task.person.nil? %>
-            <%= task.person.name %><br>
+            <%= link_to task.person.name, "/people/#{task.person_id}/tasks" %>
+            <br>
             <% end %>
           <%= link_to 'DELETE TASK ⌧',  { action: :destroy, id: task.id }, method: :delete, data: { confirm: 'Delete Task, For Real?' } %> <br>
           <% if !task.date_completed.nil? %>
