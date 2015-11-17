@@ -31,7 +31,9 @@ body {
 
 }
 
-.complete_button {
+#complete_button {
+  -webkit-appearance: checkbox;
+  height:30px;
   vertical-align: middle;
   transform: translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
@@ -39,7 +41,8 @@ body {
   transition-property: transform;
 }
 
-.complete_button:hover {
+#complete_button:hover {
+  -webkit-appearance: push button;
   transform: scale(1.1);
 }
 
@@ -90,7 +93,9 @@ h3 {
   margin-bottom: 10px;
 }
 
-.incomplete_button {
+#incomplete_button {
+  -webkit-appearance: checkbox;
+  height:30px;
   color: #E6E3E1;
   display: inline;
   vertical-align: middle;
@@ -98,9 +103,10 @@ h3 {
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   backface-visibility: hidden;
   transition-property: transform;
+  text-align: center;
 }
 
-.incomplete_button:hover {
+#incomplete_button:hover {
   transform: scale(1.1);
 }
 

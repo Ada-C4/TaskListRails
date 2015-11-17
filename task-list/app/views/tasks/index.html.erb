@@ -3,13 +3,13 @@
   <ul>
     <% @tasks.each do |task| %>
       <% if task.completed_date == nil %>
-        <% @completion_class = "incomplete_button" %>
+        <% @completion_id = "incomplete_button" %>
       <% else %>
-        <% @completion_class = "complete_button" %>
+        <% @completion_id = "complete_button" %>
       <% end %>
       <li class="task_list", id="holder">
         <div class="task_list", id="left">
-          <%= button_to "✓","/tasks/#{task.id}/complete", method: :patch, class: @completion_class %>
+          <%= button_to "✓","/tasks/#{task.id}/complete", method: :patch, id: @completion_id %>
         </div>
         <div class="task_list", id="second_to_left">
           <a href= "/tasks/<%= task.id %>"><%= task.name %></a>
