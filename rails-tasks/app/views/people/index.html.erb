@@ -1,6 +1,6 @@
 <div class="on_paper">
 
-<h1>Task-Doers</h1>
+<h1>cameron kids</h1>
 
 <table>
   <% @people.each do |person| %>
@@ -8,8 +8,24 @@
       <td>
         <a href="/people/<%= person.id %>"><%= person.name %>
       </td>
+      <td>
+        <% if person.incomplete.length == 0 %>
+        is all caught up
+        <% else %>
+          <% if person.incomplete.length == 1 %>
+            has <%= person.incomplete.length %> task to finish
+          <% else %>
+            has <%= person.incomplete.length %> tasks to finish
+          <% end %>
+        <% end %>
+      </td>
     </tr>
   <% end %>
+  <tr>
+    <td>
+      <%= button_to "⏎", "/" %>
+    </td>
+  </tr>
 </table>
 
 

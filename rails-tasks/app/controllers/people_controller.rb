@@ -12,12 +12,7 @@ class PeopleController < ApplicationController
 
   #shows all the completed and uncompleted tasks for a given person
   def tasks
-  end
-
-  private
-
-  def person_params
-    params.permit(person:[:name])
+    @person = Person.find(params[:id])
   end
 
 end

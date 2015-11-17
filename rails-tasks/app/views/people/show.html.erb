@@ -1,11 +1,8 @@
 <div class="on_paper">
 <h1><%= @person.name %></h1>
-<ul>
-  <%= @person.tasks.each do |task| %>
-    <li>
-      <%= task.name %>
-    </li>
-  <% end %>
-</ul>
+
+
+
+<a href="/people/<%= @person.id %>/tasks">☞  <%= @person.name %>'s incomplete & completed tasks</a>
 
 </div>
