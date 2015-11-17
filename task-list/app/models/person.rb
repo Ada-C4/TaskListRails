@@ -6,6 +6,5 @@ class Person < ActiveRecord::Base
     incomplete = t.where(completed_date: nil)
     incomplete.length
   end
-
-
+  
 end
