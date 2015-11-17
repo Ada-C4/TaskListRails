@@ -1,0 +1,19 @@
+<h1> Person Details </h1>
+
+<p>
+  Name: <%= @person.name %>
+</p>
+<p>
+  Description: <%= @person.description %>
+</p>
+<p id="lifetime_completions">
+  Lifetime Completed Tasks: <%= @person.lifetime_tasks %>
+</p>
+<p>
+  Completed Tasks: <%= @person.tasks.where.not(completed_date: nil).length %>
+</p>
+<p>
+  Incomplete Tasks: <%= @person.tasks.where(completed_date: nil).length %>
+</p>
+
+<%= link_to "#{@person.name}'s Tasks", "/people/#{@person.id}/tasks", :class => "person_name_link" %>

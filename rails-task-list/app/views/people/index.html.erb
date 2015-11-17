@@ -1,0 +1,27 @@
+<h1>People</h1>
+
+<ul>
+  <% @people.each do |person| %>
+  <li class="person_list">
+    <%= link_to person.name, "/people/#{person.id}", :class => "person_name_link" %>
+      <table id="person_details_table">
+        <tr>
+          <td>
+            <i class="fa fa-check"></i>
+          </td>
+          <td>
+            <%= person.tasks.where.not(completed_date: nil).length %> completed tasks
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <i class="fa fa-times"></i>
+          </td>
+          <td>
+            <%= person.tasks.where(completed_date: nil).length %> incomplete tasks
+          </td>
+        </tr>
+      </table>
+  </li>
+  <% end %>
+</ul>

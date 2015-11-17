@@ -30,19 +30,24 @@ class TasksController < ApplicationController
 
   def update
     id = params[:id]
-    Task.find(id).update(task_params[:task])
+    #Task.find(id).update(task_params[:task])
+    Task.update(id, task_params[:task])
     redirect_to "/"
   end
 
   def complete
     id = params[:id]
-    Task.find(id).update(:completed_date => Time.now)
+    task = Task.find(id)
+    task.update(:completed_date => Time.now)
+    num_tasks = task.person.lifetime_tasks
+    num_tasks += 1
+    task.person.update(:lifetime_tasks => num_tasks)
     redirect_to "/"
   end
 
   private
 
   def task_params
-    params.permit(task:[:name,:description])
+    params.permit(task:[:name,:description,:person_id])
   end
 end
