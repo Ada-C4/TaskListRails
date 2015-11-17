@@ -58,8 +58,6 @@ In this wave we will extend the interactivity with users, allowing them to edit 
   
 
 
-<!--
-
 ## Final Wave!
 In this wave, we explore creating ActiveRecord associations by creating `belongs_to` and `has_many` relationships.
 
@@ -79,4 +77,3 @@ In this wave, we explore creating ActiveRecord associations by creating `belongs
   - The url of this page should look something like `http://localhost:5000/people/1/tasks`.
   - Link to this action from a Person's `show` view.
 - Deploy your completed app to Heroku.
--->
