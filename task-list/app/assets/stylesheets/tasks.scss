@@ -33,11 +33,10 @@ h1 {
 
 table {
   table-layout: fixed;
-  width: 550px;
+  width: 600px;
   margin-left: 14%;
   border: solid rgb(39, 98, 207);
   padding: 3%;
-
 }
 
 td {
@@ -55,22 +54,29 @@ th {
 }
 
 #name_header {
-  width: 70%;
+  width: 45%;
   padding-left: 2%;
 }
 
 #task_link_cell {
-  width: 70%;
+  width: 45%;
   word-wrap:break-word;
   padding: 0 2%;
 }
 
+#person_cell {
+  width: 10%;
+  padding: 0 2%;
+  word-wrap:break-word;
+}
+
 #checkbox_cell {
-  width: 15%;
+  width: 10%;
 }
 
 #delete_button_cell {
-  width: 15%;
+  width: 10%;
+  padding: 0 10%;
 }
 
 .checkbox_link {

@@ -10,6 +10,20 @@
 <header>
   🔅🔅🔆 Task Organizer 🔆🔅🔅
 </header>
+<nav>
+  <div class="navigation_links">
+    <a href="/">Home</a>
+  </div>
+  <div class="navigation_links">
+    <%= link_to "People", "/people" %>
+  </div>
+  <div class="navigation_links">
+    <%= link_to "Task List", "/tasks" %>
+  </div>
+  <div class="navigation_links">
+    <%= link_to "New Task", "/tasks/new" %>
+  </div>
+</nav>
 
 <%= yield %>
 

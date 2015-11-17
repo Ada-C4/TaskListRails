@@ -1,0 +1,24 @@
+<h1><%= @person.name %>'s Tasks</h1>
+<table id="person_tasks_table">
+  <th id="name_header">
+    Task Name
+  </th>
+  <th id="status_header">
+    Status
+  </th>
+  <% ordered_tasks = @person.tasks.order(:comp_date) %>
+  <% ordered_tasks.each do |task| %>
+    <tr>
+      <td id="name_cell">
+        <%= task.name %>
+      </td>
+      <td id="status_cell">
+        <% if task.comp_date.nil? %>
+          Incomplete
+          <% else %>
+          Complete
+        <% end %>
+      </td>
+    </tr>
+  <% end %>
+</table>

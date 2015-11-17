@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+ .navigation_links {
+   display: inline-block;
+   margin: 5;
+   padding: 3px;
+ }
+
+ .navigation_links a:link {color: rgb(39, 98, 207);}
+ .navigation_links a:hover {font-weight: bold;}
+ .navigation_links a:visited {color: rgb(39, 98, 207);;}
+
+ nav {
+   width: 276px;
+   padding: 5px;
+   border: 2px solid rgb(254, 230, 82);
+   margin: 0;
+ }

@@ -1,0 +1,28 @@
+// Place all the styles related to the People controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#person_tasks_table {
+  table-layout: fixed;
+  width: 440px;
+  margin-left: 14%;
+  border: solid rgb(39, 98, 207);
+  padding: 3%;
+}
+
+#name_header {
+  padding-left: 2%;
+  margin-right: 30%;
+}
+
+#name_cell {
+  word-wrap:break-word;
+  padding-top: 3%;
+  padding-right: 10%;
+  padding-left: 2%;
+}
+
+#status_cell {
+  word-wrap:break-word;
+  padding-top: 3%;
+}

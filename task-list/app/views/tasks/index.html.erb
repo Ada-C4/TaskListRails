@@ -1,6 +1,3 @@
-<nav>
-  <%= link_to "New Task", "/tasks/new" %>
-</nav>
 <h1>Task List</h1>
 <table>
   <th id="status_header">
@@ -8,6 +5,9 @@
   </th>
   <th id="name_header">
     Name
+  </th>
+  <th>
+    Person
   </th>
   <th></th>
   <% @tasks.each do |task| %>
@@ -21,6 +21,11 @@
       </td>
       <td id="task_link_cell">
         <%= link_to task.name, "/tasks/#{task.id}" %>
+      </td>
+      <td id="person_cell">
+        <% if !task.person.nil? %>
+          <%= task.person.name %>
+        <% end %>
       </td>
       <td id="delete_button_cell">
         <%= button_to "Delete", "/tasks/#{task.id}", method: "delete", data: { confirm: "Are you sure you want to delete this task?" } %>
