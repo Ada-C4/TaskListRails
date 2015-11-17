@@ -1,0 +1,22 @@
+<div id='task_details'>
+  <h1><%= @task.name %></h1> 
+  <% if !@task.person.nil? %>
+    <h3>Task Owner: <%= link_to @task.person.name, "/people/#{@task.person.id}" %></h3>
+  <% end %>
+  <p><%= @task.description %></p>
+  <% unless @task.completed_at.nil? %>
+    <p>Completed on <%= @completed_time %>.</p>
+  <% else %>
+  <h2>This task is not complete yet. Get to it!</h2>
+  <% end %>
+</div>
+
+<div id='show-buttons-row'>
+  <% if @task.completed_at.nil? %>
+    <%= render partial: 'done_button', locals: {id: @task.id} %>
+    <%= render partial: 'edit_button', locals: {id: @task.id} %>
+  <% end %>
+  <%= render partial: 'delete_button', locals: {id: @task.id} %>
+</div>
+
+<%= render 'task_home_button' %>
