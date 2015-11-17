@@ -1,16 +1,38 @@
 <div class="on_paper">
 <h1><%= @task_name %></h1>
-<p>
-  <%= @description %>
-  <br>
-  <% if @completed_status == true && @completed_date == nil%>
-     completed
-  <% elsif @completed_status == true %>
-     completed <%= @completed_date %>
-  <% else %>
-     incomplete
-  <% end %>
-<%= button_to "✎", "/tasks/#{params[:name]}/edit", :method => :get%>
-</p>
-<a href="/tasks">List Home</a>
+<table>
+  <tr>
+    <td>
+      <%= @task.description %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <% if @task.complete == true &&   @completed_date == nil%>
+      completed by <%= @task.person.name %>
+      <% elsif @task.complete == true %>
+      completed by <%= @task.person.name %> on <%= @completed_date %>
+      <% else %>
+      assigned to: <%= @task.person.name %>
+      <% end %>
+    </td>
+</table>
+<table>
+    <tr>
+      <td>
+        <% if @task.complete == true || !@task.completed_date == nil%>
+          <%= button_to "✘", "/tasks/#{@task.name}", :method => :delete, data: { confirm: "delete #{@task.name}?" } %>
+        <% else %>
+          <%= button_to "✎", "/tasks/#{params[:name]}/edit", :method => :get%>
+        <td>
+          <%= button_to "✔︎", "/tasks/#{@task.name}/complete", :method => :put %>
+        </td>
+        <% end %>
+      </td>
+      <td>
+        <%= button_to "⏎", "/" %>
+      </td>
+    </tr>
+</table>
+
 </div>

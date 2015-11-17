@@ -1,0 +1,32 @@
+<div class="on_paper">
+<h1><%= @person.name %></h1>
+to complete:
+<ul>
+  <% @complete_tasks_array = [] %>
+  <% @person.tasks.each do |task| %>
+      <% if task.complete == true &&   @completed_date == nil%>
+        <% @complete_tasks_array.push(task.name) %>
+      <% elsif task.complete == true %>
+        <% @complete_tasks_array.push(task.name) %>
+      <% else %>
+      <li>
+        <%= task.name %>
+      </li>
+      <% end %>
+      <% end %>
+
+    </ul>
+completed:
+    <ul>
+    <% @complete_tasks_array.each do |task| %>
+      <li>
+        <%= task %>
+      </li>
+  <% end %>
+</ul>
+
+<a href="/tasks/new">+ a task</a>
+<br>
+<%= link_to "⏎ to task list", "/" %>
+
+</div>

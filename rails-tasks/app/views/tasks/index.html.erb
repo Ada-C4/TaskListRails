@@ -1,6 +1,6 @@
 <div class="on_paper">
 
-<h1>note to self<br>must do:</h1>
+<h1><a href="/people/">cameron kids</a><br>must do list:</h1>
 <table>
   <% @tasks.each do |task| %>
     <tr>
@@ -9,11 +9,19 @@
           <a class="complete" href="/tasks/<%= task.name %>"> <%= task.name %> </a>
         </td>
         <td>
+          <% id = task.person.id %>
+          <a href="/people/<%= id %>"> <%= task.person.name %></a>
+        </td>
+        <td>
           <%= button_to "✘", "/tasks/#{task.name}", :method => :delete, data: { confirm: "delete #{task.name}?" } %>
         </td>
         <% else %>
         <td>
           <a class="incomplete" href="/tasks/<%= task.name %>"> <%= task.name %> </a>
+        </td>
+        <td>
+          <% id = task.person.id %>
+          <a href="/people/<%= id %>"> <%= task.person.name %></a>
         </td>
         <td>
           <%= button_to "✎", "/tasks/#{task.name}/edit", :method => :get%>
@@ -29,7 +37,7 @@
   <% end %>
     <tr>
       <td>
-        <a href="/tasks/new">+ add a task</a>
+        <a href="/tasks/new">+ a task</a>
       </td>
     </tr>
 </table>

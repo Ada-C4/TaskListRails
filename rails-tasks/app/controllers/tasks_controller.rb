@@ -8,10 +8,8 @@ class TasksController < ApplicationController
 
   def show
     @task_name = params[:name]
-    task = Task.where(name: @task_name)[0]
-    @description = task.description
-    @completed_status = task.complete
-    date = task.completed_date
+    @task = Task.find_by(name: params[:name])
+    date = @task.completed_date
     if date == nil
       @completed_date = nil
     else
@@ -55,13 +53,14 @@ class TasksController < ApplicationController
     @task = Task.find_by(name: task_params[:task][:name])
     @old_name = @task.name
     @old_description = @task.description
+    @old_person = @task.person.name
     @task.update(task_params[:task])
   end
 
   private
 
   def task_params
-    params.permit(task:[:name, :description])
+    params.permit(task:[:name, :description, :person_id])
   end
 
 end

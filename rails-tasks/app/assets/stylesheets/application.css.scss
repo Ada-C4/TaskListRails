@@ -13,6 +13,41 @@
  *= require_tree .
  *= require_self
  */
+ @import url(https://fonts.googleapis.com/css?family=Special+Elite);
+
+ body {
+   font-family: Special Elite;
+   background-image: url(coffee-smartphone-desk-pen.jpg);
+ }
+
+ a, h1 {
+   font-family: Special Elite;
+   color: black;
+   text-decoration: none;
+ }
+
+ a:hover {
+   text-decoration: underline;
+ }
+
+ input {
+   margin: 10;
+ }
+
+ .on_paper {
+   width: 425px;
+   position: relative;
+   left: 225px;
+   top: 100px;
+ }
+
+ .complete {
+   text-decoration: line-through;
+ }
+
+ .incomplete {
+   text-decoration: none;
+ }
 
  button {
    display: inline;

@@ -1,0 +1,30 @@
+<div class="on_paper">
+
+<h1>cameron kids</h1>
+
+<table>
+  <% @people.each do |person| %>
+    <tr>
+      <td>
+        <a href="/people/<%= person.id %>"><%= person.name %>
+        <% if person.incomplete.length == 0 %>
+        is all caught up </a>
+        <% else %>
+          <% if person.incomplete.length == 1 %>
+            has <%= person.incomplete.length %> task to finish </a>
+          <% else %>
+            has <%= person.incomplete.length %> tasks to finish </a>
+          <% end %>
+        <% end %>
+      </td>
+    </tr>
+  <% end %>
+  <tr>
+    <td>
+      <%= link_to "⏎ to task list", "/" %>
+    </td>
+  </tr>
+</table>
+
+
+</div>

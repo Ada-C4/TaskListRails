@@ -1,0 +1,10 @@
+<div class="on_paper">
+<h1><%= @person.name %></h1>
+
+
+
+<a href="/people/<%= @person.id %>/tasks">☞  <%= @person.name %>'s incomplete & completed tasks</a>
+<br>
+<%= link_to "⏎ to task list", "/" %>
+
+</div>
