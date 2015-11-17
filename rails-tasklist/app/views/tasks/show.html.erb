@@ -26,12 +26,17 @@
           	<div><% if @task.description == "" %><%= "n/a" %><% end %><%= @task.description %></div>
          </td>
          <td>
-          	<div><% if @task.completed_at.nil? %><%= "in progress :)" %><% end %><%= @task.completed_at.strftime("%D") %></div>
+          	<div>
+              <% if @task.completed_at.nil? %>
+                <%= "in progress" %>
+              <% else %>
+                <%= @task.completed_at.strftime("%D") %>
+              <% end %>
+            </div>
          </td>
        </tr>
     </table>
     <div class="btn-group">
       <%= button_to "edit", "/tasks/#{@task.id}/edit", method: :get, class: "btn btn-default" %> <br>
-      <%= button_to "home", "/tasks/", class: "btn btn-default" %>
     </div>
   </div>

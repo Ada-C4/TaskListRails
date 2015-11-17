@@ -109,16 +109,15 @@ body {
 }
 
 .profile-pic {
-  max-width: 50%;
-  max-height: 50%;
+  max-width: 70%;
+  max-height: 70%;
   opacity: 1.0;
   text-align: center;
   border: 2px solid black;
-
 }
 
 .show-person {
-  display: inline-block;
+  // display: inline-block;
   text-align: center;
   opacity: 1.0;
   padding-bottom: 20px;
@@ -126,11 +125,12 @@ body {
 
 footer {
   text-align: center;
+  color: #DFD3CA
 }
 
 footer .btn {
   margin: 20px;
-  
+
 }
 // a:link {
 //   text-decoration: none;
