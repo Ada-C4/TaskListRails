@@ -54164,6 +54164,7 @@ Processing by TasksController#show as HTML
   Rendered application/_task_home_button.html.erb (0.1ms)
   Rendered tasks/show.html.erb within layouts/application (9.5ms)
 Completed 200 OK in 57ms (Views: 55.4ms | ActiveRecord: 0.2ms)
+<<<<<<< HEAD
 
 
 Started GET "/tasks" for ::1 at 2015-11-16 16:57:43 -0800
@@ -54318,3 +54319,5 @@ Processing by PeopleController#show as HTML
   Rendered application/_people_list_button.html.erb (0.4ms)
   Rendered people/show.html.erb within layouts/application (20.3ms)
 Completed 200 OK in 162ms (Views: 65.8ms | ActiveRecord: 0.4ms)
+=======
+>>>>>>> 6728c6c5ee64e4606c66ef970f3915b81862e41b
