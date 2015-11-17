@@ -1,7 +1,31 @@
-<h1>To Do For You</h1>
+<!-- <h1><%= @assigned_to.name %>'s tasks</h1> -->
 
-<%= @assigned_to.name %>
-
+<h3>To do:</h3>
+<div class="list">
 <% @tasks.each do |task| %>
-  <%= task.name %>
+  <% if task.completed_at.nil? %>
+      <div class="task">
+      <%= task.name %>
+      <br>
+      <%= task.description %>
+      </div>
+  <% end %>
 <% end %>
+<br>
+</div>
+
+<h3>Done:</h3>
+<div class="list">
+<% @tasks.each do |task| %>
+  <% if !task.completed_at.nil? %>
+    <div class="task">
+    <%= task.name %>
+    <br>
+    <%= task.description %>
+    completed <%= distance_of_time_in_words(task.completed_at, Time.now) %> ago
+    </div>
+  <% end %>
+<% end %>
+</div>
+
+<a class="return_home" href="/">Return to task list</a>
