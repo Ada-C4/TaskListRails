@@ -177,7 +177,6 @@ h2 {
   width: 20px;
   height: 20px;
   display: inline;
-  border-width: 1px;
   border-style: none;
   float:right;
   margin: 0 5px;
@@ -253,4 +252,9 @@ label {
 #task_description, #task_name {
   font-family: 'Quicksand', sans-serif;
   font-size: 14px;
+}
+
+.select-dropdown {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 24px;
 }

@@ -1,21 +1,37 @@
-<h1>People</h1>
-<ul>
+<div class="list">
+  <div class ="title">
+    Task Owners
+  </div>
+  <% gray = true %>
+  <!--Creates task list with alternating gray and white boxes, and strikes through completed tasks  -->
   <% @people.each do |person| %>
-    <li><a href="/people/<%= person.id %>"><%= person.name %></a></li>
-    <% count = 0 %>
-    <% person.tasks.each do |task| %>
-      <% if task.complete.nil? %>
-        <% count += 1 %>
-      <% end %>
-      <% end %>
-      Tasks to do: <%= count %>
-      <%= button_to "", "/people/#{person.id}", method: :delete, data: { :confirm => "Are you sure?" }, class: "delete-button" %>
+    <% if gray %>
+      <div class="gray-box">
+        <a href="/people/<%= person.id %>"><%= person.name %></a>
+        <% count = 0 %>
+        <% person.tasks.each do |task| %>
+          <% if task.complete.nil? %>
+            <% count += 1 %>
+            <% end %>
+        <% end %>
+        Tasks to do: <%= count %>
+        <%= button_to "", "/people/#{person.id}", method: :delete, data: { :confirm => "Are you sure?" }, class: "delete-button" %>
+      </div>
+      <% gray = false %>
+    <!--else the box is white -->
+    <% else %>
+      <div class="white-box">
+        <a href="/people/<%= person.id %>"><%= person.name %></a>
+        <% count = 0 %>
+        <% person.tasks.each do |task| %>
+          <% if task.complete.nil? %>
+            <% count += 1 %>
+            <% end %>
+        <% end %>
+        Tasks to do: <%= count %>
+        <%= button_to "", "/people/#{person.id}", method: :delete, data: { :confirm => "Are you sure?" }, class: "delete-button" %>
+      </div>
+      <% gray = true %>
+    <% end %>
   <% end %>
-</ul>
-
-<div class="square-button-container">
-  <a class="square-button" href="/people/new">
-    <p class="circle-button-title">+</p>
-    <span>Add new owner</span>
-  </a>
 </div>

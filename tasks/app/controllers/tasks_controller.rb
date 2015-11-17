@@ -11,12 +11,18 @@ class TasksController < ApplicationController
   end
 
   def new
-    @task = Task.new
+    @task = Task.new(person_id: params[:person_id])
+    session[:return_to] = request.referer
   end
 
   def create
     Task.create(task_params[:task])
-    redirect_to "/"
+    if session[:return_to].nil?
+      redirect_to "/"
+    else
+      redirect_to session[:return_to]
+    end
+    session[:return_to] = nil
   end
 
   def destroy
