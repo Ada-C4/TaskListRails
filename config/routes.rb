@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'tasks#index'
 
   get 'tasks/new' => 'tasks#new'
-  get 'tasks/:id/edit' => 'tasks#edit', as: :task
+  get 'tasks/:id/edit' => 'tasks#edit'
   get 'tasks/:id' => 'tasks#show'
 
   post 'tasks/' => 'tasks#create'
@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   get 'people/' => 'people#index'
   get 'people/new' => 'people#new'
-  get 'people/:id/edit' => 'people#edit', as: :person
+  get 'people/:id/edit' => 'people#edit'
   get 'people/:id' => 'people#show'
   get 'people/:id/tasks' => 'people#tasks'
 
