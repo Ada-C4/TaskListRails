@@ -1,0 +1,16 @@
+<%= form_for form_object do |f| %>
+  <div class='legend'><h1><%= form_title %></h1></div>
+  <fieldset>
+    <label for='name'><%= name_field %></label>
+    <%= f.text_field :name, class: 'form-field', maxlength: '30' %>
+    <br><br>
+    <label for='description'><%= text_area_field %></label>
+    <%= f.text_area text_area_object, html: {class: 'form-field'}%>
+    <% if form_object == @task %>
+    <label for='person_id'>Who's Doing This? </label>
+    <%= f.collection_select :person_id, Person.all, :id, :name, prompt: 'Who needs to do this?'%>
+    <%  end %>
+    <br><br><br>
+    <%= f.submit class:'create-button'%>
+  </fieldset>
+<% end %>

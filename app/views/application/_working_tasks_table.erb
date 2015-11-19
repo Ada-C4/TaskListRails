@@ -1,0 +1,14 @@
+<div class='tasklist'>
+  <table>
+    <% @working_tasks.each do |task|%>
+      <tr>
+         <td id='task'><%= link_to task.name, "/tasks/#{task.id}" %></td>
+         <td id='edit' class='button'><%= render partial: 'edit_button', locals: {id: task.id, controller: 'tasks'} %></td>
+         <td id='delete' class='button'><%= render partial: 'done_button', locals: {id: task.id, controller: 'tasks'} %></td>
+         <td id="mark-complete" class='button'><%= render partial: 'delete_button', locals: {id: task.id, controller: 'tasks'} %></td>
+       </tr>
+     <% end %>
+  </table>
+</div>
+
+

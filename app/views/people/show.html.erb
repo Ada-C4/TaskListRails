@@ -1,0 +1,13 @@
+<h1><%= @person.name %> has some stuff to do.</h1>
+
+<h2><%= @person.working_tasks.length %> <%= link_to 'tasks', "/people/#{@person.id}/tasks" %> left.</h2>
+
+<%= render partial: 'delete_button', locals:{id: @person.id, controller: 'people'} %>
+<%= render partial: 'edit_button', locals:{id: @person.id, controller: 'people'} %>
+
+
+<%= render 'add_task' %>
+
+<%= render 'people_list_button' %>
+
+<%= render 'completed_tasks_table' %>
