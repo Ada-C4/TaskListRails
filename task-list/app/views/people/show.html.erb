@@ -1,0 +1,5 @@
+<section>
+  <h1><%= @person.name %></h1>
+  <p><%= @person.job_title %></p>
+  <%= link_to 'Tasks',  { action: :show_tasks, id: @person.id }, method: :get %>
+</section>

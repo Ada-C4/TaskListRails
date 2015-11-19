@@ -1,0 +1,15 @@
+<section>
+  <h1>Employees</h1>
+  <ul>
+    <% @people.each do |person| %>
+      <li>
+        <div>
+          <a href= "/people/<%= person.id %>"><%= person.name %></a>
+        </div>
+        <div>
+          <p>Incomplete tasks: <%= person.count_incomplete %></p>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</section>

@@ -1,0 +1,8 @@
+<section>
+<h1> Tasks for <%= @person.name %> </h1>
+  <ul>
+    <% @tasks.each do |task|%>
+      <li><%= task.name %></li>
+    <% end %>
+  </ul>
+</section>

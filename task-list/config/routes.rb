@@ -13,6 +13,11 @@ Rails.application.routes.draw do
   get 'tasks/:id/edit' => 'tasks#edit'
   patch 'tasks/:id/complete' => 'tasks#complete'
 
+  get 'people/' => 'people#index'
+  get 'people/:id' => 'people#show'
+  get 'people/:id/tasks' => 'people#show_tasks'
+
+
   resources :tasks, :path => 'tasks'
 
   # The priority is based upon order of creation: first created -> highest priority.
