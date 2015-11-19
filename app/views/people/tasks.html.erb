@@ -1,0 +1,37 @@
+<div class="person-info">
+  <table>
+    <tr>
+      <% if @tasks[:todo].empty? && @tasks[:completed].empty? %>
+      <h3>This person has no tasks to show.</h3>
+      <% else %>
+        <th>
+          TASK
+        </th>
+        <th class="status">
+          STATUS
+        </th>
+      </tr>
+      <% @tasks[:todo].each do |task| %>
+      <tr>
+        <td>
+          <%= link_to task.name, "/tasks/#{task.id}" %>
+        </td>
+        <td class="status">
+          <%= task.status %>
+        </td>
+      </tr>
+      <% end %>
+      <% @tasks[:completed].each do |task| %>
+      <tr>
+        <td>
+          <%= link_to task.name, "/tasks/#{task.id}" %>
+        </td>
+        <td class="status">
+          <%= task.status %>
+        </td>
+      </tr>
+      <% end %>
+    <% end %>
+  </table>
+  <%= link_to(image_tag("https://33.media.tumblr.com/8092a0b1f2aa7d8cf7fc8d58f7f36155/tumblr_n4fkyi9suN1qdwrtpo1_400.gif"), "/" ) %>
+</div>

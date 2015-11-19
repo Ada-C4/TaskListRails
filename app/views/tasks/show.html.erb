@@ -1,0 +1,25 @@
+<div class="task-info">
+  <p>
+    <span>Task:</span> <%= @task.name %>
+  </p>
+  <% unless @task.description.empty? %>
+  <p>
+    <span>Description:</span> <%= @task.description %>
+  </p>
+  <% end %>
+  <p>
+    <span>Status:</span> <%= @task.status %>
+  </p>
+  <% unless @task.completed_at.nil? %>
+  <p>
+    <span>Completion Date:</span> <%= @task.completed_at.to_date %>
+  </p>
+  <% end %>
+  <% unless @task.person.nil? %>
+  <p>
+    <span>Author:</span> <%= link_to @task.person.name, "/people/#{@task.person_id}" %>
+  </p>
+  <% end %>
+  <%= button_to("Edit Task", "/tasks/#{@task.id}/edit", method: "get", title: "Edit") %>
+  <%= link_to(image_tag("https://33.media.tumblr.com/8092a0b1f2aa7d8cf7fc8d58f7f36155/tumblr_n4fkyi9suN1qdwrtpo1_400.gif"), "/" ) %>
+</div>
