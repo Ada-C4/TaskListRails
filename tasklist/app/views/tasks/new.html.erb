@@ -1,5 +1,3 @@
-<html>
-  <body>
 <%= form_for @task do |f| %>
   <fieldset>
     <legend> Add a New Task </legend>
@@ -8,6 +6,9 @@
     <br>
     <%= f.label :descript %>
     <%= f.text_field :descript %>
+    <br>
+    <%= f.label :person_id, "Task For:" %>
+    <%= f.collection_select(:person_id, Person.all, :id, :name, prompt: "Select a Person") %>
     <br>
     <%= f.label :date_completed %>
     <%= f.date_field :date_completed %>

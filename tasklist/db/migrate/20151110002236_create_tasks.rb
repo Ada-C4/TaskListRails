@@ -4,6 +4,7 @@ class CreateTasks < ActiveRecord::Migration
       t.string :name
       t.string :descript
       t.datetime :date_completed
+      t.integer :person_id
 
       t.timestamps null: false
     end
